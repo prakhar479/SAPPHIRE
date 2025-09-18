@@ -581,7 +581,7 @@ def create_analysis_plots(features: Dict[str, Any], output_dir: str):
     """Create visualization plots for the analysis."""
     try:
         # Set style
-        plt.style.use('seaborn-v0_8')
+        # plt.style.use('seaborn-v0_8')
         fig, axes = plt.subplots(2, 2, figsize=(15, 12))
         
         # Plot 1: MFCC coefficients
