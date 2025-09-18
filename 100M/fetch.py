@@ -89,6 +89,7 @@ def extract_full_data_from_h5(file_path):
                 'segments_loudness_max': get_array(analysis['segments_loudness_max']),
                 'segments_loudness_max_time': get_array(analysis['segments_loudness_max_time']),
                 'segments_loudness_start': get_array(analysis['segments_loudness_start']),
+                'track_7digitalid': get_array(song_metadata['track_7digitalid']),
             }
             return data
     except Exception as e:
