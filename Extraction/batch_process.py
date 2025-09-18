@@ -2,7 +2,7 @@
 """Batch processing utilities to convert a folder of songs into a Parquet/CSV table."""
 import os, glob, json
 import pandas as pd
-from music_multifeature_extract_v2 import analyze
+from process import analyze
 
 
 

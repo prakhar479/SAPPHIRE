@@ -1,5 +1,5 @@
 """
-music_multifeature_extract.py
+extract.py
 
 Single-file, modular extractor for audio+lyrics perceptual features.
 Outputs a Python dict (JSON-serializable) called `features`.

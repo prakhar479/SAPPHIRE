@@ -1,7 +1,7 @@
 # Run inside a notebook cell or as 'python visual...py --audio file --lyrics file'
 import argparse
 import matplotlib.pyplot as plt
-from music_multifeature_extract_v2 import analyze
+from Extraction.process import analyze
 
 
 p = argparse.ArgumentParser()

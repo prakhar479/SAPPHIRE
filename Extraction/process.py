@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-music_multifeature_extract_v2.py
+process.py
 
 Improved, self-contained music feature extractor for:
 - acoustic (perceptual MFCC, chroma, loudness, spectral descriptors)
@@ -10,10 +10,8 @@ Improved, self-contained music feature extractor for:
 - structural (segmentation, chord estimation, repetition detection)
 
 Usage:
-    python music_multifeature_extract_v2.py --audio path/to/song.wav --lyrics path/to/lyrics.txt --out features.json
-    python music_multifeature_extract_v2.py --batch_dir /path/to/folder --out batch.parquet
-
-Author: ChatGPT (adapted)
+    process.py --audio path/to/song.wav --lyrics path/to/lyrics.txt --out features.json
+    process.py --batch_dir /path/to/folder --out batch.parquet
 """
 
 import os
