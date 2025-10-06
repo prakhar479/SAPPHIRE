@@ -32,6 +32,7 @@ logging.basicConfig(
 
 # --- Feature Extraction & Processing Functions ---
 
+
 def calculate_snr_percentile(audio_data: np.ndarray, percentile: float = 95.0) -> float:
     """
     Computes a proxy Signal-to-Noise Ratio (SNR) using a percentile-based energy threshold.
@@ -66,7 +67,7 @@ def extract_audio_features(
     Loads, normalizes, and computes a suite of quality and descriptive metrics for an audio signal.
     """
     features = {}
-    
+
     # --- Pre-computation & Normalization ---
     # Ensure mono for most feature calculations
     y_mono = librosa.to_mono(y) if y.ndim > 1 else y
@@ -78,16 +79,19 @@ def extract_audio_features(
         loudness = meter.integrated_loudness(y_mono)
         normalized_audio = pyln.normalize.loudness(y_mono, loudness, target_loudness)
         features["integrated_loudness_lufs"] = float(loudness)
-    except ValueError: # Handle very short or silent audio
-        logging.warning("Loudness normalization failed, audio may be silent or too short. Skipping normalization.")
+    except ValueError:  # Handle very short or silent audio
+        logging.warning(
+            "Loudness normalization failed, audio may be silent or too short. Skipping normalization."
+        )
         normalized_audio = y_mono
         features["integrated_loudness_lufs"] = -np.inf
 
-
     # --- Quality Metrics ---
     features["snr_percentile_db"] = calculate_snr_percentile(normalized_audio)
-    features["clipping_percentage"] = float(np.mean(np.abs(normalized_audio) >= 0.999) * 100)
-    
+    features["clipping_percentage"] = float(
+        np.mean(np.abs(normalized_audio) >= 0.999) * 100
+    )
+
     # --- Descriptive Features (from normalized audio) ---
     rms_energy = librosa.feature.rms(y=normalized_audio)[0]
     zcr = librosa.feature.zero_crossing_rate(y=normalized_audio)[0]
@@ -101,7 +105,7 @@ def extract_audio_features(
     features["zcr_std"] = float(np.std(zcr))
     features["spectral_centroid_mean"] = float(np.mean(spec_centroid))
     features["spectral_bandwidth_mean"] = float(np.mean(spec_bandwidth))
-    
+
     # Add mean and std for each MFCC
     for i in range(mfccs.shape[0]):
         features[f"mfcc_{i}_mean"] = float(np.mean(mfccs[i, :]))
@@ -130,7 +134,7 @@ def extract_lyrics_features(lyrics_path: Path) -> Dict[str, Any]:
     # Strip markup (HTML, etc.)
     soup = BeautifulSoup(text, "html.parser")
     clean_text = soup.get_text()
-    
+
     # Normalize whitespace
     clean_text = re.sub(r"\s+", " ", clean_text).strip()
 
@@ -152,7 +156,7 @@ def extract_lyrics_features(lyrics_path: Path) -> Dict[str, Any]:
     word_count = len(words)
     char_count = len(clean_text)
     sentence_count = len(re.split(r"[.!?]+", clean_text))
-    
+
     # Type-Token Ratio (Vocabulary Richness)
     ttr = (len(set(words)) / word_count) if word_count > 0 else 0.0
 
@@ -180,7 +184,7 @@ def process_track(
     try:
         # --- 1. Process Audio ---
         y, original_sr = sf.read(str(audio_path), dtype="float32")
-        
+
         # Resample to target rate if necessary
         if original_sr != config["TARGET_SR"]:
             # librosa expects (channels, samples) or (samples,)
@@ -204,7 +208,7 @@ def process_track(
                 "original_audio_path": str(audio_path),
                 "original_lyrics_path": str(lyrics_path),
                 "processing_date": datetime.now(datetime.timezone.utc).isoformat(),
-                "script_version": "1.0.0", # Or git hash
+                "script_version": "1.0.0",  # Or git hash
             },
             "audio_properties": {
                 "original_sr": original_sr,
@@ -219,9 +223,12 @@ def process_track(
         # --- 4. High-Quality Subset Selection ---
         passes_criteria = all(
             [
-                metadata["audio_features"]["snr_percentile_db"] >= config["SNR_THRESHOLD"],
-                metadata["lyrics_features"]["completeness_heuristic"] >= config["LYRICS_COMPLETENESS_THRESHOLD"],
-                metadata["audio_features"]["vocal_dominance_score_hpss"] >= config["VOCAL_THRESHOLD"],
+                metadata["audio_features"]["snr_percentile_db"]
+                >= config["SNR_THRESHOLD"],
+                metadata["lyrics_features"]["completeness_heuristic"]
+                >= config["LYRICS_COMPLETENESS_THRESHOLD"],
+                metadata["audio_features"]["vocal_dominance_score_hpss"]
+                >= config["VOCAL_THRESHOLD"],
             ]
         )
 
@@ -253,7 +260,7 @@ def process_track(
 def main(args):
     """Main function to orchestrate the dataset preprocessing pipeline."""
     start_time = time.time()
-    
+
     # --- 1. Setup I/O Paths and Configuration ---
     input_audio_dir = Path(args.input_audio)
     input_lyrics_dir = Path(args.input_lyrics)
@@ -262,11 +269,13 @@ def main(args):
     # Create output directories
     for subdir in ["audio_normalized", "audio_rejected", "features", "logs"]:
         (output_dir / subdir).mkdir(parents=True, exist_ok=True)
-        
+
     # Setup file logging
     log_file = output_dir / "logs" / "processing.log"
     file_handler = logging.FileHandler(log_file, mode="w")
-    file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] - %(message)s"))
+    file_handler.setFormatter(
+        logging.Formatter("%(asctime)s [%(levelname)s] - %(message)s")
+    )
     logging.getLogger().addHandler(file_handler)
 
     logging.info(f"Starting dataset preprocessing pipeline.")
@@ -304,7 +313,7 @@ def main(args):
     results = []
     with ProcessPoolExecutor(max_workers=args.num_workers) as executor:
         future_to_job = {executor.submit(process_track, *job): job for job in jobs}
-        
+
         for future in tqdm(
             as_completed(future_to_job),
             total=len(jobs),
@@ -316,14 +325,14 @@ def main(args):
     # --- 4. Consolidate results and create manifests ---
     successful_metadata = [r["metadata"] for r in results if r["status"] == "success"]
     failed_tracks = [r for r in results if r["status"] == "error"]
-    
+
     if not successful_metadata:
         logging.error("No tracks were processed successfully.")
         return
-        
+
     # Create a Pandas DataFrame for the main manifest
     df = pd.json_normalize(successful_metadata, sep="_")
-    
+
     # Save main manifest as Parquet (efficient) and CSV (human-readable)
     manifest_parquet_path = output_dir / "manifest.parquet"
     manifest_csv_path = output_dir / "manifest.csv"
@@ -334,7 +343,7 @@ def main(args):
     high_quality_df = df[df["is_high_quality"] == True]
     high_quality_manifest_path = output_dir / "manifest_high_quality.parquet"
     high_quality_df.to_parquet(high_quality_manifest_path, index=False)
-    
+
     # Save errors to a JSON file
     errors_path = output_dir / "logs" / "errors.json"
     with open(errors_path, "w", encoding="utf-8") as f:
@@ -344,22 +353,26 @@ def main(args):
     total_processed = len(successful_metadata)
     total_high_quality = len(high_quality_df)
     total_failed = len(failed_tracks)
-    retention_pct = (total_high_quality / total_processed * 100) if total_processed > 0 else 0
+    retention_pct = (
+        (total_high_quality / total_processed * 100) if total_processed > 0 else 0
+    )
     duration_secs = time.time() - start_time
-    
-    logging.info("\n" + "="*50)
+
+    logging.info("\n" + "=" * 50)
     logging.info("--- PREPROCESSING COMPLETE ---")
     logging.info(f"Total time: {duration_secs:.2f} seconds")
     logging.info(f"Total files found: {len(jobs)}")
     logging.info(f"Successfully processed: {total_processed}")
     logging.info(f"Failed to process: {total_failed}")
-    logging.info(f"High-quality samples retained: {total_high_quality} ({retention_pct:.2f}%)")
+    logging.info(
+        f"High-quality samples retained: {total_high_quality} ({retention_pct:.2f}%)"
+    )
     logging.info("-" * 50)
     logging.info(f"Main manifest saved to: {manifest_parquet_path}")
     logging.info(f"High-quality manifest saved to: {high_quality_manifest_path}")
     logging.info(f"Detailed logs saved to: {log_file}")
     logging.info(f"Error summary saved to: {errors_path}")
-    logging.info("="*50)
+    logging.info("=" * 50)
 
 
 if __name__ == "__main__":
@@ -367,38 +380,65 @@ if __name__ == "__main__":
         description="Robust audio and lyrics dataset preprocessing pipeline.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
-    
+
     # --- I/O Arguments ---
     parser.add_argument(
-        "--input-audio", type=str, required=True, help="Path to the directory with raw audio files."
+        "--input-audio",
+        type=str,
+        required=True,
+        help="Path to the directory with raw audio files.",
     )
     parser.add_argument(
-        "--input-lyrics", type=str, required=True, help="Path to the directory with raw lyrics (.txt) files."
+        "--input-lyrics",
+        type=str,
+        required=True,
+        help="Path to the directory with raw lyrics (.txt) files.",
     )
     parser.add_argument(
-        "--output-dir", type=str, default="processed_dataset", help="Path to the directory where all outputs will be saved."
+        "--output-dir",
+        type=str,
+        default="processed_dataset",
+        help="Path to the directory where all outputs will be saved.",
     )
-    
+
     # --- Processing Arguments ---
     parser.add_argument(
-        "--num-workers", type=int, default=None, help="Number of parallel processes to use. Defaults to the number of CPU cores."
+        "--num-workers",
+        type=int,
+        default=None,
+        help="Number of parallel processes to use. Defaults to the number of CPU cores.",
     )
     parser.add_argument(
-        "--sample-rate", type=int, default=44100, help="Target sample rate for all audio."
+        "--sample-rate",
+        type=int,
+        default=44100,
+        help="Target sample rate for all audio.",
     )
     parser.add_argument(
-        "--loudness", type=float, default=-23.0, help="Target loudness in LUFS (EBU R128 standard)."
+        "--loudness",
+        type=float,
+        default=-23.0,
+        help="Target loudness in LUFS (EBU R128 standard).",
     )
-    
+
     # --- Filtering Thresholds ---
     parser.add_argument(
-        "--snr-threshold", type=float, default=15.0, help="Minimum Signal-to-Noise Ratio (SNR) in dB."
+        "--snr-threshold",
+        type=float,
+        default=15.0,
+        help="Minimum Signal-to-Noise Ratio (SNR) in dB.",
     )
     parser.add_argument(
-        "--lyrics-completeness-threshold", type=float, default=0.9, help="Minimum score for lyrics completeness heuristic."
+        "--lyrics-completeness-threshold",
+        type=float,
+        default=0.9,
+        help="Minimum score for lyrics completeness heuristic.",
     )
     parser.add_argument(
-        "--vocal-threshold", type=float, default=0.6, help="Minimum score for vocal dominance (from HPSS)."
+        "--vocal-threshold",
+        type=float,
+        default=0.6,
+        help="Minimum score for vocal dominance (from HPSS).",
     )
 
     cli_args = parser.parse_args()

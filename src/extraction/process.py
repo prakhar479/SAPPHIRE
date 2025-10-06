@@ -34,6 +34,7 @@ from sklearn.cluster import AgglomerativeClustering
 HAS_CREPE = False
 try:
     import crepe
+
     HAS_CREPE = True
 except Exception:
     HAS_CREPE = False
@@ -42,6 +43,7 @@ HAS_MADMOM = False
 try:
     import madmom
     from madmom.features.beats import RNNBeatProcessor, BeatTrackingProcessor
+
     HAS_MADMOM = True
 except Exception:
     HAS_MADMOM = False
@@ -50,6 +52,7 @@ except Exception:
 HAS_ESSENTIA = False
 try:
     import essentia.standard as es
+
     HAS_ESSENTIA = True
 except Exception:
     HAS_ESSENTIA = False
@@ -57,6 +60,7 @@ except Exception:
 # sentence-transformers lazy (we'll load only if needed)
 try:
     from sentence_transformers import SentenceTransformer
+
     HAS_SBERT = True
 except Exception:
     SentenceTransformer = None
@@ -65,6 +69,7 @@ except Exception:
 # pronouncing (CMU dictionary)
 try:
     import pronouncing
+
     HAS_PRONOUNCING = True
 except Exception:
     pronouncing = None
@@ -74,6 +79,7 @@ except Exception:
 try:
     import nltk
     from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
     nltk_vader = SentimentIntensityAnalyzer()
     HAS_VADER = True
 except Exception:
@@ -87,10 +93,11 @@ log = logging.getLogger("music_feat_v2")
 # ----------------------------
 # Basic utilities
 # ----------------------------
-import numpy as np # Make sure numpy is imported
+import numpy as np  # Make sure numpy is imported
+
 
 def numpy_converter(obj):
-    """ Custom converter for numpy data types """
+    """Custom converter for numpy data types"""
     if isinstance(obj, np.integer):
         return int(obj)
     elif isinstance(obj, np.floating):
@@ -99,11 +106,13 @@ def numpy_converter(obj):
         return obj.tolist()
     raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
 
+
 # Corrected code
 def save_json(obj, path):
-    with open(path,'w',encoding='utf8') as f:
+    with open(path, "w", encoding="utf8") as f:
         json.dump(obj, f, indent=2, ensure_ascii=False, default=numpy_converter)
     log.info("Saved JSON to %s", path)
+
 
 def load_audio(path: str, sr: int = 22050):
     """
@@ -112,12 +121,17 @@ def load_audio(path: str, sr: int = 22050):
     y, sr = librosa.load(path, sr=sr, mono=True)
     return y, sr
 
+
 def _ensure_list_serializable(arr):
     if isinstance(arr, np.ndarray):
         return arr.tolist()
     if isinstance(arr, (list, tuple)):
-        return [float(x) if isinstance(x, (np.floating, float, np.int64, int)) else x for x in arr]
+        return [
+            float(x) if isinstance(x, (np.floating, float, np.int64, int)) else x
+            for x in arr
+        ]
     return arr
+
 
 # ----------------------------
 # Acoustic features
@@ -128,16 +142,21 @@ def perceptual_mfcc(y: np.ndarray, sr: int, n_mfcc: int = 13, apply_a_weight=Tru
     before creating the mel spectrogram. Returns mean/std and matrix.
     """
     # STFT power
-    S = np.abs(librosa.stft(y, n_fft=2048, hop_length=512))**2
+    S = np.abs(librosa.stft(y, n_fft=2048, hop_length=512)) ** 2
     freqs = librosa.fft_frequencies(sr=sr, n_fft=2048)
     if apply_a_weight:
         # approximate A-weighting (not exact ISO226)
         f = freqs
         # safe eval of A-weight curve approximation
-        ra = (12194.0**2 * f**4) / ((f**2 + 20.6**2) * np.sqrt((f**2 + 107.7**2)*(f**2 + 737.9**2))*(f**2+12194.0**2) + 1e-12)
-        with np.errstate(divide='ignore'):
-            aw_db = 20*np.log10(np.maximum(ra, 1e-12)) + 2.0
-        aw_lin = 10**(aw_db/20.0)
+        ra = (12194.0**2 * f**4) / (
+            (f**2 + 20.6**2)
+            * np.sqrt((f**2 + 107.7**2) * (f**2 + 737.9**2))
+            * (f**2 + 12194.0**2)
+            + 1e-12
+        )
+        with np.errstate(divide="ignore"):
+            aw_db = 20 * np.log10(np.maximum(ra, 1e-12)) + 2.0
+        aw_lin = 10 ** (aw_db / 20.0)
         S = S * aw_lin[:, None]
     S_mel = librosa.feature.melspectrogram(S=S, sr=sr)
     # convert to dB and then MFCC
@@ -145,8 +164,9 @@ def perceptual_mfcc(y: np.ndarray, sr: int, n_mfcc: int = 13, apply_a_weight=Tru
     return {
         "mfcc_mean": _ensure_list_serializable(np.mean(mfcc, axis=1)),
         "mfcc_std": _ensure_list_serializable(np.std(mfcc, axis=1)),
-        "mfcc_matrix": _ensure_list_serializable(mfcc)
+        "mfcc_matrix": _ensure_list_serializable(mfcc),
     }
+
 
 def chroma_features(y: np.ndarray, sr: int):
     """
@@ -158,15 +178,19 @@ def chroma_features(y: np.ndarray, sr: int):
     chroma_std = np.std(chroma, axis=1)
 
     # Krumhansl templates (classic)
-    maj_template = np.array([6.35,2.23,3.48,2.33,4.38,4.09,2.52,5.19,2.39,3.66,2.29,2.88])
-    min_template = np.array([6.33,2.68,3.52,5.38,2.60,3.53,2.54,4.75,3.98,2.69,3.34,3.17])
+    maj_template = np.array(
+        [6.35, 2.23, 3.48, 2.33, 4.38, 4.09, 2.52, 5.19, 2.39, 3.66, 2.29, 2.88]
+    )
+    min_template = np.array(
+        [6.33, 2.68, 3.52, 5.38, 2.60, 3.53, 2.54, 4.75, 3.98, 2.69, 3.34, 3.17]
+    )
 
     def best_template(chroma_vec, template):
         scores = []
         for rot in range(12):
             rolled = np.roll(template, rot)
             # correlation
-            c = np.corrcoef(chroma_vec, rolled)[0,1]
+            c = np.corrcoef(chroma_vec, rolled)[0, 1]
             if np.isnan(c):
                 c = -1.0
             scores.append(c)
@@ -184,30 +208,39 @@ def chroma_features(y: np.ndarray, sr: int):
         "chroma_mean": _ensure_list_serializable(chroma_mean),
         "chroma_std": _ensure_list_serializable(chroma_std),
         "chroma_matrix": _ensure_list_serializable(chroma),
-        "estimated_key": key
+        "estimated_key": key,
     }
 
-def loudness_curve(y: np.ndarray, sr: int, frame_length: int = 2048, hop_length: int = 512):
+
+def loudness_curve(
+    y: np.ndarray, sr: int, frame_length: int = 2048, hop_length: int = 512
+):
     """
     Compute a short-term loudness curve using pyloudnorm Meter on short frames.
     Returns times and loudness in LUFS/dB (approx).
     """
     meter = pyln.Meter(sr)
-    frame_times = librosa.frames_to_time(np.arange(0, len(y), hop_length), sr=sr, hop_length=hop_length)
+    frame_times = librosa.frames_to_time(
+        np.arange(0, len(y), hop_length), sr=sr, hop_length=hop_length
+    )
     loudness_vals = []
     for i in range(0, len(y), hop_length):
-        frame = y[i:i+frame_length]
-        if len(frame) < max(256, frame_length//4):
+        frame = y[i : i + frame_length]
+        if len(frame) < max(256, frame_length // 4):
             continue
         try:
             # integrated loudness of short frame (approx)
             L = meter.integrated_loudness(frame)
         except Exception:
             rms = np.sqrt(np.mean(frame**2) + 1e-12)
-            L = 20*np.log10(rms + 1e-12)
+            L = 20 * np.log10(rms + 1e-12)
         loudness_vals.append(float(L))
-    times = frame_times[:len(loudness_vals)]
-    return {"times": _ensure_list_serializable(times), "loudness": _ensure_list_serializable(loudness_vals)}
+    times = frame_times[: len(loudness_vals)]
+    return {
+        "times": _ensure_list_serializable(times),
+        "loudness": _ensure_list_serializable(loudness_vals),
+    }
+
 
 def spectral_descriptors(y: np.ndarray, sr: int):
     sc = librosa.feature.spectral_centroid(y=y, sr=sr)
@@ -216,8 +249,9 @@ def spectral_descriptors(y: np.ndarray, sr: int):
     return {
         "centroid_mean": float(np.mean(sc)),
         "bandwidth_mean": float(np.mean(sb)),
-        "zcr_mean": float(np.mean(zcr))
+        "zcr_mean": float(np.mean(zcr)),
     }
+
 
 # ----------------------------
 # Rhythm & groove
@@ -241,13 +275,23 @@ def rhythm_features(audio_path: Optional[str], y: np.ndarray, sr: int):
             if len(beat_times) > 1:
                 tempo = 60.0 / np.median(np.diff(beat_times))
         else:
-            tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr, units='time')
-            beat_times = beat_frames.tolist() if hasattr(beat_frames, 'tolist') else list(beat_frames)
+            tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr, units="time")
+            beat_times = (
+                beat_frames.tolist()
+                if hasattr(beat_frames, "tolist")
+                else list(beat_frames)
+            )
     except Exception as e:
-        log.warning("Beat tracking failed (%s), falling back to librosa onset-based tempo.", e)
+        log.warning(
+            "Beat tracking failed (%s), falling back to librosa onset-based tempo.", e
+        )
         try:
-            tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr, units='time')
-            beat_times = beat_frames.tolist() if hasattr(beat_frames, 'tolist') else list(beat_frames)
+            tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr, units="time")
+            beat_times = (
+                beat_frames.tolist()
+                if hasattr(beat_frames, "tolist")
+                else list(beat_frames)
+            )
         except Exception:
             tempo = None
             beat_times = []
@@ -257,7 +301,7 @@ def rhythm_features(audio_path: Optional[str], y: np.ndarray, sr: int):
     onset_frames = librosa.onset.onset_detect(onset_envelope=o_env, sr=sr)
     onset_times = librosa.frames_to_time(onset_frames, sr=sr)
 
-    duration = float(len(y)/sr) if sr > 0 else 0.0
+    duration = float(len(y) / sr) if sr > 0 else 0.0
     density = float(len(onset_times) / duration) if duration > 0 else 0.0
 
     # microtiming: deviations of onsets from nearest subdivision grid
@@ -279,7 +323,7 @@ def rhythm_features(audio_path: Optional[str], y: np.ndarray, sr: int):
                 micro = {
                     "median_dev_sec": float(np.median(deviations)),
                     "mean_dev_sec": float(np.mean(deviations)),
-                    "std_dev_sec": float(np.std(deviations))
+                    "std_dev_sec": float(np.std(deviations)),
                 }
 
     # swing heuristic: ratio of odd/even inter-onset medians
@@ -297,8 +341,9 @@ def rhythm_features(audio_path: Optional[str], y: np.ndarray, sr: int):
         "onset_count": int(len(onset_times)),
         "rhythmic_density_onsets_per_sec": float(density),
         "microtiming": micro,
-        "swing_ratio_est": swing
+        "swing_ratio_est": swing,
     }
+
 
 # ----------------------------
 # Melody & pitch
@@ -310,16 +355,23 @@ def pitch_contour_crepe(audio_path: str, sr: int = 22050, step_size: int = 10):
     if not HAS_CREPE:
         raise RuntimeError("CREPE not available.")
     # crepe.predict accepts audio array or path depending on version; safer to load audio array here
-    audio, sr_read = sf.read(audio_path, dtype='float32')
+    audio, sr_read = sf.read(audio_path, dtype="float32")
     if audio.ndim > 1:
         audio = np.mean(audio, axis=1)
     # crepe.predict returns arrays; viterbi True gives smoothed F0
     try:
-        time, frequency, confidence, activation = crepe.predict(audio, sr_read, step_size=step_size, viterbi=True)
-        return {"times": _ensure_list_serializable(time), "frequency_hz": _ensure_list_serializable(frequency), "confidence": _ensure_list_serializable(confidence)}
+        time, frequency, confidence, activation = crepe.predict(
+            audio, sr_read, step_size=step_size, viterbi=True
+        )
+        return {
+            "times": _ensure_list_serializable(time),
+            "frequency_hz": _ensure_list_serializable(frequency),
+            "confidence": _ensure_list_serializable(confidence),
+        }
     except Exception as e:
         # fallback: re-raise to let caller handle
         raise RuntimeError(f"CREPE prediction failed: {e}")
+
 
 def pitch_contour_librosa(y: np.ndarray, sr: int, hop_length: int = 256):
     """
@@ -328,7 +380,9 @@ def pitch_contour_librosa(y: np.ndarray, sr: int, hop_length: int = 256):
     y_h = librosa.effects.harmonic(y)
     S = np.abs(librosa.stft(y_h, n_fft=2048, hop_length=hop_length))
     pitches, mags = librosa.piptrack(S=S, sr=sr, hop_length=hop_length)
-    times = librosa.frames_to_time(np.arange(pitches.shape[1]), sr=sr, hop_length=hop_length)
+    times = librosa.frames_to_time(
+        np.arange(pitches.shape[1]), sr=sr, hop_length=hop_length
+    )
     f0 = []
     for i in range(pitches.shape[1]):
         col = pitches[:, i]
@@ -338,7 +392,11 @@ def pitch_contour_librosa(y: np.ndarray, sr: int, hop_length: int = 256):
         else:
             idx = magcol.argmax()
             f0.append(float(col[idx]))
-    return {"times": _ensure_list_serializable(times), "frequency_hz": _ensure_list_serializable(f0)}
+    return {
+        "times": _ensure_list_serializable(times),
+        "frequency_hz": _ensure_list_serializable(f0),
+    }
+
 
 def vibrato_stats(freqs: List[float], times: List[float]):
     """
@@ -355,8 +413,11 @@ def vibrato_stats(freqs: List[float], times: List[float]):
     # smooth with Savitzky-Golay
     try:
         from scipy.signal import savgol_filter
-        win = 9 if len(valid_freqs) >= 9 else max(3, (len(valid_freqs)//2)*2+1)
-        smooth = savgol_filter(valid_freqs, win, 3) if len(valid_freqs) >= 5 else valid_freqs
+
+        win = 9 if len(valid_freqs) >= 9 else max(3, (len(valid_freqs) // 2) * 2 + 1)
+        smooth = (
+            savgol_filter(valid_freqs, win, 3) if len(valid_freqs) >= 5 else valid_freqs
+        )
     except Exception:
         smooth = valid_freqs
     residual = valid_freqs - smooth
@@ -366,6 +427,7 @@ def vibrato_stats(freqs: List[float], times: List[float]):
     if len(valid_times) >= 2:
         dt = np.mean(np.diff(valid_times))
         import numpy.fft as fft
+
         A = np.abs(fft.rfft(cents - np.mean(cents)))
         freqs_fft = fft.rfftfreq(len(cents), d=dt)
         if len(A) > 1:
@@ -378,7 +440,10 @@ def vibrato_stats(freqs: List[float], times: List[float]):
     extent = float(np.percentile(np.abs(cents), 95))
     return {"vibrato_rate_hz": rate, "vibrato_extent_cents": extent}
 
-def find_melodic_motifs(freqs: List[float], times: List[float], min_len_frames: int = 6, n_best: int = 8):
+
+def find_melodic_motifs(
+    freqs: List[float], times: List[float], min_len_frames: int = 6, n_best: int = 8
+):
     """
     Quantize pitch to semitones (MIDI), create interval sequences, collect repeated n-grams.
     Returns top motifs as interval patterns and counts.
@@ -397,14 +462,17 @@ def find_melodic_motifs(freqs: List[float], times: List[float], min_len_frames: 
         if len(intervals) < n:
             continue
         for i in range(len(intervals) - n + 1):
-            key = tuple(intervals[i:i+n])
+            key = tuple(intervals[i : i + n])
             ngrams[key].append(i)
     repeated = [(k, v) for k, v in ngrams.items() if len(v) > 1]
-    repeated_sorted = sorted(repeated, key=lambda kv: (len(kv[1]) * len(kv[0])), reverse=True)
+    repeated_sorted = sorted(
+        repeated, key=lambda kv: (len(kv[1]) * len(kv[0])), reverse=True
+    )
     motifs = []
     for k, v in repeated_sorted[:n_best]:
         motifs.append({"intervals": list(k), "occurrences": len(v)})
     return motifs
+
 
 # ----------------------------
 # Lyrical features
@@ -413,13 +481,18 @@ def load_lyrics(path: str) -> str:
     with open(path, "r", encoding="utf8") as f:
         return f.read()
 
+
 # lazy SBERT loader to avoid heavy imports unless needed
 _SBERT_MODEL = None
+
+
 def get_sbert(model_name: str = "all-mpnet-base-v2"):
     global _SBERT_MODEL
     if _SBERT_MODEL is None:
         if SentenceTransformer is None:
-            log.warning("sentence-transformers not available; semantic vectors will be None.")
+            log.warning(
+                "sentence-transformers not available; semantic vectors will be None."
+            )
             return None
         try:
             log.info("Loading SBERT model (%s)...", model_name)
@@ -428,6 +501,7 @@ def get_sbert(model_name: str = "all-mpnet-base-v2"):
             log.warning("Failed to load SBERT: %s", e)
             _SBERT_MODEL = None
     return _SBERT_MODEL
+
 
 def lyric_semantic_vector(text: str):
     model = get_sbert()
@@ -440,6 +514,7 @@ def lyric_semantic_vector(text: str):
         log.warning("SBERT encoding failed: %s", e)
         return {"embedding": None, "note": "encoding failed"}
 
+
 def lyric_sentiment_arc(text: str, window_size: int = 50):
     """
     Compute rolling sentiment using VADER on windows of 'window_size' words.
@@ -449,10 +524,14 @@ def lyric_sentiment_arc(text: str, window_size: int = 50):
         return {"note": "VADER not available", "sentiment_arc": None}
     scores = []
     for i in range(0, max(1, len(tokens)), window_size):
-        span = " ".join(tokens[i:i+window_size])
+        span = " ".join(tokens[i : i + window_size])
         s = nltk_vader.polarity_scores(span)["compound"]
         scores.append(float(s))
-    return {"sentiment_arc": _ensure_list_serializable(scores), "window_size_words": int(window_size)}
+    return {
+        "sentiment_arc": _ensure_list_serializable(scores),
+        "window_size_words": int(window_size),
+    }
+
 
 def phonetic_patterns(text: str):
     """
@@ -482,13 +561,16 @@ def phonetic_patterns(text: str):
         "total_phonemes": int(total_phonemes),
         "avg_phonemes_per_word": float(avg_phonemes_per_word),
         "unique_phonemes": int(unique_phonemes),
-        "words_missing_pron": int(missing)
+        "words_missing_pron": int(missing),
     }
+
 
 # ----------------------------
 # Structural: segmentation, chords, repetition
 # ----------------------------
-def structure_segmentation(y: np.ndarray, sr: int, hop_length: int = 512, n_segments: int = 6):
+def structure_segmentation(
+    y: np.ndarray, sr: int, hop_length: int = 512, n_segments: int = 6
+):
     """
     Segment the audio into 'n_segments' using aggregated MFCC frames and agglomerative clustering.
     Returns labels and a list of segments with start/end times.
@@ -501,11 +583,15 @@ def structure_segmentation(y: np.ndarray, sr: int, hop_length: int = 512, n_segm
         return {"labels": [], "segments": []}
     n_clusters = min(n_segments, features.shape[0])
     try:
-        cluster = AgglomerativeClustering(n_clusters=n_clusters, affinity='cosine', linkage='average')
+        cluster = AgglomerativeClustering(
+            n_clusters=n_clusters, affinity="cosine", linkage="average"
+        )
         labels = cluster.fit_predict(features).tolist()
     except Exception:
         # fallback: kmeans-like by slicing
-        labels = (np.linspace(0, n_clusters-1, num=features.shape[0]).astype(int)).tolist()
+        labels = (
+            np.linspace(0, n_clusters - 1, num=features.shape[0]).astype(int)
+        ).tolist()
     times = librosa.frames_to_time(np.arange(len(labels)), sr=sr, hop_length=hop_length)
     segments = []
     if len(labels) > 0:
@@ -514,12 +600,17 @@ def structure_segmentation(y: np.ndarray, sr: int, hop_length: int = 512, n_segm
         for i, l in enumerate(labels[1:], start=1):
             if l != cur_label:
                 end_t = float(times[i])
-                segments.append({"label": int(cur_label), "start": start_t, "end": end_t})
+                segments.append(
+                    {"label": int(cur_label), "start": start_t, "end": end_t}
+                )
                 cur_label = l
                 start_t = float(times[i])
         # final segment
-        segments.append({"label": int(cur_label), "start": start_t, "end": float(times[-1])})
+        segments.append(
+            {"label": int(cur_label), "start": start_t, "end": float(times[-1])}
+        )
     return {"labels": labels, "segments": segments}
+
 
 def chord_estimation(y: np.ndarray, sr: int, hop_length: int = 512):
     """
@@ -527,19 +618,27 @@ def chord_estimation(y: np.ndarray, sr: int, hop_length: int = 512):
     Returns chord sequence per frame with time and confidence score.
     """
     chroma = librosa.feature.chroma_cqt(y=y, sr=sr, hop_length=hop_length)
-    times = librosa.frames_to_time(np.arange(chroma.shape[1]), sr=sr, hop_length=hop_length)
-    notes = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
+    times = librosa.frames_to_time(
+        np.arange(chroma.shape[1]), sr=sr, hop_length=hop_length
+    )
+    notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
+
     def triad(root, kind):
         t = np.zeros(12)
-        if kind == 'maj':
-            t[root] = 1; t[(root+4)%12] = 1; t[(root+7)%12] = 1
+        if kind == "maj":
+            t[root] = 1
+            t[(root + 4) % 12] = 1
+            t[(root + 7) % 12] = 1
         else:
-            t[root] = 1; t[(root+3)%12] = 1; t[(root+7)%12] = 1
+            t[root] = 1
+            t[(root + 3) % 12] = 1
+            t[(root + 7) % 12] = 1
         return t
+
     templates = {}
     for i, nm in enumerate(notes):
-        templates[f"{nm}:maj"] = triad(i, 'maj')
-        templates[f"{nm}:min"] = triad(i, 'min')
+        templates[f"{nm}:maj"] = triad(i, "maj")
+        templates[f"{nm}:min"] = triad(i, "min")
     chord_seq = []
     for f in range(chroma.shape[1]):
         vec = chroma[:, f]
@@ -547,12 +646,18 @@ def chord_estimation(y: np.ndarray, sr: int, hop_length: int = 512):
         best_score = -1.0
         for name, templ in templates.items():
             # cosine-like dot product normalized by template norm
-            score = float(np.dot(vec, templ) / (np.linalg.norm(vec) * np.linalg.norm(templ) + 1e-12))
+            score = float(
+                np.dot(vec, templ)
+                / (np.linalg.norm(vec) * np.linalg.norm(templ) + 1e-12)
+            )
             if score > best_score:
                 best_score = score
                 best = name
-        chord_seq.append({"time": float(times[f]), "chord": best, "score": float(best_score)})
+        chord_seq.append(
+            {"time": float(times[f]), "chord": best, "score": float(best_score)}
+        )
     return {"chord_sequence": chord_seq}
+
 
 def repetition_detection_segments(segments: List[dict]):
     """
@@ -569,10 +674,16 @@ def repetition_detection_segments(segments: List[dict]):
             repeats.append({"hash": h, "occurrences": len(occ), "instances": occ})
     return {"repeats": repeats}
 
+
 # ----------------------------
 # Orchestrator & batch helpers
 # ----------------------------
-def analyze(audio_path: Optional[str] = None, lyrics_path: Optional[str] = None, prefer_crepe: bool = True, n_segments: int = 6) -> Dict[str, Any]:
+def analyze(
+    audio_path: Optional[str] = None,
+    lyrics_path: Optional[str] = None,
+    prefer_crepe: bool = True,
+    n_segments: int = 6,
+) -> Dict[str, Any]:
     """
     Analyze either an audio file, a lyrics file, or both.
     Returns a JSON-serializable dictionary of features.
@@ -586,7 +697,7 @@ def analyze(audio_path: Optional[str] = None, lyrics_path: Optional[str] = None,
         log.info("Analyzing audio: %s", audio_path)
         y, sr = load_audio(audio_path, sr=22050)
         features.setdefault("audio", {})
-        features["audio"]["duration_sec"] = float(len(y)/sr)
+        features["audio"]["duration_sec"] = float(len(y) / sr)
         # acoustic
         try:
             features["acoustic"] = {}
@@ -609,7 +720,9 @@ def analyze(audio_path: Optional[str] = None, lyrics_path: Optional[str] = None,
             else:
                 pc = pitch_contour_librosa(y, sr)
         except Exception as e:
-            log.warning("Pitch extraction (preferred) failed: %s; falling back to librosa", e)
+            log.warning(
+                "Pitch extraction (preferred) failed: %s; falling back to librosa", e
+            )
             try:
                 pc = pitch_contour_librosa(y, sr)
             except Exception as e2:
@@ -617,14 +730,20 @@ def analyze(audio_path: Optional[str] = None, lyrics_path: Optional[str] = None,
                 pc = {"times": [], "frequency_hz": []}
         features["melody"] = {}
         features["melody"]["pitch_contour"] = pc
-        features["melody"]["vibrato"] = vibrato_stats(pc.get("frequency_hz", []), pc.get("times", []))
-        features["melody"]["motifs"] = find_melodic_motifs(pc.get("frequency_hz", []), pc.get("times", []))
+        features["melody"]["vibrato"] = vibrato_stats(
+            pc.get("frequency_hz", []), pc.get("times", [])
+        )
+        features["melody"]["motifs"] = find_melodic_motifs(
+            pc.get("frequency_hz", []), pc.get("times", [])
+        )
         # structure & harmony
         try:
             struct = structure_segmentation(y, sr, n_segments=n_segments)
             features["structure"] = struct
             features["structure"]["chords"] = chord_estimation(y, sr)
-            features["structure"]["repetition"] = repetition_detection_segments(struct.get("segments", []))
+            features["structure"]["repetition"] = repetition_detection_segments(
+                struct.get("segments", [])
+            )
         except Exception as e:
             log.warning("Structure extraction failed: %s", e)
 
@@ -641,6 +760,7 @@ def analyze(audio_path: Optional[str] = None, lyrics_path: Optional[str] = None,
         features["lyrics"]["phonetics"] = phonetic_patterns(txt)
 
     return features
+
 
 def features_to_series(feats: Dict[str, Any]):
     """
@@ -680,10 +800,16 @@ def features_to_series(feats: Dict[str, Any]):
     row["lyrics_num_words"] = lyrics.get("num_words")
     return row
 
+
 # ----------------------------
 # Batch processing helper
 # ----------------------------
-def process_directory(directory: str, out_path: str = "batch_features.parquet", audio_exts: List[str] = None, prefer_crepe: bool = True):
+def process_directory(
+    directory: str,
+    out_path: str = "batch_features.parquet",
+    audio_exts: List[str] = None,
+    prefer_crepe: bool = True,
+):
     """
     Walk a directory recursively and process any audio files found. Attempts to pair audio files
     with a .txt lyrics file with the same base name.
@@ -691,6 +817,7 @@ def process_directory(directory: str, out_path: str = "batch_features.parquet", 
     """
     import glob
     import pandas as pd
+
     if audio_exts is None:
         audio_exts = [".wav", ".mp3", ".flac", ".ogg", ".m4a"]
     rows = []
@@ -702,7 +829,9 @@ def process_directory(directory: str, out_path: str = "batch_features.parquet", 
         base, _ = os.path.splitext(audio)
         lyrics = base + ".txt" if os.path.exists(base + ".txt") else None
         try:
-            feats = analyze(audio_path=audio, lyrics_path=lyrics, prefer_crepe=prefer_crepe)
+            feats = analyze(
+                audio_path=audio, lyrics_path=lyrics, prefer_crepe=prefer_crepe
+            )
             row = features_to_series(feats)
             row["audio_path"] = audio
             row["lyrics_path"] = lyrics
@@ -720,33 +849,65 @@ def process_directory(directory: str, out_path: str = "batch_features.parquet", 
     log.info("Saved batch output to %s (rows=%d)", out_path, len(df))
     return out_path
 
+
 # ----------------------------
 # CLI
 # ----------------------------
 def main():
-    p = argparse.ArgumentParser(description="Music multi-feature extractor (audio + lyrics).")
+    p = argparse.ArgumentParser(
+        description="Music multi-feature extractor (audio + lyrics)."
+    )
     p.add_argument("--audio", help="path to audio file (wav, mp3, flac)")
     p.add_argument("--lyrics", help="path to lyrics text file")
-    p.add_argument("--out", help="output JSON file (default: features.json)", default="features.json")
-    p.add_argument("--batch_dir", help="process directory of audio files and export table", default=None)
-    p.add_argument("--batch_out", help="batch output path (parquet/csv)", default="batch_features.parquet")
-    p.add_argument("--prefer_crepe", action="store_true", help="prefer CREPE for pitch (if installed)")
-    p.add_argument("--n_segments", type=int, default=6, help="number of structural segments to compute")
+    p.add_argument(
+        "--out",
+        help="output JSON file (default: features.json)",
+        default="features.json",
+    )
+    p.add_argument(
+        "--batch_dir",
+        help="process directory of audio files and export table",
+        default=None,
+    )
+    p.add_argument(
+        "--batch_out",
+        help="batch output path (parquet/csv)",
+        default="batch_features.parquet",
+    )
+    p.add_argument(
+        "--prefer_crepe",
+        action="store_true",
+        help="prefer CREPE for pitch (if installed)",
+    )
+    p.add_argument(
+        "--n_segments",
+        type=int,
+        default=6,
+        help="number of structural segments to compute",
+    )
     args = p.parse_args()
 
     if args.batch_dir:
-        process_directory(args.batch_dir, out_path=args.batch_out, prefer_crepe=args.prefer_crepe)
+        process_directory(
+            args.batch_dir, out_path=args.batch_out, prefer_crepe=args.prefer_crepe
+        )
         return
 
     if not args.audio and not args.lyrics:
         log.error("Nothing to do: provide --audio and/or --lyrics")
         sys.exit(1)
 
-    feats = analyze(audio_path=args.audio, lyrics_path=args.lyrics, prefer_crepe=args.prefer_crepe, n_segments=args.n_segments)
+    feats = analyze(
+        audio_path=args.audio,
+        lyrics_path=args.lyrics,
+        prefer_crepe=args.prefer_crepe,
+        n_segments=args.n_segments,
+    )
     save_json(feats, args.out)
     # also save a flattened CSV/JSON-LD style small summary next to out
     try:
         import pandas as pd
+
         row = features_to_series(feats)
         df = pd.DataFrame([row])
         summary_out = os.path.splitext(args.out)[0] + ".summary.csv"
@@ -754,6 +915,7 @@ def main():
         log.info("Saved summary CSV to %s", summary_out)
     except Exception:
         pass
+
 
 if __name__ == "__main__":
     main()
