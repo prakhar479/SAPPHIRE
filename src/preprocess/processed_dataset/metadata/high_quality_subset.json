@@ -1,0 +1,762 @@
+[
+  {
+    "track_id": "3132313830325f3935",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3132313830325f3935.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3132313830325f3935.txt",
+      "processing_date": "2025-10-04T07:59:49.225285"
+    },
+    "audio_quality": {
+      "snr": 12.19561003036414,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.7596535215718281
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3132313931375f3233",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3132313931375f3233.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3132313931375f3233.txt",
+      "processing_date": "2025-10-04T07:59:51.059470"
+    },
+    "audio_quality": {
+      "snr": 10.198716875193641,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.7716337641391944
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3130323630395f3737",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3130323630395f3737.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3130323630395f3737.txt",
+      "processing_date": "2025-10-04T07:59:52.753775"
+    },
+    "audio_quality": {
+      "snr": 10.271773701824205,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9123258197971635
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38303934305f3535",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38303934305f3535.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38303934305f3535.txt",
+      "processing_date": "2025-10-04T07:59:53.597377"
+    },
+    "audio_quality": {
+      "snr": 12.29849832706066,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8111973941450357
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3130323735315f30",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3130323735315f30.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3130323735315f30.txt",
+      "processing_date": "2025-10-04T07:59:53.908114"
+    },
+    "audio_quality": {
+      "snr": 12.091915257129184,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.7662992630597185
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38323135375f3432",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38323135375f3432.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38323135375f3432.txt",
+      "processing_date": "2025-10-04T07:59:54.187696"
+    },
+    "audio_quality": {
+      "snr": 10.215555214453149,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "en",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9566421479981948
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37323137385f30",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37323137385f30.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37323137385f30.txt",
+      "processing_date": "2025-10-04T07:59:55.366598"
+    },
+    "audio_quality": {
+      "snr": 10.875227989719304,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9536744693259286
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37353131315f3432",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37353131315f3432.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37353131315f3432.txt",
+      "processing_date": "2025-10-04T07:59:56.020768"
+    },
+    "audio_quality": {
+      "snr": 10.959724249170542,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.92052713130896
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37353131315f3536",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37353131315f3536.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37353131315f3536.txt",
+      "processing_date": "2025-10-04T07:59:56.632031"
+    },
+    "audio_quality": {
+      "snr": 11.549342851371605,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8538334787452284
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37323137385f3237",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37323137385f3237.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37323137385f3237.txt",
+      "processing_date": "2025-10-04T07:59:57.522611"
+    },
+    "audio_quality": {
+      "snr": 10.682886361348466,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9380276206498872
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38303730395f3138",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38303730395f3138.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38303730395f3138.txt",
+      "processing_date": "2025-10-04T07:59:57.860730"
+    },
+    "audio_quality": {
+      "snr": 10.025812429516227,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8208947983190114
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37363637385f3433",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37363637385f3433.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37363637385f3433.txt",
+      "processing_date": "2025-10-04T07:59:57.929550"
+    },
+    "audio_quality": {
+      "snr": 11.052868672169637,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9035488165721528
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3130323735315f3237",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3130323735315f3237.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3130323735315f3237.txt",
+      "processing_date": "2025-10-04T07:59:59.223691"
+    },
+    "audio_quality": {
+      "snr": 13.184039551641082,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8304009482276271
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38313537315f3437",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38313537315f3437.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38313537315f3437.txt",
+      "processing_date": "2025-10-04T07:59:59.528252"
+    },
+    "audio_quality": {
+      "snr": 10.805906273432598,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8249759804038632
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38313537315f3335",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38313537315f3335.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38313537315f3335.txt",
+      "processing_date": "2025-10-04T07:59:59.617154"
+    },
+    "audio_quality": {
+      "snr": 10.693746215174194,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9588360726720994
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37333233335f3633",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37333233335f3633.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37333233335f3633.txt",
+      "processing_date": "2025-10-04T07:59:59.736138"
+    },
+    "audio_quality": {
+      "snr": 10.392088144416235,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8225279738159663
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37393632395f3637",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37393632395f3637.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37393632395f3637.txt",
+      "processing_date": "2025-10-04T07:59:59.915312"
+    },
+    "audio_quality": {
+      "snr": 10.96968376464591,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8902921349579968
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3130313733395f313331",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3130313733395f313331.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3130313733395f313331.txt",
+      "processing_date": "2025-10-04T08:00:03.179638"
+    },
+    "audio_quality": {
+      "snr": 10.320900297523387,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8784640068261127
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37343337305f3138",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37343337305f3138.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37343337305f3138.txt",
+      "processing_date": "2025-10-04T08:00:03.350358"
+    },
+    "audio_quality": {
+      "snr": 10.652281881382752,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8377387786083451
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38313537315f3832",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38313537315f3832.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38313537315f3832.txt",
+      "processing_date": "2025-10-04T08:00:03.567316"
+    },
+    "audio_quality": {
+      "snr": 10.308574780611997,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.7934767900089877
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37373239345f3538",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37373239345f3538.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37373239345f3538.txt",
+      "processing_date": "2025-10-04T08:00:03.758880"
+    },
+    "audio_quality": {
+      "snr": 10.713347396463998,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9179060403855295
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37393337345f3437",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37393337345f3437.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37393337345f3437.txt",
+      "processing_date": "2025-10-04T08:00:03.857912"
+    },
+    "audio_quality": {
+      "snr": 10.7959955131181,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9956713560629498
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37323331345f3430",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37323331345f3430.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37323331345f3430.txt",
+      "processing_date": "2025-10-04T08:00:04.083842"
+    },
+    "audio_quality": {
+      "snr": 10.19903170100578,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.7716205212050917
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3130323735315f3632",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3130323735315f3632.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3130323735315f3632.txt",
+      "processing_date": "2025-10-04T08:00:05.656861"
+    },
+    "audio_quality": {
+      "snr": 12.831439606830624,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.7665085777447114
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38313330375f3531",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38313330375f3531.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38313330375f3531.txt",
+      "processing_date": "2025-10-04T08:00:05.881702"
+    },
+    "audio_quality": {
+      "snr": 10.132501501968793,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8261142750534589
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37393331325f313232",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37393331325f313232.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37393331325f313232.txt",
+      "processing_date": "2025-10-04T08:00:06.466965"
+    },
+    "audio_quality": {
+      "snr": 10.790134044522263,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "en",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9139637527751638
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38303730395f30",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38303730395f30.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38303730395f30.txt",
+      "processing_date": "2025-10-04T08:00:08.016356"
+    },
+    "audio_quality": {
+      "snr": 11.022482527780966,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.7936282456943488
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37323234355f3539",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37323234355f3539.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37323234355f3539.txt",
+      "processing_date": "2025-10-04T08:00:08.063844"
+    },
+    "audio_quality": {
+      "snr": 15.27533873103831,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9072303710748839
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3130303030365f3431",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3130303030365f3431.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3130303030365f3431.txt",
+      "processing_date": "2025-10-04T08:00:08.615178"
+    },
+    "audio_quality": {
+      "snr": 10.261004237163498,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8906318832371519
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37393337345f3539",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37393337345f3539.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37393337345f3539.txt",
+      "processing_date": "2025-10-04T08:00:09.107506"
+    },
+    "audio_quality": {
+      "snr": 10.714508056377925,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8299130465392677
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37363034375f313131",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37363034375f313131.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37363034375f313131.txt",
+      "processing_date": "2025-10-04T08:00:09.628186"
+    },
+    "audio_quality": {
+      "snr": 11.489032226762546,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8509139765655921
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "38303339395f3437",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/38303339395f3437.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/38303339395f3437.txt",
+      "processing_date": "2025-10-04T08:00:10.538343"
+    },
+    "audio_quality": {
+      "snr": 16.835631504356655,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8282905136768417
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37353131315f3730",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37353131315f3730.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37353131315f3730.txt",
+      "processing_date": "2025-10-04T08:00:10.775929"
+    },
+    "audio_quality": {
+      "snr": 11.733502452168661,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9966017197838628
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37323737365f313036",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37323737365f313036.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37323737365f313036.txt",
+      "processing_date": "2025-10-04T08:00:10.827398"
+    },
+    "audio_quality": {
+      "snr": 13.128380272593825,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.9675669776162863
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3130323735315f3434",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3130323735315f3434.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3130323735315f3434.txt",
+      "processing_date": "2025-10-04T08:00:11.760523"
+    },
+    "audio_quality": {
+      "snr": 11.415438359617795,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8336005988422713
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37353131315f3134",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37353131315f3134.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37353131315f3134.txt",
+      "processing_date": "2025-10-04T08:00:12.111812"
+    },
+    "audio_quality": {
+      "snr": 11.291802866669114,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8525716060662754
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "37383531345f30",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/37383531345f30.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/37383531345f30.txt",
+      "processing_date": "2025-10-04T08:00:12.780617"
+    },
+    "audio_quality": {
+      "snr": 10.141893341401747,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.939510852179535
+    },
+    "is_high_quality": true
+  },
+  {
+    "track_id": "3130333034385f3139",
+    "provenance": {
+      "original_audio_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs/3130333034385f3139.wav",
+      "original_lyrics_path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics/3130333034385f3139.txt",
+      "processing_date": "2025-10-04T08:00:13.222829"
+    },
+    "audio_quality": {
+      "snr": 10.899768703635528,
+      "clipping_percentage": 0.0
+    },
+    "lyrics_meta": {
+      "language_code": "vi",
+      "completeness": 1.0
+    },
+    "features": {
+      "vocal_dominance_score": 0.8908244433893099
+    },
+    "is_high_quality": true
+  }
+]

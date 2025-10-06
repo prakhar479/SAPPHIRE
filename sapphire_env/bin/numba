@@ -1,0 +1,8 @@
+#!/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/sapphire_env/bin/python3
+# -*- coding: UTF-8 -*-
+from __future__ import print_function, division, absolute_import
+
+from numba.misc.numba_entry import main
+
+if __name__ == "__main__":
+    main()

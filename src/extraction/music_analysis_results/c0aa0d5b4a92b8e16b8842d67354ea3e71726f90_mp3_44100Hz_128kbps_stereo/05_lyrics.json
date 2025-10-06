@@ -1,0 +1,51 @@
+{
+  "word_count": 230,
+  "unique_word_count": 113,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 230.0,
+  "readability": {
+    "flesch_reading_ease": -130.42946428571423,
+    "flesch_kincaid_grade": 87.09946428571428
+  },
+  "sentiment_analysis": {
+    "compound": 0.8363,
+    "positive": 0.073,
+    "negative": 0.027,
+    "neutral": 0.9
+  },
+  "topic_keywords": [
+    "walking",
+    "night",
+    "keep",
+    "light",
+    "dark",
+    "small",
+    "step",
+    "chorus"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.508695652173913,
+    "most_common_words": [
+      [
+        "the",
+        24
+      ],
+      [
+        "walking",
+        5
+      ],
+      [
+        "night",
+        4
+      ],
+      [
+        "keep",
+        4
+      ],
+      [
+        "through",
+        4
+      ]
+    ]
+  }
+}

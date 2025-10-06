@@ -87,9 +87,22 @@ log = logging.getLogger("music_feat_v2")
 # ----------------------------
 # Basic utilities
 # ----------------------------
-def save_json(obj: dict, path: str):
-    with open(path, "w", encoding="utf8") as f:
-        json.dump(obj, f, indent=2, ensure_ascii=False)
+import numpy as np # Make sure numpy is imported
+
+def numpy_converter(obj):
+    """ Custom converter for numpy data types """
+    if isinstance(obj, np.integer):
+        return int(obj)
+    elif isinstance(obj, np.floating):
+        return float(obj)
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
+
+# Corrected code
+def save_json(obj, path):
+    with open(path,'w',encoding='utf8') as f:
+        json.dump(obj, f, indent=2, ensure_ascii=False, default=numpy_converter)
     log.info("Saved JSON to %s", path)
 
 def load_audio(path: str, sr: int = 22050):

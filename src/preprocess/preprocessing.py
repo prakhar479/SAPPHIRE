@@ -17,13 +17,14 @@ TARGET_SR = 44100
 TARGET_LOUDNESS = -23.0  # LUFS, EBU R128 standard
 
 # 6.3 High-quality subset selection criteria
-SNR_THRESHOLD = 35.0  # Chosen value for Signal-to-Noise Ratio in dB
+# SNR_THRESHOLD = 35.0  # Chosen value for Signal-to-Noise Ratio in dB
+SNR_THRESHOLD = 10.0
 LYRICS_COMPLETENESS_THRESHOLD = 0.9
 VOCAL_THRESHOLD = 0.75 # Chosen value for vocal dominance score
 
 # --- Setup I/O Paths ---
-INPUT_AUDIO_DIR = Path("raw_audio")
-INPUT_LYRICS_DIR = Path("raw_lyrics")
+INPUT_AUDIO_DIR = Path("/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/songs")
+INPUT_LYRICS_DIR = Path("/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/Viet_Dataset/lyrics")
 OUTPUT_DIR = Path("processed_dataset")
 
 # Create output directories
@@ -145,6 +146,7 @@ def main():
 
     for audio_path in tqdm(audio_files, desc="Processing files"):
         track_id = audio_path.stem
+        # print(track_id)
         lyrics_path = INPUT_LYRICS_DIR / f"{track_id}.txt"
 
         if not lyrics_path.exists():

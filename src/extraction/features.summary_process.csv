@@ -1,0 +1,2 @@
+duration_sec,tempo_bpm,loudness_mean,spectral_centroid_mean,mfcc0_mean,key_tonic,key_mode,vibrato_rate_hz,vibrato_extent_cents,lyrics_num_words
+7.250022675736961,135.99917763157896,-37.001071711060625,2243.195298200919,-369.7277252906036,7,minor,0.14571288781959207,,224

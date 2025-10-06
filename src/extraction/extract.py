@@ -54,9 +54,22 @@ def load_audio(path: str, sr: Optional[int]=22050):
     y, sr = librosa.load(path, sr=sr, mono=True)
     return y, sr
 
+import numpy as np # Make sure numpy is imported
+
+def numpy_converter(obj):
+    """ Custom converter for numpy data types """
+    if isinstance(obj, np.integer):
+        return int(obj)
+    elif isinstance(obj, np.floating):
+        return float(obj)
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+    raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
+
+# Corrected code
 def save_json(obj, path):
     with open(path,'w',encoding='utf8') as f:
-        json.dump(obj, f, indent=2, ensure_ascii=False)
+        json.dump(obj, f, indent=2, ensure_ascii=False, default=numpy_converter)
 
 # --------------------------
 # Acoustic features
@@ -178,7 +191,8 @@ def rhythm_features(y, sr):
             gp = np.array(grid_positions)
             for o in onsets:
                 idx = np.argmin(np.abs(gp - o))
-                deviations.append(float(o - gp[idx]))
+                # deviations.append(float(o - gp[idx]))
+                deviations.append((o - gp[idx]).item())
         micro_dev = {'median_dev_sec': float(np.median(deviations)) if deviations else 0.0,
                      'mean_dev_sec': float(np.mean(deviations)) if deviations else 0.0,
                      'std_dev_sec': float(np.std(deviations)) if deviations else 0.0}
@@ -191,7 +205,8 @@ def rhythm_features(y, sr):
         even = inter[1::2]
         if len(even)>0 and np.median(even)>0:
             swing = float(np.median(odd)/np.median(even))
-    return {'tempo_bpm': float(tempo_bpm),
+    # Corrected code
+    return {'tempo_bpm': tempo_bpm.item(),
             'onset_count': int(len(onset_times)),
             'rhythmic_density_onsets_per_sec': float(density),
             'microtiming': micro_dev,
@@ -355,14 +370,17 @@ def structure_segmentation(y, sr, hop_length=512, n_segments=6):
     S = np.abs(librosa.stft(y, n_fft=2048, hop_length=hop_length))
     mfcc = librosa.feature.mfcc(S=librosa.power_to_db(S**2), n_mfcc=13)
     # compute recurrence / self-similarity
-    R = librosa.segment.recurrence_matrix(mfcc, backtrack=False, width=3, metric='cosine')
+    # R = librosa.segment.recurrence_matrix(mfcc, backtrack=False, width=3, metric='cosine')
+    R = librosa.segment.recurrence_matrix(mfcc, width=3, metric='cosine')
     # create feature for clustering by using aggregated mfcc per frame
     features = mfcc.T  # frames x features
     # Agglomerative clustering into n_segments
     if features.shape[0] < n_segments:
         labels = np.zeros(features.shape[0], dtype=int).tolist()
     else:
-        cluster = AgglomerativeClustering(n_clusters=n_segments, affinity='cosine', linkage='average')
+        # cluster = AgglomerativeClustering(n_clusters=n_segments, affinity='cosine', linkage='average')
+        # Corrected code
+        cluster = AgglomerativeClustering(n_clusters=n_segments, metric='cosine', linkage='average')
         labels = cluster.fit_predict(features).tolist()
     # compress adjacent identical labels into segments with times
     times = librosa.frames_to_time(np.arange(len(labels)), sr=sr, hop_length=hop_length)

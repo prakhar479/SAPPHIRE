@@ -183,16 +183,12 @@ def safe_load_json(path: str) -> Optional[Dict]:
         return None
 
 # Enhanced audio loading with error handling
+# Enhanced audio loading with error handling
 def load_audio_mono(path: str, sr: int = 22050, offset: float = 0.0, duration: Optional[float] = None):
     """Load audio file with enhanced error handling and normalization."""
     try:
-        y, sr_orig = sf.read(path, start=int(offset * sr), frames=int(duration * sr) if duration else None)
-        
-        if y.ndim > 1:
-            y = np.mean(y, axis=1)  # Convert to mono
-        
-        if sr_orig != sr and sr is not None:
-            y = librosa.resample(y, orig_sr=sr_orig, target_sr=sr)
+        # Use the more robust librosa.load() which handles various backends
+        y, sr_loaded = librosa.load(path, sr=sr, mono=True, offset=offset, duration=duration)
         
         # Normalize
         if y.size > 0:
@@ -200,7 +196,11 @@ def load_audio_mono(path: str, sr: int = 22050, offset: float = 0.0, duration: O
             if max_val > 0:
                 y = y / max_val
         
-        return y, sr, len(y) / sr
+        # Calculate duration from the loaded audio array
+        actual_duration = librosa.get_duration(y=y, sr=sr)
+        
+        return y, sr, actual_duration
+
     except Exception as e:
         logging.error(f"Error loading audio {path}: {e}")
         return np.array([]), sr, 0.0
