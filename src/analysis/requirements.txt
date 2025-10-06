@@ -1,0 +1,18 @@
+# analysis_requirements.txt
+
+# Core data handling
+pandas
+pyarrow
+
+# Plotting and visualization
+matplotlib
+seaborn
+
+# Machine Learning and statistics
+scikit-learn
+scipy
+
+# Lyrical embeddings (requires PyTorch)
+sentence-transformers
+# You may need to install torch separately if you need a specific version (e.g., with CUDA support)
+# pip install torch
