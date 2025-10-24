@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/The_Rinn_-_Voices__2017_Version_.wav",
+  "file_hash": "c64b6e4ebf707067bbf5e948a9e6f0bdc9986d4b",
+  "duration_sec": 231.22430839002268,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:26:04.999245",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 19.721821069717407,
+  "original_path": "music_analysis_results/transcoded/The_Rinn_-_Voices__2017_Version_.wav"
+}

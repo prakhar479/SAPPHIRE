@@ -1,0 +1,45 @@
+{
+  "word_count": 163,
+  "unique_word_count": 112,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 163.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "He's",
+    "whistler",
+    "not",
+    "his",
+    "for",
+    "The",
+    "Doesn't",
+    "Curtains",
+    "old"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.31288343558282206,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "He's",
+        4
+      ],
+      [
+        "whistler",
+        4
+      ],
+      [
+        "not",
+        4
+      ],
+      [
+        "his",
+        3
+      ]
+    ]
+  }
+}

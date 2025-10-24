@@ -1,0 +1,45 @@
+{
+  "word_count": 255,
+  "unique_word_count": 115,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 255.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "that",
+    "(Whoa-oh-oh-oh-oh)",
+    "the",
+    "Find",
+    "fire",
+    "I'm",
+    "life",
+    "take",
+    "paddling",
+    "all"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5490196078431373,
+    "most_common_words": [
+      [
+        "that",
+        14
+      ],
+      [
+        "(Whoa-oh-oh-oh-oh)",
+        12
+      ],
+      [
+        "the",
+        10
+      ],
+      [
+        "Find",
+        7
+      ],
+      [
+        "fire",
+        7
+      ]
+    ]
+  }
+}

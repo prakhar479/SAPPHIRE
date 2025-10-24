@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Songwriterz_-_Back_In_Time.wav",
+  "file_hash": "4311734945f3186587789ca76815c66c3d7847f8",
+  "duration_sec": 209.0338775510204,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:27:31.850208",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 16.99107265472412,
+  "original_path": "music_analysis_results/transcoded/Songwriterz_-_Back_In_Time.wav"
+}

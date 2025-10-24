@@ -1,0 +1,45 @@
+{
+  "word_count": 169,
+  "unique_word_count": 93,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 169.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "que",
+    "Por",
+    "dos",
+    "palabras",
+    "amo,",
+    "Dios",
+    "amor",
+    "pronunciarlas",
+    "Una",
+    "mil"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4497041420118343,
+    "most_common_words": [
+      [
+        "que",
+        5
+      ],
+      [
+        "Por",
+        5
+      ],
+      [
+        "dos",
+        4
+      ],
+      [
+        "palabras",
+        4
+      ],
+      [
+        "amo,",
+        4
+      ]
+    ]
+  }
+}

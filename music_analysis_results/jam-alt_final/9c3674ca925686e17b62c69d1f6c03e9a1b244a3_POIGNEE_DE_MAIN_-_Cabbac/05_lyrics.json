@@ -1,0 +1,45 @@
+{
+  "word_count": 145,
+  "unique_word_count": 101,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 145.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "mains,",
+    "main",
+    "Jeu",
+    "poignée",
+    "une",
+    "jeu",
+    "elle",
+    "Que",
+    "d'une",
+    "Quelquefois"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.303448275862069,
+    "most_common_words": [
+      [
+        "mains,",
+        6
+      ],
+      [
+        "main",
+        5
+      ],
+      [
+        "Jeu",
+        5
+      ],
+      [
+        "poignée",
+        4
+      ],
+      [
+        "une",
+        4
+      ]
+    ]
+  }
+}

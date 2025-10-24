@@ -1,0 +1,45 @@
+{
+  "word_count": 277,
+  "unique_word_count": 92,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 277.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Ouh-ah-ah,",
+    "ouh-ah-ah,",
+    "ouh-ah-ah",
+    "Christmas",
+    "Christmas,",
+    "All",
+    "want",
+    "only",
+    "you",
+    "Quand"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.667870036101083,
+    "most_common_words": [
+      [
+        "Ouh-ah-ah,",
+        14
+      ],
+      [
+        "ouh-ah-ah,",
+        14
+      ],
+      [
+        "ouh-ah-ah",
+        14
+      ],
+      [
+        "Christmas",
+        13
+      ],
+      [
+        "Christmas,",
+        12
+      ]
+    ]
+  }
+}

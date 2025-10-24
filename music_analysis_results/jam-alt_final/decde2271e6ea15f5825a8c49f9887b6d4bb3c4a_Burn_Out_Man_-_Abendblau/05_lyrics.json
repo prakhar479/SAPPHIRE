@@ -1,0 +1,45 @@
+{
+  "word_count": 313,
+  "unique_word_count": 145,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 313.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "noch",
+    "ist",
+    "Arbeit",
+    "nicht",
+    "Burnout-Man",
+    "die",
+    "sonst",
+    "musst",
+    "auch",
+    "übrig,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.536741214057508,
+    "most_common_words": [
+      [
+        "noch",
+        25
+      ],
+      [
+        "ist",
+        12
+      ],
+      [
+        "Arbeit",
+        10
+      ],
+      [
+        "nicht",
+        9
+      ],
+      [
+        "Burnout-Man",
+        8
+      ]
+    ]
+  }
+}

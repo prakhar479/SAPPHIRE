@@ -1,0 +1,45 @@
+{
+  "word_count": 198,
+  "unique_word_count": 83,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 198.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Ich",
+    "nicht",
+    "dich",
+    "kann",
+    "vergessen",
+    "gelingt",
+    "mir",
+    "warte,",
+    "bis",
+    "das"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5808080808080809,
+    "most_common_words": [
+      [
+        "Ich",
+        14
+      ],
+      [
+        "nicht",
+        14
+      ],
+      [
+        "dich",
+        9
+      ],
+      [
+        "kann",
+        5
+      ],
+      [
+        "vergessen",
+        4
+      ]
+    ]
+  }
+}

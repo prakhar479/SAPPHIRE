@@ -1,0 +1,45 @@
+{
+  "word_count": 353,
+  "unique_word_count": 154,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 353.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "dich",
+    "nicht",
+    "wie",
+    "ich",
+    "bist",
+    "und",
+    "sich",
+    "Bitte",
+    "beweg",
+    "die"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5637393767705383,
+    "most_common_words": [
+      [
+        "dich",
+        14
+      ],
+      [
+        "nicht",
+        12
+      ],
+      [
+        "wie",
+        12
+      ],
+      [
+        "ich",
+        12
+      ],
+      [
+        "bist",
+        9
+      ]
+    ]
+  }
+}

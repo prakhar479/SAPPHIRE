@@ -1,0 +1,152 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Music Analysis Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+            .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+            .header { text-align: center; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+            .section { margin: 20px 0; padding: 15px; border-left: 4px solid #4CAF50; background-color: #f9f9f9; }
+            .section h3 { color: #2E7D32; margin-top: 0; }
+            .metric { display: inline-block; margin: 10px; padding: 10px; background: #e8f5e8; border-radius: 5px; min-width: 150px; }
+            .metric-label { font-weight: bold; color: #2E7D32; }
+            .metric-value { font-size: 1.2em; color: #1B5E20; }
+            table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+            th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }
+            th { background-color: #4CAF50; color: white; }
+            .plot { text-align: center; margin: 20px 0; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>🎵 Music Analysis Report</h1>
+                <p><strong>File:</strong> /home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Slingshot_Miracle_-_Whistler.wav</p>
+                <p><strong>Analysis Date:</strong> 2025-10-24T19:26:48.349938</p>
+            </div>
+    
+            <div class="section">
+                <h3>📋 File Information</h3>
+                <div class="metric">
+                    <div class="metric-label">Sample Rate</div>
+                    <div class="metric-value">22050 Hz</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Processing Time</div>
+                    <div class="metric-value">18.67 sec</div>
+                </div>
+            </div>
+    
+            <div class="section">
+                <h3>🎼 Acoustic Features</h3>
+                <div class="metric">
+                    <div class="metric-label">Spectral Centroid</div>
+                    <div class="metric-value">2054.7 Hz</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Spectral Bandwidth</div>
+                    <div class="metric-value">2368.4 Hz</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Spectral Rolloff</div>
+                    <div class="metric-value">4477.6 Hz</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Spectral Flatness</div>
+                    <div class="metric-value">0.0207</div>
+                </div>
+            </div>
+    
+            <div class="section">
+                <h3>🥁 Rhythm Analysis</h3>
+                <div class="metric">
+                    <div class="metric-label">Tempo</div>
+                    <div class="metric-value">112.3 BPM</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Beat Count</div>
+                    <div class="metric-value">413</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Rhythm Regularity</div>
+                    <div class="metric-value">0.978</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Syncopation Index</div>
+                    <div class="metric-value">0.526</div>
+                </div>
+            </div>
+    
+            <div class="section">
+                <h3>🎹 Harmonic Analysis</h3>
+                <div class="metric">
+                    <div class="metric-label">Estimated Key</div>
+                    <div class="metric-value">C_major</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Key Confidence</div>
+                    <div class="metric-value">0.450</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Tonal Complexity</div>
+                    <div class="metric-value">0.105</div>
+                </div>
+            </div>
+    
+            <div class="section">
+                <h3>🔊 Audio Quality</h3>
+                <div class="metric">
+                    <div class="metric-label">SNR</div>
+                    <div class="metric-value">32.6 dB</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Dynamic Range</div>
+                    <div class="metric-value">16.0 dB</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">RMS Energy</div>
+                    <div class="metric-value">0.2022</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Zero Crossing Rate</div>
+                    <div class="metric-value">0.0779</div>
+                </div>
+            </div>
+    
+            <div class="section">
+                <h3>📝 Lyrics Analysis</h3>
+                <div class="metric">
+                    <div class="metric-label">Word Count</div>
+                    <div class="metric-value">163</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Unique Words</div>
+                    <div class="metric-value">112</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Sentences</div>
+                    <div class="metric-value">1</div>
+                </div>
+        
+                <div class="metric">
+                    <div class="metric-label">Repetition Ratio</div>
+                    <div class="metric-value">0.313</div>
+                </div>
+            </div>
+            <div class="section">
+                <h3>🔤 Top Keywords</h3>
+                <p>the, He's, whistler, not, his, for, The, Doesn't, Curtains, old</p>
+            </div>
+            
+            <div class="section">
+                <h3>📊 Analysis Plots</h3>
+                <div class="plot">
+                    <img src="analysis_plots.png" alt="Analysis Plots" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        
+        </div>
+    </body>
+    </html>
+    

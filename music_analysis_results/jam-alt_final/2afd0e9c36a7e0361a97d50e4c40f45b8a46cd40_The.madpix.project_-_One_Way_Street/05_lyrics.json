@@ -1,0 +1,45 @@
+{
+  "word_count": 209,
+  "unique_word_count": 128,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 209.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "one",
+    "way",
+    "you're",
+    "and",
+    "(oh,",
+    "street)",
+    "how",
+    "never",
+    "this"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3875598086124402,
+    "most_common_words": [
+      [
+        "you",
+        10
+      ],
+      [
+        "one",
+        8
+      ],
+      [
+        "way",
+        8
+      ],
+      [
+        "you're",
+        5
+      ],
+      [
+        "and",
+        4
+      ]
+    ]
+  }
+}

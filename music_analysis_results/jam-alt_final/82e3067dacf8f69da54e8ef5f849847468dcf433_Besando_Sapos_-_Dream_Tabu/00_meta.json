@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Besando_Sapos_-_Dream_Tabu.wav",
+  "file_hash": "82e3067dacf8f69da54e8ef5f849847468dcf433",
+  "duration_sec": 250.53061224489795,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:24:24.735900",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 21.50230598449707,
+  "original_path": "music_analysis_results/transcoded/Besando_Sapos_-_Dream_Tabu.wav"
+}

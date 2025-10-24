@@ -1,0 +1,45 @@
+{
+  "word_count": 201,
+  "unique_word_count": 82,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 201.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "que",
+    "Intentando",
+    "Mira,",
+    "van,",
+    "corre,",
+    "¿dónde",
+    "van?",
+    "(Uh-uh-uh,",
+    "pierdas",
+    "segundo"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.592039800995025,
+    "most_common_words": [
+      [
+        "que",
+        7
+      ],
+      [
+        "Intentando",
+        7
+      ],
+      [
+        "Mira,",
+        6
+      ],
+      [
+        "van,",
+        6
+      ],
+      [
+        "corre,",
+        6
+      ]
+    ]
+  }
+}

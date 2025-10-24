@@ -1,0 +1,45 @@
+{
+  "word_count": 336,
+  "unique_word_count": 244,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 336.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "les",
+    "que",
+    "pas",
+    "des",
+    "Milliardaire",
+    "(prolétaire)",
+    "vous",
+    "dans",
+    "tes",
+    "qui"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.27380952380952384,
+    "most_common_words": [
+      [
+        "les",
+        10
+      ],
+      [
+        "que",
+        5
+      ],
+      [
+        "pas",
+        5
+      ],
+      [
+        "des",
+        5
+      ],
+      [
+        "Milliardaire",
+        4
+      ]
+    ]
+  }
+}

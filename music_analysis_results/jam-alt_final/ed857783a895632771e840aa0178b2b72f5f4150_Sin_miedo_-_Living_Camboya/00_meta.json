@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Sin_miedo_-_Living_Camboya.wav",
+  "file_hash": "ed857783a895632771e840aa0178b2b72f5f4150",
+  "duration_sec": 222.88684807256234,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:24:25.526429",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 18.72760772705078,
+  "original_path": "music_analysis_results/transcoded/Sin_miedo_-_Living_Camboya.wav"
+}

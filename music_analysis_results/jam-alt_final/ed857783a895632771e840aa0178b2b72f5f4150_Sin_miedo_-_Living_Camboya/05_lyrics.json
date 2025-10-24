@@ -1,0 +1,45 @@
+{
+  "word_count": 172,
+  "unique_word_count": 89,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 172.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "que",
+    "miedo",
+    "Todo",
+    "sería",
+    "mejor",
+    "Decir",
+    "sin",
+    "pudiera",
+    "pudieras",
+    "siento"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4825581395348837,
+    "most_common_words": [
+      [
+        "que",
+        9
+      ],
+      [
+        "miedo",
+        8
+      ],
+      [
+        "Todo",
+        6
+      ],
+      [
+        "sería",
+        6
+      ],
+      [
+        "mejor",
+        6
+      ]
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Diosa_de_la_noche_-_Brunela_Crochenci.wav",
+  "file_hash": "c73f8067cdc842ab7ff1189abdd8fe9175c85b30",
+  "duration_sec": 230.0554648526077,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:25:12.504271",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 18.95363473892212,
+  "original_path": "music_analysis_results/transcoded/Diosa_de_la_noche_-_Brunela_Crochenci.wav"
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 194,
+  "unique_word_count": 70,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 194.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "parar",
+    "que",
+    "puedo",
+    "Decido",
+    "lugar",
+    "quiero",
+    "línea",
+    "cruzar",
+    "hay",
+    "mejor"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6391752577319587,
+    "most_common_words": [
+      [
+        "parar",
+        10
+      ],
+      [
+        "que",
+        8
+      ],
+      [
+        "puedo",
+        8
+      ],
+      [
+        "Decido",
+        8
+      ],
+      [
+        "lugar",
+        6
+      ]
+    ]
+  }
+}

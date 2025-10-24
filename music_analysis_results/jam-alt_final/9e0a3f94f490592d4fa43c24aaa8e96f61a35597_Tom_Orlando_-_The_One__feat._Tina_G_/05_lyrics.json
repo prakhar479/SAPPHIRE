@@ -1,0 +1,45 @@
+{
+  "word_count": 595,
+  "unique_word_count": 249,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 595.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "I'm",
+    "you",
+    "that",
+    "(come",
+    "home,",
+    "babe)",
+    "and",
+    "(Ooh-ooh)",
+    "think"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5815126050420167,
+    "most_common_words": [
+      [
+        "the",
+        21
+      ],
+      [
+        "I'm",
+        20
+      ],
+      [
+        "you",
+        19
+      ],
+      [
+        "that",
+        12
+      ],
+      [
+        "(come",
+        11
+      ]
+    ]
+  }
+}

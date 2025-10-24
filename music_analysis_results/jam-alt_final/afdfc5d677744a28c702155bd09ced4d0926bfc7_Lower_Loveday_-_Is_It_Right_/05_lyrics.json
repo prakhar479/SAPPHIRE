@@ -1,0 +1,45 @@
+{
+  "word_count": 216,
+  "unique_word_count": 83,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 216.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "thinking",
+    "about",
+    "all",
+    "but",
+    "I've",
+    "know",
+    "I'm",
+    "been",
+    "lately"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6157407407407407,
+    "most_common_words": [
+      [
+        "you",
+        10
+      ],
+      [
+        "thinking",
+        8
+      ],
+      [
+        "about",
+        8
+      ],
+      [
+        "all",
+        8
+      ],
+      [
+        "but",
+        7
+      ]
+    ]
+  }
+}

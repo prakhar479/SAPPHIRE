@@ -1,0 +1,45 @@
+{
+  "word_count": 96,
+  "unique_word_count": 50,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 96.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Uh-uh-uh-uh-uh-uh,",
+    "tristeza",
+    "muy",
+    "extraña",
+    "alimenta",
+    "belleza",
+    "uh-uh-uh-uh-uh,",
+    "uh-uh-uh",
+    "Soy",
+    "que"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.47916666666666663,
+    "most_common_words": [
+      [
+        "Uh-uh-uh-uh-uh-uh,",
+        4
+      ],
+      [
+        "tristeza",
+        3
+      ],
+      [
+        "muy",
+        3
+      ],
+      [
+        "extraña",
+        3
+      ],
+      [
+        "alimenta",
+        3
+      ]
+    ]
+  }
+}

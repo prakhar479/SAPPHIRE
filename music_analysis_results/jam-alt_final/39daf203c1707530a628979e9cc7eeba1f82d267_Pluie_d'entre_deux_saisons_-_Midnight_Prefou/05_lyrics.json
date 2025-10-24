@@ -1,0 +1,45 @@
+{
+  "word_count": 134,
+  "unique_word_count": 71,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 134.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Ah,",
+    "ah-ah,",
+    "ah,",
+    "Partir",
+    "vie",
+    "tourner",
+    "rond",
+    "Sensation",
+    "ineffable",
+    "mes"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4701492537313433,
+    "most_common_words": [
+      [
+        "Ah,",
+        8
+      ],
+      [
+        "ah-ah,",
+        8
+      ],
+      [
+        "ah,",
+        8
+      ],
+      [
+        "Partir",
+        3
+      ],
+      [
+        "vie",
+        3
+      ]
+    ]
+  }
+}

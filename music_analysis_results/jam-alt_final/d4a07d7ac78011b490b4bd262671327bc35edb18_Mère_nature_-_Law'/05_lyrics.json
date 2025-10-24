@@ -1,0 +1,45 @@
+{
+  "word_count": 252,
+  "unique_word_count": 108,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 252.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "suis",
+    "là,",
+    "mère",
+    "J'en",
+    "nature",
+    "pourriture",
+    "pas",
+    "terre",
+    "mature",
+    "las"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5714285714285714,
+    "most_common_words": [
+      [
+        "suis",
+        23
+      ],
+      [
+        "là,",
+        9
+      ],
+      [
+        "mère",
+        8
+      ],
+      [
+        "J'en",
+        7
+      ],
+      [
+        "nature",
+        6
+      ]
+    ]
+  }
+}

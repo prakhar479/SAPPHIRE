@@ -1,0 +1,45 @@
+{
+  "word_count": 455,
+  "unique_word_count": 137,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 455.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "bad",
+    "taste",
+    "side",
+    "Just",
+    "and",
+    "You",
+    "you",
+    "like",
+    "want",
+    "take"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6989010989010989,
+    "most_common_words": [
+      [
+        "bad",
+        21
+      ],
+      [
+        "taste",
+        20
+      ],
+      [
+        "side",
+        20
+      ],
+      [
+        "Just",
+        10
+      ],
+      [
+        "and",
+        7
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 536,
+  "unique_word_count": 211,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 536.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "nothin'",
+    "ain't",
+    "you",
+    "'em",
+    "like",
+    "don't",
+    "gon'",
+    "the",
+    "People",
+    "damn"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6063432835820896,
+    "most_common_words": [
+      [
+        "nothin'",
+        18
+      ],
+      [
+        "ain't",
+        15
+      ],
+      [
+        "you",
+        15
+      ],
+      [
+        "'em",
+        14
+      ],
+      [
+        "like",
+        14
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 212,
+  "unique_word_count": 126,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 212.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "que",
+    "soy",
+    "falta",
+    "Todo",
+    "Tengo",
+    "cuatro",
+    "mil",
+    "amigos,",
+    "tío",
+    "súper"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4056603773584906,
+    "most_common_words": [
+      [
+        "que",
+        6
+      ],
+      [
+        "soy",
+        3
+      ],
+      [
+        "falta",
+        3
+      ],
+      [
+        "Todo",
+        3
+      ],
+      [
+        "Tengo",
+        2
+      ]
+    ]
+  }
+}

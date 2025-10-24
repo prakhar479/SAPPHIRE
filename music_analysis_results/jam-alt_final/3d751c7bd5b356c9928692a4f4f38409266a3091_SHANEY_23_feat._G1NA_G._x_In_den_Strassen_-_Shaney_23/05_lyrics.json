@@ -1,0 +1,45 @@
+{
+  "word_count": 445,
+  "unique_word_count": 252,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 445.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "der",
+    "wie",
+    "ein",
+    "die",
+    "auf",
+    "den",
+    "ich",
+    "zum",
+    "und",
+    "bis"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4337078651685393,
+    "most_common_words": [
+      [
+        "der",
+        16
+      ],
+      [
+        "wie",
+        10
+      ],
+      [
+        "ein",
+        10
+      ],
+      [
+        "die",
+        10
+      ],
+      [
+        "auf",
+        10
+      ]
+    ]
+  }
+}

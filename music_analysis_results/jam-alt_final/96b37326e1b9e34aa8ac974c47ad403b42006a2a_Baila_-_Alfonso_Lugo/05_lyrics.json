@@ -1,0 +1,45 @@
+{
+  "word_count": 284,
+  "unique_word_count": 141,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 284.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "que",
+    "Baila,",
+    "baila,",
+    "baby,",
+    "tus",
+    "Que",
+    "hasta",
+    "esta",
+    "noche",
+    "pa'"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5035211267605634,
+    "most_common_words": [
+      [
+        "que",
+        12
+      ],
+      [
+        "Baila,",
+        12
+      ],
+      [
+        "baila,",
+        12
+      ],
+      [
+        "baby,",
+        10
+      ],
+      [
+        "tus",
+        8
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 178,
+  "unique_word_count": 80,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 178.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "many",
+    "gonna",
+    "and",
+    "How",
+    "Keep",
+    "your",
+    "dreams",
+    "don't",
+    "(mmm-mmm-mmm-mmm)",
+    "for"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.550561797752809,
+    "most_common_words": [
+      [
+        "many",
+        12
+      ],
+      [
+        "gonna",
+        8
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "How",
+        5
+      ],
+      [
+        "Keep",
+        4
+      ]
+    ]
+  }
+}

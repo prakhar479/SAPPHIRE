@@ -1,0 +1,45 @@
+{
+  "word_count": 321,
+  "unique_word_count": 166,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 321.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "pas",
+    "dans",
+    "pourquoi",
+    "plus",
+    "Mais",
+    "ces",
+    "toutes",
+    "Qui",
+    "demande",
+    "Ces"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4828660436137072,
+    "most_common_words": [
+      [
+        "pas",
+        10
+      ],
+      [
+        "dans",
+        8
+      ],
+      [
+        "pourquoi",
+        8
+      ],
+      [
+        "plus",
+        7
+      ],
+      [
+        "Mais",
+        5
+      ]
+    ]
+  }
+}

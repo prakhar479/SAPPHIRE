@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Intentando_Destacar_-_Sundayers_.wav",
+  "file_hash": "d131fe699f2d34475a2245429afacf3c18f0bd1a",
+  "duration_sec": 220.02344671201814,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:25:42.771861",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 18.749481678009033,
+  "original_path": "music_analysis_results/transcoded/Intentando_Destacar_-_Sundayers_.wav"
+}

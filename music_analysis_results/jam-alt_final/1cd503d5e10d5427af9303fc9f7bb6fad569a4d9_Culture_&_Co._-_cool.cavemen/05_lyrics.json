@@ -1,0 +1,45 @@
+{
+  "word_count": 136,
+  "unique_word_count": 71,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 34.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "veux",
+    "dans",
+    "faire",
+    "jouer",
+    "rôle",
+    "Attends",
+    "encore,",
+    "Culture",
+    "and",
+    "Co."
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4779411764705882,
+    "most_common_words": [
+      [
+        "veux",
+        4
+      ],
+      [
+        "dans",
+        4
+      ],
+      [
+        "faire",
+        3
+      ],
+      [
+        "jouer",
+        3
+      ],
+      [
+        "rôle",
+        3
+      ]
+    ]
+  }
+}

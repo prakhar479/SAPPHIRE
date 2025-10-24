@@ -1,0 +1,45 @@
+{
+  "word_count": 329,
+  "unique_word_count": 151,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 329.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "c'est",
+    "t'es",
+    "coup",
+    "trop",
+    "mais",
+    "plus",
+    "eh,",
+    "pour",
+    "pas",
+    "guerre,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.541033434650456,
+    "most_common_words": [
+      [
+        "c'est",
+        10
+      ],
+      [
+        "t'es",
+        8
+      ],
+      [
+        "coup",
+        8
+      ],
+      [
+        "trop",
+        8
+      ],
+      [
+        "mais",
+        6
+      ]
+    ]
+  }
+}

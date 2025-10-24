@@ -1,0 +1,45 @@
+{
+  "word_count": 182,
+  "unique_word_count": 91,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 182.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "dich",
+    "Ich",
+    "tut",
+    "weh,",
+    "mich",
+    "mir",
+    "gehen",
+    "ich",
+    "seh'n",
+    "von"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5,
+    "most_common_words": [
+      [
+        "dich",
+        10
+      ],
+      [
+        "Ich",
+        9
+      ],
+      [
+        "tut",
+        7
+      ],
+      [
+        "weh,",
+        7
+      ],
+      [
+        "mich",
+        5
+      ]
+    ]
+  }
+}

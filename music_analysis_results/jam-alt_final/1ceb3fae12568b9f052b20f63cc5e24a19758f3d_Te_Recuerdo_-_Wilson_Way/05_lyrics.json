@@ -1,0 +1,45 @@
+{
+  "word_count": 472,
+  "unique_word_count": 185,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 472.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "que",
+    "quiero",
+    "por",
+    "pensar",
+    "fuimos",
+    "dejo",
+    "estoy",
+    "estar",
+    "voy",
+    "puedo"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6080508474576272,
+    "most_common_words": [
+      [
+        "que",
+        27
+      ],
+      [
+        "quiero",
+        8
+      ],
+      [
+        "por",
+        8
+      ],
+      [
+        "pensar",
+        7
+      ],
+      [
+        "fuimos",
+        7
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 135,
+  "unique_word_count": 83,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 135.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "will",
+    "ich",
+    "Ich",
+    "mich",
+    "dich",
+    "was",
+    "ruft",
+    "frei",
+    "auch",
+    "von"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3851851851851852,
+    "most_common_words": [
+      [
+        "will",
+        5
+      ],
+      [
+        "ich",
+        5
+      ],
+      [
+        "Ich",
+        4
+      ],
+      [
+        "mich",
+        4
+      ],
+      [
+        "dich",
+        3
+      ]
+    ]
+  }
+}

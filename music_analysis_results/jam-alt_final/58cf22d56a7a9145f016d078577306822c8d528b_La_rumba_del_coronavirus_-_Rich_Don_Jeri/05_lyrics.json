@@ -1,0 +1,45 @@
+{
+  "word_count": 225,
+  "unique_word_count": 121,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 225.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Coronavirus,",
+    "virus",
+    "coronavirus",
+    "Coronavirus",
+    "había",
+    "Entonces",
+    "poco",
+    "Papa",
+    "todos",
+    "esta"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4622222222222222,
+    "most_common_words": [
+      [
+        "Coronavirus,",
+        28
+      ],
+      [
+        "virus",
+        20
+      ],
+      [
+        "coronavirus",
+        10
+      ],
+      [
+        "Coronavirus",
+        4
+      ],
+      [
+        "había",
+        2
+      ]
+    ]
+  }
+}

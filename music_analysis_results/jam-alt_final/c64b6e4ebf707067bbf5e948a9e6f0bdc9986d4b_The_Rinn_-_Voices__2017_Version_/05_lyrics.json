@@ -1,0 +1,45 @@
+{
+  "word_count": 201,
+  "unique_word_count": 92,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 201.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "their",
+    "the",
+    "voice",
+    "lost",
+    "Sharing",
+    "moonlight",
+    "time",
+    "you",
+    "Hear",
+    "that's"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5422885572139303,
+    "most_common_words": [
+      [
+        "their",
+        15
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "voice",
+        7
+      ],
+      [
+        "lost",
+        6
+      ],
+      [
+        "Sharing",
+        5
+      ]
+    ]
+  }
+}

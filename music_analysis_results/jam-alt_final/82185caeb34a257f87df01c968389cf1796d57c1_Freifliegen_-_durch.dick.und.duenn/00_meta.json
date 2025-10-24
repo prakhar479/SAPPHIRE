@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Freifliegen_-_durch.dick.und.duenn.wav",
+  "file_hash": "82185caeb34a257f87df01c968389cf1796d57c1",
+  "duration_sec": 250.25596371882085,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:28:55.424411",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 20.332919120788574,
+  "original_path": "music_analysis_results/transcoded/Freifliegen_-_durch.dick.und.duenn.wav"
+}

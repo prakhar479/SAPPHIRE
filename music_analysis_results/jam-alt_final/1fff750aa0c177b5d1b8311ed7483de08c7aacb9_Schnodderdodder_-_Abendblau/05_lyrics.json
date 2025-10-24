@@ -1,0 +1,45 @@
+{
+  "word_count": 292,
+  "unique_word_count": 131,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 292.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "ich",
+    "Und",
+    "der",
+    "und",
+    "den",
+    "Schnodder",
+    "hoch",
+    "die",
+    "Ja,",
+    "das"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5513698630136986,
+    "most_common_words": [
+      [
+        "ich",
+        18
+      ],
+      [
+        "Und",
+        17
+      ],
+      [
+        "der",
+        16
+      ],
+      [
+        "und",
+        12
+      ],
+      [
+        "den",
+        10
+      ]
+    ]
+  }
+}

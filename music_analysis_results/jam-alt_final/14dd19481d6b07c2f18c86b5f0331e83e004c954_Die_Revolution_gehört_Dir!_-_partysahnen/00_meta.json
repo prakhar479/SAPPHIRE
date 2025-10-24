@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Die_Revolution_gehört_Dir!_-_partysahnen.wav",
+  "file_hash": "14dd19481d6b07c2f18c86b5f0331e83e004c954",
+  "duration_sec": 167.47664399092972,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:28:15.204310",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 13.020001649856567,
+  "original_path": "music_analysis_results/transcoded/Die_Revolution_gehört_Dir!_-_partysahnen.wav"
+}

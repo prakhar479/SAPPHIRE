@@ -1,0 +1,45 @@
+{
+  "word_count": 143,
+  "unique_word_count": 72,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 143.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "don't",
+    "and",
+    "Oh-oh-oh-oh-oh,",
+    "I'm",
+    "through",
+    "Now",
+    "want",
+    "'cause"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.49650349650349646,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "you",
+        7
+      ],
+      [
+        "don't",
+        5
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "Oh-oh-oh-oh-oh,",
+        4
+      ]
+    ]
+  }
+}

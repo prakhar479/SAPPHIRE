@@ -1,0 +1,45 @@
+{
+  "word_count": 336,
+  "unique_word_count": 102,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 336.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "doo,",
+    "the",
+    "Doo-doo-doo,",
+    "doo-doo-doo,",
+    "you",
+    "And",
+    "You're",
+    "doo",
+    "You",
+    "like"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6964285714285714,
+    "most_common_words": [
+      [
+        "doo,",
+        20
+      ],
+      [
+        "the",
+        17
+      ],
+      [
+        "Doo-doo-doo,",
+        16
+      ],
+      [
+        "doo-doo-doo,",
+        16
+      ],
+      [
+        "you",
+        14
+      ]
+    ]
+  }
+}

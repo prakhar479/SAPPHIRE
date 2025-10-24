@@ -1,0 +1,45 @@
+{
+  "word_count": 199,
+  "unique_word_count": 80,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 199.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Veränderung",
+    "Zeit",
+    "die",
+    "für",
+    "ist",
+    "das",
+    "wie",
+    "ich",
+    "Mein",
+    "Chef"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5979899497487438,
+    "most_common_words": [
+      [
+        "Veränderung",
+        19
+      ],
+      [
+        "Zeit",
+        11
+      ],
+      [
+        "die",
+        10
+      ],
+      [
+        "für",
+        10
+      ],
+      [
+        "ist",
+        7
+      ]
+    ]
+  }
+}

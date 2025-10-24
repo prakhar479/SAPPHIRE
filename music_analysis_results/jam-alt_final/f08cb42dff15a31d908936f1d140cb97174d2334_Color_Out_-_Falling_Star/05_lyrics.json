@@ -1,0 +1,45 @@
+{
+  "word_count": 273,
+  "unique_word_count": 122,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 273.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "And",
+    "you",
+    "and",
+    "time",
+    "waited",
+    "come",
+    "your",
+    "it's",
+    "all",
+    "the"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5531135531135531,
+    "most_common_words": [
+      [
+        "And",
+        13
+      ],
+      [
+        "you",
+        13
+      ],
+      [
+        "and",
+        8
+      ],
+      [
+        "time",
+        7
+      ],
+      [
+        "waited",
+        6
+      ]
+    ]
+  }
+}

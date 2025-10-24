@@ -1,0 +1,45 @@
+{
+  "word_count": 151,
+  "unique_word_count": 98,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 151.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "der",
+    "Wir",
+    "Und",
+    "stehn",
+    "auf",
+    "Stelle",
+    "Die",
+    "ist",
+    "Der",
+    "uns"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3509933774834437,
+    "most_common_words": [
+      [
+        "der",
+        8
+      ],
+      [
+        "Wir",
+        6
+      ],
+      [
+        "Und",
+        6
+      ],
+      [
+        "stehn",
+        5
+      ],
+      [
+        "auf",
+        5
+      ]
+    ]
+  }
+}

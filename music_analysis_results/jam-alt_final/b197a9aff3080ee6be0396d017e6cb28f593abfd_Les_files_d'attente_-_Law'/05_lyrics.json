@@ -1,0 +1,45 @@
+{
+  "word_count": 268,
+  "unique_word_count": 127,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 268.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Allez,",
+    "Ouh-ouh,",
+    "ouh-ouh-ouh-ouh",
+    "Ils",
+    "dessus,",
+    "est",
+    "allez",
+    "peu",
+    "tous",
+    "plus"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5261194029850746,
+    "most_common_words": [
+      [
+        "Allez,",
+        9
+      ],
+      [
+        "Ouh-ouh,",
+        8
+      ],
+      [
+        "ouh-ouh-ouh-ouh",
+        8
+      ],
+      [
+        "Ils",
+        6
+      ],
+      [
+        "dessus,",
+        6
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 148,
+  "unique_word_count": 89,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 148.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "meines",
+    "Jesus,",
+    "Licht",
+    "Leid,",
+    "Jesus",
+    "ich",
+    "Lebens",
+    "war",
+    "mir",
+    "geboren"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3986486486486487,
+    "most_common_words": [
+      [
+        "meines",
+        4
+      ],
+      [
+        "Jesus,",
+        4
+      ],
+      [
+        "Licht",
+        4
+      ],
+      [
+        "Leid,",
+        4
+      ],
+      [
+        "Jesus",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 113,
+  "unique_word_count": 72,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 113.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "ah-ah,",
+    "Ah-ah,",
+    "ah-ah",
+    "Ooh-ooh-ooh,",
+    "ooh-ooh",
+    "the",
+    "that",
+    "I'm",
+    "okay",
+    "can"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.36283185840707965,
+    "most_common_words": [
+      [
+        "ah-ah,",
+        10
+      ],
+      [
+        "Ah-ah,",
+        5
+      ],
+      [
+        "ah-ah",
+        5
+      ],
+      [
+        "Ooh-ooh-ooh,",
+        4
+      ],
+      [
+        "ooh-ooh",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Explosive_Ear_Candy_-_Like_The_Sun.wav",
+  "file_hash": "9686a3e63e9cf9a7385643f1501b188eecd4aa16",
+  "duration_sec": 192.92167800453515,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:27:10.254806",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 18.19175934791565,
+  "original_path": "music_analysis_results/transcoded/Explosive_Ear_Candy_-_Like_The_Sun.wav"
+}
