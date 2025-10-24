@@ -207,7 +207,7 @@ def process_track(
             "provenance": {
                 "original_audio_path": str(audio_path),
                 "original_lyrics_path": str(lyrics_path),
-                "processing_date": datetime.now(datetime.timezone.utc).isoformat(),
+                "processing_date": datetime.now(timezone.utc).isoformat(),
                 "script_version": "1.0.0",  # Or git hash
             },
             "audio_properties": {
