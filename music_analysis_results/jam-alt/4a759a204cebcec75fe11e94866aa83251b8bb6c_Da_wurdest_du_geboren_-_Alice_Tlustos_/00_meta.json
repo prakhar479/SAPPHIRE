@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Da_wurdest_du_geboren_-_Alice_Tlustos_.wav",
+  "file_hash": "4a759a204cebcec75fe11e94866aa83251b8bb6c",
+  "duration_sec": 207.36108843537414,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:20:04.982892",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 15.162607669830322,
+  "original_path": "music_analysis_results/transcoded/Da_wurdest_du_geboren_-_Alice_Tlustos_.wav"
+}

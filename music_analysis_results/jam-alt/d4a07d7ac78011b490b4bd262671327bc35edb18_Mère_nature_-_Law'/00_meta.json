@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Mère_nature_-_Law'.wav",
+  "file_hash": "d4a07d7ac78011b490b4bd262671327bc35edb18",
+  "duration_sec": 225.27274376417233,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:15:37.141338",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 16.086347103118896,
+  "original_path": "music_analysis_results/transcoded/Mère_nature_-_Law'.wav"
+}

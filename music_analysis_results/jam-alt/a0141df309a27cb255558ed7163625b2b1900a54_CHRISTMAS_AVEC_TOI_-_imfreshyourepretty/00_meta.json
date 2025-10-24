@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/CHRISTMAS_AVEC_TOI_-_imfreshyourepretty.wav",
+  "file_hash": "a0141df309a27cb255558ed7163625b2b1900a54",
+  "duration_sec": 233.6332426303855,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:14:49.637778",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 17.317593812942505,
+  "original_path": "music_analysis_results/transcoded/CHRISTMAS_AVEC_TOI_-_imfreshyourepretty.wav"
+}

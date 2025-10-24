@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Lower_Loveday_-_Is_It_Right_.wav",
+  "file_hash": "afdfc5d677744a28c702155bd09ced4d0926bfc7",
+  "duration_sec": 180.06149659863945,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:18:03.881422",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 13.6748788356781,
+  "original_path": "music_analysis_results/transcoded/Lower_Loveday_-_Is_It_Right_.wav"
+}

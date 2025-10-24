@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/¡Óyeme_tiburón!_-_Corrientes.wav",
+  "file_hash": "79d925c3d2ccbeea707ec1a9ef5eb8072b83921e",
+  "duration_sec": 180.13111111111112,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:16:52.218074",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 15.098734140396118,
+  "original_path": "music_analysis_results/transcoded/¡Óyeme_tiburón!_-_Corrientes.wav"
+}

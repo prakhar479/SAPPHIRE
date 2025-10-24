@@ -1,0 +1,26 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/data/raw/jam-alt/audio/Avercage_-_Embers.mp3",
+  "file_hash": "a0da2860143cb81368c4ae4b645694e0362e628d",
+  "duration_sec": 0.0,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:08:13.890749",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 1,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": false,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "original_path": "data/raw/jam-alt/audio/Avercage_-_Embers.mp3"
+}

@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Palabras_-_Javier_Gomez_Bello.wav",
+  "file_hash": "a21b67f202510551c3bccc8ce0d6e1b2b3eb8316",
+  "duration_sec": 216.22421768707483,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:16:32.994004",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 15.643952369689941,
+  "original_path": "music_analysis_results/transcoded/Palabras_-_Javier_Gomez_Bello.wav"
+}

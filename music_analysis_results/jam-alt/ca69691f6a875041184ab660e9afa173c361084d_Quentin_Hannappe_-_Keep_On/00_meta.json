@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Quentin_Hannappe_-_Keep_On.wav",
+  "file_hash": "ca69691f6a875041184ab660e9afa173c361084d",
+  "duration_sec": 189.84,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:17:49.850942",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 15.335394144058228,
+  "original_path": "music_analysis_results/transcoded/Quentin_Hannappe_-_Keep_On.wav"
+}

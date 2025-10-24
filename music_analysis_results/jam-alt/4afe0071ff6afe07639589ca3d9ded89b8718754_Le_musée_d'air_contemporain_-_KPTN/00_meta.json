@@ -1,0 +1,27 @@
+{
+  "path": "/home/kushal/Desktop/UG_4/Music/Sprint2/SAPPHIRE/music_analysis_results/transcoded/Le_musée_d'air_contemporain_-_KPTN.wav",
+  "file_hash": "4afe0071ff6afe07639589ca3d9ded89b8718754",
+  "duration_sec": 184.2031292517007,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T17:14:25.775706",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false,
+    "force_transcode": true,
+    "transcode_dir": null
+  },
+  "processing_time_sec": 20.32654094696045,
+  "original_path": "music_analysis_results/transcoded/Le_musée_d'air_contemporain_-_KPTN.wav"
+}
