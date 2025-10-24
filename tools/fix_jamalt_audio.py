@@ -21,8 +21,10 @@ import os
 from huggingface_hub import snapshot_download
 
 
-def resolve_and_copy(snapshot_dir: Path, filename: str, dest_dir: Path, dry_run: bool = True):
-    src = snapshot_dir / 'audio' / filename
+def resolve_and_copy(
+    snapshot_dir: Path, filename: str, dest_dir: Path, dry_run: bool = True
+):
+    src = snapshot_dir / "audio" / filename
     if not src.exists():
         print(f"[WARN] audio entry not found in snapshot: {filename}")
         return False
@@ -56,31 +58,31 @@ def resolve_and_copy(snapshot_dir: Path, filename: str, dest_dir: Path, dry_run:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', default='jamendolyrics/jam-alt')
-    parser.add_argument('--out-root', type=Path, default=Path('data/raw/jam-alt'))
-    parser.add_argument('--split', default='test')
-    parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument("--dataset", default="jamendolyrics/jam-alt")
+    parser.add_argument("--out-root", type=Path, default=Path("data/raw/jam-alt"))
+    parser.add_argument("--split", default="test")
+    parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
     out_root = args.out_root
-    audio_dir = out_root / 'audio'
-    lyrics_dir = out_root / 'lyrics'
+    audio_dir = out_root / "audio"
+    lyrics_dir = out_root / "lyrics"
 
-    print('Downloading HF snapshot (or using cached copy)')
-    snapshot_dir = Path(snapshot_download(repo_id=args.dataset, repo_type='dataset'))
-    print('Snapshot at', snapshot_dir)
+    print("Downloading HF snapshot (or using cached copy)")
+    snapshot_dir = Path(snapshot_download(repo_id=args.dataset, repo_type="dataset"))
+    print("Snapshot at", snapshot_dir)
 
-    metadata = snapshot_dir / 'metadata.csv'
+    metadata = snapshot_dir / "metadata.csv"
     if not metadata.exists():
-        print('metadata.csv not found in snapshot; aborting')
+        print("metadata.csv not found in snapshot; aborting")
         return 1
 
     # Read metadata and copy corresponding audio blobs
     replaced = 0
-    with open(metadata, encoding='utf-8') as f:
+    with open(metadata, encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            filepath = row.get('Filepath')
+            filepath = row.get("Filepath")
             if not filepath:
                 continue
             filename = Path(filepath).name
@@ -96,7 +98,9 @@ def main():
                     pass
 
             if need_replace:
-                ok = resolve_and_copy(snapshot_dir, filename, audio_dir, dry_run=args.dry_run)
+                ok = resolve_and_copy(
+                    snapshot_dir, filename, audio_dir, dry_run=args.dry_run
+                )
                 if ok and not args.dry_run:
                     replaced += 1
 
@@ -104,5 +108,5 @@ def main():
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     raise SystemExit(main())

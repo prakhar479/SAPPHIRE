@@ -17,10 +17,7 @@ snapshot_download(
     repo_id=dataset_repo_id,
     repo_type="dataset",
     local_dir=local_dir,
-    allow_patterns=[
-        "subsets/*/audio/*.mp3", 
-        "subsets/*/parquet/*.parquet"
-    ]
+    allow_patterns=["subsets/*/audio/*.mp3", "subsets/*/parquet/*.parquet"],
 )
 
 print("\n--- Download complete! ---")

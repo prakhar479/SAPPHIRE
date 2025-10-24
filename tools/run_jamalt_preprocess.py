@@ -59,7 +59,13 @@ def save_audio(audio_field, out_path: Path):
     return False
 
 
-def download_and_dump(dataset_id: str, split: str, out_root: Path, config_name: str = None, stream: bool = True):
+def download_and_dump(
+    dataset_id: str,
+    split: str,
+    out_root: Path,
+    config_name: str = None,
+    stream: bool = True,
+):
     """Download dataset entries to out_root. When stream=True the HF dataset is loaded in
     streaming mode (no full in-memory decoding) which is safer for large audio datasets.
     """
@@ -84,11 +90,15 @@ def download_and_dump(dataset_id: str, split: str, out_root: Path, config_name: 
 
     if snapshot_download is not None:
         try:
-            print(f"Downloading dataset repo via huggingface_hub.snapshot_download('{dataset_id}')...")
+            print(
+                f"Downloading dataset repo via huggingface_hub.snapshot_download('{dataset_id}')..."
+            )
             repo_dir = snapshot_download(repo_id=dataset_id, repo_type="dataset")
             metadata_path = Path(repo_dir) / "metadata.csv"
             if not metadata_path.exists():
-                raise FileNotFoundError(f"metadata.csv not found in snapshot at {repo_dir}")
+                raise FileNotFoundError(
+                    f"metadata.csv not found in snapshot at {repo_dir}"
+                )
 
             import csv
 
@@ -105,13 +115,17 @@ def download_and_dump(dataset_id: str, split: str, out_root: Path, config_name: 
                         shutil.copy(src_audio, audio_dir / src_audio.name)
 
                     # lyrics
-                    src_lyrics = Path(repo_dir) / "lyrics" / (Path(filepath).stem + ".txt")
+                    src_lyrics = (
+                        Path(repo_dir) / "lyrics" / (Path(filepath).stem + ".txt")
+                    )
                     if src_lyrics.exists():
                         shutil.copy(src_lyrics, lyrics_dir / src_lyrics.name)
 
                     written += 1
 
-            print(f"Wrote {written} examples. Audio files in {audio_dir}, lyrics in {lyrics_dir}.")
+            print(
+                f"Wrote {written} examples. Audio files in {audio_dir}, lyrics in {lyrics_dir}."
+            )
             return audio_dir, lyrics_dir
         except Exception as e:
             print(f"huggingface_hub snapshot_download approach failed: {e}")
@@ -154,17 +168,23 @@ def download_and_dump(dataset_id: str, split: str, out_root: Path, config_name: 
 
                 written += 1
     except MemoryError:
-        print("MemoryError while loading dataset: try running with streaming enabled (default). Exiting.")
+        print(
+            "MemoryError while loading dataset: try running with streaming enabled (default). Exiting."
+        )
         raise
     except Exception as e:
         print(f"Error while iterating dataset: {e}")
         raise
 
-    print(f"Wrote {written} examples. Audio files in {audio_dir}, lyrics in {lyrics_dir}.")
+    print(
+        f"Wrote {written} examples. Audio files in {audio_dir}, lyrics in {lyrics_dir}."
+    )
     return audio_dir, lyrics_dir
 
 
-def run_preprocessing(preprocessing_py: Path, audio_dir: Path, lyrics_dir: Path, out_processed: Path):
+def run_preprocessing(
+    preprocessing_py: Path, audio_dir: Path, lyrics_dir: Path, out_processed: Path
+):
     """Load preprocessing.py as a module, patch its INPUT paths, and call main()."""
     print(f"Loading preprocessing from {preprocessing_py}")
     loader = SourceFileLoader("preprocessing_module", str(preprocessing_py))
@@ -186,17 +206,43 @@ def run_preprocessing(preprocessing_py: Path, audio_dir: Path, lyrics_dir: Path,
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", default="jamendolyrics/jam-alt", help="HF dataset id")
+    parser.add_argument(
+        "--dataset", default="jamendolyrics/jam-alt", help="HF dataset id"
+    )
     parser.add_argument("--split", default="test", help="Split to load")
-    parser.add_argument("--config", default=None, help="Optional config/name for the HF dataset (e.g., 'en', 'es')")
-    parser.add_argument("--out-root", type=Path, default=Path("data/raw/jam-alt"), help="Where to dump audio/lyrics")
-    parser.add_argument("--run-preprocess", action="store_true", help="After download, call the repository preprocessing pipeline")
-    parser.add_argument("--no-stream", action="store_true", help="Disable streaming mode (may use lots of memory). By default streaming is enabled.")
-    parser.add_argument("--processed-out", type=Path, default=Path("processed_jamalt"), help="Output dir for preprocessing results if --run-preprocess is used")
+    parser.add_argument(
+        "--config",
+        default=None,
+        help="Optional config/name for the HF dataset (e.g., 'en', 'es')",
+    )
+    parser.add_argument(
+        "--out-root",
+        type=Path,
+        default=Path("data/raw/jam-alt"),
+        help="Where to dump audio/lyrics",
+    )
+    parser.add_argument(
+        "--run-preprocess",
+        action="store_true",
+        help="After download, call the repository preprocessing pipeline",
+    )
+    parser.add_argument(
+        "--no-stream",
+        action="store_true",
+        help="Disable streaming mode (may use lots of memory). By default streaming is enabled.",
+    )
+    parser.add_argument(
+        "--processed-out",
+        type=Path,
+        default=Path("processed_jamalt"),
+        help="Output dir for preprocessing results if --run-preprocess is used",
+    )
     args = parser.parse_args()
 
     stream = not args.no_stream
-    audio_dir, lyrics_dir = download_and_dump(args.dataset, args.split, args.out_root, args.config, stream=stream)
+    audio_dir, lyrics_dir = download_and_dump(
+        args.dataset, args.split, args.out_root, args.config, stream=stream
+    )
 
     if args.run_preprocess:
         # Find preprocessing.py in repo
