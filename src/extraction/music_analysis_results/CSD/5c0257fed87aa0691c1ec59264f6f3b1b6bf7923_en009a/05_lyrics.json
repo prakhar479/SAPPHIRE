@@ -1,0 +1,43 @@
+{
+  "word_count": 128,
+  "unique_word_count": 12,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 128.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "can",
+    "you",
+    "out",
+    "like",
+    "this",
+    "it's",
+    "lovely",
+    "game"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.90625,
+    "most_common_words": [
+      [
+        "can",
+        12
+      ],
+      [
+        "you",
+        12
+      ],
+      [
+        "out",
+        12
+      ],
+      [
+        "like",
+        12
+      ],
+      [
+        "this",
+        12
+      ]
+    ]
+  }
+}

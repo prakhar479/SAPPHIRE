@@ -1,0 +1,45 @@
+{
+  "word_count": 80,
+  "unique_word_count": 14,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 80.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Teddy",
+    "says",
+    "your",
+    "clap",
+    "hands",
+    "nod",
+    "head",
+    "stamp",
+    "feet",
+    "bend"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.825,
+    "most_common_words": [
+      [
+        "Teddy",
+        12
+      ],
+      [
+        "says",
+        12
+      ],
+      [
+        "your",
+        12
+      ],
+      [
+        "clap",
+        4
+      ],
+      [
+        "hands",
+        4
+      ]
+    ]
+  }
+}

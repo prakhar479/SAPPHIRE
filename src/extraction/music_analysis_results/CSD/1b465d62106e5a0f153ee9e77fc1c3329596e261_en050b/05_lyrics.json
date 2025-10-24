@@ -1,0 +1,45 @@
+{
+  "word_count": 117,
+  "unique_word_count": 73,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 117.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "Maggie",
+    "and",
+    "The",
+    "Where",
+    "were",
+    "young",
+    "hill",
+    "old",
+    "mill"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.37606837606837606,
+    "most_common_words": [
+      [
+        "the",
+        11
+      ],
+      [
+        "Maggie",
+        8
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "The",
+        3
+      ],
+      [
+        "Where",
+        3
+      ]
+    ]
+  }
+}

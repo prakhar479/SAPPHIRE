@@ -1,0 +1,45 @@
+{
+  "word_count": 181,
+  "unique_word_count": 65,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 181.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "reindeer",
+    "Rudolph",
+    "the",
+    "you",
+    "red",
+    "nosed",
+    "nose",
+    "say",
+    "him",
+    "Then"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6408839779005524,
+    "most_common_words": [
+      [
+        "reindeer",
+        10
+      ],
+      [
+        "Rudolph",
+        8
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "you",
+        6
+      ],
+      [
+        "red",
+        4
+      ]
+    ]
+  }
+}

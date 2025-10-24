@@ -1,0 +1,45 @@
+{
+  "word_count": 73,
+  "unique_word_count": 33,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 73.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "row",
+    "Row",
+    "your",
+    "boat",
+    "Gently",
+    "the",
+    "merrily",
+    "you",
+    "see",
+    "forget"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.547945205479452,
+    "most_common_words": [
+      [
+        "row",
+        8
+      ],
+      [
+        "Row",
+        4
+      ],
+      [
+        "your",
+        4
+      ],
+      [
+        "boat",
+        4
+      ],
+      [
+        "Gently",
+        4
+      ]
+    ]
+  }
+}

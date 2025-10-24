@@ -1,0 +1,602 @@
+{
+    "kr001a": {
+        "songname": "알파벳 송",
+        "key_diff": 0,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr001b": {
+        "songname": "알파벳 송",
+        "key_diff": 4,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr002a": {
+        "songname": "천사들의 노래가",
+        "key_diff": 0,
+        "tempo": 111,
+        "time_signature": "4/4"
+    },
+    "kr002b": {
+        "songname": "천사들의 노래가",
+        "key_diff": -4,
+        "tempo": 111,
+        "time_signature": "4/4"
+    },
+    "kr003a": {
+        "songname": "곰 세 마리",
+        "key_diff": 0,
+        "tempo": 115,
+        "time_signature": "4/4"
+    },
+    "kr003b": {
+        "songname": "곰 세 마리",
+        "key_diff": 5,
+        "tempo": 115,
+        "time_signature": "4/4"
+    },
+    "kr004a": {
+        "songname": "빙고",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr004b": {
+        "songname": "빙고",
+        "key_diff": -4,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr005a": {
+        "songname": "내 동생",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr005b": {
+        "songname": "내 동생",
+        "key_diff": -4,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr006a": {
+        "songname": "나비야",
+        "key_diff": 0,
+        "tempo": 65,
+        "time_signature": "4/4"
+    },
+    "kr006b": {
+        "songname": "나비야",
+        "key_diff": -6,
+        "tempo": 65,
+        "time_signature": "4/4"
+    },
+    "kr007a": {
+        "songname": "솜사탕",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr007b": {
+        "songname": "솜사탕",
+        "key_diff": -4,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr008a": {
+        "songname": "마법의 성",
+        "key_diff": 0,
+        "tempo": 70,
+        "time_signature": "4/4"
+    },
+    "kr008b": {
+        "songname": "마법의 성",
+        "key_diff": 2,
+        "tempo": 70,
+        "time_signature": "4/4"
+    },
+    "kr009a": {
+        "songname": "아빠 힘내세요",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr009b": {
+        "songname": "아빠 힘내세요",
+        "key_diff": -4,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr010a": {
+        "songname": "화이트 크리스마스",
+        "key_diff": 0,
+        "tempo": 90,
+        "time_signature": "4/4"
+    },
+    "kr010b": {
+        "songname": "화이트 크리스마스",
+        "key_diff": -4,
+        "tempo": 90,
+        "time_signature": "4/4"
+    },
+    "kr011a": {
+        "songname": "뚱보와 갈비",
+        "key_diff": 0,
+        "tempo": 124,
+        "time_signature": "4/4"
+    },
+    "kr011b": {
+        "songname": "뚱보와 갈비",
+        "key_diff": -4,
+        "tempo": 124,
+        "time_signature": "4/4"
+    },
+    "kr012a": {
+        "songname": "네잎클로버",
+        "key_diff": 0,
+        "tempo": 110,
+        "time_signature": "4/4"
+    },
+    "kr012b": {
+        "songname": "네잎클로버",
+        "key_diff": -4,
+        "tempo": 110,
+        "time_signature": "4/4"
+    },
+    "kr013a": {
+        "songname": "라쿠카라차",
+        "key_diff": 0,
+        "tempo": 70,
+        "time_signature": "4/4"
+    },
+    "kr013b": {
+        "songname": "라쿠카라차",
+        "key_diff": 4,
+        "tempo": 70,
+        "time_signature": "4/4"
+    },
+    "kr014a": {
+        "songname": "옥수수",
+        "key_diff": 0,
+        "tempo": 100,
+        "time_signature": "4/4"
+    },
+    "kr014b": {
+        "songname": "옥수수",
+        "key_diff": -3,
+        "tempo": 100,
+        "time_signature": "4/4"
+    },
+    "kr015a": {
+        "songname": "이슬",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr015b": {
+        "songname": "이슬",
+        "key_diff": -4,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr016a": {
+        "songname": "개똥벌레",
+        "key_diff": 0,
+        "tempo": 110,
+        "time_signature": "4/4"
+    },
+    "kr016b": {
+        "songname": "개똥벌레",
+        "key_diff": 4,
+        "tempo": 110,
+        "time_signature": "4/4"
+    },
+    "kr017a": {
+        "songname": "나처럼 해봐요",
+        "key_diff": 0,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr017b": {
+        "songname": "나처럼 해봐요",
+        "key_diff": 4,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr018a": {
+        "songname": "울면 안 돼",
+        "key_diff": 0,
+        "tempo": 115,
+        "time_signature": "4/4"
+    },
+    "kr018b": {
+        "songname": "울면 안 돼",
+        "key_diff": -2,
+        "tempo": 115,
+        "time_signature": "4/4"
+    },
+    "kr019a": {
+        "songname": "도레미 송",
+        "key_diff": 0,
+        "tempo": 128,
+        "time_signature": "4/4"
+    },
+    "kr019b": {
+        "songname": "도레미 송",
+        "key_diff": -3,
+        "tempo": 128,
+        "time_signature": "4/4"
+    },
+    "kr020a": {
+        "songname": "거룩한 밤",
+        "key_diff": 0,
+        "tempo": 108,
+        "time_signature": "4/4"
+    },
+    "kr020b": {
+        "songname": "거룩한 밤",
+        "key_diff": -4,
+        "tempo": 108,
+        "time_signature": "4/4"
+    },
+    "kr021a": {
+        "songname": "동물농장",
+        "key_diff": 0,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr021b": {
+        "songname": "동물농장",
+        "key_diff": 4,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr022a": {
+        "songname": "개구리",
+        "key_diff": 0,
+        "tempo": 105,
+        "time_signature": "4/4"
+    },
+    "kr022b": {
+        "songname": "개구리",
+        "key_diff": -5,
+        "tempo": 105,
+        "time_signature": "4/4"
+    },
+    "kr023a": {
+        "songname": "할아버지의 낡은 시계",
+        "key_diff": 0,
+        "tempo": 85,
+        "time_signature": "4/4"
+    },
+    "kr023b": {
+        "songname": "할아버지의 낡은 시계",
+        "key_diff": -4,
+        "tempo": 85,
+        "time_signature": "4/4"
+    },
+    "kr024a": {
+        "songname": "머리 어깨 무릎 발",
+        "key_diff": 0,
+        "tempo": 126,
+        "time_signature": "4/4"
+    },
+    "kr024b": {
+        "songname": "머리 어깨 무릎 발",
+        "key_diff": -4,
+        "tempo": 126,
+        "time_signature": "4/4"
+    },
+    "kr025a": {
+        "songname": "거룩한 밤",
+        "key_diff": 0,
+        "tempo": 77,
+        "time_signature": "4/4"
+    },
+    "kr025b": {
+        "songname": "거룩한 밤",
+        "key_diff": -3,
+        "tempo": 77,
+        "time_signature": "4/4"
+    },
+    "kr026a": {
+        "songname": "고향의 봄",
+        "key_diff": 0,
+        "tempo": 100,
+        "time_signature": "4/4"
+    },
+    "kr026b": {
+        "songname": "고향의 봄",
+        "key_diff": -4,
+        "tempo": 100,
+        "time_signature": "4/4"
+    },
+    "kr027a": {
+        "songname": "고드름",
+        "key_diff": 0,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr027b": {
+        "songname": "고드름",
+        "key_diff": -2,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr028a": {
+        "songname": "열꼬마 인디언",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr028b": {
+        "songname": "열꼬마 인디언",
+        "key_diff": -5,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr029a": {
+        "songname": "징글벨",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr029b": {
+        "songname": "징글벨",
+        "key_diff": -5,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr030a": {
+        "songname": "기쁘다 구주 오셨네",
+        "key_diff": 0,
+        "tempo": 107,
+        "time_signature": "4/4"
+    },
+    "kr030b": {
+        "songname": "기쁘다 구주 오셨네",
+        "key_diff": -5,
+        "tempo": 107,
+        "time_signature": "4/4"
+    },
+    "kr031a": {
+        "songname": "아기 염소",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr031b": {
+        "songname": "아기 염소",
+        "key_diff": -4,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr032a": {
+        "songname": "작별",
+        "key_diff": 0,
+        "tempo": 72,
+        "time_signature": "4/4"
+    },
+    "kr032b": {
+        "songname": "작별",
+        "key_diff": 5,
+        "tempo": 72,
+        "time_signature": "4/4"
+    },
+    "kr033a": {
+        "songname": "귀여운 꼬마",
+        "key_diff": 0,
+        "tempo": 115,
+        "time_signature": "4/4"
+    },
+    "kr033b": {
+        "songname": "귀여운 꼬마",
+        "key_diff": -4,
+        "tempo": 115,
+        "time_signature": "4/4"
+    },
+    "kr034a": {
+        "songname": "런던 다리가 무너져요",
+        "key_diff": 0,
+        "tempo": 85,
+        "time_signature": "4/4"
+    },
+    "kr034b": {
+        "songname": "런던 다리가 무너져요",
+        "key_diff": -4,
+        "tempo": 85,
+        "time_signature": "4/4"
+    },
+    "kr035a": {
+        "songname": "즐거운 나의 집",
+        "key_diff": 0,
+        "tempo": 100,
+        "time_signature": "4/4"
+    },
+    "kr035b": {
+        "songname": "즐거운 나의 집",
+        "key_diff": 4,
+        "tempo": 100,
+        "time_signature": "4/4"
+    },
+    "kr036a": {
+        "songname": "퐁당퐁당",
+        "key_diff": 0,
+        "tempo": 125,
+        "time_signature": "4/4"
+    },
+    "kr036b": {
+        "songname": "퐁당퐁당",
+        "key_diff": -3,
+        "tempo": 125,
+        "time_signature": "4/4"
+    },
+    "kr037a": {
+        "songname": "루돌프",
+        "key_diff": 0,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr037b": {
+        "songname": "루돌프",
+        "key_diff": -3,
+        "tempo": 130,
+        "time_signature": "4/4"
+    },
+    "kr038a": {
+        "songname": "초록 바다",
+        "key_diff": 0,
+        "tempo": 116,
+        "time_signature": "4/4"
+    },
+    "kr038b": {
+        "songname": "초록 바다",
+        "key_diff": -3,
+        "tempo": 116,
+        "time_signature": "4/4"
+    },
+    "kr039a": {
+        "songname": "새싹들이다",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr039b": {
+        "songname": "새싹들이다",
+        "key_diff": -3,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr040a": {
+        "songname": "거미가 줄을 타고",
+        "key_diff": 0,
+        "tempo": 113,
+        "time_signature": "4/4"
+    },
+    "kr040b": {
+        "songname": "거미가 줄을 타고",
+        "key_diff": -4,
+        "tempo": 113,
+        "time_signature": "4/4"
+    },
+    "kr041a": {
+        "songname": "반짝반짝 작은 별",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr041b": {
+        "songname": "반짝반짝 작은 별",
+        "key_diff": 3,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr042a": {
+        "songname": "둥근 해가 떴습니다",
+        "key_diff": 0,
+        "tempo": 121,
+        "time_signature": "4/4"
+    },
+    "kr042b": {
+        "songname": "둥근 해가 떴습니다",
+        "key_diff": -4,
+        "tempo": 121,
+        "time_signature": "4/4"
+    },
+    "kr043a": {
+        "songname": "산중호걸",
+        "key_diff": 0,
+        "tempo": 122,
+        "time_signature": "4/4"
+    },
+    "kr043b": {
+        "songname": "산중호걸",
+        "key_diff": -4,
+        "tempo": 122,
+        "time_signature": "4/4"
+    },
+    "kr044a": {
+        "songname": "우리 모두 다 같이 손뼉을",
+        "key_diff": 0,
+        "tempo": 115,
+        "time_signature": "4/4"
+    },
+    "kr044b": {
+        "songname": "우리 모두 다 같이 손뼉을",
+        "key_diff": -4,
+        "tempo": 115,
+        "time_signature": "4/4"
+    },
+    "kr045a": {
+        "songname": "수건 돌리기",
+        "key_diff": 0,
+        "tempo": 112,
+        "time_signature": "4/4"
+    },
+    "kr045b": {
+        "songname": "수건 돌리기",
+        "key_diff": -4,
+        "tempo": 112,
+        "time_signature": "4/4"
+    },
+    "kr046a": {
+        "songname": "기차 타고 신나게",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr046b": {
+        "songname": "기차 타고 신나게",
+        "key_diff": -3,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr047a": {
+        "songname": "우산",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr047b": {
+        "songname": "우산",
+        "key_diff": -4,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr048a": {
+        "songname": "숲속을 걸어요",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr048b": {
+        "songname": "숲속을 걸어요",
+        "key_diff": -4,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr049a": {
+        "songname": "당신은 누구십니까",
+        "key_diff": 0,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr049b": {
+        "songname": "당신은 누구십니까",
+        "key_diff": -3,
+        "tempo": 120,
+        "time_signature": "4/4"
+    },
+    "kr050a": {
+        "songname": "창 밖을 보라",
+        "key_diff": 0,
+        "tempo": 125,
+        "time_signature": "4/4"
+    },
+    "kr050b": {
+        "songname": "창 밖을 보라",
+        "key_diff": -6,
+        "tempo": 125,
+        "time_signature": "4/4"
+    }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 266,
+  "unique_word_count": 58,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 266.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "She",
+    "little",
+    "cockroach",
+    "her",
+    "dance",
+    "she",
+    "The",
+    "All",
+    "wanted"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7819548872180451,
+    "most_common_words": [
+      [
+        "the",
+        24
+      ],
+      [
+        "She",
+        14
+      ],
+      [
+        "little",
+        12
+      ],
+      [
+        "cockroach",
+        12
+      ],
+      [
+        "her",
+        12
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 176,
+  "unique_word_count": 49,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 176.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "better",
+    "you",
+    "not",
+    "out",
+    "Santa",
+    "Claus",
+    "coming",
+    "town",
+    "watch",
+    "cry"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7215909090909092,
+    "most_common_words": [
+      [
+        "better",
+        12
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "not",
+        8
+      ],
+      [
+        "out",
+        6
+      ],
+      [
+        "Santa",
+        6
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 86,
+  "unique_word_count": 62,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 86.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "baby",
+    "cradle",
+    "will",
+    "and",
+    "she",
+    "Rock",
+    "bye",
+    "When",
+    "near"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.2790697674418605,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "baby",
+        5
+      ],
+      [
+        "cradle",
+        4
+      ],
+      [
+        "will",
+        3
+      ],
+      [
+        "and",
+        3
+      ]
+    ]
+  }
+}

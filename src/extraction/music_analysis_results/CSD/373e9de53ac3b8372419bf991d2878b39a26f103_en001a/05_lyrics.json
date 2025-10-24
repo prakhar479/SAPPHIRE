@@ -1,0 +1,45 @@
+{
+  "word_count": 81,
+  "unique_word_count": 38,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 81.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "Now",
+    "know",
+    "won't",
+    "you",
+    "sing",
+    "with",
+    "Next",
+    "time",
+    "along"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5308641975308642,
+    "most_common_words": [
+      [
+        "and",
+        2
+      ],
+      [
+        "Now",
+        2
+      ],
+      [
+        "know",
+        2
+      ],
+      [
+        "won't",
+        2
+      ],
+      [
+        "you",
+        2
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 146,
+  "unique_word_count": 36,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 146.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "all",
+    "the",
+    "were",
+    "and",
+    "what",
+    "that",
+    "would",
+    "standing",
+    "outside",
+    "with"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7534246575342466,
+    "most_common_words": [
+      [
+        "all",
+        6
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "were",
+        6
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "what",
+        6
+      ]
+    ]
+  }
+}

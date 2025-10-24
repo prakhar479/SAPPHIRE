@@ -1,0 +1,45 @@
+{
+  "word_count": 76,
+  "unique_word_count": 29,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 76.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "bear",
+    "Father",
+    "very",
+    "Look",
+    "there",
+    "are",
+    "three",
+    "bears",
+    "all",
+    "the"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.618421052631579,
+    "most_common_words": [
+      [
+        "bear",
+        12
+      ],
+      [
+        "Father",
+        4
+      ],
+      [
+        "very",
+        4
+      ],
+      [
+        "Look",
+        2
+      ],
+      [
+        "there",
+        2
+      ]
+    ]
+  }
+}

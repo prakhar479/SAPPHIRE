@@ -1,0 +1,45 @@
+{
+  "word_count": 64,
+  "unique_word_count": 21,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 64.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Twinkle",
+    "twinkle",
+    "little",
+    "star",
+    "How",
+    "wonder",
+    "what",
+    "you",
+    "are",
+    "the"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.671875,
+    "most_common_words": [
+      [
+        "Twinkle",
+        4
+      ],
+      [
+        "twinkle",
+        4
+      ],
+      [
+        "little",
+        4
+      ],
+      [
+        "star",
+        4
+      ],
+      [
+        "How",
+        4
+      ]
+    ]
+  }
+}

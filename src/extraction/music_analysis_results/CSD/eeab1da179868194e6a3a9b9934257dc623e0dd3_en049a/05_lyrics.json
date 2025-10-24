@@ -1,0 +1,45 @@
+{
+  "word_count": 121,
+  "unique_word_count": 42,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 121.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "Dinah",
+    "blow",
+    "won't",
+    "fee",
+    "fie",
+    "fiddly",
+    "your",
+    "horn"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6528925619834711,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "you",
+        8
+      ],
+      [
+        "Dinah",
+        7
+      ],
+      [
+        "blow",
+        7
+      ],
+      [
+        "won't",
+        6
+      ]
+    ]
+  }
+}

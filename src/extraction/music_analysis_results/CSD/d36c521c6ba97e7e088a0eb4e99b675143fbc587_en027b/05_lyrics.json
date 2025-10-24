@@ -1,0 +1,45 @@
+{
+  "word_count": 130,
+  "unique_word_count": 50,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 130.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "was",
+    "The",
+    "cute",
+    "little",
+    "fellow",
+    "got",
+    "away",
+    "and",
+    "the",
+    "crying"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6153846153846154,
+    "most_common_words": [
+      [
+        "was",
+        6
+      ],
+      [
+        "The",
+        4
+      ],
+      [
+        "cute",
+        4
+      ],
+      [
+        "little",
+        4
+      ],
+      [
+        "fellow",
+        4
+      ]
+    ]
+  }
+}

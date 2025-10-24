@@ -1,0 +1,45 @@
+{
+  "word_count": 80,
+  "unique_word_count": 28,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 80.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "chirp",
+    "Butterfly",
+    "Come",
+    "over",
+    "here",
+    "dance",
+    "fly",
+    "Yellow",
+    "white"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.65,
+    "most_common_words": [
+      [
+        "and",
+        8
+      ],
+      [
+        "chirp",
+        6
+      ],
+      [
+        "Butterfly",
+        4
+      ],
+      [
+        "Come",
+        4
+      ],
+      [
+        "over",
+        4
+      ]
+    ]
+  }
+}

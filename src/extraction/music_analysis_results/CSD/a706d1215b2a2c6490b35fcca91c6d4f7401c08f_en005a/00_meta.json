@@ -1,0 +1,24 @@
+{
+  "path": "../../data/raw/CSD/english/wav/en005a.wav",
+  "file_hash": "a706d1215b2a2c6490b35fcca91c6d4f7401c08f",
+  "duration_sec": 73.84616780045351,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T19:12:26.474742",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false
+  },
+  "processing_time_sec": 7.556598901748657
+}

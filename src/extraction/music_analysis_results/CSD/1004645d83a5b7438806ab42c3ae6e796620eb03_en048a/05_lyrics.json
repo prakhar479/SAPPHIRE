@@ -1,0 +1,45 @@
+{
+  "word_count": 184,
+  "unique_word_count": 52,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 184.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "out",
+    "window",
+    "Look",
+    "look",
+    "Children",
+    "are",
+    "Singing",
+    "winter",
+    "song"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7173913043478262,
+    "most_common_words": [
+      [
+        "the",
+        28
+      ],
+      [
+        "out",
+        16
+      ],
+      [
+        "window",
+        16
+      ],
+      [
+        "Look",
+        8
+      ],
+      [
+        "look",
+        8
+      ]
+    ]
+  }
+}

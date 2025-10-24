@@ -1,0 +1,45 @@
+{
+  "word_count": 103,
+  "unique_word_count": 53,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 103.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "and",
+    "heaven",
+    "his",
+    "wonders",
+    "Let",
+    "nature",
+    "sing",
+    "Repeat"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4854368932038835,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "And",
+        7
+      ],
+      [
+        "and",
+        7
+      ],
+      [
+        "heaven",
+        4
+      ],
+      [
+        "his",
+        4
+      ]
+    ]
+  }
+}

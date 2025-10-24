@@ -1,0 +1,45 @@
+{
+  "word_count": 164,
+  "unique_word_count": 44,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 164.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "doe",
+    "deer",
+    "long",
+    "Sew",
+    "Doe",
+    "female",
+    "Ray",
+    "drop",
+    "golden",
+    "sun"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7317073170731707,
+    "most_common_words": [
+      [
+        "doe",
+        8
+      ],
+      [
+        "deer",
+        6
+      ],
+      [
+        "long",
+        6
+      ],
+      [
+        "Sew",
+        5
+      ],
+      [
+        "Doe",
+        3
+      ]
+    ]
+  }
+}

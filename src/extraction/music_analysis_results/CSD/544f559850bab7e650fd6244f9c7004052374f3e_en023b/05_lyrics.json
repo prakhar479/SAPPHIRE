@@ -1,0 +1,45 @@
+{
+  "word_count": 85,
+  "unique_word_count": 31,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 85.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "auld",
+    "lang",
+    "syne",
+    "For",
+    "take",
+    "cup",
+    "kindness",
+    "yet",
+    "And",
+    "Should"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6352941176470588,
+    "most_common_words": [
+      [
+        "auld",
+        10
+      ],
+      [
+        "lang",
+        8
+      ],
+      [
+        "syne",
+        8
+      ],
+      [
+        "For",
+        7
+      ],
+      [
+        "take",
+        3
+      ]
+    ]
+  }
+}

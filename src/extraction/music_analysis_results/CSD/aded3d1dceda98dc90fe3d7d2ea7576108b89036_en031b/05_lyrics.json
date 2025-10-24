@@ -1,0 +1,45 @@
+{
+  "word_count": 138,
+  "unique_word_count": 16,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 138.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "muffin",
+    "man",
+    "the",
+    "know",
+    "who",
+    "lives",
+    "Drury",
+    "Lane",
+    "you",
+    "Yes"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8840579710144928,
+    "most_common_words": [
+      [
+        "muffin",
+        24
+      ],
+      [
+        "man",
+        24
+      ],
+      [
+        "the",
+        22
+      ],
+      [
+        "know",
+        12
+      ],
+      [
+        "who",
+        6
+      ]
+    ]
+  }
+}

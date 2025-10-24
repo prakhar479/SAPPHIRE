@@ -1,0 +1,45 @@
+{
+  "word_count": 95,
+  "unique_word_count": 61,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 95.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "was",
+    "tic",
+    "toc",
+    "old",
+    "man",
+    "years",
+    "stopped",
+    "short",
+    "never"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.35789473684210527,
+    "most_common_words": [
+      [
+        "the",
+        7
+      ],
+      [
+        "was",
+        5
+      ],
+      [
+        "tic",
+        4
+      ],
+      [
+        "toc",
+        4
+      ],
+      [
+        "old",
+        3
+      ]
+    ]
+  }
+}

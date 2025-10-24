@@ -1,0 +1,45 @@
+{
+  "word_count": 139,
+  "unique_word_count": 60,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 139.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "come",
+    "him",
+    "let",
+    "adore",
+    "the",
+    "Lord",
+    "Christ",
+    "all",
+    "and",
+    "born"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5683453237410072,
+    "most_common_words": [
+      [
+        "come",
+        12
+      ],
+      [
+        "him",
+        10
+      ],
+      [
+        "let",
+        9
+      ],
+      [
+        "adore",
+        9
+      ],
+      [
+        "the",
+        6
+      ]
+    ]
+  }
+}

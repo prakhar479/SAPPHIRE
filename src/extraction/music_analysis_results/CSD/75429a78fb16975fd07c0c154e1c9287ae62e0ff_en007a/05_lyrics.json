@@ -1,0 +1,45 @@
+{
+  "word_count": 78,
+  "unique_word_count": 42,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 78.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Clementine",
+    "darling",
+    "were",
+    "and",
+    "for",
+    "And",
+    "You",
+    "lost",
+    "gone",
+    "forever"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.46153846153846156,
+    "most_common_words": [
+      [
+        "Clementine",
+        6
+      ],
+      [
+        "darling",
+        6
+      ],
+      [
+        "were",
+        4
+      ],
+      [
+        "and",
+        3
+      ],
+      [
+        "for",
+        2
+      ]
+    ]
+  }
+}

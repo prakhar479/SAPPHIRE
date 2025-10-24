@@ -1,0 +1,45 @@
+{
+  "word_count": 86,
+  "unique_word_count": 61,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 86.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "over",
+    "rainbow",
+    "Somewhere",
+    "that",
+    "are",
+    "And",
+    "where",
+    "fly",
+    "why"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.2906976744186046,
+    "most_common_words": [
+      [
+        "the",
+        7
+      ],
+      [
+        "over",
+        4
+      ],
+      [
+        "rainbow",
+        4
+      ],
+      [
+        "Somewhere",
+        3
+      ],
+      [
+        "that",
+        2
+      ]
+    ]
+  }
+}

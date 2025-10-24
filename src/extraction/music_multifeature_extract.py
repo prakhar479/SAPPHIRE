@@ -1144,6 +1144,7 @@ def gather_audio_files(
                 lyrics_path = None
                 for lyrics_ext in lyrics_extensions:
                     potential_lyrics = os.path.join(root, basename + lyrics_ext)
+                    # potential_lyrics = os.path.join(root[:-3]+"lyric/", basename + lyrics_ext)
                     if os.path.exists(potential_lyrics):
                         lyrics_path = potential_lyrics
                         break

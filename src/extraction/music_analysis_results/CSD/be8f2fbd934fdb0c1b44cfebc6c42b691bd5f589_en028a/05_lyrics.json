@@ -1,0 +1,45 @@
+{
+  "word_count": 195,
+  "unique_word_count": 34,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 195.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "fair",
+    "lady",
+    "down",
+    "Build",
+    "with",
+    "will",
+    "away",
+    "clay",
+    "stones"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8256410256410256,
+    "most_common_words": [
+      [
+        "and",
+        28
+      ],
+      [
+        "fair",
+        9
+      ],
+      [
+        "lady",
+        9
+      ],
+      [
+        "down",
+        8
+      ],
+      [
+        "Build",
+        8
+      ]
+    ]
+  }
+}

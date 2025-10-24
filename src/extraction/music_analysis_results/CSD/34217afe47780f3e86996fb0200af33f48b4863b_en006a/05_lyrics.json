@@ -1,0 +1,45 @@
+{
+  "word_count": 54,
+  "unique_word_count": 39,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 54.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "white",
+    "Christmas",
+    "the",
+    "I'm",
+    "dreaming",
+    "and",
+    "your",
+    "Just",
+    "like",
+    "ones"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.2777777777777778,
+    "most_common_words": [
+      [
+        "white",
+        3
+      ],
+      [
+        "Christmas",
+        3
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "I'm",
+        2
+      ],
+      [
+        "dreaming",
+        2
+      ]
+    ]
+  }
+}

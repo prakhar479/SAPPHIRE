@@ -1,0 +1,45 @@
+{
+  "word_count": 62,
+  "unique_word_count": 41,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 62.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Robin",
+    "and",
+    "Little",
+    "redbreast",
+    "upon",
+    "went",
+    "pussycat",
+    "away",
+    "jumped",
+    "Pussycat"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.33870967741935487,
+    "most_common_words": [
+      [
+        "Robin",
+        6
+      ],
+      [
+        "and",
+        5
+      ],
+      [
+        "Little",
+        3
+      ],
+      [
+        "redbreast",
+        2
+      ],
+      [
+        "upon",
+        2
+      ]
+    ]
+  }
+}
