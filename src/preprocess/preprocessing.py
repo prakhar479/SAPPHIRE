@@ -417,7 +417,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--loudness",
         type=float,
-        default=-23.0,
+        default=-24.0,
         help="Target loudness in LUFS (EBU R128 standard).",
     )
 
@@ -425,19 +425,19 @@ if __name__ == "__main__":
     parser.add_argument(
         "--snr-threshold",
         type=float,
-        default=15.0,
+        default=10.0,
         help="Minimum Signal-to-Noise Ratio (SNR) in dB.",
     )
     parser.add_argument(
         "--lyrics-completeness-threshold",
         type=float,
-        default=0.9,
+        default=0.5,
         help="Minimum score for lyrics completeness heuristic.",
     )
     parser.add_argument(
         "--vocal-threshold",
         type=float,
-        default=0.6,
+        default=0.3,
         help="Minimum score for vocal dominance (from HPSS).",
     )
 
