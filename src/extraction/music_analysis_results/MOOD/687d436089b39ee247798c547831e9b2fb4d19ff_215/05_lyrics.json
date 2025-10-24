@@ -1,0 +1,45 @@
+{
+  "word_count": 203,
+  "unique_word_count": 82,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 203.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "music",
+    "hear",
+    "the",
+    "can",
+    "baby",
+    "Whenever",
+    "The",
+    "you",
+    "way",
+    "all"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5960591133004927,
+    "most_common_words": [
+      [
+        "music",
+        16
+      ],
+      [
+        "hear",
+        14
+      ],
+      [
+        "the",
+        11
+      ],
+      [
+        "can",
+        9
+      ],
+      [
+        "baby",
+        7
+      ]
+    ]
+  }
+}

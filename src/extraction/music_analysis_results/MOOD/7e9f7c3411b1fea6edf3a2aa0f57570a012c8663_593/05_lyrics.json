@@ -1,0 +1,45 @@
+{
+  "word_count": 129,
+  "unique_word_count": 95,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 64.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "was",
+    "Jerry",
+    "race",
+    "car",
+    "driver",
+    "man",
+    "And",
+    "never",
+    "did",
+    "number"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.26356589147286824,
+    "most_common_words": [
+      [
+        "was",
+        5
+      ],
+      [
+        "Jerry",
+        3
+      ],
+      [
+        "race",
+        3
+      ],
+      [
+        "car",
+        3
+      ],
+      [
+        "driver",
+        3
+      ]
+    ]
+  }
+}

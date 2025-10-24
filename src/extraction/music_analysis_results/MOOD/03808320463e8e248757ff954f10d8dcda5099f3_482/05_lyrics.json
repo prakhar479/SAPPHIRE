@@ -1,0 +1,45 @@
+{
+  "word_count": 795,
+  "unique_word_count": 376,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 113.57142857142857,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "I'm",
+    "got",
+    "out",
+    "time",
+    "And",
+    "never",
+    "they",
+    "for"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5270440251572327,
+    "most_common_words": [
+      [
+        "the",
+        39
+      ],
+      [
+        "and",
+        13
+      ],
+      [
+        "I'm",
+        13
+      ],
+      [
+        "got",
+        12
+      ],
+      [
+        "out",
+        9
+      ]
+    ]
+  }
+}

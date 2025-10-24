@@ -1,0 +1,45 @@
+{
+  "word_count": 197,
+  "unique_word_count": 56,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 197.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "about",
+    "love",
+    "straight",
+    "wanna",
+    "probably",
+    "But",
+    "Oh,",
+    "now",
+    "think"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7157360406091371,
+    "most_common_words": [
+      [
+        "you",
+        25
+      ],
+      [
+        "about",
+        12
+      ],
+      [
+        "love",
+        8
+      ],
+      [
+        "straight",
+        8
+      ],
+      [
+        "wanna",
+        7
+      ]
+    ]
+  }
+}

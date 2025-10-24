@@ -1,0 +1,45 @@
+{
+  "word_count": 204,
+  "unique_word_count": 85,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 204.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "You",
+    "that",
+    "queen",
+    "can",
+    "dance",
+    "dancing",
+    "and",
+    "for",
+    "jive"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5833333333333333,
+    "most_common_words": [
+      [
+        "the",
+        20
+      ],
+      [
+        "You",
+        9
+      ],
+      [
+        "that",
+        7
+      ],
+      [
+        "queen",
+        7
+      ],
+      [
+        "can",
+        6
+      ]
+    ]
+  }
+}

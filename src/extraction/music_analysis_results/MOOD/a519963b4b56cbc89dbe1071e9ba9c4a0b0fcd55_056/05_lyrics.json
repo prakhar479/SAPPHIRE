@@ -1,0 +1,45 @@
+{
+  "word_count": 313,
+  "unique_word_count": 140,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 156.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "man",
+    "child,",
+    "That",
+    "well,",
+    "Man",
+    "you",
+    "that",
+    "hurt",
+    "don't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5527156549520766,
+    "most_common_words": [
+      [
+        "I'm",
+        22
+      ],
+      [
+        "man",
+        21
+      ],
+      [
+        "child,",
+        6
+      ],
+      [
+        "That",
+        6
+      ],
+      [
+        "well,",
+        6
+      ]
+    ]
+  }
+}

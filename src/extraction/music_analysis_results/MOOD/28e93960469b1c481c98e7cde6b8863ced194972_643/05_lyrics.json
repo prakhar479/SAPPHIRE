@@ -1,0 +1,45 @@
+{
+  "word_count": 356,
+  "unique_word_count": 126,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 89.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "knew",
+    "Girl",
+    "From",
+    "that",
+    "know",
+    "still",
+    "love",
+    "Mars"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6460674157303371,
+    "most_common_words": [
+      [
+        "the",
+        18
+      ],
+      [
+        "you",
+        11
+      ],
+      [
+        "knew",
+        10
+      ],
+      [
+        "Girl",
+        10
+      ],
+      [
+        "From",
+        10
+      ]
+    ]
+  }
+}

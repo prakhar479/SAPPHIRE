@@ -1,0 +1,45 @@
+{
+  "word_count": 112,
+  "unique_word_count": 62,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 112.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Arnold",
+    "Layne,",
+    "Layne",
+    "two",
+    "know",
+    "the",
+    "They",
+    "him",
+    "Oh,",
+    "It's"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4464285714285714,
+    "most_common_words": [
+      [
+        "Arnold",
+        11
+      ],
+      [
+        "Layne,",
+        6
+      ],
+      [
+        "Layne",
+        5
+      ],
+      [
+        "two",
+        4
+      ],
+      [
+        "know",
+        4
+      ]
+    ]
+  }
+}

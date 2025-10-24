@@ -1,0 +1,45 @@
+{
+  "word_count": 201,
+  "unique_word_count": 117,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 201.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "rain",
+    "flowers",
+    "With",
+    "all",
+    "power",
+    "time",
+    "was",
+    "upon",
+    "I'm"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.417910447761194,
+    "most_common_words": [
+      [
+        "the",
+        17
+      ],
+      [
+        "rain",
+        8
+      ],
+      [
+        "flowers",
+        5
+      ],
+      [
+        "With",
+        3
+      ],
+      [
+        "all",
+        3
+      ]
+    ]
+  }
+}

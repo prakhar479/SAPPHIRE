@@ -1,0 +1,45 @@
+{
+  "word_count": 143,
+  "unique_word_count": 105,
+  "sentence_count": 13,
+  "avg_words_per_sentence": 11.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "their",
+    "war",
+    "just",
+    "yeah!",
+    "like",
+    "minds",
+    "that",
+    "bodies",
+    "They"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.26573426573426573,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "their",
+        6
+      ],
+      [
+        "war",
+        5
+      ],
+      [
+        "just",
+        3
+      ],
+      [
+        "yeah!",
+        3
+      ]
+    ]
+  }
+}

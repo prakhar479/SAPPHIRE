@@ -1,0 +1,45 @@
+{
+  "word_count": 201,
+  "unique_word_count": 134,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 50.25,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "London",
+    "calling",
+    "that",
+    "you",
+    "calling,",
+    "Now",
+    "out",
+    "all",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.33333333333333337,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "London",
+        11
+      ],
+      [
+        "calling",
+        5
+      ],
+      [
+        "that",
+        4
+      ],
+      [
+        "you",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 149,
+  "unique_word_count": 88,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 149.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "the",
+    "going",
+    "you",
+    "got",
+    "where",
+    "leave",
+    "this",
+    "country,",
+    "babe"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4093959731543624,
+    "most_common_words": [
+      [
+        "I'm",
+        8
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "going",
+        6
+      ],
+      [
+        "you",
+        5
+      ],
+      [
+        "got",
+        5
+      ]
+    ]
+  }
+}

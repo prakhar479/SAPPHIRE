@@ -1,0 +1,45 @@
+{
+  "word_count": 187,
+  "unique_word_count": 79,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 93.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "let's",
+    "the",
+    "upon",
+    "hill",
+    "There's",
+    "Let's",
+    "thrill",
+    "go,",
+    "a-go,",
+    "gonna"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5775401069518716,
+    "most_common_words": [
+      [
+        "let's",
+        16
+      ],
+      [
+        "the",
+        10
+      ],
+      [
+        "upon",
+        9
+      ],
+      [
+        "hill",
+        9
+      ],
+      [
+        "There's",
+        7
+      ]
+    ]
+  }
+}

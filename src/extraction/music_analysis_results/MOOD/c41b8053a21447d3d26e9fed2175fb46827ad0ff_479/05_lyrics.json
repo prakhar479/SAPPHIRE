@@ -1,0 +1,45 @@
+{
+  "word_count": 107,
+  "unique_word_count": 60,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 107.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "love",
+    "The",
+    "gets",
+    "And",
+    "the",
+    "have",
+    "Never",
+    "thought",
+    "I'd",
+    "For"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4392523364485982,
+    "most_common_words": [
+      [
+        "love",
+        8
+      ],
+      [
+        "The",
+        4
+      ],
+      [
+        "gets",
+        4
+      ],
+      [
+        "And",
+        3
+      ],
+      [
+        "the",
+        3
+      ]
+    ]
+  }
+}

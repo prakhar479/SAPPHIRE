@@ -1,0 +1,45 @@
+{
+  "word_count": 162,
+  "unique_word_count": 91,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 162.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "don't",
+    "Feet",
+    "fail",
+    "now",
+    "the",
+    "you",
+    "could",
+    "Can't",
+    "see,",
+    "that"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.43827160493827155,
+    "most_common_words": [
+      [
+        "don't",
+        10
+      ],
+      [
+        "Feet",
+        6
+      ],
+      [
+        "fail",
+        6
+      ],
+      [
+        "now",
+        6
+      ],
+      [
+        "the",
+        5
+      ]
+    ]
+  }
+}

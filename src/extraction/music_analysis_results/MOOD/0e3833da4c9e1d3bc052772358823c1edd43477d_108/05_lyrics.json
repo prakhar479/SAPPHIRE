@@ -1,0 +1,45 @@
+{
+  "word_count": 260,
+  "unique_word_count": 94,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 52.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "with",
+    "little",
+    "help",
+    "from",
+    "friends",
+    "get",
+    "Mm,",
+    "out",
+    "try"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6384615384615384,
+    "most_common_words": [
+      [
+        "you",
+        11
+      ],
+      [
+        "with",
+        11
+      ],
+      [
+        "little",
+        11
+      ],
+      [
+        "help",
+        11
+      ],
+      [
+        "from",
+        11
+      ]
+    ]
+  }
+}

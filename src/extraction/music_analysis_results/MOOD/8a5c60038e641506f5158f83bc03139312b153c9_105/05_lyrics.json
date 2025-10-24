@@ -1,0 +1,45 @@
+{
+  "word_count": 563,
+  "unique_word_count": 128,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 563.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "all",
+    "right",
+    "feel",
+    "that",
+    "now",
+    "shake",
+    "one",
+    "more",
+    "(make",
+    "it's"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7726465364120781,
+    "most_common_words": [
+      [
+        "all",
+        30
+      ],
+      [
+        "right",
+        24
+      ],
+      [
+        "feel",
+        22
+      ],
+      [
+        "that",
+        18
+      ],
+      [
+        "now",
+        16
+      ]
+    ]
+  }
+}

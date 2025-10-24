@@ -1,0 +1,45 @@
+{
+  "word_count": 182,
+  "unique_word_count": 72,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 182.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "little",
+    "Wake",
+    "Susie,",
+    "Susie",
+    "Whatta",
+    "gonna",
+    "tell",
+    "up,",
+    "wake",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6043956043956045,
+    "most_common_words": [
+      [
+        "little",
+        16
+      ],
+      [
+        "Wake",
+        15
+      ],
+      [
+        "Susie,",
+        9
+      ],
+      [
+        "Susie",
+        8
+      ],
+      [
+        "Whatta",
+        6
+      ]
+    ]
+  }
+}

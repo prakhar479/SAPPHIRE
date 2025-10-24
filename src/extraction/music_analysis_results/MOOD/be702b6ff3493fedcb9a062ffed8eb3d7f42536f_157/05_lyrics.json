@@ -1,0 +1,45 @@
+{
+  "word_count": 125,
+  "unique_word_count": 78,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 125.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "love",
+    "mine",
+    "You",
+    "Goodness,",
+    "gracious,",
+    "great",
+    "balls",
+    "fire!!",
+    "baby,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.376,
+    "most_common_words": [
+      [
+        "and",
+        4
+      ],
+      [
+        "love",
+        4
+      ],
+      [
+        "mine",
+        4
+      ],
+      [
+        "You",
+        3
+      ],
+      [
+        "Goodness,",
+        3
+      ]
+    ]
+  }
+}

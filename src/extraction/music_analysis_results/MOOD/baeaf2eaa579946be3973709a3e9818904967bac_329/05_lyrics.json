@@ -1,0 +1,45 @@
+{
+  "word_count": 364,
+  "unique_word_count": 177,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 364.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "And",
+    "for",
+    "and",
+    "meant",
+    "was",
+    "but",
+    "will",
+    "were"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5137362637362637,
+    "most_common_words": [
+      [
+        "you",
+        15
+      ],
+      [
+        "the",
+        13
+      ],
+      [
+        "And",
+        10
+      ],
+      [
+        "for",
+        9
+      ],
+      [
+        "and",
+        8
+      ]
+    ]
+  }
+}

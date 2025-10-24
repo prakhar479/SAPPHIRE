@@ -1,0 +1,45 @@
+{
+  "word_count": 161,
+  "unique_word_count": 92,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 161.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "miss",
+    "the",
+    "And",
+    "I'd",
+    "how",
+    "run",
+    "through",
+    "long",
+    "this"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4285714285714286,
+    "most_common_words": [
+      [
+        "you",
+        10
+      ],
+      [
+        "miss",
+        7
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "And",
+        4
+      ],
+      [
+        "I'd",
+        4
+      ]
+    ]
+  }
+}

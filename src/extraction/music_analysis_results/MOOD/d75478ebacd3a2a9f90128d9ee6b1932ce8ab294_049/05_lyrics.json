@@ -1,0 +1,45 @@
+{
+  "word_count": 214,
+  "unique_word_count": 153,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 19.454545454545453,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "and",
+    "people",
+    "love",
+    "have",
+    "know",
+    "that",
+    "take",
+    "long"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.2850467289719626,
+    "most_common_words": [
+      [
+        "the",
+        10
+      ],
+      [
+        "you",
+        4
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "people",
+        3
+      ],
+      [
+        "love",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 414,
+  "unique_word_count": 156,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 414.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "was",
+    "Ana",
+    "you",
+    "would",
+    "And",
+    "there",
+    "and",
+    "for",
+    "are"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6231884057971014,
+    "most_common_words": [
+      [
+        "the",
+        32
+      ],
+      [
+        "was",
+        10
+      ],
+      [
+        "Ana",
+        10
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "would",
+        10
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 212,
+  "unique_word_count": 110,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 212.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "don't",
+    "let",
+    "old",
+    "your",
+    "babies",
+    "grow",
+    "cowboys",
+    "'em",
+    "him"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4811320754716981,
+    "most_common_words": [
+      [
+        "and",
+        12
+      ],
+      [
+        "don't",
+        7
+      ],
+      [
+        "let",
+        7
+      ],
+      [
+        "old",
+        4
+      ],
+      [
+        "your",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 256,
+  "unique_word_count": 132,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 64.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "all",
+    "forget",
+    "Downtown",
+    "and",
+    "can",
+    "downtown",
+    "are",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.484375,
+    "most_common_words": [
+      [
+        "you",
+        11
+      ],
+      [
+        "the",
+        10
+      ],
+      [
+        "all",
+        9
+      ],
+      [
+        "forget",
+        6
+      ],
+      [
+        "Downtown",
+        6
+      ]
+    ]
+  }
+}

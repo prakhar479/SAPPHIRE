@@ -1,0 +1,45 @@
+{
+  "word_count": 150,
+  "unique_word_count": 57,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 150.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "boy,",
+    "can",
+    "see",
+    "All",
+    "[Chorus]",
+    "You",
+    "been",
+    "when",
+    "you're",
+    "with"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.62,
+    "most_common_words": [
+      [
+        "boy,",
+        6
+      ],
+      [
+        "can",
+        5
+      ],
+      [
+        "see",
+        5
+      ],
+      [
+        "All",
+        4
+      ],
+      [
+        "[Chorus]",
+        3
+      ]
+    ]
+  }
+}

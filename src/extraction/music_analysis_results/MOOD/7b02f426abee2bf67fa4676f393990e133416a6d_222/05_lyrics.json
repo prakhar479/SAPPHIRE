@@ -1,0 +1,45 @@
+{
+  "word_count": 118,
+  "unique_word_count": 62,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 118.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "no,",
+    "the",
+    "basket",
+    "dropped",
+    "yellow",
+    "She",
+    "(Was",
+    "No,",
+    "A-Tisket",
+    "A-Tasket"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.47457627118644063,
+    "most_common_words": [
+      [
+        "no,",
+        6
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "basket",
+        4
+      ],
+      [
+        "dropped",
+        4
+      ],
+      [
+        "yellow",
+        3
+      ]
+    ]
+  }
+}

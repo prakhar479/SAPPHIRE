@@ -1,0 +1,45 @@
+{
+  "word_count": 174,
+  "unique_word_count": 109,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 174.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "lied",
+    "Now",
+    "I'm",
+    "fuzzy",
+    "and",
+    "for",
+    "many",
+    "love",
+    "more"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.37356321839080464,
+    "most_common_words": [
+      [
+        "the",
+        5
+      ],
+      [
+        "lied",
+        5
+      ],
+      [
+        "Now",
+        5
+      ],
+      [
+        "I'm",
+        5
+      ],
+      [
+        "fuzzy",
+        5
+      ]
+    ]
+  }
+}

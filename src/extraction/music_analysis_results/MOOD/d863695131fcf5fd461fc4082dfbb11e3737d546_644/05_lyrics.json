@@ -1,0 +1,45 @@
+{
+  "word_count": 139,
+  "unique_word_count": 63,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 34.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "please,",
+    "Baby",
+    "Lemonade",
+    "through",
+    "make",
+    "like",
+    "sad",
+    "town",
+    "cold"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5467625899280575,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "please,",
+        10
+      ],
+      [
+        "Baby",
+        5
+      ],
+      [
+        "Lemonade",
+        5
+      ],
+      [
+        "through",
+        3
+      ]
+    ]
+  }
+}

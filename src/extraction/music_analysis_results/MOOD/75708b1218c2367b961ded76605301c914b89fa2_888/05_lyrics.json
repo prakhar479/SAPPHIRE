@@ -1,0 +1,45 @@
+{
+  "word_count": 222,
+  "unique_word_count": 137,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 44.4,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "The",
+    "alone",
+    "will",
+    "All",
+    "when",
+    "soul",
+    "him",
+    "see"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.38288288288288286,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "The",
+        5
+      ],
+      [
+        "alone",
+        4
+      ],
+      [
+        "will",
+        3
+      ]
+    ]
+  }
+}

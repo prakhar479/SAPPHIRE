@@ -1,0 +1,45 @@
+{
+  "word_count": 150,
+  "unique_word_count": 52,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 150.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "Well",
+    "here",
+    "sittin'",
+    "over",
+    "Parchman",
+    "Farm",
+    "And",
+    "puttin'",
+    "that"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6533333333333333,
+    "most_common_words": [
+      [
+        "I'm",
+        13
+      ],
+      [
+        "Well",
+        9
+      ],
+      [
+        "here",
+        9
+      ],
+      [
+        "sittin'",
+        7
+      ],
+      [
+        "over",
+        7
+      ]
+    ]
+  }
+}

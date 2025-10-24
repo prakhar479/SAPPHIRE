@@ -1,0 +1,45 @@
+{
+  "word_count": 310,
+  "unique_word_count": 196,
+  "sentence_count": 6,
+  "avg_words_per_sentence": 51.666666666666664,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "Let's",
+    "your",
+    "all",
+    "let's",
+    "get",
+    "this",
+    "life",
+    "and",
+    "much"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.367741935483871,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "Let's",
+        6
+      ],
+      [
+        "your",
+        4
+      ],
+      [
+        "all",
+        4
+      ],
+      [
+        "let's",
+        4
+      ]
+    ]
+  }
+}

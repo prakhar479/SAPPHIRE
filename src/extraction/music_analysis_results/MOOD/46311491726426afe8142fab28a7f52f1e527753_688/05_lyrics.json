@@ -1,0 +1,45 @@
+{
+  "word_count": 229,
+  "unique_word_count": 111,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 229.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Poor",
+    "poor",
+    "pitiful",
+    "She",
+    "the",
+    "Well",
+    "don't",
+    "These",
+    "young",
+    "girls"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5152838427947598,
+    "most_common_words": [
+      [
+        "Poor",
+        11
+      ],
+      [
+        "poor",
+        10
+      ],
+      [
+        "pitiful",
+        10
+      ],
+      [
+        "She",
+        7
+      ],
+      [
+        "the",
+        5
+      ]
+    ]
+  }
+}

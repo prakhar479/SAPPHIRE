@@ -1,0 +1,45 @@
+{
+  "word_count": 271,
+  "unique_word_count": 95,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 27.1,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "now",
+    "you",
+    "later",
+    "let",
+    "don't",
+    "and",
+    "run",
+    "away",
+    "down.",
+    "runaway"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6494464944649446,
+    "most_common_words": [
+      [
+        "now",
+        21
+      ],
+      [
+        "you",
+        11
+      ],
+      [
+        "later",
+        10
+      ],
+      [
+        "let",
+        10
+      ],
+      [
+        "don't",
+        9
+      ]
+    ]
+  }
+}

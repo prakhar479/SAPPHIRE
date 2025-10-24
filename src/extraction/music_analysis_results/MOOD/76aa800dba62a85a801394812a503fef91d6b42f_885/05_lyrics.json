@@ -1,0 +1,45 @@
+{
+  "word_count": 78,
+  "unique_word_count": 51,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 78.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "never",
+    "our",
+    "poor",
+    "boy",
+    "get",
+    "Cuz",
+    "believes",
+    "chance",
+    "he'll"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.34615384615384615,
+    "most_common_words": [
+      [
+        "the",
+        8
+      ],
+      [
+        "never",
+        4
+      ],
+      [
+        "our",
+        3
+      ],
+      [
+        "poor",
+        3
+      ],
+      [
+        "boy",
+        3
+      ]
+    ]
+  }
+}

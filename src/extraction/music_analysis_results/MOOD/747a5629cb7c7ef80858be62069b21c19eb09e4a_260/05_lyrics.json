@@ -1,0 +1,45 @@
+{
+  "word_count": 131,
+  "unique_word_count": 23,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 32.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "found",
+    "world",
+    "new",
+    "Since",
+    "left",
+    "you",
+    "Everyday",
+    "paradise,",
+    "Watch"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8244274809160306,
+    "most_common_words": [
+      [
+        "the",
+        14
+      ],
+      [
+        "found",
+        13
+      ],
+      [
+        "world",
+        13
+      ],
+      [
+        "new",
+        11
+      ],
+      [
+        "Since",
+        8
+      ]
+    ]
+  }
+}

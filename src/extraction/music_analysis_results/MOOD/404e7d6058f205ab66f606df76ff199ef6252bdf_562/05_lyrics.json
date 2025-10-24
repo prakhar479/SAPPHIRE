@@ -1,0 +1,45 @@
+{
+  "word_count": 532,
+  "unique_word_count": 149,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 532.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "love",
+    "you",
+    "baby,",
+    "leave",
+    "where",
+    "Tainted",
+    "did",
+    "our",
+    "I've",
+    "that"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7199248120300752,
+    "most_common_words": [
+      [
+        "love",
+        31
+      ],
+      [
+        "you",
+        28
+      ],
+      [
+        "baby,",
+        15
+      ],
+      [
+        "leave",
+        15
+      ],
+      [
+        "where",
+        12
+      ]
+    ]
+  }
+}

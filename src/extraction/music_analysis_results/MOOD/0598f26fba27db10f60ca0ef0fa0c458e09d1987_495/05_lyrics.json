@@ -1,0 +1,45 @@
+{
+  "word_count": 108,
+  "unique_word_count": 73,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 108.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "I'm",
+    "the",
+    "may",
+    "But",
+    "your",
+    "You",
+    "and",
+    "that",
+    "one"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.32407407407407407,
+    "most_common_words": [
+      [
+        "you",
+        10
+      ],
+      [
+        "I'm",
+        5
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "may",
+        3
+      ],
+      [
+        "But",
+        3
+      ]
+    ]
+  }
+}

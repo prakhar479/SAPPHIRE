@@ -1,0 +1,45 @@
+{
+  "word_count": 249,
+  "unique_word_count": 147,
+  "sentence_count": 8,
+  "avg_words_per_sentence": 31.125,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "get",
+    "you",
+    "one",
+    "thing",
+    "this",
+    "that",
+    "and",
+    "we're",
+    "time",
+    "gotta"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.40963855421686746,
+    "most_common_words": [
+      [
+        "get",
+        11
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "one",
+        5
+      ],
+      [
+        "thing",
+        5
+      ],
+      [
+        "this",
+        5
+      ]
+    ]
+  }
+}

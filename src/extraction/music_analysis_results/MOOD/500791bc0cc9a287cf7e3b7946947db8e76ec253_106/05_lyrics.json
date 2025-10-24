@@ -1,0 +1,45 @@
+{
+  "word_count": 162,
+  "unique_word_count": 82,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 162.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "going",
+    "you",
+    "what's",
+    "You",
+    "know",
+    "we've",
+    "got",
+    "find",
+    "way",
+    "bring"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.49382716049382713,
+    "most_common_words": [
+      [
+        "going",
+        8
+      ],
+      [
+        "you",
+        5
+      ],
+      [
+        "what's",
+        5
+      ],
+      [
+        "You",
+        4
+      ],
+      [
+        "know",
+        3
+      ]
+    ]
+  }
+}

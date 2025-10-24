@@ -1,0 +1,45 @@
+{
+  "word_count": 304,
+  "unique_word_count": 129,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 27.636363636363637,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "How",
+    "does",
+    "feel",
+    "only",
+    "that",
+    "one",
+    "knows",
+    "one?",
+    "you're"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.575657894736842,
+    "most_common_words": [
+      [
+        "the",
+        19
+      ],
+      [
+        "How",
+        17
+      ],
+      [
+        "does",
+        16
+      ],
+      [
+        "feel",
+        16
+      ],
+      [
+        "only",
+        9
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 581,
+  "unique_word_count": 317,
+  "sentence_count": 6,
+  "avg_words_per_sentence": 96.83333333333333,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "(No",
+    "more",
+    "less)",
+    "And",
+    "magic",
+    "this",
+    "that's",
+    "are"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4543889845094664,
+    "most_common_words": [
+      [
+        "the",
+        32
+      ],
+      [
+        "and",
+        11
+      ],
+      [
+        "(No",
+        11
+      ],
+      [
+        "more",
+        10
+      ],
+      [
+        "less)",
+        9
+      ]
+    ]
+  }
+}

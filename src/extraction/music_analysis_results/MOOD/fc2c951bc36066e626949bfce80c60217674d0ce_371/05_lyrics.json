@@ -1,0 +1,45 @@
+{
+  "word_count": 301,
+  "unique_word_count": 86,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 301.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "And",
+    "love",
+    "time",
+    "space",
+    "don't",
+    "all",
+    "will",
+    "die",
+    "float"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7142857142857143,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "And",
+        14
+      ],
+      [
+        "love",
+        11
+      ],
+      [
+        "time",
+        9
+      ],
+      [
+        "space",
+        7
+      ]
+    ]
+  }
+}

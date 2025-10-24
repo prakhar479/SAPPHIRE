@@ -1,0 +1,45 @@
+{
+  "word_count": 181,
+  "unique_word_count": 91,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 90.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Ivy",
+    "for",
+    "the",
+    "oh-oh!",
+    "did",
+    "HELL",
+    "HELL!",
+    "love",
+    "you're",
+    "jawbone"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.49723756906077343,
+    "most_common_words": [
+      [
+        "Ivy",
+        8
+      ],
+      [
+        "for",
+        8
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "oh-oh!",
+        6
+      ],
+      [
+        "did",
+        4
+      ]
+    ]
+  }
+}

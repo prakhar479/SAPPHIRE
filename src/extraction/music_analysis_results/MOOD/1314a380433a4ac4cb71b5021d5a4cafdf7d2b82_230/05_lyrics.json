@@ -1,0 +1,45 @@
+{
+  "word_count": 179,
+  "unique_word_count": 82,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 179.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "that",
+    "and",
+    "Like",
+    "said,",
+    "\"Ain't",
+    "kick",
+    "fella",
+    "just",
+    "Tell"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.541899441340782,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "that",
+        7
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "Like",
+        4
+      ],
+      [
+        "said,",
+        4
+      ]
+    ]
+  }
+}

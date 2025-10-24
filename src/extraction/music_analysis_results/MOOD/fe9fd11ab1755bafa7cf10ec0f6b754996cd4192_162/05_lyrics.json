@@ -1,0 +1,45 @@
+{
+  "word_count": 214,
+  "unique_word_count": 148,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 19.454545454545453,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "got",
+    "your",
+    "have",
+    "it's",
+    "night",
+    "going",
+    "Hitch",
+    "ride"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.30841121495327106,
+    "most_common_words": [
+      [
+        "the",
+        11
+      ],
+      [
+        "you",
+        5
+      ],
+      [
+        "got",
+        4
+      ],
+      [
+        "your",
+        3
+      ],
+      [
+        "have",
+        3
+      ]
+    ]
+  }
+}

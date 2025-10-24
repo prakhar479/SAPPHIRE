@@ -1,0 +1,45 @@
+{
+  "word_count": 111,
+  "unique_word_count": 69,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 111.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "after",
+    "for",
+    "walkin'",
+    "the",
+    "you",
+    "midnight",
+    "I'm",
+    "searchin'",
+    "out",
+    "Out"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3783783783783784,
+    "most_common_words": [
+      [
+        "after",
+        5
+      ],
+      [
+        "for",
+        5
+      ],
+      [
+        "walkin'",
+        4
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "you",
+        4
+      ]
+    ]
+  }
+}

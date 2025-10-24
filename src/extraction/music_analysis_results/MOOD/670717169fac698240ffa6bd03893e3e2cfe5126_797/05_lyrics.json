@@ -1,0 +1,45 @@
+{
+  "word_count": 195,
+  "unique_word_count": 127,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 195.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "California!",
+    "ber",
+    "alles!",
+    "will",
+    "you",
+    "the",
+    "your",
+    "[x2]",
+    "Brown",
+    "And"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3487179487179487,
+    "most_common_words": [
+      [
+        "California!",
+        12
+      ],
+      [
+        "ber",
+        12
+      ],
+      [
+        "alles!",
+        12
+      ],
+      [
+        "will",
+        9
+      ],
+      [
+        "you",
+        7
+      ]
+    ]
+  }
+}

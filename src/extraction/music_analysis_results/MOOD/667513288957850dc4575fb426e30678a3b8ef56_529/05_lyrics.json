@@ -1,0 +1,45 @@
+{
+  "word_count": 157,
+  "unique_word_count": 77,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 14.272727272727273,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "what",
+    "the",
+    "lakes",
+    "tell",
+    "cannot",
+    "done.",
+    "another",
+    "feel",
+    "that",
+    "could"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5095541401273885,
+    "most_common_words": [
+      [
+        "what",
+        6
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "lakes",
+        4
+      ],
+      [
+        "tell",
+        4
+      ],
+      [
+        "cannot",
+        4
+      ]
+    ]
+  }
+}

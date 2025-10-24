@@ -1,0 +1,45 @@
+{
+  "word_count": 264,
+  "unique_word_count": 118,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 264.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Escapade",
+    "time",
+    "Come",
+    "good",
+    "your",
+    "got",
+    "escapade",
+    "with",
+    "we've"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.553030303030303,
+    "most_common_words": [
+      [
+        "you",
+        11
+      ],
+      [
+        "Escapade",
+        8
+      ],
+      [
+        "time",
+        6
+      ],
+      [
+        "Come",
+        6
+      ],
+      [
+        "good",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 333,
+  "unique_word_count": 153,
+  "sentence_count": 38,
+  "avg_words_per_sentence": 8.763157894736842,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "days",
+    "hole",
+    "you",
+    "your",
+    "You",
+    "right,",
+    "got",
+    "all",
+    "know"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5405405405405406,
+    "most_common_words": [
+      [
+        "the",
+        20
+      ],
+      [
+        "days",
+        19
+      ],
+      [
+        "hole",
+        19
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "your",
+        6
+      ]
+    ]
+  }
+}

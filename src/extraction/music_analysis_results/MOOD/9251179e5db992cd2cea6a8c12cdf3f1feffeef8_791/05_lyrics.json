@@ -1,0 +1,45 @@
+{
+  "word_count": 73,
+  "unique_word_count": 14,
+  "sentence_count": 34,
+  "avg_words_per_sentence": 2.1470588235294117,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "your",
+    "daddy.",
+    "want",
+    "soul,",
+    "Come",
+    "will",
+    "eat",
+    "soul.",
+    "...I",
+    "soul..."
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8082191780821918,
+    "most_common_words": [
+      [
+        "your",
+        11
+      ],
+      [
+        "daddy.",
+        8
+      ],
+      [
+        "want",
+        7
+      ],
+      [
+        "soul,",
+        7
+      ],
+      [
+        "Come",
+        7
+      ]
+    ]
+  }
+}

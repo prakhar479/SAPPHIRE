@@ -1,0 +1,45 @@
+{
+  "word_count": 247,
+  "unique_word_count": 113,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 247.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "it,",
+    "roll",
+    "with",
+    "baby",
+    "just",
+    "and",
+    "you",
+    "You",
+    "baby,",
+    "you'll"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5425101214574899,
+    "most_common_words": [
+      [
+        "it,",
+        19
+      ],
+      [
+        "roll",
+        16
+      ],
+      [
+        "with",
+        16
+      ],
+      [
+        "baby",
+        12
+      ],
+      [
+        "just",
+        12
+      ]
+    ]
+  }
+}

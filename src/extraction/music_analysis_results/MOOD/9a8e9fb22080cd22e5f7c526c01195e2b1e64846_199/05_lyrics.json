@@ -1,0 +1,45 @@
+{
+  "word_count": 413,
+  "unique_word_count": 217,
+  "sentence_count": 8,
+  "avg_words_per_sentence": 51.625,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "and",
+    "with",
+    "ooooo",
+    "little",
+    "but",
+    "fraudulent",
+    "could",
+    "would"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.47457627118644063,
+    "most_common_words": [
+      [
+        "you",
+        17
+      ],
+      [
+        "the",
+        15
+      ],
+      [
+        "and",
+        12
+      ],
+      [
+        "with",
+        6
+      ],
+      [
+        "ooooo",
+        6
+      ]
+    ]
+  }
+}

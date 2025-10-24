@@ -1,0 +1,45 @@
+{
+  "word_count": 323,
+  "unique_word_count": 86,
+  "sentence_count": 16,
+  "avg_words_per_sentence": 20.1875,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Eli's",
+    "your",
+    "better",
+    "hide",
+    "walked",
+    "never",
+    "you",
+    "heart,",
+    "get",
+    "no,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7337461300309598,
+    "most_common_words": [
+      [
+        "Eli's",
+        25
+      ],
+      [
+        "your",
+        14
+      ],
+      [
+        "better",
+        13
+      ],
+      [
+        "hide",
+        13
+      ],
+      [
+        "walked",
+        12
+      ]
+    ]
+  }
+}

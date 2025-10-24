@@ -1,0 +1,45 @@
+{
+  "word_count": 131,
+  "unique_word_count": 52,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 131.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "You",
+    "can't",
+    "have",
+    "not",
+    "you",
+    "me,",
+    "for",
+    "free",
+    "the",
+    "steal"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6030534351145038,
+    "most_common_words": [
+      [
+        "You",
+        14
+      ],
+      [
+        "can't",
+        12
+      ],
+      [
+        "have",
+        12
+      ],
+      [
+        "not",
+        5
+      ],
+      [
+        "you",
+        3
+      ]
+    ]
+  }
+}

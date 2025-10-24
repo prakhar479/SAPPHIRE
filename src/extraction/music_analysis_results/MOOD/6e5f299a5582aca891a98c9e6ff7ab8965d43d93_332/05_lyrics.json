@@ -1,0 +1,45 @@
+{
+  "word_count": 100,
+  "unique_word_count": 43,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 100.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "love",
+    "Kind",
+    "drag",
+    "When",
+    "Anyway,",
+    "Girl,",
+    "still",
+    "I'll",
+    "always"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5700000000000001,
+    "most_common_words": [
+      [
+        "you",
+        11
+      ],
+      [
+        "love",
+        7
+      ],
+      [
+        "Kind",
+        4
+      ],
+      [
+        "drag",
+        4
+      ],
+      [
+        "When",
+        4
+      ]
+    ]
+  }
+}

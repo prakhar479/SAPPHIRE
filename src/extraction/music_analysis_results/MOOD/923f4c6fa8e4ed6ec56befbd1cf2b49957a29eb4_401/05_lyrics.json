@@ -1,0 +1,45 @@
+{
+  "word_count": 277,
+  "unique_word_count": 169,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 277.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "was",
+    "Amelia,",
+    "just",
+    "false",
+    "alarm",
+    "you",
+    "and",
+    "tell",
+    "across"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3898916967509025,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "was",
+        11
+      ],
+      [
+        "Amelia,",
+        7
+      ],
+      [
+        "just",
+        7
+      ],
+      [
+        "false",
+        7
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 104,
+  "unique_word_count": 62,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 14.857142857142858,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "world",
+    "change",
+    "This",
+    "may",
+    "never",
+    "been",
+    "And",
+    "all",
+    "I've"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.40384615384615385,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "world",
+        5
+      ],
+      [
+        "change",
+        5
+      ],
+      [
+        "This",
+        4
+      ],
+      [
+        "may",
+        4
+      ]
+    ]
+  }
+}

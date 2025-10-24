@@ -1,0 +1,45 @@
+{
+  "word_count": 81,
+  "unique_word_count": 44,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 81.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "human",
+    "and",
+    "terribly",
+    "ever",
+    "get",
+    "behaviour",
+    "there's",
+    "definitely",
+    "ready",
+    "yet"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.45679012345679015,
+    "most_common_words": [
+      [
+        "human",
+        5
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "terribly",
+        4
+      ],
+      [
+        "ever",
+        3
+      ],
+      [
+        "get",
+        3
+      ]
+    ]
+  }
+}

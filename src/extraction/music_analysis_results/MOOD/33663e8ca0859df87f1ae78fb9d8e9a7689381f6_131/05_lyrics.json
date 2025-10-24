@@ -1,0 +1,45 @@
+{
+  "word_count": 245,
+  "unique_word_count": 155,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 245.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "all",
+    "life",
+    "this",
+    "your",
+    "own",
+    "when",
+    "down",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.36734693877551017,
+    "most_common_words": [
+      [
+        "the",
+        15
+      ],
+      [
+        "And",
+        9
+      ],
+      [
+        "all",
+        7
+      ],
+      [
+        "life",
+        4
+      ],
+      [
+        "this",
+        4
+      ]
+    ]
+  }
+}

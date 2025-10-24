@@ -1,0 +1,45 @@
+{
+  "word_count": 156,
+  "unique_word_count": 86,
+  "sentence_count": 21,
+  "avg_words_per_sentence": 7.428571428571429,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Oh,",
+    "and",
+    "can",
+    "Cheer",
+    "up,",
+    "Sleepy",
+    "Jean.",
+    "what",
+    "mean.",
+    "daydream"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4487179487179487,
+    "most_common_words": [
+      [
+        "Oh,",
+        6
+      ],
+      [
+        "and",
+        5
+      ],
+      [
+        "can",
+        5
+      ],
+      [
+        "Cheer",
+        4
+      ],
+      [
+        "up,",
+        4
+      ]
+    ]
+  }
+}

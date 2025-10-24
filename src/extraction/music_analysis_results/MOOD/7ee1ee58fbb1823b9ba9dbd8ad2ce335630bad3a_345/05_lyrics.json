@@ -1,0 +1,45 @@
+{
+  "word_count": 148,
+  "unique_word_count": 79,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 148.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "was",
+    "very",
+    "good",
+    "year",
+    "the",
+    "When",
+    "for",
+    "girls",
+    "And",
+    "We'd"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.46621621621621623,
+    "most_common_words": [
+      [
+        "was",
+        13
+      ],
+      [
+        "very",
+        7
+      ],
+      [
+        "good",
+        7
+      ],
+      [
+        "year",
+        7
+      ],
+      [
+        "the",
+        7
+      ]
+    ]
+  }
+}

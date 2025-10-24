@@ -1,0 +1,45 @@
+{
+  "word_count": 188,
+  "unique_word_count": 112,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 188.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "Ulster",
+    "Alternative",
+    "They",
+    "know",
+    "got",
+    "want",
+    "And",
+    "Get"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4042553191489362,
+    "most_common_words": [
+      [
+        "you",
+        9
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "Ulster",
+        7
+      ],
+      [
+        "Alternative",
+        6
+      ],
+      [
+        "They",
+        4
+      ]
+    ]
+  }
+}

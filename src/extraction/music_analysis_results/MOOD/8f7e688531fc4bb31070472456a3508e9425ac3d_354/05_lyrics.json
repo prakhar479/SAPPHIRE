@@ -1,0 +1,45 @@
+{
+  "word_count": 127,
+  "unique_word_count": 68,
+  "sentence_count": 16,
+  "avg_words_per_sentence": 7.9375,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "crystal",
+    "I've",
+    "way",
+    "again.",
+    "And",
+    "Should",
+    "never",
+    "have",
+    "left"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4645669291338582,
+    "most_common_words": [
+      [
+        "the",
+        4
+      ],
+      [
+        "crystal",
+        4
+      ],
+      [
+        "I've",
+        4
+      ],
+      [
+        "way",
+        4
+      ],
+      [
+        "again.",
+        4
+      ]
+    ]
+  }
+}

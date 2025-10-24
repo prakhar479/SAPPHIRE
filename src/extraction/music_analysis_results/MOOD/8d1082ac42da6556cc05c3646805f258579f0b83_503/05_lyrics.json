@@ -1,0 +1,45 @@
+{
+  "word_count": 112,
+  "unique_word_count": 56,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 112.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Valentine",
+    "your",
+    "little",
+    "for",
+    "day",
+    "figure",
+    "less",
+    "than",
+    "Greek"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5,
+    "most_common_words": [
+      [
+        "you",
+        7
+      ],
+      [
+        "Valentine",
+        4
+      ],
+      [
+        "your",
+        4
+      ],
+      [
+        "little",
+        4
+      ],
+      [
+        "for",
+        4
+      ]
+    ]
+  }
+}

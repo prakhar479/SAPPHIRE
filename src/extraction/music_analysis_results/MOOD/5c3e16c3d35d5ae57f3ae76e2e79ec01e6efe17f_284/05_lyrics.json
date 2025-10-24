@@ -1,0 +1,45 @@
+{
+  "word_count": 234,
+  "unique_word_count": 142,
+  "sentence_count": 14,
+  "avg_words_per_sentence": 16.714285714285715,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Hey",
+    "porter!",
+    "that",
+    "the",
+    "tell",
+    "engineer",
+    "And",
+    "will",
+    "Cause",
+    "Southern"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3931623931623932,
+    "most_common_words": [
+      [
+        "Hey",
+        10
+      ],
+      [
+        "porter!",
+        10
+      ],
+      [
+        "that",
+        9
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "tell",
+        5
+      ]
+    ]
+  }
+}

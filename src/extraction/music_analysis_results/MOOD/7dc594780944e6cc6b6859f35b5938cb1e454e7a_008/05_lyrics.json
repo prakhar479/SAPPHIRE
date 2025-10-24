@@ -1,0 +1,45 @@
+{
+  "word_count": 122,
+  "unique_word_count": 64,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 17.428571428571427,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "You",
+    "the",
+    "worth",
+    "for",
+    "when",
+    "found",
+    "for?",
+    "was",
+    "But",
+    "all"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.47540983606557374,
+    "most_common_words": [
+      [
+        "You",
+        6
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "worth",
+        3
+      ],
+      [
+        "for",
+        3
+      ],
+      [
+        "when",
+        3
+      ]
+    ]
+  }
+}

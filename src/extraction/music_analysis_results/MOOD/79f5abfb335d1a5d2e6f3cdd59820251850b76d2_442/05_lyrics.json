@@ -1,0 +1,45 @@
+{
+  "word_count": 127,
+  "unique_word_count": 19,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 127.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "want",
+    "adored",
+    "don't",
+    "sell",
+    "soul",
+    "He's",
+    "already",
+    "You",
+    "adore",
+    "have"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8503937007874016,
+    "most_common_words": [
+      [
+        "want",
+        17
+      ],
+      [
+        "adored",
+        10
+      ],
+      [
+        "don't",
+        4
+      ],
+      [
+        "sell",
+        4
+      ],
+      [
+        "soul",
+        4
+      ]
+    ]
+  }
+}

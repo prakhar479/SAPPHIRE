@@ -1,0 +1,45 @@
+{
+  "word_count": 139,
+  "unique_word_count": 77,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 139.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "need",
+    "Don't",
+    "reducer",
+    "Ain't",
+    "loser",
+    "I'm",
+    "anyone",
+    "got",
+    "from",
+    "just"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4460431654676259,
+    "most_common_words": [
+      [
+        "need",
+        5
+      ],
+      [
+        "Don't",
+        4
+      ],
+      [
+        "reducer",
+        4
+      ],
+      [
+        "Ain't",
+        4
+      ],
+      [
+        "loser",
+        4
+      ]
+    ]
+  }
+}

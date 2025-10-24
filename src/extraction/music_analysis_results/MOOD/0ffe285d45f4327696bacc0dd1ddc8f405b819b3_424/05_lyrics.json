@@ -1,0 +1,45 @@
+{
+  "word_count": 87,
+  "unique_word_count": 51,
+  "sentence_count": 6,
+  "avg_words_per_sentence": 14.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "too",
+    "lovely",
+    "Like",
+    "But",
+    "love",
+    "You",
+    "look",
+    "misty",
+    "Too",
+    "leave"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4137931034482759,
+    "most_common_words": [
+      [
+        "too",
+        5
+      ],
+      [
+        "lovely",
+        4
+      ],
+      [
+        "Like",
+        3
+      ],
+      [
+        "But",
+        3
+      ],
+      [
+        "love",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 156,
+  "unique_word_count": 94,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 78.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "love",
+    "that",
+    "know",
+    "I'd",
+    "special",
+    "for",
+    "you,",
+    "let"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.39743589743589747,
+    "most_common_words": [
+      [
+        "you",
+        7
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "love",
+        4
+      ],
+      [
+        "that",
+        3
+      ],
+      [
+        "know",
+        3
+      ]
+    ]
+  }
+}

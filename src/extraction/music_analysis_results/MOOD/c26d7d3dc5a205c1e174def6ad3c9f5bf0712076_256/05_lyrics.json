@@ -1,0 +1,45 @@
+{
+  "word_count": 625,
+  "unique_word_count": 308,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 312.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "You",
+    "the",
+    "got",
+    "want",
+    "and",
+    "your",
+    "just",
+    "move",
+    "bust"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5072,
+    "most_common_words": [
+      [
+        "you",
+        24
+      ],
+      [
+        "You",
+        21
+      ],
+      [
+        "the",
+        17
+      ],
+      [
+        "got",
+        14
+      ],
+      [
+        "want",
+        13
+      ]
+    ]
+  }
+}

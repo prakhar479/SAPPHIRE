@@ -1,0 +1,45 @@
+{
+  "word_count": 132,
+  "unique_word_count": 81,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 132.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "could",
+    "save",
+    "them",
+    "with",
+    "the",
+    "The",
+    "that",
+    "I'd",
+    "like"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.38636363636363635,
+    "most_common_words": [
+      [
+        "you",
+        5
+      ],
+      [
+        "could",
+        3
+      ],
+      [
+        "save",
+        3
+      ],
+      [
+        "them",
+        3
+      ],
+      [
+        "with",
+        3
+      ]
+    ]
+  }
+}

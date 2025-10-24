@@ -1,0 +1,45 @@
+{
+  "word_count": 215,
+  "unique_word_count": 92,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 21.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "for",
+    "that",
+    "thought",
+    "think",
+    "Sometimes",
+    "know",
+    "me,",
+    "the",
+    "wasn't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5720930232558139,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "for",
+        5
+      ],
+      [
+        "that",
+        5
+      ],
+      [
+        "thought",
+        4
+      ],
+      [
+        "think",
+        4
+      ]
+    ]
+  }
+}

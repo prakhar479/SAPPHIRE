@@ -1,0 +1,45 @@
+{
+  "word_count": 167,
+  "unique_word_count": 89,
+  "sentence_count": 14,
+  "avg_words_per_sentence": 11.928571428571429,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "more",
+    "Mister",
+    "They",
+    "I'm",
+    "And",
+    "Nice",
+    "Guy,",
+    "he's",
+    "they"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.46706586826347307,
+    "most_common_words": [
+      [
+        "the",
+        7
+      ],
+      [
+        "more",
+        6
+      ],
+      [
+        "Mister",
+        6
+      ],
+      [
+        "They",
+        4
+      ],
+      [
+        "I'm",
+        4
+      ]
+    ]
+  }
+}

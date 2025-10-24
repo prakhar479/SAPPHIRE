@@ -1,0 +1,45 @@
+{
+  "word_count": 262,
+  "unique_word_count": 48,
+  "sentence_count": 22,
+  "avg_words_per_sentence": 11.909090909090908,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Punk",
+    "Rocker",
+    "Sheena",
+    "Punk,",
+    "Rocker,",
+    "now...",
+    "Well",
+    "the",
+    "all",
+    "ready"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.816793893129771,
+    "most_common_words": [
+      [
+        "Punk",
+        37
+      ],
+      [
+        "Rocker",
+        22
+      ],
+      [
+        "Sheena",
+        21
+      ],
+      [
+        "Punk,",
+        8
+      ],
+      [
+        "Rocker,",
+        7
+      ]
+    ]
+  }
+}

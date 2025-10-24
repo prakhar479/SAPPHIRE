@@ -1,0 +1,45 @@
+{
+  "word_count": 214,
+  "unique_word_count": 97,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 107.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "(Good",
+    "lovin')",
+    "yeah",
+    "All",
+    "lovin'",
+    "you",
+    "need",
+    "the",
+    "love,",
+    "said,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5467289719626168,
+    "most_common_words": [
+      [
+        "(Good",
+        20
+      ],
+      [
+        "lovin')",
+        20
+      ],
+      [
+        "yeah",
+        15
+      ],
+      [
+        "All",
+        6
+      ],
+      [
+        "lovin'",
+        6
+      ]
+    ]
+  }
+}

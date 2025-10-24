@@ -1,0 +1,45 @@
+{
+  "word_count": 296,
+  "unique_word_count": 154,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 59.2,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "was",
+    "her",
+    "Turned",
+    "That",
+    "just",
+    "for",
+    "that",
+    "later"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4797297297297297,
+    "most_common_words": [
+      [
+        "the",
+        14
+      ],
+      [
+        "And",
+        12
+      ],
+      [
+        "was",
+        6
+      ],
+      [
+        "her",
+        6
+      ],
+      [
+        "Turned",
+        5
+      ]
+    ]
+  }
+}

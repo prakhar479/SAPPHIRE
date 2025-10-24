@@ -1,0 +1,45 @@
+{
+  "word_count": 188,
+  "unique_word_count": 59,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 188.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "And",
+    "I'm",
+    "<Lee>",
+    "how",
+    "she",
+    "<Nancy>",
+    "Some",
+    "velvet",
+    "mornin'",
+    "when"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6861702127659575,
+    "most_common_words": [
+      [
+        "And",
+        9
+      ],
+      [
+        "I'm",
+        8
+      ],
+      [
+        "<Lee>",
+        7
+      ],
+      [
+        "how",
+        6
+      ],
+      [
+        "she",
+        6
+      ]
+    ]
+  }
+}

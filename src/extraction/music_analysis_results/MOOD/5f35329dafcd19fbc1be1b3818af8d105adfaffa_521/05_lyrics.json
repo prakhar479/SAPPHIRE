@@ -1,0 +1,45 @@
+{
+  "word_count": 145,
+  "unique_word_count": 94,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 145.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "our",
+    "And",
+    "are",
+    "the",
+    "that",
+    "It's",
+    "either",
+    "sadness",
+    "euphoria",
+    "only"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3517241379310345,
+    "most_common_words": [
+      [
+        "our",
+        9
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "are",
+        4
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "that",
+        3
+      ]
+    ]
+  }
+}

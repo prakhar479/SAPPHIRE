@@ -1,0 +1,45 @@
+{
+  "word_count": 191,
+  "unique_word_count": 137,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 191.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "far",
+    "away",
+    "Take",
+    "I'm",
+    "case",
+    "you",
+    "another",
+    "time",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.2827225130890052,
+    "most_common_words": [
+      [
+        "the",
+        10
+      ],
+      [
+        "far",
+        4
+      ],
+      [
+        "away",
+        4
+      ],
+      [
+        "Take",
+        3
+      ],
+      [
+        "I'm",
+        3
+      ]
+    ]
+  }
+}

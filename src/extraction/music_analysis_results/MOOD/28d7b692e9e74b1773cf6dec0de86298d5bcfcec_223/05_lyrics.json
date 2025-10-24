@@ -1,0 +1,45 @@
+{
+  "word_count": 206,
+  "unique_word_count": 43,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 206.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "happy",
+    "birthday",
+    "Happy",
+    "birthday,",
+    "you",
+    "they",
+    "were",
+    "was",
+    "And",
+    "Happy,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7912621359223301,
+    "most_common_words": [
+      [
+        "happy",
+        14
+      ],
+      [
+        "birthday",
+        14
+      ],
+      [
+        "Happy",
+        12
+      ],
+      [
+        "birthday,",
+        12
+      ],
+      [
+        "you",
+        12
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 552,
+  "unique_word_count": 311,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 61.333333333333336,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "your",
+    "get",
+    "with",
+    "cause",
+    "like",
+    "rewind",
+    "The",
+    "\"Press",
+    "haven't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4365942028985508,
+    "most_common_words": [
+      [
+        "the",
+        31
+      ],
+      [
+        "your",
+        11
+      ],
+      [
+        "get",
+        9
+      ],
+      [
+        "with",
+        9
+      ],
+      [
+        "cause",
+        8
+      ]
+    ]
+  }
+}

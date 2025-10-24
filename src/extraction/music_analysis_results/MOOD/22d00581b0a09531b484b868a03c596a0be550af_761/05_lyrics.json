@@ -1,0 +1,45 @@
+{
+  "word_count": 318,
+  "unique_word_count": 99,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 159.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "With",
+    "Breadfan",
+    "Stay",
+    "all",
+    "away",
+    "your",
+    "gonna",
+    "Open",
+    "lose"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6886792452830188,
+    "most_common_words": [
+      [
+        "the",
+        26
+      ],
+      [
+        "With",
+        9
+      ],
+      [
+        "Breadfan",
+        8
+      ],
+      [
+        "Stay",
+        8
+      ],
+      [
+        "all",
+        7
+      ]
+    ]
+  }
+}

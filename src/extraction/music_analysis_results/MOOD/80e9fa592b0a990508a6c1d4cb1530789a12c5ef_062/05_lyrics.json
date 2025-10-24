@@ -1,0 +1,45 @@
+{
+  "word_count": 307,
+  "unique_word_count": 112,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 34.111111111111114,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "got",
+    "and",
+    "super",
+    "that",
+    "I'm",
+    "bad",
+    "gimme,",
+    "you",
+    "wanna",
+    "Tells"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6351791530944626,
+    "most_common_words": [
+      [
+        "got",
+        13
+      ],
+      [
+        "and",
+        12
+      ],
+      [
+        "super",
+        9
+      ],
+      [
+        "that",
+        8
+      ],
+      [
+        "I'm",
+        8
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 175,
+  "unique_word_count": 66,
+  "sentence_count": 22,
+  "avg_words_per_sentence": 7.954545454545454,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "they",
+    "believe",
+    "And",
+    "don't",
+    "...",
+    "the",
+    "How",
+    "you",
+    "love",
+    "can"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6228571428571428,
+    "most_common_words": [
+      [
+        "they",
+        13
+      ],
+      [
+        "believe",
+        10
+      ],
+      [
+        "And",
+        7
+      ],
+      [
+        "don't",
+        7
+      ],
+      [
+        "...",
+        7
+      ]
+    ]
+  }
+}

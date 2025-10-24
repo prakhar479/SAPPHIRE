@@ -1,0 +1,45 @@
+{
+  "word_count": 239,
+  "unique_word_count": 52,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 239.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "I'm",
+    "and",
+    "Come",
+    "your",
+    "lonely",
+    "baby",
+    "'Cause",
+    "rescue",
+    "baby)"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7824267782426778,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "I'm",
+        11
+      ],
+      [
+        "and",
+        11
+      ],
+      [
+        "Come",
+        9
+      ],
+      [
+        "your",
+        8
+      ]
+    ]
+  }
+}

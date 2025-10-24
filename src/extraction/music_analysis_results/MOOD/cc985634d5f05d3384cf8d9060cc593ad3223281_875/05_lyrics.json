@@ -1,0 +1,45 @@
+{
+  "word_count": 144,
+  "unique_word_count": 44,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 144.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "your",
+    "death",
+    "sweet",
+    "last",
+    "got",
+    "something",
+    "say",
+    "today",
+    "And",
+    "doesn't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6944444444444444,
+    "most_common_words": [
+      [
+        "your",
+        6
+      ],
+      [
+        "death",
+        6
+      ],
+      [
+        "sweet",
+        5
+      ],
+      [
+        "last",
+        5
+      ],
+      [
+        "got",
+        3
+      ]
+    ]
+  }
+}

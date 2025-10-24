@@ -1,0 +1,45 @@
+{
+  "word_count": 382,
+  "unique_word_count": 119,
+  "sentence_count": 12,
+  "avg_words_per_sentence": 31.833333333333332,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "want",
+    "for",
+    "back",
+    "back,",
+    "it,",
+    "just",
+    "(want",
+    "good)",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6884816753926701,
+    "most_common_words": [
+      [
+        "you",
+        36
+      ],
+      [
+        "want",
+        24
+      ],
+      [
+        "for",
+        19
+      ],
+      [
+        "back",
+        17
+      ],
+      [
+        "back,",
+        16
+      ]
+    ]
+  }
+}

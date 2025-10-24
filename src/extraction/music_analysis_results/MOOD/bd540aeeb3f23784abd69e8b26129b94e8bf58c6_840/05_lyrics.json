@@ -1,0 +1,45 @@
+{
+  "word_count": 294,
+  "unique_word_count": 95,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 26.727272727272727,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "run",
+    "que",
+    "Psycho",
+    "Qu'est-ce",
+    "c'est?",
+    "far",
+    "better",
+    "Run",
+    "away",
+    "can't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6768707482993197,
+    "most_common_words": [
+      [
+        "run",
+        36
+      ],
+      [
+        "que",
+        7
+      ],
+      [
+        "Psycho",
+        6
+      ],
+      [
+        "Qu'est-ce",
+        6
+      ],
+      [
+        "c'est?",
+        6
+      ]
+    ]
+  }
+}

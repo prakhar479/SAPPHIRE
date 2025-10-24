@@ -1,0 +1,45 @@
+{
+  "word_count": 347,
+  "unique_word_count": 109,
+  "sentence_count": 14,
+  "avg_words_per_sentence": 24.785714285714285,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Sally",
+    "was",
+    "good",
+    "ole",
+    "girl",
+    "the",
+    "girl.",
+    "her",
+    "best",
+    "she"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6858789625360231,
+    "most_common_words": [
+      [
+        "Sally",
+        27
+      ],
+      [
+        "was",
+        27
+      ],
+      [
+        "good",
+        24
+      ],
+      [
+        "ole",
+        24
+      ],
+      [
+        "girl",
+        14
+      ]
+    ]
+  }
+}

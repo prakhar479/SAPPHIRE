@@ -1,0 +1,45 @@
+{
+  "word_count": 96,
+  "unique_word_count": 64,
+  "sentence_count": 14,
+  "avg_words_per_sentence": 6.857142857142857,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "It's",
+    "time",
+    "And",
+    "show",
+    "season",
+    "for",
+    "loving.",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.33333333333333337,
+    "most_common_words": [
+      [
+        "the",
+        7
+      ],
+      [
+        "you",
+        4
+      ],
+      [
+        "It's",
+        3
+      ],
+      [
+        "time",
+        3
+      ],
+      [
+        "And",
+        2
+      ]
+    ]
+  }
+}

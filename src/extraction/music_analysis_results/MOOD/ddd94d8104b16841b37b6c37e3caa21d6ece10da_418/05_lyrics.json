@@ -1,0 +1,45 @@
+{
+  "word_count": 250,
+  "unique_word_count": 75,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 250.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "all",
+    "were",
+    "Maybe",
+    "need",
+    "shot",
+    "arm",
+    "You",
+    "changed"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7,
+    "most_common_words": [
+      [
+        "you",
+        13
+      ],
+      [
+        "the",
+        11
+      ],
+      [
+        "all",
+        9
+      ],
+      [
+        "were",
+        7
+      ],
+      [
+        "Maybe",
+        7
+      ]
+    ]
+  }
+}

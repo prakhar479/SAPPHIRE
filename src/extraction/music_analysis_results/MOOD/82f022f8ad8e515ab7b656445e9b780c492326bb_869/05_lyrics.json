@@ -1,0 +1,45 @@
+{
+  "word_count": 83,
+  "unique_word_count": 56,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 83.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Alright",
+    "I'm",
+    "The",
+    "head",
+    "Gonna",
+    "only",
+    "way",
+    "know",
+    "right",
+    "now,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.32530120481927716,
+    "most_common_words": [
+      [
+        "Alright",
+        9
+      ],
+      [
+        "I'm",
+        4
+      ],
+      [
+        "The",
+        3
+      ],
+      [
+        "head",
+        3
+      ],
+      [
+        "Gonna",
+        2
+      ]
+    ]
+  }
+}

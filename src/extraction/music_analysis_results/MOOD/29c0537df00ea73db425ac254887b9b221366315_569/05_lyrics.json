@@ -1,0 +1,45 @@
+{
+  "word_count": 158,
+  "unique_word_count": 63,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 31.6,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "like",
+    "the",
+    "you",
+    "Wear",
+    "Ride",
+    "and",
+    "out",
+    "tall",
+    "hat",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6012658227848101,
+    "most_common_words": [
+      [
+        "like",
+        8
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "you",
+        6
+      ],
+      [
+        "Wear",
+        6
+      ],
+      [
+        "Ride",
+        5
+      ]
+    ]
+  }
+}

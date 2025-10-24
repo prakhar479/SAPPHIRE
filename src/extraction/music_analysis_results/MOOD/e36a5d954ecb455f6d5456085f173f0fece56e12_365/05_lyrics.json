@@ -1,0 +1,45 @@
+{
+  "word_count": 142,
+  "unique_word_count": 73,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 142.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "her",
+    "from",
+    "It's",
+    "far",
+    "away",
+    "please",
+    "tell",
+    "she",
+    "side"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4859154929577465,
+    "most_common_words": [
+      [
+        "the",
+        8
+      ],
+      [
+        "her",
+        7
+      ],
+      [
+        "from",
+        5
+      ],
+      [
+        "It's",
+        5
+      ],
+      [
+        "far",
+        4
+      ]
+    ]
+  }
+}

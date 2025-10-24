@@ -1,0 +1,45 @@
+{
+  "word_count": 132,
+  "unique_word_count": 72,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 132.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "peaches",
+    "the",
+    "eat",
+    "Movin'",
+    "country,",
+    "Gonna",
+    "lot",
+    "little",
+    "for",
+    "Millions"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4545454545454546,
+    "most_common_words": [
+      [
+        "peaches",
+        7
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "eat",
+        5
+      ],
+      [
+        "Movin'",
+        4
+      ],
+      [
+        "country,",
+        4
+      ]
+    ]
+  }
+}

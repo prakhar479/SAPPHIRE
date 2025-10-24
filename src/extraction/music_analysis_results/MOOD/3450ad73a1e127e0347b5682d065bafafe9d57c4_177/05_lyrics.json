@@ -1,0 +1,45 @@
+{
+  "word_count": 161,
+  "unique_word_count": 56,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 40.25,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "hey",
+    "want",
+    "girl",
+    "know",
+    "you'll",
+    "Hey,",
+    "baby!",
+    "When",
+    "you",
+    "mine"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6521739130434783,
+    "most_common_words": [
+      [
+        "hey",
+        13
+      ],
+      [
+        "want",
+        9
+      ],
+      [
+        "girl",
+        8
+      ],
+      [
+        "know",
+        7
+      ],
+      [
+        "you'll",
+        7
+      ]
+    ]
+  }
+}

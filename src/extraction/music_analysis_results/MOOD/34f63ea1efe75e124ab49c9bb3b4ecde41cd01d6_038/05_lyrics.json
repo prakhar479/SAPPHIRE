@@ -1,0 +1,45 @@
+{
+  "word_count": 210,
+  "unique_word_count": 72,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 210.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Gonna",
+    "use",
+    "make",
+    "you",
+    "Got",
+    "you,",
+    "I'm",
+    "gonna",
+    "my,",
+    "special"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6571428571428571,
+    "most_common_words": [
+      [
+        "Gonna",
+        15
+      ],
+      [
+        "use",
+        13
+      ],
+      [
+        "make",
+        12
+      ],
+      [
+        "you",
+        7
+      ],
+      [
+        "Got",
+        6
+      ]
+    ]
+  }
+}

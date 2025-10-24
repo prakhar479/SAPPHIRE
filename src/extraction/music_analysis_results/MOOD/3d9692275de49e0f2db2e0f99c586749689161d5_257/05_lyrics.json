@@ -1,0 +1,45 @@
+{
+  "word_count": 286,
+  "unique_word_count": 127,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 95.33333333333333,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "baby,",
+    "Beach",
+    "beach",
+    "can",
+    "remember",
+    "that",
+    "(Oh,",
+    "oh,",
+    "oh)"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5559440559440559,
+    "most_common_words": [
+      [
+        "the",
+        20
+      ],
+      [
+        "baby,",
+        12
+      ],
+      [
+        "Beach",
+        6
+      ],
+      [
+        "beach",
+        6
+      ],
+      [
+        "can",
+        6
+      ]
+    ]
+  }
+}

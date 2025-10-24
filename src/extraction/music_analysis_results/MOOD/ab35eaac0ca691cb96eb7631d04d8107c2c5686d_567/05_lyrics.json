@@ -1,0 +1,45 @@
+{
+  "word_count": 225,
+  "unique_word_count": 90,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 225.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "crucified",
+    "the",
+    "mon",
+    "dieu",
+    "holy",
+    "dimension",
+    "Godlike",
+    "ascension",
+    "Heavens"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6,
+    "most_common_words": [
+      [
+        "I'm",
+        9
+      ],
+      [
+        "crucified",
+        9
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "mon",
+        6
+      ],
+      [
+        "dieu",
+        6
+      ]
+    ]
+  }
+}

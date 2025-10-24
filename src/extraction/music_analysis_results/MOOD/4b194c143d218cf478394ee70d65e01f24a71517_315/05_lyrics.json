@@ -1,0 +1,45 @@
+{
+  "word_count": 405,
+  "unique_word_count": 111,
+  "sentence_count": 27,
+  "avg_words_per_sentence": 15.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "love",
+    "your",
+    "can't",
+    "Shake",
+    "just",
+    "shake",
+    "you",
+    "CHORUS:",
+    "shake...",
+    "I'm"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7259259259259259,
+    "most_common_words": [
+      [
+        "love",
+        53
+      ],
+      [
+        "your",
+        51
+      ],
+      [
+        "can't",
+        30
+      ],
+      [
+        "Shake",
+        29
+      ],
+      [
+        "just",
+        27
+      ]
+    ]
+  }
+}

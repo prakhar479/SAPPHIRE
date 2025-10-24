@@ -1,0 +1,45 @@
+{
+  "word_count": 71,
+  "unique_word_count": 50,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 71.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "don't",
+    "remember",
+    "him",
+    "time",
+    "through",
+    "hundred",
+    "Counting",
+    "backwards",
+    "count"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.295774647887324,
+    "most_common_words": [
+      [
+        "you",
+        4
+      ],
+      [
+        "don't",
+        2
+      ],
+      [
+        "remember",
+        2
+      ],
+      [
+        "him",
+        2
+      ],
+      [
+        "time",
+        2
+      ]
+    ]
+  }
+}

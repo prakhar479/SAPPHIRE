@@ -1,0 +1,45 @@
+{
+  "word_count": 227,
+  "unique_word_count": 34,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 56.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "got",
+    "really",
+    "You",
+    "now",
+    "you",
+    "don't",
+    "can't",
+    "sleep",
+    "night",
+    "know"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8502202643171806,
+    "most_common_words": [
+      [
+        "got",
+        29
+      ],
+      [
+        "really",
+        19
+      ],
+      [
+        "You",
+        19
+      ],
+      [
+        "now",
+        13
+      ],
+      [
+        "you",
+        10
+      ]
+    ]
+  }
+}

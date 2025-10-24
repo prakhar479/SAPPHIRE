@@ -1,0 +1,45 @@
+{
+  "word_count": 235,
+  "unique_word_count": 143,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 117.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "his",
+    "many",
+    "and",
+    "too",
+    "him",
+    "was",
+    "for",
+    "evers",
+    "they"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.39148936170212767,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "his",
+        12
+      ],
+      [
+        "many",
+        7
+      ],
+      [
+        "and",
+        7
+      ],
+      [
+        "too",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 165,
+  "unique_word_count": 112,
+  "sentence_count": 19,
+  "avg_words_per_sentence": 8.68421052631579,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "up!",
+    "The",
+    "and",
+    "the",
+    "Deutschland",
+    "has",
+    "gotta",
+    "die!",
+    "Wake",
+    "wake"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.32121212121212117,
+    "most_common_words": [
+      [
+        "up!",
+        6
+      ],
+      [
+        "The",
+        5
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "Deutschland",
+        2
+      ]
+    ]
+  }
+}

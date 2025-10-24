@@ -1,0 +1,45 @@
+{
+  "word_count": 421,
+  "unique_word_count": 258,
+  "sentence_count": 19,
+  "avg_words_per_sentence": 22.157894736842106,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "like",
+    "and",
+    "your",
+    "ass",
+    "with",
+    "You",
+    "couldn't",
+    "get"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3871733966745843,
+    "most_common_words": [
+      [
+        "you",
+        13
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "like",
+        6
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "your",
+        6
+      ]
+    ]
+  }
+}

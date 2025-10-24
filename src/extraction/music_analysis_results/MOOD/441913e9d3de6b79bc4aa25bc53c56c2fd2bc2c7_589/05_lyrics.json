@@ -1,0 +1,45 @@
+{
+  "word_count": 592,
+  "unique_word_count": 263,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 592.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "days",
+    "since",
+    "and",
+    "I'm",
+    "you're",
+    "have",
+    "sorry",
+    "like"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5557432432432432,
+    "most_common_words": [
+      [
+        "the",
+        23
+      ],
+      [
+        "you",
+        12
+      ],
+      [
+        "days",
+        10
+      ],
+      [
+        "since",
+        9
+      ],
+      [
+        "and",
+        9
+      ]
+    ]
+  }
+}

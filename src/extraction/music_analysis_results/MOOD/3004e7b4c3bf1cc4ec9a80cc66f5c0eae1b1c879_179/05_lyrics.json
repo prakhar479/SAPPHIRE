@@ -1,0 +1,45 @@
+{
+  "word_count": 520,
+  "unique_word_count": 287,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 520.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "was",
+    "wallet",
+    "had",
+    "you",
+    "Ali",
+    "get",
+    "for",
+    "down"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.44807692307692304,
+    "most_common_words": [
+      [
+        "the",
+        17
+      ],
+      [
+        "and",
+        12
+      ],
+      [
+        "was",
+        9
+      ],
+      [
+        "wallet",
+        8
+      ],
+      [
+        "had",
+        7
+      ]
+    ]
+  }
+}

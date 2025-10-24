@@ -1,0 +1,45 @@
+{
+  "word_count": 666,
+  "unique_word_count": 392,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 333.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "I'm",
+    "Never",
+    "brother",
+    "got",
+    "get",
+    "The",
+    "off",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.41141141141141147,
+    "most_common_words": [
+      [
+        "the",
+        38
+      ],
+      [
+        "and",
+        10
+      ],
+      [
+        "I'm",
+        6
+      ],
+      [
+        "Never",
+        6
+      ],
+      [
+        "brother",
+        6
+      ]
+    ]
+  }
+}

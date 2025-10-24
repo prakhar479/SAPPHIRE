@@ -1,0 +1,45 @@
+{
+  "word_count": 250,
+  "unique_word_count": 125,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 25.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "two",
+    "front",
+    "teeth",
+    "(thweeth)",
+    "and",
+    "for",
+    "could",
+    "the",
+    "All",
+    "want"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5,
+    "most_common_words": [
+      [
+        "two",
+        12
+      ],
+      [
+        "front",
+        12
+      ],
+      [
+        "teeth",
+        9
+      ],
+      [
+        "(thweeth)",
+        6
+      ],
+      [
+        "and",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 142,
+  "unique_word_count": 69,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 142.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "easy",
+    "yourself",
+    "hard",
+    "breaking",
+    "very",
+    "And",
+    "make",
+    "you",
+    "him",
+    "Make"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5140845070422535,
+    "most_common_words": [
+      [
+        "easy",
+        6
+      ],
+      [
+        "yourself",
+        6
+      ],
+      [
+        "hard",
+        5
+      ],
+      [
+        "breaking",
+        4
+      ],
+      [
+        "very",
+        4
+      ]
+    ]
+  }
+}

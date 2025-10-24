@@ -1,0 +1,45 @@
+{
+  "word_count": 384,
+  "unique_word_count": 143,
+  "sentence_count": 38,
+  "avg_words_per_sentence": 10.105263157894736,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "kindsa",
+    "all",
+    "girls.",
+    "All",
+    "girls,",
+    "I'm",
+    "the",
+    "feel",
+    "wanna",
+    "know"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6276041666666667,
+    "most_common_words": [
+      [
+        "kindsa",
+        31
+      ],
+      [
+        "all",
+        17
+      ],
+      [
+        "girls.",
+        16
+      ],
+      [
+        "All",
+        15
+      ],
+      [
+        "girls,",
+        15
+      ]
+    ]
+  }
+}

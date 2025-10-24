@@ -1,0 +1,45 @@
+{
+  "word_count": 430,
+  "unique_word_count": 161,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 215.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "And",
+    "your",
+    "offer",
+    "Yes",
+    "was",
+    "were",
+    "You",
+    "another"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6255813953488372,
+    "most_common_words": [
+      [
+        "the",
+        20
+      ],
+      [
+        "you",
+        14
+      ],
+      [
+        "And",
+        10
+      ],
+      [
+        "your",
+        8
+      ],
+      [
+        "offer",
+        7
+      ]
+    ]
+  }
+}

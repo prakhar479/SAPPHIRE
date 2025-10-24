@@ -1,0 +1,45 @@
+{
+  "word_count": 216,
+  "unique_word_count": 114,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 216.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "nobody",
+    "You",
+    "your",
+    "said",
+    "that",
+    "Well",
+    "say",
+    "she",
+    "nobody,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4722222222222222,
+    "most_common_words": [
+      [
+        "you",
+        9
+      ],
+      [
+        "nobody",
+        8
+      ],
+      [
+        "You",
+        6
+      ],
+      [
+        "your",
+        5
+      ],
+      [
+        "said",
+        5
+      ]
+    ]
+  }
+}

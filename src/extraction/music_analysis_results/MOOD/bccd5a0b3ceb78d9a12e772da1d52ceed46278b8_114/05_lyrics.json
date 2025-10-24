@@ -1,0 +1,45 @@
+{
+  "word_count": 212,
+  "unique_word_count": 70,
+  "sentence_count": 50,
+  "avg_words_per_sentence": 4.24,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Don't",
+    "bring",
+    "down.",
+    "Grrooss.",
+    "the",
+    "down,",
+    "You",
+    "your",
+    "get",
+    "got"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6698113207547169,
+    "most_common_words": [
+      [
+        "Don't",
+        23
+      ],
+      [
+        "bring",
+        23
+      ],
+      [
+        "down.",
+        23
+      ],
+      [
+        "Grrooss.",
+        15
+      ],
+      [
+        "the",
+        5
+      ]
+    ]
+  }
+}

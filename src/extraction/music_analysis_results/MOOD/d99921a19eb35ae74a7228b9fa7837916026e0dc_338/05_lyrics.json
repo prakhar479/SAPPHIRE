@@ -1,0 +1,45 @@
+{
+  "word_count": 214,
+  "unique_word_count": 110,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 214.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "your",
+    "yellow",
+    "brick",
+    "road",
+    "going",
+    "old",
+    "You",
+    "can't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.485981308411215,
+    "most_common_words": [
+      [
+        "the",
+        14
+      ],
+      [
+        "you",
+        9
+      ],
+      [
+        "your",
+        4
+      ],
+      [
+        "yellow",
+        4
+      ],
+      [
+        "brick",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 152,
+  "unique_word_count": 44,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 152.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I've",
+    "clean",
+    "been",
+    "clean,",
+    "this",
+    "What",
+    "with",
+    "it?",
+    "what",
+    "Where"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7105263157894737,
+    "most_common_words": [
+      [
+        "I've",
+        7
+      ],
+      [
+        "clean",
+        7
+      ],
+      [
+        "been",
+        7
+      ],
+      [
+        "clean,",
+        6
+      ],
+      [
+        "this",
+        4
+      ]
+    ]
+  }
+}

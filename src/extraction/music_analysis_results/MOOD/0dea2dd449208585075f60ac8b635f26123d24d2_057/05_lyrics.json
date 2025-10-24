@@ -1,0 +1,45 @@
+{
+  "word_count": 363,
+  "unique_word_count": 156,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 363.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "sugar",
+    "Pour",
+    "the",
+    "some",
+    "get",
+    "your",
+    "sweet",
+    "love",
+    "like",
+    "little"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5702479338842975,
+    "most_common_words": [
+      [
+        "sugar",
+        17
+      ],
+      [
+        "Pour",
+        13
+      ],
+      [
+        "the",
+        10
+      ],
+      [
+        "some",
+        9
+      ],
+      [
+        "get",
+        5
+      ]
+    ]
+  }
+}

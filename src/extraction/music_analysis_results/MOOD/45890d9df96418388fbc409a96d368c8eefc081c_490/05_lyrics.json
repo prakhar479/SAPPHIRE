@@ -1,0 +1,45 @@
+{
+  "word_count": 140,
+  "unique_word_count": 87,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 70.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "crying",
+    "crying,",
+    "over",
+    "and",
+    "but",
+    "was",
+    "all",
+    "for",
+    "hand"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.37857142857142856,
+    "most_common_words": [
+      [
+        "you",
+        12
+      ],
+      [
+        "crying",
+        7
+      ],
+      [
+        "crying,",
+        7
+      ],
+      [
+        "over",
+        6
+      ],
+      [
+        "and",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 249,
+  "unique_word_count": 103,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 249.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "got",
+    "you",
+    "babe",
+    "HIM:",
+    "HER:",
+    "don't",
+    "BOTH:",
+    "say",
+    "won't",
+    "all"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5863453815261044,
+    "most_common_words": [
+      [
+        "got",
+        24
+      ],
+      [
+        "you",
+        22
+      ],
+      [
+        "babe",
+        11
+      ],
+      [
+        "HIM:",
+        9
+      ],
+      [
+        "HER:",
+        6
+      ]
+    ]
+  }
+}

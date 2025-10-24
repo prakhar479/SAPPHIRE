@@ -1,0 +1,45 @@
+{
+  "word_count": 52,
+  "unique_word_count": 41,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 52.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "man",
+    "pretty",
+    "'Cause",
+    "I'm",
+    "spell",
+    "back",
+    "You",
+    "women,",
+    "Standing",
+    "line,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.21153846153846156,
+    "most_common_words": [
+      [
+        "man",
+        3
+      ],
+      [
+        "pretty",
+        2
+      ],
+      [
+        "'Cause",
+        2
+      ],
+      [
+        "I'm",
+        2
+      ],
+      [
+        "spell",
+        2
+      ]
+    ]
+  }
+}

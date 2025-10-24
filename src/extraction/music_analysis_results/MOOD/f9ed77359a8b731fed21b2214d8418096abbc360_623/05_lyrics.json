@@ -1,0 +1,45 @@
+{
+  "word_count": 593,
+  "unique_word_count": 241,
+  "sentence_count": 24,
+  "avg_words_per_sentence": 24.708333333333332,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "look",
+    "that",
+    "that,",
+    "Look",
+    "you",
+    "just",
+    "news",
+    "call",
+    "him"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5935919055649241,
+    "most_common_words": [
+      [
+        "the",
+        29
+      ],
+      [
+        "look",
+        18
+      ],
+      [
+        "that",
+        17
+      ],
+      [
+        "that,",
+        14
+      ],
+      [
+        "Look",
+        10
+      ]
+    ]
+  }
+}

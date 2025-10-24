@@ -1,0 +1,45 @@
+{
+  "word_count": 312,
+  "unique_word_count": 200,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 312.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "like",
+    "I'm",
+    "goin'",
+    "nigga",
+    "dat",
+    "get",
+    "you",
+    "Don't",
+    "when"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3589743589743589,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "like",
+        7
+      ],
+      [
+        "I'm",
+        4
+      ],
+      [
+        "goin'",
+        4
+      ],
+      [
+        "nigga",
+        4
+      ]
+    ]
+  }
+}

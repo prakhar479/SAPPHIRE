@@ -1,0 +1,45 @@
+{
+  "word_count": 951,
+  "unique_word_count": 393,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 951.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "was",
+    "said",
+    "you",
+    "her",
+    "But",
+    "your",
+    "She",
+    "she"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5867507886435331,
+    "most_common_words": [
+      [
+        "the",
+        30
+      ],
+      [
+        "and",
+        24
+      ],
+      [
+        "was",
+        18
+      ],
+      [
+        "said",
+        18
+      ],
+      [
+        "you",
+        16
+      ]
+    ]
+  }
+}

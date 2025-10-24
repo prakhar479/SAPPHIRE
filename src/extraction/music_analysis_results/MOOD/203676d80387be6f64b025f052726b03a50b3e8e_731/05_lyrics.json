@@ -1,0 +1,45 @@
+{
+  "word_count": 244,
+  "unique_word_count": 146,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 244.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "here",
+    "out",
+    "And",
+    "Let",
+    "with",
+    "their",
+    "those",
+    "rings",
+    "his"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4016393442622951,
+    "most_common_words": [
+      [
+        "the",
+        8
+      ],
+      [
+        "here",
+        8
+      ],
+      [
+        "out",
+        7
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "Let",
+        4
+      ]
+    ]
+  }
+}

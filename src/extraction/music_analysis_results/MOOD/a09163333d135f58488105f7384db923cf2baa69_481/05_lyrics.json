@@ -1,0 +1,45 @@
+{
+  "word_count": 255,
+  "unique_word_count": 123,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 255.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "are",
+    "other",
+    "over",
+    "you",
+    "just",
+    "for",
+    "Cause",
+    "hand",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5176470588235293,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "are",
+        7
+      ],
+      [
+        "other",
+        5
+      ],
+      [
+        "over",
+        5
+      ],
+      [
+        "you",
+        5
+      ]
+    ]
+  }
+}

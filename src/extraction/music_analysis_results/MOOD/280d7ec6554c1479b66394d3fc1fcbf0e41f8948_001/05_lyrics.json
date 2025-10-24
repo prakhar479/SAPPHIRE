@@ -1,0 +1,45 @@
+{
+  "word_count": 167,
+  "unique_word_count": 65,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 167.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Mama",
+    "treats",
+    "your",
+    "daughter",
+    "mean",
+    "the",
+    "man",
+    "I've",
+    "him",
+    "He's"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6107784431137724,
+    "most_common_words": [
+      [
+        "Mama",
+        14
+      ],
+      [
+        "treats",
+        10
+      ],
+      [
+        "your",
+        9
+      ],
+      [
+        "daughter",
+        9
+      ],
+      [
+        "mean",
+        9
+      ]
+    ]
+  }
+}

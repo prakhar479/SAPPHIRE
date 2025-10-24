@@ -1,0 +1,45 @@
+{
+  "word_count": 119,
+  "unique_word_count": 77,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 119.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "I'll",
+    "there",
+    "teardrop",
+    "your",
+    "ever",
+    "before",
+    "next",
+    "falls"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3529411764705882,
+    "most_common_words": [
+      [
+        "you",
+        5
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "I'll",
+        4
+      ],
+      [
+        "there",
+        4
+      ],
+      [
+        "teardrop",
+        4
+      ]
+    ]
+  }
+}

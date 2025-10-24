@@ -1,0 +1,45 @@
+{
+  "word_count": 617,
+  "unique_word_count": 204,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 205.66666666666666,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "time",
+    "It's",
+    "end",
+    "world",
+    "know",
+    "had",
+    "some",
+    "alone)",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6693679092382496,
+    "most_common_words": [
+      [
+        "the",
+        47
+      ],
+      [
+        "time",
+        32
+      ],
+      [
+        "It's",
+        21
+      ],
+      [
+        "end",
+        21
+      ],
+      [
+        "world",
+        21
+      ]
+    ]
+  }
+}

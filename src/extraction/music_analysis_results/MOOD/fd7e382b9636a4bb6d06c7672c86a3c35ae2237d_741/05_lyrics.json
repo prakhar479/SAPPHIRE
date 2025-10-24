@@ -1,0 +1,45 @@
+{
+  "word_count": 199,
+  "unique_word_count": 83,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 199.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Godzilla!",
+    "again",
+    "the",
+    "and",
+    "no,",
+    "Godzilla,",
+    "yeah",
+    "History",
+    "shows",
+    "How"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5829145728643217,
+    "most_common_words": [
+      [
+        "Godzilla!",
+        8
+      ],
+      [
+        "again",
+        8
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "no,",
+        6
+      ]
+    ]
+  }
+}

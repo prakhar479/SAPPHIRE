@@ -1,0 +1,45 @@
+{
+  "word_count": 311,
+  "unique_word_count": 192,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 28.272727272727273,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "Vincent",
+    "Red",
+    "And",
+    "her",
+    "James",
+    "you",
+    "the",
+    "for",
+    "Molly"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.382636655948553,
+    "most_common_words": [
+      [
+        "and",
+        9
+      ],
+      [
+        "Vincent",
+        7
+      ],
+      [
+        "Red",
+        6
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "her",
+        6
+      ]
+    ]
+  }
+}

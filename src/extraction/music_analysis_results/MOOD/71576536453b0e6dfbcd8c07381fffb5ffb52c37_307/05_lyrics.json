@@ -1,0 +1,45 @@
+{
+  "word_count": 130,
+  "unique_word_count": 77,
+  "sentence_count": 20,
+  "avg_words_per_sentence": 6.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "kiss",
+    "your",
+    "out",
+    "and",
+    "Kiss",
+    "wear",
+    "Oh,",
+    "beneath",
+    "milky"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4076923076923077,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "kiss",
+        4
+      ],
+      [
+        "your",
+        4
+      ],
+      [
+        "out",
+        3
+      ],
+      [
+        "and",
+        3
+      ]
+    ]
+  }
+}

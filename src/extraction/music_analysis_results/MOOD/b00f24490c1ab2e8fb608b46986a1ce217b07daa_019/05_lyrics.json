@@ -1,0 +1,45 @@
+{
+  "word_count": 249,
+  "unique_word_count": 99,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 124.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Let's",
+    "spend",
+    "the",
+    "night",
+    "together",
+    "you",
+    "need",
+    "my)",
+    "I'm",
+    "more"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6024096385542168,
+    "most_common_words": [
+      [
+        "Let's",
+        13
+      ],
+      [
+        "spend",
+        13
+      ],
+      [
+        "the",
+        13
+      ],
+      [
+        "night",
+        13
+      ],
+      [
+        "together",
+        13
+      ]
+    ]
+  }
+}

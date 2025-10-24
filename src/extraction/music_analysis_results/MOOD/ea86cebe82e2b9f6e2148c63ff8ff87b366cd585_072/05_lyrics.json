@@ -1,0 +1,45 @@
+{
+  "word_count": 192,
+  "unique_word_count": 63,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 48.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "for",
+    "design",
+    "life",
+    "are",
+    "the",
+    "came",
+    "don't",
+    "talk",
+    "about",
+    "love"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.671875,
+    "most_common_words": [
+      [
+        "for",
+        12
+      ],
+      [
+        "design",
+        12
+      ],
+      [
+        "life",
+        11
+      ],
+      [
+        "are",
+        6
+      ],
+      [
+        "the",
+        5
+      ]
+    ]
+  }
+}

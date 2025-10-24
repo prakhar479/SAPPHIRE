@@ -1,0 +1,45 @@
+{
+  "word_count": 201,
+  "unique_word_count": 40,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 201.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "get",
+    "Ooh-oo",
+    "child",
+    "Some",
+    "brighter",
+    "Things",
+    "are",
+    "gonna",
+    "easier",
+    "Things'll"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8009950248756219,
+    "most_common_words": [
+      [
+        "get",
+        16
+      ],
+      [
+        "Ooh-oo",
+        12
+      ],
+      [
+        "child",
+        12
+      ],
+      [
+        "Some",
+        12
+      ],
+      [
+        "brighter",
+        9
+      ]
+    ]
+  }
+}

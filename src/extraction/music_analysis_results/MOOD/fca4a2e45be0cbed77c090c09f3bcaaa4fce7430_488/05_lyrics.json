@@ -1,0 +1,45 @@
+{
+  "word_count": 104,
+  "unique_word_count": 69,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 104.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "ooh",
+    "Won't",
+    "let",
+    "you,",
+    "it's",
+    "the",
+    "can",
+    "for",
+    "And"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.33653846153846156,
+    "most_common_words": [
+      [
+        "you",
+        7
+      ],
+      [
+        "ooh",
+        6
+      ],
+      [
+        "Won't",
+        4
+      ],
+      [
+        "let",
+        3
+      ],
+      [
+        "you,",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 210,
+  "unique_word_count": 107,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 52.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "that",
+    "you",
+    "I'm",
+    "much",
+    "one",
+    "can",
+    "tell",
+    "doing",
+    "wrong",
+    "today"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4904761904761905,
+    "most_common_words": [
+      [
+        "that",
+        7
+      ],
+      [
+        "you",
+        6
+      ],
+      [
+        "I'm",
+        5
+      ],
+      [
+        "much",
+        4
+      ],
+      [
+        "one",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 382,
+  "unique_word_count": 145,
+  "sentence_count": 23,
+  "avg_words_per_sentence": 16.608695652173914,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Solid",
+    "hot",
+    "rock",
+    "And",
+    "build",
+    "and",
+    "solid",
+    "what",
+    "That's",
+    "got"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6204188481675392,
+    "most_common_words": [
+      [
+        "Solid",
+        14
+      ],
+      [
+        "hot",
+        12
+      ],
+      [
+        "rock",
+        10
+      ],
+      [
+        "And",
+        9
+      ],
+      [
+        "build",
+        9
+      ]
+    ]
+  }
+}

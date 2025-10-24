@@ -1,0 +1,45 @@
+{
+  "word_count": 129,
+  "unique_word_count": 90,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 18.428571428571427,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "Then",
+    "one",
+    "you",
+    "all",
+    "and",
+    "thousand",
+    "come",
+    "could",
+    "And"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3023255813953488,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "Then",
+        4
+      ],
+      [
+        "one",
+        4
+      ],
+      [
+        "you",
+        3
+      ],
+      [
+        "all",
+        3
+      ]
+    ]
+  }
+}

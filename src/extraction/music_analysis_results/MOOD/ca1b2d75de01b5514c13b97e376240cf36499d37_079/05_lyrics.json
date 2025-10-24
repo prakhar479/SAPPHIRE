@@ -1,0 +1,45 @@
+{
+  "word_count": 205,
+  "unique_word_count": 72,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 205.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "cry",
+    "you",
+    "cry,",
+    "want",
+    "Cry,",
+    "and",
+    "Yes",
+    "Then",
+    "That",
+    "I've"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6487804878048781,
+    "most_common_words": [
+      [
+        "cry",
+        15
+      ],
+      [
+        "you",
+        15
+      ],
+      [
+        "cry,",
+        10
+      ],
+      [
+        "want",
+        10
+      ],
+      [
+        "Cry,",
+        8
+      ]
+    ]
+  }
+}

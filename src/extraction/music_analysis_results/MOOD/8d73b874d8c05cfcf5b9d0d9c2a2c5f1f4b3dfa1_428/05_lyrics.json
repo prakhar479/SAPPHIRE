@@ -1,0 +1,45 @@
+{
+  "word_count": 278,
+  "unique_word_count": 122,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 69.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "You",
+    "out",
+    "way",
+    "know",
+    "spits",
+    "And",
+    "throws",
+    "about"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5611510791366907,
+    "most_common_words": [
+      [
+        "the",
+        19
+      ],
+      [
+        "you",
+        18
+      ],
+      [
+        "You",
+        10
+      ],
+      [
+        "out",
+        8
+      ],
+      [
+        "way",
+        7
+      ]
+    ]
+  }
+}

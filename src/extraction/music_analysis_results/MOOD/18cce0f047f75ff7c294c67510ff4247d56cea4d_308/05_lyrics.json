@@ -1,0 +1,45 @@
+{
+  "word_count": 256,
+  "unique_word_count": 116,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 256.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "down",
+    "you",
+    "slow",
+    "changing",
+    "the",
+    "lights",
+    "are",
+    "You",
+    "time",
+    "from"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.546875,
+    "most_common_words": [
+      [
+        "down",
+        18
+      ],
+      [
+        "you",
+        17
+      ],
+      [
+        "slow",
+        16
+      ],
+      [
+        "changing",
+        13
+      ],
+      [
+        "the",
+        10
+      ]
+    ]
+  }
+}

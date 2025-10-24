@@ -1,0 +1,45 @@
+{
+  "word_count": 307,
+  "unique_word_count": 167,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 307.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "her",
+    "gotta",
+    "little",
+    "tenderness",
+    "Try",
+    "love",
+    "try",
+    "yeah",
+    "Don't",
+    "hold"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4560260586319218,
+    "most_common_words": [
+      [
+        "her",
+        27
+      ],
+      [
+        "gotta",
+        8
+      ],
+      [
+        "little",
+        6
+      ],
+      [
+        "tenderness",
+        6
+      ],
+      [
+        "Try",
+        6
+      ]
+    ]
+  }
+}

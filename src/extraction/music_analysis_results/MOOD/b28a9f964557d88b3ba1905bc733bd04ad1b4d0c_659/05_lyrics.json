@@ -1,0 +1,45 @@
+{
+  "word_count": 229,
+  "unique_word_count": 106,
+  "sentence_count": 15,
+  "avg_words_per_sentence": 15.266666666666667,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "way",
+    "Goodbye",
+    "blackberry",
+    "day.",
+    "don't",
+    "see",
+    "can't",
+    "you,",
+    "need"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.537117903930131,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "way",
+        9
+      ],
+      [
+        "Goodbye",
+        8
+      ],
+      [
+        "blackberry",
+        8
+      ],
+      [
+        "day.",
+        5
+      ]
+    ]
+  }
+}

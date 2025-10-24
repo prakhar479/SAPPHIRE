@@ -1,0 +1,45 @@
+{
+  "word_count": 291,
+  "unique_word_count": 124,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 291.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "number",
+    "nine",
+    "leave",
+    "westbound",
+    "Gonna",
+    "mind",
+    "this",
+    "town,",
+    "far"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5738831615120275,
+    "most_common_words": [
+      [
+        "the",
+        21
+      ],
+      [
+        "number",
+        12
+      ],
+      [
+        "nine",
+        12
+      ],
+      [
+        "leave",
+        12
+      ],
+      [
+        "westbound",
+        11
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 323,
+  "unique_word_count": 85,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 323.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "with",
+    "his",
+    "Killing",
+    "song",
+    "softly",
+    "life",
+    "words",
+    "pain",
+    "Singing",
+    "Telling"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.736842105263158,
+    "most_common_words": [
+      [
+        "with",
+        33
+      ],
+      [
+        "his",
+        33
+      ],
+      [
+        "Killing",
+        18
+      ],
+      [
+        "song",
+        18
+      ],
+      [
+        "softly",
+        17
+      ]
+    ]
+  }
+}

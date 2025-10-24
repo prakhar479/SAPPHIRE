@@ -1,0 +1,45 @@
+{
+  "word_count": 163,
+  "unique_word_count": 91,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 23.285714285714285,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "want",
+    "I'm",
+    "show",
+    "way",
+    "wonder",
+    "you're",
+    "And",
+    "Who"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.44171779141104295,
+    "most_common_words": [
+      [
+        "you",
+        6
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "want",
+        5
+      ],
+      [
+        "I'm",
+        4
+      ],
+      [
+        "show",
+        3
+      ]
+    ]
+  }
+}

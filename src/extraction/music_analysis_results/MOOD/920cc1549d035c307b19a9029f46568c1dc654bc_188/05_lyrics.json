@@ -1,0 +1,45 @@
+{
+  "word_count": 223,
+  "unique_word_count": 45,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 223.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Come",
+    "on-a",
+    "house",
+    "house,",
+    "I'm",
+    "gonna",
+    "give",
+    "you",
+    "come",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7982062780269058,
+    "most_common_words": [
+      [
+        "Come",
+        19
+      ],
+      [
+        "on-a",
+        19
+      ],
+      [
+        "house",
+        19
+      ],
+      [
+        "house,",
+        17
+      ],
+      [
+        "I'm",
+        10
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 169,
+  "unique_word_count": 82,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 169.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "there",
+    "moved",
+    "elusive",
+    "dreams",
+    "you",
+    "find",
+    "followed",
+    "didnt",
+    "For",
+    "they're"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.514792899408284,
+    "most_common_words": [
+      [
+        "there",
+        6
+      ],
+      [
+        "moved",
+        5
+      ],
+      [
+        "elusive",
+        5
+      ],
+      [
+        "dreams",
+        5
+      ],
+      [
+        "you",
+        4
+      ]
+    ]
+  }
+}

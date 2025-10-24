@@ -1,0 +1,45 @@
+{
+  "word_count": 82,
+  "unique_word_count": 44,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 82.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "dreams",
+    "can't",
+    "Instead",
+    "having",
+    "sweet",
+    "about",
+    "Sweet",
+    "night",
+    "through"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.46341463414634143,
+    "most_common_words": [
+      [
+        "you",
+        7
+      ],
+      [
+        "dreams",
+        5
+      ],
+      [
+        "can't",
+        3
+      ],
+      [
+        "Instead",
+        3
+      ],
+      [
+        "having",
+        3
+      ]
+    ]
+  }
+}

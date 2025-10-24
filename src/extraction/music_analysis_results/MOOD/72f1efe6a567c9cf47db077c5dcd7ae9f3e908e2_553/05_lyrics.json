@@ -1,0 +1,45 @@
+{
+  "word_count": 227,
+  "unique_word_count": 86,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 227.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "with",
+    "blinded",
+    "And",
+    "science!\"",
+    "any",
+    "she",
+    "poetry",
+    "motion",
+    "her",
+    "harmony"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6211453744493391,
+    "most_common_words": [
+      [
+        "with",
+        13
+      ],
+      [
+        "blinded",
+        8
+      ],
+      [
+        "And",
+        8
+      ],
+      [
+        "science!\"",
+        7
+      ],
+      [
+        "any",
+        6
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 161,
+  "unique_word_count": 33,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 16.1,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "what",
+    "the",
+    "sunshine",
+    "and",
+    "life,",
+    "sunshine,",
+    "Everybody",
+    "loves",
+    "feel,",
+    "get"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7950310559006211,
+    "most_common_words": [
+      [
+        "what",
+        16
+      ],
+      [
+        "the",
+        15
+      ],
+      [
+        "sunshine",
+        13
+      ],
+      [
+        "and",
+        8
+      ],
+      [
+        "life,",
+        6
+      ]
+    ]
+  }
+}

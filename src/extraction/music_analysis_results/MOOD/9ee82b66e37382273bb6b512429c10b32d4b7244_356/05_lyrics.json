@@ -1,0 +1,45 @@
+{
+  "word_count": 123,
+  "unique_word_count": 69,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 123.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "heart",
+    "and",
+    "Brittle",
+    "[Chorus]",
+    "I'm",
+    "And",
+    "Jimmy",
+    "brown",
+    "Made"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4390243902439024,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "heart",
+        6
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "Brittle",
+        4
+      ],
+      [
+        "[Chorus]",
+        3
+      ]
+    ]
+  }
+}

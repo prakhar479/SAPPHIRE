@@ -1,0 +1,45 @@
+{
+  "word_count": 173,
+  "unique_word_count": 48,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 173.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "love",
+    "can't",
+    "get",
+    "enough",
+    "your",
+    "you",
+    "and",
+    "Come",
+    "come",
+    "want"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7225433526011561,
+    "most_common_words": [
+      [
+        "love",
+        13
+      ],
+      [
+        "can't",
+        12
+      ],
+      [
+        "get",
+        12
+      ],
+      [
+        "enough",
+        12
+      ],
+      [
+        "your",
+        12
+      ]
+    ]
+  }
+}

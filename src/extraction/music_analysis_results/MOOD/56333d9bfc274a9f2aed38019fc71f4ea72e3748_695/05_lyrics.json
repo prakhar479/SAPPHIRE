@@ -1,0 +1,45 @@
+{
+  "word_count": 246,
+  "unique_word_count": 77,
+  "sentence_count": 13,
+  "avg_words_per_sentence": 18.923076923076923,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "la-la,",
+    "knows",
+    "much",
+    "about",
+    "these",
+    "things",
+    "charming",
+    "this",
+    "the",
+    "said"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6869918699186992,
+    "most_common_words": [
+      [
+        "la-la,",
+        12
+      ],
+      [
+        "knows",
+        8
+      ],
+      [
+        "much",
+        8
+      ],
+      [
+        "about",
+        8
+      ],
+      [
+        "these",
+        8
+      ]
+    ]
+  }
+}

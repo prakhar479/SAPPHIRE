@@ -1,0 +1,45 @@
+{
+  "word_count": 334,
+  "unique_word_count": 99,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 334.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "love",
+    "Could",
+    "I'm",
+    "falling",
+    "With",
+    "baby)",
+    "And",
+    "for",
+    "(with"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7035928143712575,
+    "most_common_words": [
+      [
+        "you",
+        28
+      ],
+      [
+        "love",
+        18
+      ],
+      [
+        "Could",
+        17
+      ],
+      [
+        "I'm",
+        17
+      ],
+      [
+        "falling",
+        17
+      ]
+    ]
+  }
+}

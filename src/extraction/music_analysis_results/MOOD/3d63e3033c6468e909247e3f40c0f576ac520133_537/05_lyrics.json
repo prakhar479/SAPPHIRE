@@ -1,0 +1,45 @@
+{
+  "word_count": 201,
+  "unique_word_count": 137,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 22.333333333333332,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "La,",
+    "the",
+    "and",
+    "were",
+    "[Chorus]",
+    "They",
+    "me,",
+    "Caine",
+    "just",
+    "The"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.31840796019900497,
+    "most_common_words": [
+      [
+        "La,",
+        14
+      ],
+      [
+        "the",
+        12
+      ],
+      [
+        "and",
+        7
+      ],
+      [
+        "were",
+        3
+      ],
+      [
+        "[Chorus]",
+        3
+      ]
+    ]
+  }
+}

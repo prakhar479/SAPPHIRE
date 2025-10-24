@@ -1,0 +1,45 @@
+{
+  "word_count": 230,
+  "unique_word_count": 108,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 230.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "Stay",
+    "alive",
+    "stay",
+    "with",
+    "that",
+    "and",
+    "But",
+    "screaming"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5304347826086957,
+    "most_common_words": [
+      [
+        "you",
+        11
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "Stay",
+        6
+      ],
+      [
+        "alive",
+        6
+      ],
+      [
+        "stay",
+        5
+      ]
+    ]
+  }
+}

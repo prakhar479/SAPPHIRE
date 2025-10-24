@@ -1,0 +1,45 @@
+{
+  "word_count": 201,
+  "unique_word_count": 87,
+  "sentence_count": 19,
+  "avg_words_per_sentence": 10.578947368421053,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Bachelor",
+    "Kisses",
+    "now,",
+    "won't",
+    "your",
+    "Oh,",
+    "save",
+    "these",
+    "they're"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5671641791044777,
+    "most_common_words": [
+      [
+        "you",
+        8
+      ],
+      [
+        "Bachelor",
+        8
+      ],
+      [
+        "Kisses",
+        8
+      ],
+      [
+        "now,",
+        8
+      ],
+      [
+        "won't",
+        7
+      ]
+    ]
+  }
+}

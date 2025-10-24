@@ -1,0 +1,45 @@
+{
+  "word_count": 131,
+  "unique_word_count": 48,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 14.555555555555555,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "It's",
+    "But",
+    "wouldn't",
+    "make",
+    "believe",
+    "you",
+    "believed",
+    "me.",
+    "Without",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.633587786259542,
+    "most_common_words": [
+      [
+        "It's",
+        6
+      ],
+      [
+        "But",
+        4
+      ],
+      [
+        "wouldn't",
+        4
+      ],
+      [
+        "make",
+        4
+      ],
+      [
+        "believe",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 136,
+  "unique_word_count": 83,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 136.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Can",
+    "still",
+    "friends?",
+    "but",
+    "Things",
+    "like",
+    "can't",
+    "just",
+    "it's",
+    "time"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3897058823529411,
+    "most_common_words": [
+      [
+        "Can",
+        6
+      ],
+      [
+        "still",
+        6
+      ],
+      [
+        "friends?",
+        5
+      ],
+      [
+        "but",
+        4
+      ],
+      [
+        "Things",
+        3
+      ]
+    ]
+  }
+}

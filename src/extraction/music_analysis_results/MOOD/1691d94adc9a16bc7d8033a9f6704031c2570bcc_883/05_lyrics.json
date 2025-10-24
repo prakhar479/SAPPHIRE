@@ -1,0 +1,45 @@
+{
+  "word_count": 102,
+  "unique_word_count": 83,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 51.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "[repeat",
+    "chorus]",
+    "them",
+    "your",
+    "says",
+    "out",
+    "want",
+    "Rip",
+    "down"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.18627450980392157,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "[repeat",
+        4
+      ],
+      [
+        "chorus]",
+        4
+      ],
+      [
+        "them",
+        3
+      ],
+      [
+        "your",
+        2
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 358,
+  "unique_word_count": 133,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 358.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "shake",
+    "doin",
+    "Breakdown",
+    "down",
+    "Detroit",
+    "motor",
+    "city",
+    "right",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6284916201117319,
+    "most_common_words": [
+      [
+        "the",
+        25
+      ],
+      [
+        "shake",
+        18
+      ],
+      [
+        "doin",
+        17
+      ],
+      [
+        "Breakdown",
+        17
+      ],
+      [
+        "down",
+        17
+      ]
+    ]
+  }
+}

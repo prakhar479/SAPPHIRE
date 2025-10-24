@@ -1,0 +1,45 @@
+{
+  "word_count": 159,
+  "unique_word_count": 89,
+  "sentence_count": 28,
+  "avg_words_per_sentence": 5.678571428571429,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "your",
+    "pussy",
+    "dog.",
+    "can",
+    "can't",
+    "dog?",
+    "Can",
+    "you",
+    "I'm"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.44025157232704404,
+    "most_common_words": [
+      [
+        "the",
+        15
+      ],
+      [
+        "your",
+        9
+      ],
+      [
+        "pussy",
+        9
+      ],
+      [
+        "dog.",
+        5
+      ],
+      [
+        "can",
+        4
+      ]
+    ]
+  }
+}

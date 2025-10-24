@@ -1,0 +1,45 @@
+{
+  "word_count": 201,
+  "unique_word_count": 103,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 201.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "and",
+    "you're",
+    "hero",
+    "working",
+    "class",
+    "something",
+    "they",
+    "the",
+    "feel"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.48756218905472637,
+    "most_common_words": [
+      [
+        "you",
+        17
+      ],
+      [
+        "and",
+        7
+      ],
+      [
+        "you're",
+        6
+      ],
+      [
+        "hero",
+        6
+      ],
+      [
+        "working",
+        5
+      ]
+    ]
+  }
+}

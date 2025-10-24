@@ -1,0 +1,45 @@
+{
+  "word_count": 218,
+  "unique_word_count": 114,
+  "sentence_count": 18,
+  "avg_words_per_sentence": 12.11111111111111,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "that",
+    "the",
+    "remember",
+    "don't",
+    "care",
+    "You",
+    "say",
+    "you've",
+    "know"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.47706422018348627,
+    "most_common_words": [
+      [
+        "you",
+        12
+      ],
+      [
+        "that",
+        4
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "remember",
+        4
+      ],
+      [
+        "don't",
+        4
+      ]
+    ]
+  }
+}

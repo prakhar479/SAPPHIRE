@@ -1,0 +1,45 @@
+{
+  "word_count": 135,
+  "unique_word_count": 81,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 135.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I've",
+    "been",
+    "long",
+    "you",
+    "waiting",
+    "time",
+    "more",
+    "and",
+    "now",
+    "take"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4,
+    "most_common_words": [
+      [
+        "I've",
+        4
+      ],
+      [
+        "been",
+        4
+      ],
+      [
+        "long",
+        4
+      ],
+      [
+        "you",
+        4
+      ],
+      [
+        "waiting",
+        3
+      ]
+    ]
+  }
+}

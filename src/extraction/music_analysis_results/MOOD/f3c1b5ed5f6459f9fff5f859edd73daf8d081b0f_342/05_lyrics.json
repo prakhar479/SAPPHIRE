@@ -1,0 +1,45 @@
+{
+  "word_count": 232,
+  "unique_word_count": 80,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 232.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "better",
+    "feelin'",
+    "I'm",
+    "back",
+    "bin",
+    "her",
+    "Sundown",
+    "take",
+    "care",
+    "find"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6551724137931034,
+    "most_common_words": [
+      [
+        "better",
+        8
+      ],
+      [
+        "feelin'",
+        7
+      ],
+      [
+        "I'm",
+        7
+      ],
+      [
+        "back",
+        6
+      ],
+      [
+        "bin",
+        6
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 230,
+  "unique_word_count": 104,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 230.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "And",
+    "see",
+    "darkness",
+    "that",
+    "know",
+    "our",
+    "love",
+    "Well",
+    "can"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5478260869565217,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "And",
+        12
+      ],
+      [
+        "see",
+        11
+      ],
+      [
+        "darkness",
+        10
+      ],
+      [
+        "that",
+        7
+      ]
+    ]
+  }
+}

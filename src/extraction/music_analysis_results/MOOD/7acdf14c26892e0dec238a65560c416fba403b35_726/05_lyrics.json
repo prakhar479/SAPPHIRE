@@ -1,0 +1,45 @@
+{
+  "word_count": 112,
+  "unique_word_count": 70,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 28.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "surfing",
+    "magazines",
+    "used",
+    "get",
+    "our",
+    "breaking",
+    "and",
+    "kicks",
+    "reading"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.375,
+    "most_common_words": [
+      [
+        "the",
+        8
+      ],
+      [
+        "surfing",
+        4
+      ],
+      [
+        "magazines",
+        4
+      ],
+      [
+        "used",
+        3
+      ],
+      [
+        "get",
+        3
+      ]
+    ]
+  }
+}

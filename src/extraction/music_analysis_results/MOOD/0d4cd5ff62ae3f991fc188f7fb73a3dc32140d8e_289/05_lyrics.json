@@ -1,0 +1,45 @@
+{
+  "word_count": 299,
+  "unique_word_count": 109,
+  "sentence_count": 14,
+  "avg_words_per_sentence": 21.357142857142858,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "And",
+    "happy",
+    "believe",
+    "hour",
+    "it's",
+    "the",
+    "they",
+    "Don't",
+    "you",
+    "'Cause"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6354515050167224,
+    "most_common_words": [
+      [
+        "And",
+        14
+      ],
+      [
+        "happy",
+        13
+      ],
+      [
+        "believe",
+        9
+      ],
+      [
+        "hour",
+        8
+      ],
+      [
+        "it's",
+        8
+      ]
+    ]
+  }
+}

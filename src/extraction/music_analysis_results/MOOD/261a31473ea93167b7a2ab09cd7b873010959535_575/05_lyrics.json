@@ -1,0 +1,45 @@
+{
+  "word_count": 725,
+  "unique_word_count": 367,
+  "sentence_count": 25,
+  "avg_words_per_sentence": 29.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "your",
+    "Bombs",
+    "over",
+    "Baghdad!",
+    "Bob",
+    "head.",
+    "Rag",
+    "top."
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.49379310344827587,
+    "most_common_words": [
+      [
+        "the",
+        21
+      ],
+      [
+        "you",
+        19
+      ],
+      [
+        "your",
+        14
+      ],
+      [
+        "Bombs",
+        12
+      ],
+      [
+        "over",
+        12
+      ]
+    ]
+  }
+}

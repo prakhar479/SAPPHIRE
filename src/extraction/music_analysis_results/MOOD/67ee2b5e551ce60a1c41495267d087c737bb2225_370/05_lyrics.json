@@ -1,0 +1,45 @@
+{
+  "word_count": 72,
+  "unique_word_count": 51,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 72.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "And",
+    "Yeah,",
+    "said",
+    "you",
+    "will",
+    "alone",
+    "again",
+    "tonight",
+    "dear",
+    "that"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.29166666666666663,
+    "most_common_words": [
+      [
+        "And",
+        3
+      ],
+      [
+        "Yeah,",
+        2
+      ],
+      [
+        "said",
+        2
+      ],
+      [
+        "you",
+        2
+      ],
+      [
+        "will",
+        2
+      ]
+    ]
+  }
+}

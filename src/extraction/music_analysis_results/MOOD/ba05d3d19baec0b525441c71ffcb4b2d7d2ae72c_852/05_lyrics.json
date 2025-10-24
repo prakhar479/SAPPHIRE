@@ -1,0 +1,45 @@
+{
+  "word_count": 384,
+  "unique_word_count": 206,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 384.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "Spirit",
+    "desire",
+    "you",
+    "it's",
+    "for",
+    "will",
+    "fall",
+    "And"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.46354166666666663,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "and",
+        9
+      ],
+      [
+        "Spirit",
+        8
+      ],
+      [
+        "desire",
+        8
+      ],
+      [
+        "you",
+        7
+      ]
+    ]
+  }
+}

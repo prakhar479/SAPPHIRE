@@ -1,0 +1,45 @@
+{
+  "word_count": 120,
+  "unique_word_count": 38,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 120.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Everybody",
+    "wants",
+    "Closer",
+    "Free",
+    "And",
+    "everybody",
+    "live",
+    "they",
+    "love",
+    "How"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6833333333333333,
+    "most_common_words": [
+      [
+        "Everybody",
+        12
+      ],
+      [
+        "wants",
+        10
+      ],
+      [
+        "Closer",
+        7
+      ],
+      [
+        "Free",
+        7
+      ],
+      [
+        "And",
+        6
+      ]
+    ]
+  }
+}

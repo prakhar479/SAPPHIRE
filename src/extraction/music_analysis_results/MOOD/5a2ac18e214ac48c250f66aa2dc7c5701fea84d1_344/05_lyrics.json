@@ -1,0 +1,45 @@
+{
+  "word_count": 210,
+  "unique_word_count": 87,
+  "sentence_count": 15,
+  "avg_words_per_sentence": 14.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "look",
+    "you",
+    "Old",
+    "man",
+    "I'm",
+    "lot",
+    "like",
+    "life,",
+    "were.",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5857142857142856,
+    "most_common_words": [
+      [
+        "look",
+        10
+      ],
+      [
+        "you",
+        8
+      ],
+      [
+        "Old",
+        7
+      ],
+      [
+        "man",
+        7
+      ],
+      [
+        "I'm",
+        7
+      ]
+    ]
+  }
+}

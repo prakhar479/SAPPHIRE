@@ -1,0 +1,45 @@
+{
+  "word_count": 97,
+  "unique_word_count": 64,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 97.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "Blue",
+    "eyes",
+    "crying",
+    "rain",
+    "see",
+    "meet",
+    "again",
+    "hand",
+    "twilight"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3402061855670103,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "Blue",
+        4
+      ],
+      [
+        "eyes",
+        4
+      ],
+      [
+        "crying",
+        4
+      ],
+      [
+        "rain",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 254,
+  "unique_word_count": 151,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 254.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "little",
+    "bit",
+    "just",
+    "for",
+    "the",
+    "Cigarettes",
+    "and",
+    "chocolate",
+    "milk",
+    "Everything"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.405511811023622,
+    "most_common_words": [
+      [
+        "little",
+        13
+      ],
+      [
+        "bit",
+        12
+      ],
+      [
+        "just",
+        4
+      ],
+      [
+        "for",
+        4
+      ],
+      [
+        "the",
+        4
+      ]
+    ]
+  }
+}

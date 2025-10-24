@@ -1,0 +1,45 @@
+{
+  "word_count": 367,
+  "unique_word_count": 188,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 33.36363636363637,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "let",
+    "the",
+    "just",
+    "and",
+    "go,",
+    "not",
+    "this",
+    "really",
+    "will"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4877384196185286,
+    "most_common_words": [
+      [
+        "you",
+        13
+      ],
+      [
+        "let",
+        12
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "just",
+        7
+      ],
+      [
+        "and",
+        7
+      ]
+    ]
+  }
+}

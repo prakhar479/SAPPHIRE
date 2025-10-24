@@ -1,0 +1,45 @@
+{
+  "word_count": 287,
+  "unique_word_count": 108,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 26.09090909090909,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "limit",
+    "Take",
+    "And",
+    "one",
+    "more",
+    "time.",
+    "You",
+    "out",
+    "all"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6236933797909407,
+    "most_common_words": [
+      [
+        "the",
+        26
+      ],
+      [
+        "limit",
+        20
+      ],
+      [
+        "Take",
+        18
+      ],
+      [
+        "And",
+        9
+      ],
+      [
+        "one",
+        8
+      ]
+    ]
+  }
+}

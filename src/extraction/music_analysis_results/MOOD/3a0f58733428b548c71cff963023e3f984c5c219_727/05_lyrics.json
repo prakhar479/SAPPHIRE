@@ -1,0 +1,45 @@
+{
+  "word_count": 228,
+  "unique_word_count": 122,
+  "sentence_count": 26,
+  "avg_words_per_sentence": 8.76923076923077,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Mrs.",
+    "you,",
+    "the",
+    "Robinson.",
+    "place",
+    "for",
+    "hey",
+    "Robinson,",
+    "Jesus"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4649122807017544,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "Mrs.",
+        7
+      ],
+      [
+        "you,",
+        5
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "Robinson.",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 161,
+  "unique_word_count": 84,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 161.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "can't",
+    "get",
+    "I'm",
+    "And",
+    "try",
+    "and",
+    "satisfaction",
+    "man",
+    "When",
+    "comes"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4782608695652174,
+    "most_common_words": [
+      [
+        "can't",
+        8
+      ],
+      [
+        "get",
+        7
+      ],
+      [
+        "I'm",
+        7
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "try",
+        4
+      ]
+    ]
+  }
+}

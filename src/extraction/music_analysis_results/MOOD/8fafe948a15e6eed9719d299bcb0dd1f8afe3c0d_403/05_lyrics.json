@@ -1,0 +1,45 @@
+{
+  "word_count": 114,
+  "unique_word_count": 59,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 114.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "fall",
+    "pieces",
+    "You",
+    "time",
+    "and",
+    "someone",
+    "Each",
+    "you",
+    "your",
+    "want"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.48245614035087714,
+    "most_common_words": [
+      [
+        "fall",
+        6
+      ],
+      [
+        "pieces",
+        6
+      ],
+      [
+        "You",
+        5
+      ],
+      [
+        "time",
+        3
+      ],
+      [
+        "and",
+        3
+      ]
+    ]
+  }
+}

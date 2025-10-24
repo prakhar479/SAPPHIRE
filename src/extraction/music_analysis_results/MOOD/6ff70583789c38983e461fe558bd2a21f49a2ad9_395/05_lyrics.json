@@ -1,0 +1,45 @@
+{
+  "word_count": 278,
+  "unique_word_count": 151,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 139.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "she",
+    "And",
+    "and",
+    "his",
+    "shoes",
+    "Jenkins",
+    "her",
+    "Ah,",
+    "but"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.45683453237410077,
+    "most_common_words": [
+      [
+        "the",
+        17
+      ],
+      [
+        "she",
+        8
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "and",
+        5
+      ],
+      [
+        "his",
+        5
+      ]
+    ]
+  }
+}

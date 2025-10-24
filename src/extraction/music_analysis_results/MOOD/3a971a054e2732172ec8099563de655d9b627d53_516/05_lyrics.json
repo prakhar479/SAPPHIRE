@@ -1,0 +1,45 @@
+{
+  "word_count": 97,
+  "unique_word_count": 61,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 32.333333333333336,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "winter's",
+    "day",
+    "All",
+    "leaves",
+    "are",
+    "brown",
+    "sky",
+    "grey"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3711340206185567,
+    "most_common_words": [
+      [
+        "the",
+        7
+      ],
+      [
+        "And",
+        3
+      ],
+      [
+        "winter's",
+        3
+      ],
+      [
+        "day",
+        3
+      ],
+      [
+        "All",
+        2
+      ]
+    ]
+  }
+}

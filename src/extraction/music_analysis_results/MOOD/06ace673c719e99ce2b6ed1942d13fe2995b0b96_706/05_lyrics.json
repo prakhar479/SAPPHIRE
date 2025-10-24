@@ -1,0 +1,45 @@
+{
+  "word_count": 197,
+  "unique_word_count": 117,
+  "sentence_count": 18,
+  "avg_words_per_sentence": 10.944444444444445,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "not",
+    "the",
+    "got",
+    "And",
+    "But",
+    "I've",
+    "though",
+    "man",
+    "get",
+    "you"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.40609137055837563,
+    "most_common_words": [
+      [
+        "not",
+        6
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "got",
+        5
+      ],
+      [
+        "And",
+        4
+      ],
+      [
+        "But",
+        4
+      ]
+    ]
+  }
+}

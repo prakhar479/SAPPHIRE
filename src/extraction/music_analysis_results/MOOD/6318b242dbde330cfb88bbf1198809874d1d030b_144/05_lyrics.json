@@ -1,0 +1,45 @@
+{
+  "word_count": 250,
+  "unique_word_count": 94,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 250.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "An'",
+    "don't",
+    "reputation",
+    "not",
+    "give",
+    "damn",
+    "no,",
+    "I'm",
+    "bad",
+    "'Bout"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.624,
+    "most_common_words": [
+      [
+        "An'",
+        12
+      ],
+      [
+        "don't",
+        10
+      ],
+      [
+        "reputation",
+        10
+      ],
+      [
+        "not",
+        10
+      ],
+      [
+        "give",
+        8
+      ]
+    ]
+  }
+}

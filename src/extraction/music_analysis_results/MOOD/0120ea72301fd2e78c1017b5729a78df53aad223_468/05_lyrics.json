@@ -1,0 +1,45 @@
+{
+  "word_count": 238,
+  "unique_word_count": 132,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 238.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "And",
+    "father",
+    "had",
+    "son",
+    "were",
+    "his",
+    "Well",
+    "But"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4453781512605042,
+    "most_common_words": [
+      [
+        "the",
+        17
+      ],
+      [
+        "and",
+        10
+      ],
+      [
+        "And",
+        8
+      ],
+      [
+        "father",
+        4
+      ],
+      [
+        "had",
+        4
+      ]
+    ]
+  }
+}

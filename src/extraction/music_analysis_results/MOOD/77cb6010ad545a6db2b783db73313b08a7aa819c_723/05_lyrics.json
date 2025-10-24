@@ -1,0 +1,45 @@
+{
+  "word_count": 348,
+  "unique_word_count": 193,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 348.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "And",
+    "you",
+    "the",
+    "and",
+    "man",
+    "from",
+    "Mars",
+    "eatin'",
+    "don't",
+    "out"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4454022988505747,
+    "most_common_words": [
+      [
+        "And",
+        15
+      ],
+      [
+        "you",
+        13
+      ],
+      [
+        "the",
+        11
+      ],
+      [
+        "and",
+        8
+      ],
+      [
+        "man",
+        7
+      ]
+    ]
+  }
+}

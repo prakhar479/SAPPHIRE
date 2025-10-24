@@ -1,0 +1,45 @@
+{
+  "word_count": 180,
+  "unique_word_count": 99,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 180.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Gretel",
+    "you",
+    "head",
+    "yeah",
+    "She",
+    "know",
+    "out",
+    "fucking",
+    "bitch",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.44999999999999996,
+    "most_common_words": [
+      [
+        "Gretel",
+        8
+      ],
+      [
+        "you",
+        6
+      ],
+      [
+        "head",
+        4
+      ],
+      [
+        "yeah",
+        4
+      ],
+      [
+        "She",
+        4
+      ]
+    ]
+  }
+}

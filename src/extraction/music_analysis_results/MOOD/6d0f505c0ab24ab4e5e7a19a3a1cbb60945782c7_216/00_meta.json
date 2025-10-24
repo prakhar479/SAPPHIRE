@@ -1,0 +1,24 @@
+{
+  "path": "../../data/raw/MIREX-like_mood/dataset/Audio/216.mp3",
+  "file_hash": "6d0f505c0ab24ab4e5e7a19a3a1cbb60945782c7",
+  "duration_sec": 29.071383219954647,
+  "sample_rate": 22050,
+  "analysis_timestamp": "2025-10-24T20:25:08.247367",
+  "config": {
+    "sr": 22050,
+    "n_fft": 2048,
+    "hop_length": 512,
+    "n_mels": 128,
+    "n_mfcc": 13,
+    "n_chroma": 12,
+    "frame_length": 2048,
+    "workers": 4,
+    "use_crepe": false,
+    "save_matrices": false,
+    "save_plots": true,
+    "force": true,
+    "quick": false,
+    "verbose": false
+  },
+  "processing_time_sec": 3.874253749847412
+}

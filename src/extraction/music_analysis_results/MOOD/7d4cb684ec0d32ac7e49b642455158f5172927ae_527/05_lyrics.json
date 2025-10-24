@@ -1,0 +1,45 @@
+{
+  "word_count": 123,
+  "unique_word_count": 54,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 123.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "what",
+    "God",
+    "only",
+    "knows",
+    "I'd",
+    "without",
+    "would",
+    "should",
+    "ever"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5609756097560976,
+    "most_common_words": [
+      [
+        "you",
+        10
+      ],
+      [
+        "what",
+        7
+      ],
+      [
+        "God",
+        5
+      ],
+      [
+        "only",
+        5
+      ],
+      [
+        "knows",
+        5
+      ]
+    ]
+  }
+}

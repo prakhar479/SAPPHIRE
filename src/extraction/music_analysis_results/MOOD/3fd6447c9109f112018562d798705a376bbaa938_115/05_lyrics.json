@@ -1,0 +1,45 @@
+{
+  "word_count": 194,
+  "unique_word_count": 102,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 194.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "night",
+    "Don't",
+    "stop",
+    "Just",
+    "believin'",
+    "Hold",
+    "Streetlight",
+    "people"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4742268041237113,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "and",
+        9
+      ],
+      [
+        "night",
+        5
+      ],
+      [
+        "Don't",
+        4
+      ],
+      [
+        "stop",
+        4
+      ]
+    ]
+  }
+}

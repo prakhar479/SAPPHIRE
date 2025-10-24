@@ -1,0 +1,45 @@
+{
+  "word_count": 334,
+  "unique_word_count": 206,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 334.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "your",
+    "from",
+    "with",
+    "and",
+    "time",
+    "old",
+    "With",
+    "boy"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.38323353293413176,
+    "most_common_words": [
+      [
+        "the",
+        19
+      ],
+      [
+        "you",
+        15
+      ],
+      [
+        "your",
+        8
+      ],
+      [
+        "from",
+        7
+      ],
+      [
+        "with",
+        6
+      ]
+    ]
+  }
+}

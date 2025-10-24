@@ -1,0 +1,45 @@
+{
+  "word_count": 189,
+  "unique_word_count": 133,
+  "sentence_count": 19,
+  "avg_words_per_sentence": 9.947368421052632,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "And",
+    "one",
+    "the",
+    "drop",
+    "big",
+    "We'll",
+    "But",
+    "Let's",
+    "too",
+    "for"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.2962962962962963,
+    "most_common_words": [
+      [
+        "And",
+        7
+      ],
+      [
+        "one",
+        6
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "drop",
+        5
+      ],
+      [
+        "big",
+        5
+      ]
+    ]
+  }
+}

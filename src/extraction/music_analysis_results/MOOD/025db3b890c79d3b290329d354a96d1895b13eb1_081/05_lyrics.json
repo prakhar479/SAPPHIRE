@@ -1,0 +1,45 @@
+{
+  "word_count": 467,
+  "unique_word_count": 91,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 467.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Don't",
+    "Stop",
+    "The",
+    "Force",
+    "Get",
+    "'Til",
+    "You",
+    "Keep",
+    "With",
+    "Enough"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8051391862955032,
+    "most_common_words": [
+      [
+        "Don't",
+        51
+      ],
+      [
+        "Stop",
+        50
+      ],
+      [
+        "The",
+        32
+      ],
+      [
+        "Force",
+        27
+      ],
+      [
+        "Get",
+        26
+      ]
+    ]
+  }
+}

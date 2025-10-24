@@ -1,0 +1,45 @@
+{
+  "word_count": 281,
+  "unique_word_count": 143,
+  "sentence_count": 16,
+  "avg_words_per_sentence": 17.5625,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "And",
+    "was",
+    "cat",
+    "dog",
+    "named",
+    "Della",
+    "Dealer",
+    "her"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.49110320284697506,
+    "most_common_words": [
+      [
+        "the",
+        22
+      ],
+      [
+        "and",
+        14
+      ],
+      [
+        "And",
+        10
+      ],
+      [
+        "was",
+        9
+      ],
+      [
+        "cat",
+        7
+      ]
+    ]
+  }
+}

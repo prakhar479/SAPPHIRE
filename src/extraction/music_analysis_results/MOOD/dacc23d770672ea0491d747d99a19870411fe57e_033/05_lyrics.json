@@ -1,0 +1,45 @@
+{
+  "word_count": 150,
+  "unique_word_count": 92,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 15.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "right",
+    "baby,",
+    "her",
+    "said,",
+    "you",
+    "All",
+    "now,",
+    "it's",
+    "a-all",
+    "now."
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3866666666666667,
+    "most_common_words": [
+      [
+        "right",
+        8
+      ],
+      [
+        "baby,",
+        5
+      ],
+      [
+        "her",
+        4
+      ],
+      [
+        "said,",
+        4
+      ],
+      [
+        "you",
+        4
+      ]
+    ]
+  }
+}

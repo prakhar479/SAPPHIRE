@@ -1,0 +1,45 @@
+{
+  "word_count": 111,
+  "unique_word_count": 58,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 111.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "wah",
+    "Wah",
+    "goin'",
+    "the",
+    "'Cause",
+    "was",
+    "wah,",
+    "they",
+    "waah,",
+    "goin',"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4774774774774775,
+    "most_common_words": [
+      [
+        "wah",
+        24
+      ],
+      [
+        "Wah",
+        8
+      ],
+      [
+        "goin'",
+        4
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "'Cause",
+        3
+      ]
+    ]
+  }
+}

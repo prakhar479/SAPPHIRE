@@ -1,0 +1,45 @@
+{
+  "word_count": 497,
+  "unique_word_count": 198,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 99.4,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "G-L-O-R-I-A",
+    "Gloria",
+    "And",
+    "the",
+    "her",
+    "she",
+    "mine",
+    "and",
+    "make",
+    "ding"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6016096579476862,
+    "most_common_words": [
+      [
+        "G-L-O-R-I-A",
+        22
+      ],
+      [
+        "Gloria",
+        19
+      ],
+      [
+        "And",
+        17
+      ],
+      [
+        "the",
+        16
+      ],
+      [
+        "her",
+        16
+      ]
+    ]
+  }
+}

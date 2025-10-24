@@ -1,0 +1,45 @@
+{
+  "word_count": 526,
+  "unique_word_count": 320,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 47.81818181818182,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "the",
+    "now",
+    "I'm",
+    "niggas",
+    "niggas,",
+    "like",
+    "nigga",
+    "you",
+    "now,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3916349809885932,
+    "most_common_words": [
+      [
+        "and",
+        16
+      ],
+      [
+        "the",
+        14
+      ],
+      [
+        "now",
+        10
+      ],
+      [
+        "I'm",
+        9
+      ],
+      [
+        "niggas",
+        8
+      ]
+    ]
+  }
+}

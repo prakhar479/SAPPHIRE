@@ -1,0 +1,45 @@
+{
+  "word_count": 284,
+  "unique_word_count": 109,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 284.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "don't",
+    "want",
+    "Chelsea",
+    "your",
+    "all",
+    "that",
+    "gave",
+    "little",
+    "does"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6161971830985915,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "don't",
+        12
+      ],
+      [
+        "want",
+        12
+      ],
+      [
+        "Chelsea",
+        6
+      ],
+      [
+        "your",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 214,
+  "unique_word_count": 112,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 107.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "me!",
+    "tell",
+    "Tell",
+    "you",
+    "How",
+    "and",
+    "do!",
+    "I've",
+    "seen"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.47663551401869164,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "me!",
+        8
+      ],
+      [
+        "tell",
+        6
+      ],
+      [
+        "Tell",
+        5
+      ],
+      [
+        "you",
+        5
+      ]
+    ]
+  }
+}

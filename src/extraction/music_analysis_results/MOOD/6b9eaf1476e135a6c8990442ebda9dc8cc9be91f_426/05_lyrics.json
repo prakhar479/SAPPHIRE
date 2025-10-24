@@ -1,0 +1,45 @@
+{
+  "word_count": 212,
+  "unique_word_count": 101,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 19.272727272727273,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "emotional",
+    "want",
+    "with",
+    "take",
+    "the",
+    "You",
+    "you",
+    "sure",
+    "me?"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5235849056603774,
+    "most_common_words": [
+      [
+        "and",
+        6
+      ],
+      [
+        "emotional",
+        6
+      ],
+      [
+        "want",
+        4
+      ],
+      [
+        "with",
+        4
+      ],
+      [
+        "take",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 151,
+  "unique_word_count": 69,
+  "sentence_count": 34,
+  "avg_words_per_sentence": 4.4411764705882355,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Every",
+    "I'll",
+    "watching",
+    "move",
+    "make",
+    "break",
+    "you.",
+    "vow",
+    "smile"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.543046357615894,
+    "most_common_words": [
+      [
+        "you",
+        22
+      ],
+      [
+        "Every",
+        20
+      ],
+      [
+        "I'll",
+        5
+      ],
+      [
+        "watching",
+        5
+      ],
+      [
+        "move",
+        4
+      ]
+    ]
+  }
+}

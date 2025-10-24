@@ -1,0 +1,45 @@
+{
+  "word_count": 101,
+  "unique_word_count": 57,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 101.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "This",
+    "you",
+    "pop",
+    "Yeah",
+    "yeah",
+    "the",
+    "and",
+    "Someone",
+    "leans",
+    "direction"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4356435643564357,
+    "most_common_words": [
+      [
+        "This",
+        5
+      ],
+      [
+        "you",
+        4
+      ],
+      [
+        "pop",
+        3
+      ],
+      [
+        "Yeah",
+        3
+      ],
+      [
+        "yeah",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 242,
+  "unique_word_count": 157,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 242.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "coal",
+    "miner's",
+    "all",
+    "was",
+    "daughter",
+    "night",
+    "Butcher",
+    "Holler",
+    "were"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.35123966942148765,
+    "most_common_words": [
+      [
+        "the",
+        15
+      ],
+      [
+        "coal",
+        6
+      ],
+      [
+        "miner's",
+        4
+      ],
+      [
+        "all",
+        4
+      ],
+      [
+        "was",
+        3
+      ]
+    ]
+  }
+}

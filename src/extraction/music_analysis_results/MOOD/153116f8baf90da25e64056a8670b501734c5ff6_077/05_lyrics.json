@@ -1,0 +1,45 @@
+{
+  "word_count": 207,
+  "unique_word_count": 77,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 103.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "bad",
+    "luck",
+    "all",
+    "been",
+    "wasn't",
+    "for",
+    "wouldn't",
+    "have",
+    "since",
+    "luck,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6280193236714976,
+    "most_common_words": [
+      [
+        "bad",
+        12
+      ],
+      [
+        "luck",
+        10
+      ],
+      [
+        "all",
+        7
+      ],
+      [
+        "been",
+        6
+      ],
+      [
+        "wasn't",
+        6
+      ]
+    ]
+  }
+}

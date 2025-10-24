@@ -1,0 +1,45 @@
+{
+  "word_count": 170,
+  "unique_word_count": 88,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 170.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "highway",
+    "down",
+    "Oh,",
+    "rockin'",
+    "Got",
+    "can't",
+    "and",
+    "movin'",
+    "lose"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.48235294117647054,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "highway",
+        10
+      ],
+      [
+        "down",
+        9
+      ],
+      [
+        "Oh,",
+        8
+      ],
+      [
+        "rockin'",
+        8
+      ]
+    ]
+  }
+}

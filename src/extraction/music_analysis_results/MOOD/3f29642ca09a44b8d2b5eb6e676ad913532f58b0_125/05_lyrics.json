@@ -1,0 +1,45 @@
+{
+  "word_count": 152,
+  "unique_word_count": 82,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 152.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "na-na-na-na",
+    "Uh!",
+    "help",
+    "your",
+    "na-na-na-na-na-na-na-na-na-na",
+    "Wow!",
+    "the",
+    "y'all",
+    "One",
+    "two"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4605263157894737,
+    "most_common_words": [
+      [
+        "na-na-na-na",
+        8
+      ],
+      [
+        "Uh!",
+        5
+      ],
+      [
+        "help",
+        5
+      ],
+      [
+        "your",
+        4
+      ],
+      [
+        "na-na-na-na-na-na-na-na-na-na",
+        4
+      ]
+    ]
+  }
+}

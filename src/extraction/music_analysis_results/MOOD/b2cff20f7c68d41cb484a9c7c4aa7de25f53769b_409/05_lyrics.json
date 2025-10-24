@@ -1,0 +1,45 @@
+{
+  "word_count": 43,
+  "unique_word_count": 26,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 43.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "over",
+    "and",
+    "i'm",
+    "ocean",
+    "hills,",
+    "dell",
+    "fireline",
+    "sand,",
+    "plan"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.39534883720930236,
+    "most_common_words": [
+      [
+        "the",
+        8
+      ],
+      [
+        "over",
+        7
+      ],
+      [
+        "and",
+        3
+      ],
+      [
+        "i'm",
+        1
+      ],
+      [
+        "ocean",
+        1
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 221,
+  "unique_word_count": 99,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 110.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "and",
+    "one",
+    "Did",
+    "ever",
+    "have",
+    "the",
+    "make",
+    "your",
+    "And"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5520361990950227,
+    "most_common_words": [
+      [
+        "you",
+        16
+      ],
+      [
+        "and",
+        11
+      ],
+      [
+        "one",
+        10
+      ],
+      [
+        "Did",
+        6
+      ],
+      [
+        "ever",
+        6
+      ]
+    ]
+  }
+}

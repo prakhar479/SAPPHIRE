@@ -1,0 +1,45 @@
+{
+  "word_count": 70,
+  "unique_word_count": 48,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 70.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "(sing",
+    "the",
+    "2x)",
+    "lordy,",
+    "trouble",
+    "don't",
+    "nobody",
+    "know",
+    "troubles",
+    "but"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3142857142857143,
+    "most_common_words": [
+      [
+        "(sing",
+        3
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "2x)",
+        3
+      ],
+      [
+        "lordy,",
+        2
+      ],
+      [
+        "trouble",
+        2
+      ]
+    ]
+  }
+}

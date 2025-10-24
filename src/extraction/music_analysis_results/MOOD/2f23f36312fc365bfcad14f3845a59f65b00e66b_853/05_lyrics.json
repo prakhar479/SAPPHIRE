@@ -1,0 +1,45 @@
+{
+  "word_count": 138,
+  "unique_word_count": 94,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 138.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "his",
+    "him",
+    "just",
+    "Nobody",
+    "Has",
+    "Can",
+    "will",
+    "time",
+    "for"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3188405797101449,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "his",
+        5
+      ],
+      [
+        "him",
+        4
+      ],
+      [
+        "just",
+        3
+      ],
+      [
+        "Nobody",
+        3
+      ]
+    ]
+  }
+}

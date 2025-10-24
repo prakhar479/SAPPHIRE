@@ -1,0 +1,45 @@
+{
+  "word_count": 347,
+  "unique_word_count": 95,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 86.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "for",
+    "lust",
+    "life",
+    "the",
+    "'Cause",
+    "love",
+    "got",
+    "With",
+    "liquor",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7262247838616716,
+    "most_common_words": [
+      [
+        "for",
+        26
+      ],
+      [
+        "lust",
+        25
+      ],
+      [
+        "life",
+        25
+      ],
+      [
+        "the",
+        13
+      ],
+      [
+        "'Cause",
+        9
+      ]
+    ]
+  }
+}

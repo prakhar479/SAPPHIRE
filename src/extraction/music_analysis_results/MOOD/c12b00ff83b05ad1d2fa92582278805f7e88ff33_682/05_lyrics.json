@@ -1,0 +1,45 @@
+{
+  "word_count": 207,
+  "unique_word_count": 74,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 207.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "just",
+    "girl",
+    "She's",
+    "She",
+    "[Chorus]",
+    "want",
+    "your",
+    "from"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.642512077294686,
+    "most_common_words": [
+      [
+        "the",
+        18
+      ],
+      [
+        "you",
+        13
+      ],
+      [
+        "just",
+        12
+      ],
+      [
+        "girl",
+        9
+      ],
+      [
+        "She's",
+        7
+      ]
+    ]
+  }
+}

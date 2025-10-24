@@ -1,0 +1,45 @@
+{
+  "word_count": 139,
+  "unique_word_count": 79,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 139.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Uh-oh,",
+    "You're",
+    "the",
+    "got",
+    "Your",
+    "machine",
+    "you",
+    "Uh-oh",
+    "and",
+    "Japanese"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4316546762589928,
+    "most_common_words": [
+      [
+        "Uh-oh,",
+        9
+      ],
+      [
+        "You're",
+        6
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "got",
+        4
+      ],
+      [
+        "Your",
+        4
+      ]
+    ]
+  }
+}

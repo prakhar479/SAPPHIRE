@@ -1,0 +1,45 @@
+{
+  "word_count": 129,
+  "unique_word_count": 81,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 129.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "can't",
+    "wait",
+    "there",
+    "I'll",
+    "the",
+    "Wait",
+    "hour",
+    "crummy",
+    "water",
+    "tower"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.37209302325581395,
+    "most_common_words": [
+      [
+        "can't",
+        9
+      ],
+      [
+        "wait",
+        9
+      ],
+      [
+        "there",
+        5
+      ],
+      [
+        "I'll",
+        3
+      ],
+      [
+        "the",
+        3
+      ]
+    ]
+  }
+}

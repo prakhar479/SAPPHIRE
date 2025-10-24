@@ -1,0 +1,45 @@
+{
+  "word_count": 189,
+  "unique_word_count": 119,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 189.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "Bonita",
+    "like",
+    "[Chorus]",
+    "Applebum,",
+    "gotta",
+    "put",
+    "love",
+    "you?"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.37037037037037035,
+    "most_common_words": [
+      [
+        "you",
+        10
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "Bonita",
+        4
+      ],
+      [
+        "like",
+        4
+      ],
+      [
+        "[Chorus]",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 239,
+  "unique_word_count": 99,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 59.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "I'm",
+    "and",
+    "father",
+    "comes",
+    "got",
+    "head",
+    "you",
+    "Now,",
+    "Father"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5857740585774058,
+    "most_common_words": [
+      [
+        "the",
+        11
+      ],
+      [
+        "I'm",
+        7
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "father",
+        5
+      ],
+      [
+        "comes",
+        5
+      ]
+    ]
+  }
+}

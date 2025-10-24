@@ -1,0 +1,45 @@
+{
+  "word_count": 132,
+  "unique_word_count": 70,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 132.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "want",
+    "Sliding",
+    "'n'",
+    "out",
+    "grace",
+    "free",
+    "and",
+    "the",
+    "hate",
+    "(We"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4696969696969697,
+    "most_common_words": [
+      [
+        "want",
+        6
+      ],
+      [
+        "Sliding",
+        6
+      ],
+      [
+        "'n'",
+        6
+      ],
+      [
+        "out",
+        6
+      ],
+      [
+        "grace",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 122,
+  "unique_word_count": 60,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 122.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "old",
+    "song",
+    "same",
+    "have",
+    "the",
+    "Why",
+    "carry",
+    "on?",
+    "Always",
+    "singing"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5081967213114754,
+    "most_common_words": [
+      [
+        "old",
+        9
+      ],
+      [
+        "song",
+        9
+      ],
+      [
+        "same",
+        6
+      ],
+      [
+        "have",
+        5
+      ],
+      [
+        "the",
+        5
+      ]
+    ]
+  }
+}

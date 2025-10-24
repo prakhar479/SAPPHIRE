@@ -1,0 +1,45 @@
+{
+  "word_count": 167,
+  "unique_word_count": 61,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 167.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "walk",
+    "you",
+    "and",
+    "(don't",
+    "stop)",
+    "And",
+    "Walk",
+    "the",
+    "see",
+    "by,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6347305389221557,
+    "most_common_words": [
+      [
+        "walk",
+        10
+      ],
+      [
+        "you",
+        8
+      ],
+      [
+        "and",
+        8
+      ],
+      [
+        "(don't",
+        6
+      ],
+      [
+        "stop)",
+        6
+      ]
+    ]
+  }
+}

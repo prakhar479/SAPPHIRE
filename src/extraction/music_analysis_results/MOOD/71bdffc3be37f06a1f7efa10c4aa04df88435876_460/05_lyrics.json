@@ -1,0 +1,45 @@
+{
+  "word_count": 438,
+  "unique_word_count": 235,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 62.57142857142857,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "ain't",
+    "the",
+    "got",
+    "you",
+    "this",
+    "some",
+    "Heard",
+    "that",
+    "time",
+    "for"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4634703196347032,
+    "most_common_words": [
+      [
+        "ain't",
+        17
+      ],
+      [
+        "the",
+        13
+      ],
+      [
+        "got",
+        10
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "this",
+        8
+      ]
+    ]
+  }
+}

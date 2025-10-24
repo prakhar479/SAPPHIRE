@@ -1,0 +1,45 @@
+{
+  "word_count": 385,
+  "unique_word_count": 217,
+  "sentence_count": 6,
+  "avg_words_per_sentence": 64.16666666666667,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "and",
+    "'em",
+    "over",
+    "was",
+    "you",
+    "Martian",
+    "boogie",
+    "ketchup"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4363636363636364,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "And",
+        7
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "'em",
+        6
+      ],
+      [
+        "over",
+        6
+      ]
+    ]
+  }
+}

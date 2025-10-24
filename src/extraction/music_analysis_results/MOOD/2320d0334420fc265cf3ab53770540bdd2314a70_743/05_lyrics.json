@@ -1,0 +1,45 @@
+{
+  "word_count": 158,
+  "unique_word_count": 96,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 158.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "The",
+    "your",
+    "me,",
+    "don't",
+    "Ace",
+    "Spades",
+    "for",
+    "know"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3924050632911392,
+    "most_common_words": [
+      [
+        "the",
+        10
+      ],
+      [
+        "you",
+        6
+      ],
+      [
+        "The",
+        5
+      ],
+      [
+        "your",
+        3
+      ],
+      [
+        "me,",
+        3
+      ]
+    ]
+  }
+}

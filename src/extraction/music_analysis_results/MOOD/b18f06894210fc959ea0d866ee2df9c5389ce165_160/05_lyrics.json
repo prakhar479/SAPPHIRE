@@ -1,0 +1,45 @@
+{
+  "word_count": 243,
+  "unique_word_count": 72,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 60.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Jenny",
+    "you",
+    "see,",
+    "see",
+    "(Jenny",
+    "whoo",
+    "Jenny)",
+    "spinnin'",
+    "with",
+    "along"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7037037037037037,
+    "most_common_words": [
+      [
+        "Jenny",
+        28
+      ],
+      [
+        "you",
+        11
+      ],
+      [
+        "see,",
+        8
+      ],
+      [
+        "see",
+        8
+      ],
+      [
+        "(Jenny",
+        8
+      ]
+    ]
+  }
+}

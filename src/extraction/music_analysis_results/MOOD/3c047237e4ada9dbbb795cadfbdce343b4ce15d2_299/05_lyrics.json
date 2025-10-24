@@ -1,0 +1,45 @@
+{
+  "word_count": 261,
+  "unique_word_count": 109,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 261.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Now",
+    "we're",
+    "gettin'",
+    "out",
+    "somewhere",
+    "I'm",
+    "the",
+    "with",
+    "you",
+    "Ooh"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5823754789272031,
+    "most_common_words": [
+      [
+        "Now",
+        9
+      ],
+      [
+        "we're",
+        9
+      ],
+      [
+        "gettin'",
+        9
+      ],
+      [
+        "out",
+        7
+      ],
+      [
+        "somewhere",
+        7
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 226,
+  "unique_word_count": 112,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 32.285714285714285,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "would",
+    "And",
+    "and",
+    "could",
+    "this",
+    "life",
+    "all",
+    "watched",
+    "don't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.504424778761062,
+    "most_common_words": [
+      [
+        "the",
+        14
+      ],
+      [
+        "would",
+        6
+      ],
+      [
+        "And",
+        5
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "could",
+        4
+      ]
+    ]
+  }
+}

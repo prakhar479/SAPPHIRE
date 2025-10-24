@@ -1,0 +1,45 @@
+{
+  "word_count": 311,
+  "unique_word_count": 146,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 44.42857142857143,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I've",
+    "the",
+    "need",
+    "I'm",
+    "And",
+    "know",
+    "good",
+    "like",
+    "all",
+    "just"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5305466237942122,
+    "most_common_words": [
+      [
+        "I've",
+        10
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "need",
+        7
+      ],
+      [
+        "I'm",
+        6
+      ],
+      [
+        "And",
+        5
+      ]
+    ]
+  }
+}

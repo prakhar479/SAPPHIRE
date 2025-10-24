@@ -1,0 +1,45 @@
+{
+  "word_count": 219,
+  "unique_word_count": 53,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 219.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "your",
+    "it's",
+    "like",
+    "wanna",
+    "20th",
+    "century",
+    "toy,",
+    "boy",
+    "say",
+    "Friends"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7579908675799087,
+    "most_common_words": [
+      [
+        "your",
+        17
+      ],
+      [
+        "it's",
+        12
+      ],
+      [
+        "like",
+        12
+      ],
+      [
+        "wanna",
+        11
+      ],
+      [
+        "20th",
+        11
+      ]
+    ]
+  }
+}

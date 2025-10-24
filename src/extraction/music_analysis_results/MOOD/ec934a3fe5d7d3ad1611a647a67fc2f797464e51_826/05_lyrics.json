@@ -1,0 +1,45 @@
+{
+  "word_count": 143,
+  "unique_word_count": 87,
+  "sentence_count": 13,
+  "avg_words_per_sentence": 11.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "need",
+    "don't",
+    "cure",
+    "(x3)",
+    "final",
+    "get",
+    "solution!",
+    "solution...",
+    "the",
+    "won't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.39160839160839156,
+    "most_common_words": [
+      [
+        "need",
+        8
+      ],
+      [
+        "don't",
+        4
+      ],
+      [
+        "cure",
+        4
+      ],
+      [
+        "(x3)",
+        4
+      ],
+      [
+        "final",
+        4
+      ]
+    ]
+  }
+}

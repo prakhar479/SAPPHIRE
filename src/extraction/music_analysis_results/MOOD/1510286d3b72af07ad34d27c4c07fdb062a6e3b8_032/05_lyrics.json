@@ -1,0 +1,45 @@
+{
+  "word_count": 183,
+  "unique_word_count": 100,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 61.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "tell",
+    "can",
+    "You",
+    "you",
+    "your",
+    "the",
+    "heart",
+    "out",
+    "never",
+    "I'm"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.45355191256830596,
+    "most_common_words": [
+      [
+        "tell",
+        15
+      ],
+      [
+        "can",
+        10
+      ],
+      [
+        "You",
+        7
+      ],
+      [
+        "you",
+        6
+      ],
+      [
+        "your",
+        5
+      ]
+    ]
+  }
+}

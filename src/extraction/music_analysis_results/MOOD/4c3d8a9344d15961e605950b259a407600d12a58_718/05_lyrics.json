@@ -1,0 +1,45 @@
+{
+  "word_count": 515,
+  "unique_word_count": 290,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 515.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "you",
+    "your",
+    "this",
+    "love",
+    "and",
+    "for",
+    "know",
+    "will"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4368932038834952,
+    "most_common_words": [
+      [
+        "the",
+        18
+      ],
+      [
+        "And",
+        10
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "your",
+        9
+      ],
+      [
+        "this",
+        8
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 163,
+  "unique_word_count": 87,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 163.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "city",
+    "you",
+    "there's",
+    "thousand",
+    "wanna",
+    "And",
+    "But",
+    "say,",
+    "tell"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4662576687116564,
+    "most_common_words": [
+      [
+        "the",
+        11
+      ],
+      [
+        "city",
+        5
+      ],
+      [
+        "you",
+        5
+      ],
+      [
+        "there's",
+        4
+      ],
+      [
+        "thousand",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 437,
+  "unique_word_count": 256,
+  "sentence_count": 26,
+  "avg_words_per_sentence": 16.807692307692307,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "was",
+    "that",
+    "said",
+    "you",
+    "and",
+    "like",
+    "drivin'",
+    "got",
+    "all"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.41418764302059496,
+    "most_common_words": [
+      [
+        "the",
+        25
+      ],
+      [
+        "was",
+        12
+      ],
+      [
+        "that",
+        8
+      ],
+      [
+        "said",
+        6
+      ],
+      [
+        "you",
+        6
+      ]
+    ]
+  }
+}

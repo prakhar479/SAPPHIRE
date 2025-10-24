@@ -1,0 +1,45 @@
+{
+  "word_count": 258,
+  "unique_word_count": 109,
+  "sentence_count": 25,
+  "avg_words_per_sentence": 10.32,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "I'm",
+    "and",
+    "New",
+    "York",
+    "state",
+    "mind.",
+    "don't",
+    "day",
+    "with"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5775193798449613,
+    "most_common_words": [
+      [
+        "the",
+        10
+      ],
+      [
+        "I'm",
+        9
+      ],
+      [
+        "and",
+        8
+      ],
+      [
+        "New",
+        7
+      ],
+      [
+        "York",
+        7
+      ]
+    ]
+  }
+}

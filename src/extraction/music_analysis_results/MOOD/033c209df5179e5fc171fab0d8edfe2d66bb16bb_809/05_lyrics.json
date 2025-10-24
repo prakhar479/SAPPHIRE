@@ -1,0 +1,45 @@
+{
+  "word_count": 123,
+  "unique_word_count": 72,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 11.181818181818182,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "your",
+    "you",
+    "You",
+    "home.",
+    "the",
+    "That's",
+    "evil,",
+    "evil",
+    "going",
+    "brother,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.41463414634146345,
+    "most_common_words": [
+      [
+        "your",
+        5
+      ],
+      [
+        "you",
+        5
+      ],
+      [
+        "You",
+        4
+      ],
+      [
+        "home.",
+        4
+      ],
+      [
+        "the",
+        4
+      ]
+    ]
+  }
+}

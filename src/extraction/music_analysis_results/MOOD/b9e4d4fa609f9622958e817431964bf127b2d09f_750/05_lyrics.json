@@ -1,0 +1,45 @@
+{
+  "word_count": 185,
+  "unique_word_count": 78,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 185.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Break",
+    "the",
+    "through",
+    "other",
+    "side",
+    "yeah,",
+    "yeah",
+    "She",
+    "get(s",
+    "high)"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5783783783783784,
+    "most_common_words": [
+      [
+        "Break",
+        14
+      ],
+      [
+        "the",
+        13
+      ],
+      [
+        "through",
+        13
+      ],
+      [
+        "other",
+        9
+      ],
+      [
+        "side",
+        8
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 100,
+  "unique_word_count": 79,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 14.285714285714286,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "ladies",
+    "welcome",
+    "music",
+    "hear",
+    "today",
+    "blues",
+    "Good",
+    "evening"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.20999999999999996,
+    "most_common_words": [
+      [
+        "the",
+        8
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "ladies",
+        2
+      ],
+      [
+        "welcome",
+        2
+      ],
+      [
+        "music",
+        2
+      ]
+    ]
+  }
+}

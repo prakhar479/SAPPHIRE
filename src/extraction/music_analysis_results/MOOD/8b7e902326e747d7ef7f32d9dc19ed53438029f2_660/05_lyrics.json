@@ -1,0 +1,45 @@
+{
+  "word_count": 67,
+  "unique_word_count": 54,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 67.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "all",
+    "you",
+    "play",
+    "make",
+    "out",
+    "Dear",
+    "Mister",
+    "Fantasy",
+    "tune",
+    "Something"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.19402985074626866,
+    "most_common_words": [
+      [
+        "all",
+        3
+      ],
+      [
+        "you",
+        3
+      ],
+      [
+        "play",
+        2
+      ],
+      [
+        "make",
+        2
+      ],
+      [
+        "out",
+        2
+      ]
+    ]
+  }
+}

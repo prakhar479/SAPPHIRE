@@ -1,0 +1,45 @@
+{
+  "word_count": 168,
+  "unique_word_count": 104,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 168.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "never",
+    "gonna",
+    "the",
+    "make",
+    "out",
+    "And",
+    "kiss",
+    "away",
+    "shake"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.38095238095238093,
+    "most_common_words": [
+      [
+        "you",
+        6
+      ],
+      [
+        "never",
+        5
+      ],
+      [
+        "gonna",
+        5
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "make",
+        4
+      ]
+    ]
+  }
+}

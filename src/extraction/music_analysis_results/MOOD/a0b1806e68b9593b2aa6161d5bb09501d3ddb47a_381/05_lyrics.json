@@ -1,0 +1,45 @@
+{
+  "word_count": 128,
+  "unique_word_count": 39,
+  "sentence_count": 27,
+  "avg_words_per_sentence": 4.7407407407407405,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "She's",
+    "the",
+    "It's",
+    "best",
+    "thing",
+    "she's",
+    "ever",
+    "had.",
+    "reformed.",
+    "her"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6953125,
+    "most_common_words": [
+      [
+        "She's",
+        13
+      ],
+      [
+        "the",
+        12
+      ],
+      [
+        "It's",
+        8
+      ],
+      [
+        "best",
+        8
+      ],
+      [
+        "thing",
+        8
+      ]
+    ]
+  }
+}

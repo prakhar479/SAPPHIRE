@@ -1,0 +1,45 @@
+{
+  "word_count": 115,
+  "unique_word_count": 85,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 57.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "come",
+    "on,",
+    "the",
+    "Well",
+    "she's",
+    "we're",
+    "better",
+    "tongue",
+    "twisting",
+    "storm,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.26086956521739135,
+    "most_common_words": [
+      [
+        "come",
+        6
+      ],
+      [
+        "on,",
+        6
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "Well",
+        3
+      ],
+      [
+        "she's",
+        2
+      ]
+    ]
+  }
+}

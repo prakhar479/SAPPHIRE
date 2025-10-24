@@ -1,0 +1,45 @@
+{
+  "word_count": 91,
+  "unique_word_count": 50,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 91.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "was",
+    "stranger",
+    "you",
+    "town",
+    "When",
+    "why",
+    "Why",
+    "did",
+    "believe",
+    "have"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4505494505494505,
+    "most_common_words": [
+      [
+        "was",
+        7
+      ],
+      [
+        "stranger",
+        7
+      ],
+      [
+        "you",
+        5
+      ],
+      [
+        "town",
+        4
+      ],
+      [
+        "When",
+        2
+      ]
+    ]
+  }
+}

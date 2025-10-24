@@ -1,0 +1,45 @@
+{
+  "word_count": 71,
+  "unique_word_count": 18,
+  "sentence_count": 39,
+  "avg_words_per_sentence": 1.8205128205128205,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "up.",
+    "Smack",
+    "bitch",
+    "Change",
+    "pitch",
+    "aaaa",
+    "aaaaa",
+    "(Aaaaaa...",
+    "Aaaaaaaaaaaaaaaa....",
+    "aaaaaa"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7464788732394366,
+    "most_common_words": [
+      [
+        "up.",
+        14
+      ],
+      [
+        "Smack",
+        8
+      ],
+      [
+        "bitch",
+        8
+      ],
+      [
+        "Change",
+        6
+      ],
+      [
+        "pitch",
+        6
+      ]
+    ]
+  }
+}

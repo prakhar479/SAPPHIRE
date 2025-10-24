@@ -1,0 +1,45 @@
+{
+  "word_count": 244,
+  "unique_word_count": 82,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 244.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "you",
+    "together",
+    "happy",
+    "the",
+    "for",
+    "how",
+    "you,",
+    "only",
+    "For"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6639344262295082,
+    "most_common_words": [
+      [
+        "and",
+        16
+      ],
+      [
+        "you",
+        16
+      ],
+      [
+        "together",
+        12
+      ],
+      [
+        "happy",
+        11
+      ],
+      [
+        "the",
+        8
+      ]
+    ]
+  }
+}

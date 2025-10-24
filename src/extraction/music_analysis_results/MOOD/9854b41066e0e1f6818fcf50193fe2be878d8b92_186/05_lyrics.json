@@ -1,0 +1,45 @@
+{
+  "word_count": 251,
+  "unique_word_count": 114,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 25.1,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "All",
+    "with",
+    "Sweet",
+    "Little",
+    "Sixteen",
+    "rockin'",
+    "Pa.",
+    "Deep"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.545816733067729,
+    "most_common_words": [
+      [
+        "the",
+        14
+      ],
+      [
+        "And",
+        7
+      ],
+      [
+        "All",
+        7
+      ],
+      [
+        "with",
+        6
+      ],
+      [
+        "Sweet",
+        6
+      ]
+    ]
+  }
+}

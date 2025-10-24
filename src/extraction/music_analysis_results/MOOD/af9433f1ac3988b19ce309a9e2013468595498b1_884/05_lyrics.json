@@ -1,0 +1,45 @@
+{
+  "word_count": 266,
+  "unique_word_count": 59,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 266.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "likes",
+    "what",
+    "means",
+    "knows",
+    "not",
+    "And",
+    "the",
+    "He's",
+    "one",
+    "all"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7781954887218046,
+    "most_common_words": [
+      [
+        "likes",
+        18
+      ],
+      [
+        "what",
+        14
+      ],
+      [
+        "means",
+        14
+      ],
+      [
+        "knows",
+        13
+      ],
+      [
+        "not",
+        13
+      ]
+    ]
+  }
+}

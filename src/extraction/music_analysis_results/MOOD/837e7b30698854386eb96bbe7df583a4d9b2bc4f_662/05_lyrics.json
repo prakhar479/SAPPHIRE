@@ -1,0 +1,45 @@
+{
+  "word_count": 249,
+  "unique_word_count": 89,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 249.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "day",
+    "another",
+    "just",
+    "she",
+    "her",
+    "the",
+    "do,",
+    "it's",
+    "It's",
+    "into"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.642570281124498,
+    "most_common_words": [
+      [
+        "day",
+        14
+      ],
+      [
+        "another",
+        13
+      ],
+      [
+        "just",
+        11
+      ],
+      [
+        "she",
+        10
+      ],
+      [
+        "her",
+        10
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 426,
+  "unique_word_count": 111,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 142.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "me,",
+    "no,",
+    "Why",
+    "wanna",
+    "hurt",
+    "Just",
+    "because",
+    "not"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7394366197183099,
+    "most_common_words": [
+      [
+        "you",
+        21
+      ],
+      [
+        "the",
+        19
+      ],
+      [
+        "me,",
+        18
+      ],
+      [
+        "no,",
+        16
+      ],
+      [
+        "Why",
+        13
+      ]
+    ]
+  }
+}

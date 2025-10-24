@@ -1,0 +1,45 @@
+{
+  "word_count": 187,
+  "unique_word_count": 77,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 46.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "right",
+    "through",
+    "door",
+    "mine,",
+    "want",
+    "all",
+    "just",
+    "it's",
+    "for"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5882352941176471,
+    "most_common_words": [
+      [
+        "the",
+        8
+      ],
+      [
+        "right",
+        6
+      ],
+      [
+        "through",
+        6
+      ],
+      [
+        "door",
+        6
+      ],
+      [
+        "mine,",
+        6
+      ]
+    ]
+  }
+}

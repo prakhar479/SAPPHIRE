@@ -1,0 +1,45 @@
+{
+  "word_count": 685,
+  "unique_word_count": 364,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 68.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "was",
+    "like",
+    "And",
+    "Now",
+    "his",
+    "him",
+    "They",
+    "caught"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4686131386861314,
+    "most_common_words": [
+      [
+        "the",
+        27
+      ],
+      [
+        "and",
+        13
+      ],
+      [
+        "was",
+        7
+      ],
+      [
+        "like",
+        7
+      ],
+      [
+        "And",
+        6
+      ]
+    ]
+  }
+}

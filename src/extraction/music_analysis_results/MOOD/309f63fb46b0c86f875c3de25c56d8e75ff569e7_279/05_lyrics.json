@@ -1,0 +1,45 @@
+{
+  "word_count": 139,
+  "unique_word_count": 79,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 27.8,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "(Ride)",
+    "(bang)",
+    "ride)",
+    "your",
+    "get",
+    "the",
+    "Shoot!",
+    "Now",
+    "stay",
+    "beside"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4316546762589928,
+    "most_common_words": [
+      [
+        "(Ride)",
+        6
+      ],
+      [
+        "(bang)",
+        6
+      ],
+      [
+        "ride)",
+        5
+      ],
+      [
+        "your",
+        4
+      ],
+      [
+        "get",
+        4
+      ]
+    ]
+  }
+}

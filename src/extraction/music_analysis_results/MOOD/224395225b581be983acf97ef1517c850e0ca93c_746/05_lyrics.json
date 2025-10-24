@@ -1,0 +1,45 @@
+{
+  "word_count": 258,
+  "unique_word_count": 142,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 25.8,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "Hello-hurrah",
+    "eton",
+    "your",
+    "and",
+    "out",
+    "for",
+    "rifles,",
+    "rifles."
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4496124031007752,
+    "most_common_words": [
+      [
+        "the",
+        16
+      ],
+      [
+        "you",
+        8
+      ],
+      [
+        "Hello-hurrah",
+        8
+      ],
+      [
+        "eton",
+        8
+      ],
+      [
+        "your",
+        6
+      ]
+    ]
+  }
+}

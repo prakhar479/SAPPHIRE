@@ -1,0 +1,45 @@
+{
+  "word_count": 40,
+  "unique_word_count": 27,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 20.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "pink,",
+    "moon",
+    "saw",
+    "Pink",
+    "you",
+    "It's",
+    "pink",
+    "written",
+    "and",
+    "say"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.32499999999999996,
+    "most_common_words": [
+      [
+        "pink,",
+        4
+      ],
+      [
+        "moon",
+        3
+      ],
+      [
+        "saw",
+        2
+      ],
+      [
+        "Pink",
+        2
+      ],
+      [
+        "you",
+        2
+      ]
+    ]
+  }
+}

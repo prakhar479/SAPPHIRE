@@ -1,0 +1,45 @@
+{
+  "word_count": 387,
+  "unique_word_count": 113,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 387.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "And",
+    "that",
+    "you",
+    "want",
+    "didn't",
+    "sodas",
+    "think",
+    "this",
+    "would"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7080103359173127,
+    "most_common_words": [
+      [
+        "and",
+        15
+      ],
+      [
+        "And",
+        12
+      ],
+      [
+        "that",
+        9
+      ],
+      [
+        "you",
+        9
+      ],
+      [
+        "want",
+        9
+      ]
+    ]
+  }
+}

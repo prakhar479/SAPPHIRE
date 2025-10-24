@@ -1,0 +1,45 @@
+{
+  "word_count": 153,
+  "unique_word_count": 79,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 38.25,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "hey,",
+    "Hey,",
+    "little",
+    "girl",
+    "the",
+    "that",
+    "Gee,",
+    "like",
+    "you",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4836601307189542,
+    "most_common_words": [
+      [
+        "hey,",
+        22
+      ],
+      [
+        "Hey,",
+        10
+      ],
+      [
+        "little",
+        9
+      ],
+      [
+        "girl",
+        7
+      ],
+      [
+        "the",
+        5
+      ]
+    ]
+  }
+}

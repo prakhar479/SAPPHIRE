@@ -1,0 +1,45 @@
+{
+  "word_count": 236,
+  "unique_word_count": 139,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 21.454545454545453,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "never",
+    "I'm",
+    "got",
+    "they",
+    "for",
+    "that",
+    "and",
+    "They",
+    "could"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4110169491525424,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "never",
+        6
+      ],
+      [
+        "I'm",
+        6
+      ],
+      [
+        "got",
+        4
+      ],
+      [
+        "they",
+        4
+      ]
+    ]
+  }
+}

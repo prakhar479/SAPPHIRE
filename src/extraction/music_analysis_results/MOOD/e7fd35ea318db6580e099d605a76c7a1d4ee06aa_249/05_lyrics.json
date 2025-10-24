@@ -1,0 +1,45 @@
+{
+  "word_count": 805,
+  "unique_word_count": 438,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 805.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "for",
+    "you",
+    "with",
+    "gold",
+    "The",
+    "all",
+    "some",
+    "get"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.45590062111801244,
+    "most_common_words": [
+      [
+        "the",
+        56
+      ],
+      [
+        "and",
+        18
+      ],
+      [
+        "for",
+        8
+      ],
+      [
+        "you",
+        7
+      ],
+      [
+        "with",
+        7
+      ]
+    ]
+  }
+}

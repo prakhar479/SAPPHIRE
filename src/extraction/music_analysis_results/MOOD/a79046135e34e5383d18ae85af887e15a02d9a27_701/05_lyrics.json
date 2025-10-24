@@ -1,0 +1,45 @@
+{
+  "word_count": 321,
+  "unique_word_count": 86,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 321.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "love",
+    "you",
+    "pay",
+    "rent",
+    "you,",
+    "it's",
+    "(It's",
+    "easy,",
+    "easy)",
+    "You"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7320872274143302,
+    "most_common_words": [
+      [
+        "love",
+        16
+      ],
+      [
+        "you",
+        15
+      ],
+      [
+        "pay",
+        15
+      ],
+      [
+        "rent",
+        15
+      ],
+      [
+        "you,",
+        13
+      ]
+    ]
+  }
+}

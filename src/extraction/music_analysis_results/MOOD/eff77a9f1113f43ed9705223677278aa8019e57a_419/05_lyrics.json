@@ -1,0 +1,45 @@
+{
+  "word_count": 184,
+  "unique_word_count": 51,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 26.285714285714285,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "skin",
+    "black",
+    "metallic",
+    "Your",
+    "the",
+    "It's",
+    "colour",
+    "your",
+    "you're",
+    "when"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7228260869565217,
+    "most_common_words": [
+      [
+        "skin",
+        23
+      ],
+      [
+        "black",
+        18
+      ],
+      [
+        "metallic",
+        17
+      ],
+      [
+        "Your",
+        16
+      ],
+      [
+        "the",
+        9
+      ]
+    ]
+  }
+}

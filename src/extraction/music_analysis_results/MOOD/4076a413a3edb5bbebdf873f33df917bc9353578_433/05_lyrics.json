@@ -1,0 +1,45 @@
+{
+  "word_count": 232,
+  "unique_word_count": 71,
+  "sentence_count": 31,
+  "avg_words_per_sentence": 7.483870967741935,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "your",
+    "Our",
+    "with",
+    "Salt,",
+    "sweat,",
+    "sugar",
+    "asphalt.",
+    "hearts",
+    "littering"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6939655172413793,
+    "most_common_words": [
+      [
+        "the",
+        25
+      ],
+      [
+        "your",
+        10
+      ],
+      [
+        "Our",
+        10
+      ],
+      [
+        "with",
+        6
+      ],
+      [
+        "Salt,",
+        6
+      ]
+    ]
+  }
+}

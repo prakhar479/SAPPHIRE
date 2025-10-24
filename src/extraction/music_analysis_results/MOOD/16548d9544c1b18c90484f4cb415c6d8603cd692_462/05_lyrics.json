@@ -1,0 +1,45 @@
+{
+  "word_count": 256,
+  "unique_word_count": 157,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 256.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "This",
+    "I'll",
+    "for",
+    "and",
+    "when",
+    "expanding",
+    "man",
+    "That",
+    "stand"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.38671875,
+    "most_common_words": [
+      [
+        "the",
+        17
+      ],
+      [
+        "This",
+        5
+      ],
+      [
+        "I'll",
+        5
+      ],
+      [
+        "for",
+        3
+      ],
+      [
+        "and",
+        3
+      ]
+    ]
+  }
+}

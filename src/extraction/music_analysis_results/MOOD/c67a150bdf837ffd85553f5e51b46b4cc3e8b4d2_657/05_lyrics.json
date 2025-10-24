@@ -1,0 +1,45 @@
+{
+  "word_count": 207,
+  "unique_word_count": 90,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 207.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "repeats",
+    "the",
+    "never",
+    "History",
+    "tell",
+    "myself",
+    "before",
+    "sleep",
+    "say",
+    "you"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5652173913043479,
+    "most_common_words": [
+      [
+        "repeats",
+        10
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "never",
+        6
+      ],
+      [
+        "History",
+        5
+      ],
+      [
+        "tell",
+        4
+      ]
+    ]
+  }
+}

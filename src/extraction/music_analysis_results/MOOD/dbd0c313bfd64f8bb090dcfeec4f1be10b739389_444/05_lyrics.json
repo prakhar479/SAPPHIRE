@@ -1,0 +1,45 @@
+{
+  "word_count": 177,
+  "unique_word_count": 97,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 177.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "leave",
+    "the",
+    "don't",
+    "Don't",
+    "high,",
+    "dry",
+    "ever",
+    "best",
+    "thing"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.45197740112994356,
+    "most_common_words": [
+      [
+        "you",
+        12
+      ],
+      [
+        "leave",
+        10
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "don't",
+        6
+      ],
+      [
+        "Don't",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 161,
+  "unique_word_count": 81,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 161.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "like",
+    "you",
+    "never",
+    "girl",
+    "before",
+    "I've",
+    "And",
+    "known",
+    "come",
+    "you've"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.49689440993788825,
+    "most_common_words": [
+      [
+        "like",
+        8
+      ],
+      [
+        "you",
+        7
+      ],
+      [
+        "never",
+        6
+      ],
+      [
+        "girl",
+        6
+      ],
+      [
+        "before",
+        6
+      ]
+    ]
+  }
+}

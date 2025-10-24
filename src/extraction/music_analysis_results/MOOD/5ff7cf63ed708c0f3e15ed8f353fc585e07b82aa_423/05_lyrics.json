@@ -1,0 +1,45 @@
+{
+  "word_count": 108,
+  "unique_word_count": 57,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 108.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "hurt",
+    "have",
+    "without",
+    "know",
+    "that",
+    "I've",
+    "And",
+    "you",
+    "got",
+    "Really"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4722222222222222,
+    "most_common_words": [
+      [
+        "hurt",
+        4
+      ],
+      [
+        "have",
+        4
+      ],
+      [
+        "without",
+        4
+      ],
+      [
+        "know",
+        3
+      ],
+      [
+        "that",
+        3
+      ]
+    ]
+  }
+}

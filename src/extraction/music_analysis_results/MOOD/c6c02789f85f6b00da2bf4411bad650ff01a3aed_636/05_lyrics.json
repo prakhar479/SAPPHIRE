@@ -1,0 +1,45 @@
+{
+  "word_count": 364,
+  "unique_word_count": 105,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 52.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Come",
+    "Barbie,",
+    "let's",
+    "can",
+    "party!",
+    "barbie",
+    "I'm",
+    "the",
+    "(uu-oooh-u)"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7115384615384616,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "Come",
+        14
+      ],
+      [
+        "Barbie,",
+        14
+      ],
+      [
+        "let's",
+        14
+      ],
+      [
+        "can",
+        13
+      ]
+    ]
+  }
+}

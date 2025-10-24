@@ -1,0 +1,45 @@
+{
+  "word_count": 159,
+  "unique_word_count": 81,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 39.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you!",
+    "don't",
+    "care",
+    "about",
+    "the",
+    "Fuck",
+    "man",
+    "from",
+    "seen",
+    "was"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.49056603773584906,
+    "most_common_words": [
+      [
+        "you!",
+        14
+      ],
+      [
+        "don't",
+        10
+      ],
+      [
+        "care",
+        10
+      ],
+      [
+        "about",
+        10
+      ],
+      [
+        "the",
+        5
+      ]
+    ]
+  }
+}

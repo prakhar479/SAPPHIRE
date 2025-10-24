@@ -1,0 +1,45 @@
+{
+  "word_count": 92,
+  "unique_word_count": 59,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 10.222222222222221,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "Only",
+    "Everybody's",
+    "talkin'",
+    "me.",
+    "don't",
+    "hear",
+    "word",
+    "they're",
+    "sayin',"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3586956521739131,
+    "most_common_words": [
+      [
+        "the",
+        9
+      ],
+      [
+        "Only",
+        3
+      ],
+      [
+        "Everybody's",
+        2
+      ],
+      [
+        "talkin'",
+        2
+      ],
+      [
+        "me.",
+        2
+      ]
+    ]
+  }
+}

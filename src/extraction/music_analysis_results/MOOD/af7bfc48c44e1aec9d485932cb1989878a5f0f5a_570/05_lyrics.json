@@ -1,0 +1,45 @@
+{
+  "word_count": 121,
+  "unique_word_count": 81,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 121.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "huh",
+    "keep",
+    "The",
+    "[Chorus]",
+    "still",
+    "beat",
+    "goes",
+    "girls",
+    "on,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3305785123966942,
+    "most_common_words": [
+      [
+        "the",
+        7
+      ],
+      [
+        "huh",
+        6
+      ],
+      [
+        "keep",
+        5
+      ],
+      [
+        "The",
+        4
+      ],
+      [
+        "[Chorus]",
+        3
+      ]
+    ]
+  }
+}

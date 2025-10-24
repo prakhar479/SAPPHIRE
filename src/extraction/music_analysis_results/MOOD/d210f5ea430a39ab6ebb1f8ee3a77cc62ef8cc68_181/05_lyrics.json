@@ -1,0 +1,45 @@
+{
+  "word_count": 119,
+  "unique_word_count": 75,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 119.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "ROSE",
+    "HEART",
+    "SONG",
+    "SAN",
+    "ANTONE",
+    "THE",
+    "ALL",
+    "THAT",
+    "LIVE",
+    "ALONE"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3697478991596639,
+    "most_common_words": [
+      [
+        "ROSE",
+        4
+      ],
+      [
+        "HEART",
+        3
+      ],
+      [
+        "SONG",
+        3
+      ],
+      [
+        "SAN",
+        3
+      ],
+      [
+        "ANTONE",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 558,
+  "unique_word_count": 346,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 139.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "and",
+    "your",
+    "it's",
+    "I'm",
+    "And",
+    "real",
+    "with",
+    "can"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3799283154121864,
+    "most_common_words": [
+      [
+        "the",
+        27
+      ],
+      [
+        "you",
+        8
+      ],
+      [
+        "and",
+        7
+      ],
+      [
+        "your",
+        7
+      ],
+      [
+        "it's",
+        7
+      ]
+    ]
+  }
+}

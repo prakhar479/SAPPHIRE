@@ -1,0 +1,45 @@
+{
+  "word_count": 179,
+  "unique_word_count": 83,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 44.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "better",
+    "love",
+    "knock",
+    "knock,",
+    "It's",
+    "I'd",
+    "baby",
+    "That",
+    "'Cause",
+    "know"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5363128491620112,
+    "most_common_words": [
+      [
+        "better",
+        9
+      ],
+      [
+        "love",
+        7
+      ],
+      [
+        "knock",
+        7
+      ],
+      [
+        "knock,",
+        5
+      ],
+      [
+        "It's",
+        4
+      ]
+    ]
+  }
+}

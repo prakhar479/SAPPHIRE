@@ -1,0 +1,45 @@
+{
+  "word_count": 222,
+  "unique_word_count": 85,
+  "sentence_count": 16,
+  "avg_words_per_sentence": 13.875,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "you",
+    "your",
+    "would",
+    "summer",
+    "world",
+    "forget",
+    "and",
+    "Beechwood"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6171171171171171,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "And",
+        10
+      ],
+      [
+        "you",
+        9
+      ],
+      [
+        "your",
+        9
+      ],
+      [
+        "would",
+        7
+      ]
+    ]
+  }
+}

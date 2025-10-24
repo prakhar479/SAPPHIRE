@@ -1,0 +1,45 @@
+{
+  "word_count": 158,
+  "unique_word_count": 98,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 158.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "feet",
+    "and",
+    "the",
+    "I'd",
+    "ten",
+    "tall",
+    "bulletproof",
+    "But",
+    "time"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.379746835443038,
+    "most_common_words": [
+      [
+        "I'm",
+        6
+      ],
+      [
+        "feet",
+        5
+      ],
+      [
+        "and",
+        5
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "I'd",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 606,
+  "unique_word_count": 56,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 606.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "what",
+    "now",
+    "the",
+    "they",
+    "told",
+    "And",
+    "that",
+    "Fuck",
+    "you,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.9075907590759076,
+    "most_common_words": [
+      [
+        "you",
+        41
+      ],
+      [
+        "what",
+        41
+      ],
+      [
+        "now",
+        32
+      ],
+      [
+        "the",
+        29
+      ],
+      [
+        "they",
+        25
+      ]
+    ]
+  }
+}

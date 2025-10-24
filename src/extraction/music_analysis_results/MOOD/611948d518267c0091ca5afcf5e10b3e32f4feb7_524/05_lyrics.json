@@ -1,0 +1,45 @@
+{
+  "word_count": 188,
+  "unique_word_count": 123,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 188.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "for",
+    "And",
+    "and",
+    "But",
+    "say",
+    "good",
+    "year",
+    "roses"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3457446808510638,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "you",
+        8
+      ],
+      [
+        "for",
+        4
+      ],
+      [
+        "And",
+        3
+      ],
+      [
+        "and",
+        3
+      ]
+    ]
+  }
+}

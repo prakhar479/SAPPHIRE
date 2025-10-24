@@ -1,0 +1,45 @@
+{
+  "word_count": 351,
+  "unique_word_count": 186,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 351.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "I'm",
+    "gonna",
+    "never",
+    "[Scrreeech-BANG,",
+    "tinkle]",
+    "never,",
+    "and",
+    "Transfusion,",
+    "transfusion"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4700854700854701,
+    "most_common_words": [
+      [
+        "the",
+        16
+      ],
+      [
+        "I'm",
+        14
+      ],
+      [
+        "gonna",
+        9
+      ],
+      [
+        "never",
+        8
+      ],
+      [
+        "[Scrreeech-BANG,",
+        7
+      ]
+    ]
+  }
+}

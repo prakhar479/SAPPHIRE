@@ -1,0 +1,45 @@
+{
+  "word_count": 37,
+  "unique_word_count": 24,
+  "sentence_count": 6,
+  "avg_words_per_sentence": 6.166666666666667,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "was",
+    "When",
+    "drank",
+    "some",
+    "very",
+    "good",
+    "beer",
+    "purchased",
+    "with",
+    "fake"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3513513513513513,
+    "most_common_words": [
+      [
+        "was",
+        3
+      ],
+      [
+        "When",
+        2
+      ],
+      [
+        "drank",
+        2
+      ],
+      [
+        "some",
+        2
+      ],
+      [
+        "very",
+        2
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 184,
+  "unique_word_count": 95,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 92.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "gonna",
+    "night",
+    "All",
+    "Tell",
+    "long",
+    "and",
+    "all",
+    "long,",
+    "the",
+    "pitch"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4836956521739131,
+    "most_common_words": [
+      [
+        "gonna",
+        12
+      ],
+      [
+        "night",
+        11
+      ],
+      [
+        "All",
+        8
+      ],
+      [
+        "Tell",
+        7
+      ],
+      [
+        "long",
+        6
+      ]
+    ]
+  }
+}

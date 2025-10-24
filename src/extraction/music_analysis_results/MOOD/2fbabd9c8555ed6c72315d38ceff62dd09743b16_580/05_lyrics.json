@@ -1,0 +1,45 @@
+{
+  "word_count": 187,
+  "unique_word_count": 90,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 187.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "these",
+    "keep",
+    "boots",
+    "are",
+    "You",
+    "for",
+    "all",
+    "just",
+    "what"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.518716577540107,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "these",
+        7
+      ],
+      [
+        "keep",
+        6
+      ],
+      [
+        "boots",
+        6
+      ],
+      [
+        "are",
+        6
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 165,
+  "unique_word_count": 78,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 55.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "Breaking",
+    "law,",
+    "breaking",
+    "law",
+    "it's",
+    "don't",
+    "You",
+    "know",
+    "what"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5272727272727273,
+    "most_common_words": [
+      [
+        "the",
+        26
+      ],
+      [
+        "Breaking",
+        12
+      ],
+      [
+        "law,",
+        12
+      ],
+      [
+        "breaking",
+        12
+      ],
+      [
+        "law",
+        12
+      ]
+    ]
+  }
+}

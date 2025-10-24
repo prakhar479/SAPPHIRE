@@ -1,0 +1,45 @@
+{
+  "word_count": 587,
+  "unique_word_count": 318,
+  "sentence_count": 6,
+  "avg_words_per_sentence": 97.83333333333333,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "you",
+    "I'm",
+    "You",
+    "know",
+    "rebel",
+    "The",
+    "never",
+    "time"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.45826235093696766,
+    "most_common_words": [
+      [
+        "the",
+        35
+      ],
+      [
+        "and",
+        11
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "I'm",
+        7
+      ],
+      [
+        "You",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 148,
+  "unique_word_count": 70,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 148.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Hotel",
+    "Detective",
+    "the",
+    "her",
+    "she's",
+    "and",
+    "about",
+    "it,",
+    "'cause",
+    "little"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.527027027027027,
+    "most_common_words": [
+      [
+        "Hotel",
+        13
+      ],
+      [
+        "Detective",
+        13
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "her",
+        5
+      ],
+      [
+        "she's",
+        5
+      ]
+    ]
+  }
+}

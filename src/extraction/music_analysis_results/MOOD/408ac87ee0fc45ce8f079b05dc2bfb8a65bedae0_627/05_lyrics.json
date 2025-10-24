@@ -1,0 +1,45 @@
+{
+  "word_count": 246,
+  "unique_word_count": 47,
+  "sentence_count": 13,
+  "avg_words_per_sentence": 18.923076923076923,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "bird,",
+    "the",
+    "A-well-a",
+    "word",
+    "b-bird's",
+    "papa-ooma-mow-mow",
+    "bird",
+    "Papa-ooma-mow-mow,",
+    "about",
+    "everybody's"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8089430894308943,
+    "most_common_words": [
+      [
+        "bird,",
+        52
+      ],
+      [
+        "the",
+        34
+      ],
+      [
+        "A-well-a",
+        23
+      ],
+      [
+        "word",
+        20
+      ],
+      [
+        "b-bird's",
+        16
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 249,
+  "unique_word_count": 164,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 124.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "and",
+    "the",
+    "[Chorus]",
+    "said,",
+    "can",
+    "load",
+    "just",
+    "Fanny,",
+    "take"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3413654618473896,
+    "most_common_words": [
+      [
+        "you",
+        8
+      ],
+      [
+        "and",
+        7
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "[Chorus]",
+        5
+      ],
+      [
+        "said,",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 73,
+  "unique_word_count": 39,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 18.25,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "late",
+    "you",
+    "Always",
+    "with",
+    "your",
+    "why",
+    "kisses",
+    "want",
+    "this",
+    "way"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4657534246575342,
+    "most_common_words": [
+      [
+        "late",
+        5
+      ],
+      [
+        "you",
+        5
+      ],
+      [
+        "Always",
+        4
+      ],
+      [
+        "with",
+        4
+      ],
+      [
+        "your",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 94,
+  "unique_word_count": 72,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 13.428571428571429,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "The",
+    "song.",
+    "melody",
+    "was",
+    "and",
+    "the",
+    "stardust",
+    "are",
+    "Sometimes",
+    "wonder"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.23404255319148937,
+    "most_common_words": [
+      [
+        "The",
+        4
+      ],
+      [
+        "song.",
+        2
+      ],
+      [
+        "melody",
+        2
+      ],
+      [
+        "was",
+        2
+      ],
+      [
+        "and",
+        2
+      ]
+    ]
+  }
+}

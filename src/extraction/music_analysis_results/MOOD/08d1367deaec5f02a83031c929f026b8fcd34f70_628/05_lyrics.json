@@ -1,0 +1,45 @@
+{
+  "word_count": 194,
+  "unique_word_count": 130,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 38.8,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "trousers,",
+    "All",
+    "baggy",
+    "fun",
+    "had",
+    "Baggy",
+    "boys",
+    "rules"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3298969072164949,
+    "most_common_words": [
+      [
+        "the",
+        13
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "trousers,",
+        5
+      ],
+      [
+        "All",
+        4
+      ],
+      [
+        "baggy",
+        4
+      ]
+    ]
+  }
+}

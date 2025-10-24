@@ -1,0 +1,45 @@
+{
+  "word_count": 239,
+  "unique_word_count": 126,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 47.8,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "The",
+    "rock'n'roll",
+    "and",
+    "for",
+    "now",
+    "You",
+    "know",
+    "can't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4728033472803347,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "The",
+        6
+      ],
+      [
+        "rock'n'roll",
+        4
+      ],
+      [
+        "and",
+        4
+      ]
+    ]
+  }
+}

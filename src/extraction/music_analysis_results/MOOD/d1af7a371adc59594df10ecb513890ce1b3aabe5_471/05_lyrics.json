@@ -1,0 +1,45 @@
+{
+  "word_count": 177,
+  "unique_word_count": 116,
+  "sentence_count": 8,
+  "avg_words_per_sentence": 22.125,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "our",
+    "superficial",
+    "sighs,",
+    "borders",
+    "lives.",
+    "your",
+    "now",
+    "Like"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.34463276836158196,
+    "most_common_words": [
+      [
+        "the",
+        15
+      ],
+      [
+        "And",
+        11
+      ],
+      [
+        "our",
+        6
+      ],
+      [
+        "superficial",
+        3
+      ],
+      [
+        "sighs,",
+        3
+      ]
+    ]
+  }
+}

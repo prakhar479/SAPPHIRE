@@ -1,0 +1,45 @@
+{
+  "word_count": 82,
+  "unique_word_count": 67,
+  "sentence_count": 11,
+  "avg_words_per_sentence": 7.454545454545454,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "groovy.",
+    "got",
+    "morning",
+    "for",
+    "cha",
+    "Slow",
+    "down,",
+    "you"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.18292682926829273,
+    "most_common_words": [
+      [
+        "the",
+        3
+      ],
+      [
+        "and",
+        3
+      ],
+      [
+        "groovy.",
+        3
+      ],
+      [
+        "got",
+        2
+      ],
+      [
+        "morning",
+        2
+      ]
+    ]
+  }
+}

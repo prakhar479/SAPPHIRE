@@ -1,0 +1,45 @@
+{
+  "word_count": 158,
+  "unique_word_count": 85,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 158.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "From",
+    "words",
+    "these",
+    "alone",
+    "head",
+    "toes",
+    "You",
+    "get",
+    "wrong"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4620253164556962,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "From",
+        5
+      ],
+      [
+        "words",
+        4
+      ],
+      [
+        "these",
+        4
+      ],
+      [
+        "alone",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 283,
+  "unique_word_count": 140,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 283.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Judy",
+    "the",
+    "She",
+    "you",
+    "was",
+    "Judy,",
+    "when",
+    "your",
+    "dream",
+    "horses"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5053003533568905,
+    "most_common_words": [
+      [
+        "Judy",
+        8
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "She",
+        7
+      ],
+      [
+        "you",
+        7
+      ],
+      [
+        "was",
+        7
+      ]
+    ]
+  }
+}

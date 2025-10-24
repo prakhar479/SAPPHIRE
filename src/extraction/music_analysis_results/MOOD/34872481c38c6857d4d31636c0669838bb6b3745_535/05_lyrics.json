@@ -1,0 +1,45 @@
+{
+  "word_count": 155,
+  "unique_word_count": 88,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 155.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Wild",
+    "horses",
+    "you",
+    "couldn't",
+    "drag",
+    "away",
+    "wild",
+    "them",
+    "know",
+    "some"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.432258064516129,
+    "most_common_words": [
+      [
+        "Wild",
+        8
+      ],
+      [
+        "horses",
+        8
+      ],
+      [
+        "you",
+        7
+      ],
+      [
+        "couldn't",
+        6
+      ],
+      [
+        "drag",
+        6
+      ]
+    ]
+  }
+}

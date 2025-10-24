@@ -1,0 +1,45 @@
+{
+  "word_count": 132,
+  "unique_word_count": 40,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 132.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "know",
+    "you,",
+    "call",
+    "me)",
+    "hate",
+    "(but",
+    "yeah",
+    "Well",
+    "baby"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.696969696969697,
+    "most_common_words": [
+      [
+        "you",
+        17
+      ],
+      [
+        "know",
+        8
+      ],
+      [
+        "you,",
+        8
+      ],
+      [
+        "call",
+        7
+      ],
+      [
+        "me)",
+        7
+      ]
+    ]
+  }
+}

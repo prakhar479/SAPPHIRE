@@ -1,0 +1,45 @@
+{
+  "word_count": 69,
+  "unique_word_count": 27,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 23.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "-La",
+    "the",
+    "Get",
+    "message",
+    "out",
+    "\"Everything",
+    "alright.\"",
+    "Break",
+    "with",
+    "Everything"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6086956521739131,
+    "most_common_words": [
+      [
+        "-La",
+        4
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "Get",
+        2
+      ],
+      [
+        "message",
+        2
+      ],
+      [
+        "out",
+        2
+      ]
+    ]
+  }
+}

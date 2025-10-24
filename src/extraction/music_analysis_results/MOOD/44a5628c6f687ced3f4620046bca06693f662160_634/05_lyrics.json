@@ -1,0 +1,45 @@
+{
+  "word_count": 177,
+  "unique_word_count": 110,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 177.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Tut)",
+    "(King",
+    "the",
+    "Arizona",
+    "King",
+    "Now",
+    "see",
+    "(Born",
+    "moved",
+    "Babylonia"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.37853107344632764,
+    "most_common_words": [
+      [
+        "Tut)",
+        14
+      ],
+      [
+        "(King",
+        6
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "Arizona",
+        4
+      ],
+      [
+        "King",
+        4
+      ]
+    ]
+  }
+}

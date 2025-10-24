@@ -1,0 +1,45 @@
+{
+  "word_count": 198,
+  "unique_word_count": 132,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 66.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "bad",
+    "jokes",
+    "are",
+    "But",
+    "they",
+    "this",
+    "guess",
+    "for"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.33333333333333337,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "And",
+        7
+      ],
+      [
+        "bad",
+        6
+      ],
+      [
+        "jokes",
+        4
+      ],
+      [
+        "are",
+        4
+      ]
+    ]
+  }
+}

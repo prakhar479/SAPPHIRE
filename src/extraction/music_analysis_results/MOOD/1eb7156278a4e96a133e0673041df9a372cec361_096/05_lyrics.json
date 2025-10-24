@@ -1,0 +1,45 @@
+{
+  "word_count": 134,
+  "unique_word_count": 81,
+  "sentence_count": 8,
+  "avg_words_per_sentence": 16.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "gonna",
+    "up,",
+    "and",
+    "rock",
+    "the",
+    "Saturday",
+    "night",
+    "about",
+    "don't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3955223880597015,
+    "most_common_words": [
+      [
+        "I'm",
+        8
+      ],
+      [
+        "gonna",
+        8
+      ],
+      [
+        "up,",
+        7
+      ],
+      [
+        "and",
+        4
+      ],
+      [
+        "rock",
+        4
+      ]
+    ]
+  }
+}

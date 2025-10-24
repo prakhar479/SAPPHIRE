@@ -1,0 +1,45 @@
+{
+  "word_count": 231,
+  "unique_word_count": 151,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 231.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Las",
+    "the",
+    "Viva",
+    "Vegas",
+    "gonna",
+    "I'm",
+    "Vegas,",
+    "and",
+    "there",
+    "And"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.34632034632034636,
+    "most_common_words": [
+      [
+        "Las",
+        9
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "Viva",
+        8
+      ],
+      [
+        "Vegas",
+        5
+      ],
+      [
+        "gonna",
+        4
+      ]
+    ]
+  }
+}

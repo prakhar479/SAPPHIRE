@@ -1,0 +1,45 @@
+{
+  "word_count": 174,
+  "unique_word_count": 98,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 174.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "him",
+    "his",
+    "see",
+    "the",
+    "he's",
+    "like",
+    "I'll",
+    "stick",
+    "out",
+    "forever"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4367816091954023,
+    "most_common_words": [
+      [
+        "him",
+        5
+      ],
+      [
+        "his",
+        4
+      ],
+      [
+        "see",
+        4
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "he's",
+        3
+      ]
+    ]
+  }
+}

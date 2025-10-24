@@ -1,0 +1,45 @@
+{
+  "word_count": 212,
+  "unique_word_count": 98,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 212.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "Palisades",
+    "Park",
+    "And",
+    "like",
+    "ate",
+    "love",
+    "When",
+    "and",
+    "girl"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5377358490566038,
+    "most_common_words": [
+      [
+        "the",
+        7
+      ],
+      [
+        "Palisades",
+        6
+      ],
+      [
+        "Park",
+        6
+      ],
+      [
+        "And",
+        4
+      ],
+      [
+        "like",
+        4
+      ]
+    ]
+  }
+}

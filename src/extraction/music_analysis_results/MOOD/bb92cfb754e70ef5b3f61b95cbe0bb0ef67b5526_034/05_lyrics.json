@@ -1,0 +1,45 @@
+{
+  "word_count": 596,
+  "unique_word_count": 141,
+  "sentence_count": 31,
+  "avg_words_per_sentence": 19.225806451612904,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "You",
+    "I'm",
+    "Know",
+    "Really",
+    "(Bad",
+    "Bad-Really,",
+    "Bad)",
+    "The",
+    "Bad,",
+    "Bad-"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7634228187919463,
+    "most_common_words": [
+      [
+        "You",
+        51
+      ],
+      [
+        "I'm",
+        34
+      ],
+      [
+        "Know",
+        29
+      ],
+      [
+        "Really",
+        20
+      ],
+      [
+        "(Bad",
+        18
+      ]
+    ]
+  }
+}

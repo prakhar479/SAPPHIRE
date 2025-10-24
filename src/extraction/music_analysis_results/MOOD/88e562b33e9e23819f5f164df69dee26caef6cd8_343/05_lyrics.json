@@ -1,0 +1,45 @@
+{
+  "word_count": 137,
+  "unique_word_count": 79,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 19.571428571428573,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "with",
+    "the",
+    "Because",
+    "I'm",
+    "still",
+    "love",
+    "this",
+    "want",
+    "But"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4233576642335767,
+    "most_common_words": [
+      [
+        "you",
+        8
+      ],
+      [
+        "with",
+        5
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "Because",
+        4
+      ],
+      [
+        "I'm",
+        4
+      ]
+    ]
+  }
+}

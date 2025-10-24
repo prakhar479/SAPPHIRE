@@ -1,0 +1,45 @@
+{
+  "word_count": 456,
+  "unique_word_count": 108,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 456.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Mickey",
+    "Mickey,",
+    "Oh,",
+    "the",
+    "take",
+    "you're",
+    "You",
+    "Hey,",
+    "what"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7631578947368421,
+    "most_common_words": [
+      [
+        "you",
+        32
+      ],
+      [
+        "Mickey",
+        29
+      ],
+      [
+        "Mickey,",
+        23
+      ],
+      [
+        "Oh,",
+        22
+      ],
+      [
+        "the",
+        14
+      ]
+    ]
+  }
+}

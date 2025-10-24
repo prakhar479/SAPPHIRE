@@ -1,0 +1,45 @@
+{
+  "word_count": 304,
+  "unique_word_count": 142,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 76.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "cloud",
+    "Hey!",
+    "You!",
+    "Get",
+    "off",
+    "the",
+    "Don't",
+    "hang",
+    "around",
+    "'cause"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5328947368421053,
+    "most_common_words": [
+      [
+        "cloud",
+        14
+      ],
+      [
+        "Hey!",
+        12
+      ],
+      [
+        "You!",
+        12
+      ],
+      [
+        "Get",
+        12
+      ],
+      [
+        "off",
+        12
+      ]
+    ]
+  }
+}

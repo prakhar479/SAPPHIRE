@@ -1,0 +1,45 @@
+{
+  "word_count": 365,
+  "unique_word_count": 117,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 365.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "It's",
+    "that",
+    "rock",
+    "roll",
+    "music",
+    "Any",
+    "old",
+    "wanna",
+    "dance"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6794520547945205,
+    "most_common_words": [
+      [
+        "you",
+        25
+      ],
+      [
+        "It's",
+        11
+      ],
+      [
+        "that",
+        10
+      ],
+      [
+        "rock",
+        10
+      ],
+      [
+        "roll",
+        10
+      ]
+    ]
+  }
+}

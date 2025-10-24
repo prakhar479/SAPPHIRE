@@ -1,0 +1,45 @@
+{
+  "word_count": 97,
+  "unique_word_count": 60,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 10.777777777777779,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "dog.",
+    "you",
+    "how",
+    "her",
+    "she",
+    "Walkin'",
+    "dog,",
+    "just",
+    "a-walkin'"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.38144329896907214,
+    "most_common_words": [
+      [
+        "the",
+        11
+      ],
+      [
+        "dog.",
+        4
+      ],
+      [
+        "you",
+        4
+      ],
+      [
+        "how",
+        4
+      ],
+      [
+        "her",
+        3
+      ]
+    ]
+  }
+}

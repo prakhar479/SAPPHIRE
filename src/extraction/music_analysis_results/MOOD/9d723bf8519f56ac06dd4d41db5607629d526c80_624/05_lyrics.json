@@ -1,0 +1,45 @@
+{
+  "word_count": 239,
+  "unique_word_count": 65,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 34.142857142857146,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Fish",
+    "heads",
+    "heads,",
+    "Rolly",
+    "polly",
+    "Eat",
+    "them",
+    "up,",
+    "Yummm",
+    "They"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7280334728033473,
+    "most_common_words": [
+      [
+        "Fish",
+        54
+      ],
+      [
+        "heads",
+        31
+      ],
+      [
+        "heads,",
+        20
+      ],
+      [
+        "Rolly",
+        11
+      ],
+      [
+        "polly",
+        11
+      ]
+    ]
+  }
+}

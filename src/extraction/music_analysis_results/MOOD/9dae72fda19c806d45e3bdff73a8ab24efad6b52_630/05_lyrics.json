@@ -1,0 +1,45 @@
+{
+  "word_count": 124,
+  "unique_word_count": 99,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 124.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "with",
+    "cocktails",
+    "for",
+    "two",
+    "longer",
+    "some",
+    "That",
+    "With"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.2016129032258065,
+    "most_common_words": [
+      [
+        "the",
+        3
+      ],
+      [
+        "and",
+        3
+      ],
+      [
+        "with",
+        3
+      ],
+      [
+        "cocktails",
+        3
+      ],
+      [
+        "for",
+        3
+      ]
+    ]
+  }
+}

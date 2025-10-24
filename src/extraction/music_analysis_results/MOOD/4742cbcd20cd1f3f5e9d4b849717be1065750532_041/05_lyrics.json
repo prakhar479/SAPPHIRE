@@ -1,0 +1,45 @@
+{
+  "word_count": 259,
+  "unique_word_count": 132,
+  "sentence_count": 13,
+  "avg_words_per_sentence": 19.923076923076923,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "crazy",
+    "the",
+    "Crazy",
+    "Let",
+    "crazy,",
+    "you,",
+    "that",
+    "night",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.49034749034749037,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "crazy",
+        9
+      ],
+      [
+        "the",
+        8
+      ],
+      [
+        "Crazy",
+        8
+      ],
+      [
+        "Let",
+        7
+      ]
+    ]
+  }
+}

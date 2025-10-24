@@ -1,0 +1,45 @@
+{
+  "word_count": 219,
+  "unique_word_count": 61,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 219.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "love",
+    "with",
+    "fallen",
+    "Ever",
+    "someone",
+    "You",
+    "And",
+    "shouldn't've",
+    "natural",
+    "emotions"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7214611872146119,
+    "most_common_words": [
+      [
+        "love",
+        27
+      ],
+      [
+        "with",
+        19
+      ],
+      [
+        "fallen",
+        18
+      ],
+      [
+        "Ever",
+        13
+      ],
+      [
+        "someone",
+        13
+      ]
+    ]
+  }
+}

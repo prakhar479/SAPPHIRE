@@ -1,0 +1,45 @@
+{
+  "word_count": 171,
+  "unique_word_count": 115,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 42.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "know",
+    "this",
+    "This",
+    "our",
+    "last",
+    "goodbye",
+    "But",
+    "it's"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.32748538011695905,
+    "most_common_words": [
+      [
+        "the",
+        6
+      ],
+      [
+        "you",
+        6
+      ],
+      [
+        "know",
+        5
+      ],
+      [
+        "this",
+        4
+      ],
+      [
+        "This",
+        3
+      ]
+    ]
+  }
+}

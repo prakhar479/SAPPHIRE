@@ -1,0 +1,45 @@
+{
+  "word_count": 208,
+  "unique_word_count": 113,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 208.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "was",
+    "shot",
+    "baby's",
+    "yeah",
+    "that",
+    "had",
+    "love",
+    "loved",
+    "double",
+    "Double"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4567307692307693,
+    "most_common_words": [
+      [
+        "was",
+        7
+      ],
+      [
+        "shot",
+        6
+      ],
+      [
+        "baby's",
+        6
+      ],
+      [
+        "yeah",
+        6
+      ],
+      [
+        "that",
+        4
+      ]
+    ]
+  }
+}

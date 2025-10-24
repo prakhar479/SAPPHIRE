@@ -1,0 +1,45 @@
+{
+  "word_count": 157,
+  "unique_word_count": 91,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 157.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "neat",
+    "can't",
+    "neat,she",
+    "afford",
+    "more",
+    "(repeat",
+    "man",
+    "mystery",
+    "there",
+    "distant"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.42038216560509556,
+    "most_common_words": [
+      [
+        "neat",
+        11
+      ],
+      [
+        "can't",
+        7
+      ],
+      [
+        "neat,she",
+        4
+      ],
+      [
+        "afford",
+        4
+      ],
+      [
+        "more",
+        3
+      ]
+    ]
+  }
+}

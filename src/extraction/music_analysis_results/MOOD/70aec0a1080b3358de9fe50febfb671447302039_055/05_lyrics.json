@@ -1,0 +1,45 @@
+{
+  "word_count": 232,
+  "unique_word_count": 109,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 232.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "Well,",
+    "I'm",
+    "man,",
+    "yes",
+    "am,",
+    "can't",
+    "help",
+    "but",
+    "love"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5301724137931034,
+    "most_common_words": [
+      [
+        "and",
+        10
+      ],
+      [
+        "Well,",
+        8
+      ],
+      [
+        "I'm",
+        8
+      ],
+      [
+        "man,",
+        6
+      ],
+      [
+        "yes",
+        6
+      ]
+    ]
+  }
+}

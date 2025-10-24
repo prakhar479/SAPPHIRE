@@ -1,0 +1,45 @@
+{
+  "word_count": 178,
+  "unique_word_count": 99,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 44.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "home",
+    "from",
+    "away",
+    "I'm",
+    "500",
+    "miles",
+    "and",
+    "the",
+    "all",
+    "when"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4438202247191011,
+    "most_common_words": [
+      [
+        "home",
+        12
+      ],
+      [
+        "from",
+        10
+      ],
+      [
+        "away",
+        8
+      ],
+      [
+        "I'm",
+        6
+      ],
+      [
+        "500",
+        6
+      ]
+    ]
+  }
+}

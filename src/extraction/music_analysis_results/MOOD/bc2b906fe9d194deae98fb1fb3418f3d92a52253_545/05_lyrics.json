@@ -1,0 +1,45 @@
+{
+  "word_count": 167,
+  "unique_word_count": 59,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 167.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "got",
+    "you",
+    "I've",
+    "The",
+    "only",
+    "thing",
+    "your",
+    "the",
+    "That",
+    "And"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6467065868263473,
+    "most_common_words": [
+      [
+        "got",
+        14
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "I've",
+        9
+      ],
+      [
+        "The",
+        8
+      ],
+      [
+        "only",
+        8
+      ]
+    ]
+  }
+}

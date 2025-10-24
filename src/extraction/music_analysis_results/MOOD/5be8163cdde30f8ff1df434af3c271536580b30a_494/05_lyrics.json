@@ -1,0 +1,45 @@
+{
+  "word_count": 209,
+  "unique_word_count": 131,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 69.66666666666667,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "steal",
+    "I'll",
+    "away,",
+    "away",
+    "Sweet",
+    "Lady",
+    "not",
+    "all",
+    "every"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3732057416267942,
+    "most_common_words": [
+      [
+        "the",
+        7
+      ],
+      [
+        "steal",
+        7
+      ],
+      [
+        "I'll",
+        5
+      ],
+      [
+        "away,",
+        4
+      ],
+      [
+        "away",
+        4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 193,
+  "unique_word_count": 73,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 193.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "day",
+    "don't",
+    "It's",
+    "lazy",
+    "with",
+    "I'm",
+    "down",
+    "nothing",
+    "got"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6217616580310881,
+    "most_common_words": [
+      [
+        "you",
+        12
+      ],
+      [
+        "day",
+        9
+      ],
+      [
+        "don't",
+        8
+      ],
+      [
+        "It's",
+        6
+      ],
+      [
+        "lazy",
+        6
+      ]
+    ]
+  }
+}

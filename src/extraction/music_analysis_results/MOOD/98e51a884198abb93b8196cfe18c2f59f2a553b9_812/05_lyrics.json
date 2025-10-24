@@ -1,0 +1,45 @@
+{
+  "word_count": 85,
+  "unique_word_count": 71,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 85.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "the",
+    "people",
+    "no,",
+    "black",
+    "Satan's",
+    "higher",
+    "What",
+    "this",
+    "that"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.16470588235294115,
+    "most_common_words": [
+      [
+        "and",
+        3
+      ],
+      [
+        "the",
+        3
+      ],
+      [
+        "people",
+        3
+      ],
+      [
+        "no,",
+        3
+      ],
+      [
+        "black",
+        2
+      ]
+    ]
+  }
+}

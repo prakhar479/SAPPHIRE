@@ -1,0 +1,45 @@
+{
+  "word_count": 1412,
+  "unique_word_count": 544,
+  "sentence_count": 68,
+  "avg_words_per_sentence": 20.764705882352942,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "will",
+    "that",
+    "have",
+    "freedom",
+    "from",
+    "colored",
+    "every",
+    "this"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6147308781869689,
+    "most_common_words": [
+      [
+        "the",
+        84
+      ],
+      [
+        "and",
+        38
+      ],
+      [
+        "will",
+        26
+      ],
+      [
+        "that",
+        21
+      ],
+      [
+        "have",
+        18
+      ]
+    ]
+  }
+}

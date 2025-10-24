@@ -1,0 +1,45 @@
+{
+  "word_count": 298,
+  "unique_word_count": 142,
+  "sentence_count": 46,
+  "avg_words_per_sentence": 6.478260869565218,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "Pd...",
+    "...",
+    "Stooge",
+    "Hand",
+    "Beetlebomb",
+    "now",
+    "there",
+    "it's"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5234899328859061,
+    "most_common_words": [
+      [
+        "the",
+        19
+      ],
+      [
+        "And",
+        18
+      ],
+      [
+        "Pd...",
+        9
+      ],
+      [
+        "...",
+        6
+      ],
+      [
+        "Stooge",
+        5
+      ]
+    ]
+  }
+}

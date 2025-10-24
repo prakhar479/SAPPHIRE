@@ -1,0 +1,45 @@
+{
+  "word_count": 105,
+  "unique_word_count": 79,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 105.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "inside",
+    "(Chorus)",
+    "see",
+    "that",
+    "way",
+    "The",
+    "not",
+    "From",
+    "deep"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.24761904761904763,
+    "most_common_words": [
+      [
+        "the",
+        5
+      ],
+      [
+        "inside",
+        3
+      ],
+      [
+        "(Chorus)",
+        3
+      ],
+      [
+        "see",
+        2
+      ],
+      [
+        "that",
+        2
+      ]
+    ]
+  }
+}

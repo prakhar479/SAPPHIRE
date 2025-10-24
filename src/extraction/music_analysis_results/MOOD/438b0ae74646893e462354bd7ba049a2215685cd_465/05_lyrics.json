@@ -1,0 +1,45 @@
+{
+  "word_count": 265,
+  "unique_word_count": 95,
+  "sentence_count": 30,
+  "avg_words_per_sentence": 8.833333333333334,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "know",
+    "have",
+    "things",
+    "should've",
+    "All",
+    "little",
+    "life",
+    "yet."
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6415094339622642,
+    "most_common_words": [
+      [
+        "you",
+        15
+      ],
+      [
+        "the",
+        11
+      ],
+      [
+        "know",
+        8
+      ],
+      [
+        "have",
+        8
+      ],
+      [
+        "things",
+        8
+      ]
+    ]
+  }
+}

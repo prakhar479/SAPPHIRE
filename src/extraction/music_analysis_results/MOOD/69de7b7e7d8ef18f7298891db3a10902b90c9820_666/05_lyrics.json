@@ -1,0 +1,45 @@
+{
+  "word_count": 191,
+  "unique_word_count": 75,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 47.75,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "could",
+    "girls",
+    "Pablo",
+    "Picasso",
+    "not",
+    "never",
+    "And",
+    "called",
+    "his",
+    "asshole"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6073298429319371,
+    "most_common_words": [
+      [
+        "could",
+        9
+      ],
+      [
+        "girls",
+        8
+      ],
+      [
+        "Pablo",
+        8
+      ],
+      [
+        "Picasso",
+        8
+      ],
+      [
+        "not",
+        8
+      ]
+    ]
+  }
+}

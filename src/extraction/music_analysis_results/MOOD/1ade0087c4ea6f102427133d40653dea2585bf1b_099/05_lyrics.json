@@ -1,0 +1,45 @@
+{
+  "word_count": 411,
+  "unique_word_count": 119,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 411.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "think",
+    "you",
+    "about,",
+    "me,",
+    "(think)",
+    "let",
+    "freedom",
+    "about",
+    "You",
+    "(freedom),"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7104622871046229,
+    "most_common_words": [
+      [
+        "think",
+        28
+      ],
+      [
+        "you",
+        12
+      ],
+      [
+        "about,",
+        12
+      ],
+      [
+        "me,",
+        12
+      ],
+      [
+        "(think)",
+        11
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 212,
+  "unique_word_count": 125,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 212.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "the",
+    "your",
+    "Metal",
+    "health",
+    "you",
+    "rock",
+    "head",
+    "will",
+    "mad"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.410377358490566,
+    "most_common_words": [
+      [
+        "I'm",
+        8
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "your",
+        7
+      ],
+      [
+        "Metal",
+        6
+      ],
+      [
+        "health",
+        6
+      ]
+    ]
+  }
+}

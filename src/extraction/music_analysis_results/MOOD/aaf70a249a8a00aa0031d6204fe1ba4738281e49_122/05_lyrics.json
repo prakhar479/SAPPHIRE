@@ -1,0 +1,45 @@
+{
+  "word_count": 105,
+  "unique_word_count": 63,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 105.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "How",
+    "will",
+    "are",
+    "you?",
+    "meet",
+    "you",
+    "count",
+    "anyplace",
+    "anywhere",
+    "anytime"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4,
+    "most_common_words": [
+      [
+        "How",
+        4
+      ],
+      [
+        "will",
+        4
+      ],
+      [
+        "are",
+        3
+      ],
+      [
+        "you?",
+        3
+      ],
+      [
+        "meet",
+        3
+      ]
+    ]
+  }
+}

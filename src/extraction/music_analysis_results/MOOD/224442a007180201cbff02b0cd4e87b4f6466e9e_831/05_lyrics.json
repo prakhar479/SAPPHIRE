@@ -1,0 +1,45 @@
+{
+  "word_count": 82,
+  "unique_word_count": 61,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 82.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "equally",
+    "You'll",
+    "will",
+    "damaged",
+    "your",
+    "the",
+    "Signal",
+    "when",
+    "can't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.25609756097560976,
+    "most_common_words": [
+      [
+        "you",
+        5
+      ],
+      [
+        "equally",
+        3
+      ],
+      [
+        "You'll",
+        3
+      ],
+      [
+        "will",
+        2
+      ],
+      [
+        "damaged",
+        2
+      ]
+    ]
+  }
+}

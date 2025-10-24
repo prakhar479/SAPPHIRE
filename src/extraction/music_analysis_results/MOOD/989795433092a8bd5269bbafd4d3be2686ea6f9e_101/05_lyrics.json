@@ -1,0 +1,45 @@
+{
+  "word_count": 196,
+  "unique_word_count": 55,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 196.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "shake",
+    "now",
+    "baby",
+    "know",
+    "it,",
+    "and",
+    "Come",
+    "you",
+    "on,",
+    "come"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7193877551020409,
+    "most_common_words": [
+      [
+        "shake",
+        12
+      ],
+      [
+        "now",
+        12
+      ],
+      [
+        "baby",
+        9
+      ],
+      [
+        "know",
+        9
+      ],
+      [
+        "it,",
+        9
+      ]
+    ]
+  }
+}

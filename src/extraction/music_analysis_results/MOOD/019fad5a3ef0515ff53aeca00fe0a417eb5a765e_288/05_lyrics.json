@@ -1,0 +1,45 @@
+{
+  "word_count": 141,
+  "unique_word_count": 65,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 141.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "gonna",
+    "the",
+    "believe",
+    "every",
+    "want",
+    "get",
+    "know",
+    "don't",
+    "she"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5390070921985816,
+    "most_common_words": [
+      [
+        "I'm",
+        5
+      ],
+      [
+        "gonna",
+        5
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "believe",
+        4
+      ],
+      [
+        "every",
+        4
+      ]
+    ]
+  }
+}

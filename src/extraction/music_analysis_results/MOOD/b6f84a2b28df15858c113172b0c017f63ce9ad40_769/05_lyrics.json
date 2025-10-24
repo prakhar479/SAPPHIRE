@@ -1,0 +1,45 @@
+{
+  "word_count": 278,
+  "unique_word_count": 137,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 278.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "got",
+    "about",
+    "Personality",
+    "and",
+    "personality",
+    "crisis",
+    "But",
+    "don't",
+    "what"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5071942446043165,
+    "most_common_words": [
+      [
+        "you",
+        15
+      ],
+      [
+        "got",
+        11
+      ],
+      [
+        "about",
+        6
+      ],
+      [
+        "Personality",
+        6
+      ],
+      [
+        "and",
+        6
+      ]
+    ]
+  }
+}

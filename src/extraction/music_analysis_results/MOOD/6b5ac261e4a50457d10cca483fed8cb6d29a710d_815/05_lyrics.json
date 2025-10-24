@@ -1,0 +1,45 @@
+{
+  "word_count": 247,
+  "unique_word_count": 99,
+  "sentence_count": 6,
+  "avg_words_per_sentence": 41.166666666666664,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "can't,",
+    "can't",
+    "stand",
+    "losing",
+    "you",
+    "And",
+    "guess",
+    "But",
+    "all",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5991902834008097,
+    "most_common_words": [
+      [
+        "can't,",
+        22
+      ],
+      [
+        "can't",
+        14
+      ],
+      [
+        "stand",
+        13
+      ],
+      [
+        "losing",
+        13
+      ],
+      [
+        "you",
+        9
+      ]
+    ]
+  }
+}

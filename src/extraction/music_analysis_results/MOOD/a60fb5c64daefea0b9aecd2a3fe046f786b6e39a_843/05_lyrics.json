@@ -1,0 +1,45 @@
+{
+  "word_count": 157,
+  "unique_word_count": 82,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 31.4,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "little",
+    "get",
+    "around",
+    "the",
+    "more",
+    "better",
+    "and",
+    "used",
+    "seven",
+    "Get"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.47770700636942676,
+    "most_common_words": [
+      [
+        "little",
+        10
+      ],
+      [
+        "get",
+        5
+      ],
+      [
+        "around",
+        5
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "more",
+        4
+      ]
+    ]
+  }
+}

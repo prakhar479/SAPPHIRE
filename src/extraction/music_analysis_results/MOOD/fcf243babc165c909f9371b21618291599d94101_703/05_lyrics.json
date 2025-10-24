@@ -1,0 +1,45 @@
+{
+  "word_count": 177,
+  "unique_word_count": 48,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 177.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Everybody's",
+    "happy",
+    "nowadays",
+    "Life's",
+    "illusion",
+    "dream",
+    "love",
+    "know",
+    "the",
+    "But"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.728813559322034,
+    "most_common_words": [
+      [
+        "Everybody's",
+        12
+      ],
+      [
+        "happy",
+        12
+      ],
+      [
+        "nowadays",
+        12
+      ],
+      [
+        "Life's",
+        8
+      ],
+      [
+        "illusion",
+        8
+      ]
+    ]
+  }
+}

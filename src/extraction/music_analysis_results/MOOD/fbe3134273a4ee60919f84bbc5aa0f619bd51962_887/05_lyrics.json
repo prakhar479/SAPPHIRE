@@ -1,0 +1,45 @@
+{
+  "word_count": 248,
+  "unique_word_count": 147,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 35.42857142857143,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "your",
+    "holiday",
+    "Cambodia",
+    "It's",
+    "Pol",
+    "you'll",
+    "the",
+    "Where",
+    "For"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.407258064516129,
+    "most_common_words": [
+      [
+        "you",
+        13
+      ],
+      [
+        "your",
+        6
+      ],
+      [
+        "holiday",
+        6
+      ],
+      [
+        "Cambodia",
+        6
+      ],
+      [
+        "It's",
+        5
+      ]
+    ]
+  }
+}

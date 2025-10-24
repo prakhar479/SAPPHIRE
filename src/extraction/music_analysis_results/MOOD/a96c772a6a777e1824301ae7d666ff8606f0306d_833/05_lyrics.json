@@ -1,0 +1,45 @@
+{
+  "word_count": 208,
+  "unique_word_count": 139,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 23.11111111111111,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "it's",
+    "'A'",
+    "bomb",
+    "Wardour",
+    "Hate",
+    "Bomb,",
+    "with",
+    "hate"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3317307692307693,
+    "most_common_words": [
+      [
+        "the",
+        15
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "it's",
+        4
+      ],
+      [
+        "'A'",
+        4
+      ],
+      [
+        "bomb",
+        4
+      ]
+    ]
+  }
+}

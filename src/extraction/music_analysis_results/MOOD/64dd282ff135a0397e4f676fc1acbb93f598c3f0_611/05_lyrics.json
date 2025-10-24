@@ -1,0 +1,45 @@
+{
+  "word_count": 157,
+  "unique_word_count": 50,
+  "sentence_count": 46,
+  "avg_words_per_sentence": 3.4130434782608696,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Oh,",
+    "yeah.",
+    "Oopa",
+    "oopa/",
+    "[With",
+    "gibberish",
+    "chanting",
+    "behind.]",
+    "(We're",
+    "the"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6815286624203822,
+    "most_common_words": [
+      [
+        "Oh,",
+        10
+      ],
+      [
+        "yeah.",
+        9
+      ],
+      [
+        "Oopa",
+        7
+      ],
+      [
+        "oopa/",
+        7
+      ],
+      [
+        "[With",
+        7
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 250,
+  "unique_word_count": 138,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 250.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "ain't",
+    "marchin'",
+    "But",
+    "anymore",
+    "For",
+    "war",
+    "young",
+    "killed",
+    "was"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.44799999999999995,
+    "most_common_words": [
+      [
+        "the",
+        20
+      ],
+      [
+        "ain't",
+        7
+      ],
+      [
+        "marchin'",
+        7
+      ],
+      [
+        "But",
+        5
+      ],
+      [
+        "anymore",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 145,
+  "unique_word_count": 87,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 145.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "lonely",
+    "that",
+    "for",
+    "another",
+    "room",
+    "Another",
+    "you",
+    "place,",
+    "time",
+    "Won't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4,
+    "most_common_words": [
+      [
+        "lonely",
+        5
+      ],
+      [
+        "that",
+        4
+      ],
+      [
+        "for",
+        4
+      ],
+      [
+        "another",
+        4
+      ],
+      [
+        "room",
+        4
+      ]
+    ]
+  }
+}

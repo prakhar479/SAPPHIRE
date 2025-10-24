@@ -1,0 +1,45 @@
+{
+  "word_count": 133,
+  "unique_word_count": 91,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 19.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "Alfie,",
+    "Alfie.",
+    "believe",
+    "love",
+    "What's",
+    "all",
+    "Alfie?",
+    "just"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3157894736842105,
+    "most_common_words": [
+      [
+        "the",
+        4
+      ],
+      [
+        "you",
+        4
+      ],
+      [
+        "Alfie,",
+        4
+      ],
+      [
+        "Alfie.",
+        4
+      ],
+      [
+        "believe",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 417,
+  "unique_word_count": 145,
+  "sentence_count": 39,
+  "avg_words_per_sentence": 10.692307692307692,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "wanna",
+    "bye,",
+    "Bye",
+    "you",
+    "for",
+    "ain't",
+    "Bye,",
+    "that",
+    "make",
+    "bye..."
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6522781774580335,
+    "most_common_words": [
+      [
+        "wanna",
+        17
+      ],
+      [
+        "bye,",
+        15
+      ],
+      [
+        "Bye",
+        13
+      ],
+      [
+        "you",
+        12
+      ],
+      [
+        "for",
+        11
+      ]
+    ]
+  }
+}

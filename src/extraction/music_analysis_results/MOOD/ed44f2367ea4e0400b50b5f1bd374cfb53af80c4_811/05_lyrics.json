@@ -1,0 +1,45 @@
+{
+  "word_count": 139,
+  "unique_word_count": 91,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 139.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "But",
+    "business",
+    "know",
+    "I'm",
+    "and",
+    "you",
+    "You",
+    "need",
+    "I've",
+    "got"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3453237410071942,
+    "most_common_words": [
+      [
+        "But",
+        4
+      ],
+      [
+        "business",
+        3
+      ],
+      [
+        "know",
+        3
+      ],
+      [
+        "I'm",
+        3
+      ],
+      [
+        "and",
+        3
+      ]
+    ]
+  }
+}

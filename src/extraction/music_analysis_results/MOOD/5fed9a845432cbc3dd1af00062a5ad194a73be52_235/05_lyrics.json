@@ -1,0 +1,45 @@
+{
+  "word_count": 217,
+  "unique_word_count": 123,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 54.25,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "that",
+    "I'm",
+    "gonna",
+    "know",
+    "won't",
+    "Don't",
+    "I'll",
+    "strong",
+    "about"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.43317972350230416,
+    "most_common_words": [
+      [
+        "you",
+        11
+      ],
+      [
+        "that",
+        6
+      ],
+      [
+        "I'm",
+        5
+      ],
+      [
+        "gonna",
+        5
+      ],
+      [
+        "know",
+        5
+      ]
+    ]
+  }
+}

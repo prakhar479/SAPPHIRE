@@ -1,0 +1,45 @@
+{
+  "word_count": 292,
+  "unique_word_count": 163,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 29.2,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "believe",
+    "And",
+    "Dear",
+    "don't",
+    "that",
+    "God",
+    "and",
+    "make"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4417808219178082,
+    "most_common_words": [
+      [
+        "you",
+        16
+      ],
+      [
+        "the",
+        12
+      ],
+      [
+        "believe",
+        6
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "Dear",
+        5
+      ]
+    ]
+  }
+}

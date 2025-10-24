@@ -1,0 +1,45 @@
+{
+  "word_count": 123,
+  "unique_word_count": 86,
+  "sentence_count": 14,
+  "avg_words_per_sentence": 8.785714285714286,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "time",
+    "I'm",
+    "not",
+    "afraid",
+    "but",
+    "she",
+    "might",
+    "and"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.30081300813008127,
+    "most_common_words": [
+      [
+        "the",
+        8
+      ],
+      [
+        "And",
+        3
+      ],
+      [
+        "time",
+        2
+      ],
+      [
+        "I'm",
+        2
+      ],
+      [
+        "not",
+        2
+      ]
+    ]
+  }
+}

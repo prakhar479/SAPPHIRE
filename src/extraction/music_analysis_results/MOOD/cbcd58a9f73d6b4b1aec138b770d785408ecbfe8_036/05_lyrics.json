@@ -1,0 +1,45 @@
+{
+  "word_count": 89,
+  "unique_word_count": 50,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 89.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "takes",
+    "courage",
+    "enjoy",
+    "The",
+    "hardcore",
+    "and",
+    "the",
+    "gentle",
+    "Big",
+    "time"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4382022471910112,
+    "most_common_words": [
+      [
+        "takes",
+        3
+      ],
+      [
+        "courage",
+        3
+      ],
+      [
+        "enjoy",
+        3
+      ],
+      [
+        "The",
+        3
+      ],
+      [
+        "hardcore",
+        3
+      ]
+    ]
+  }
+}

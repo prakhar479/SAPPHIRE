@@ -1,0 +1,45 @@
+{
+  "word_count": 382,
+  "unique_word_count": 80,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 382.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "man",
+    "your",
+    "gonna",
+    "he's",
+    "step",
+    "can",
+    "know",
+    "You're",
+    "Hey"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7905759162303665,
+    "most_common_words": [
+      [
+        "you",
+        34
+      ],
+      [
+        "man",
+        16
+      ],
+      [
+        "your",
+        15
+      ],
+      [
+        "gonna",
+        14
+      ],
+      [
+        "he's",
+        13
+      ]
+    ]
+  }
+}

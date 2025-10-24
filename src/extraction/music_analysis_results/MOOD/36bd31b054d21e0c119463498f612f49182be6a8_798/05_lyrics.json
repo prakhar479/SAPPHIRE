@@ -1,0 +1,45 @@
+{
+  "word_count": 107,
+  "unique_word_count": 80,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 11.88888888888889,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "isolation,",
+    "the",
+    "Isolation,",
+    "isolation.",
+    "I'm",
+    "every",
+    "for",
+    "that",
+    "But",
+    "just"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.25233644859813087,
+    "most_common_words": [
+      [
+        "isolation,",
+        5
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "Isolation,",
+        3
+      ],
+      [
+        "isolation.",
+        3
+      ],
+      [
+        "I'm",
+        3
+      ]
+    ]
+  }
+}

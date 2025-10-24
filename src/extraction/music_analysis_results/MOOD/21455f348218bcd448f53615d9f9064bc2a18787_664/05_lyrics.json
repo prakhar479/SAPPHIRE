@@ -1,0 +1,45 @@
+{
+  "word_count": 127,
+  "unique_word_count": 74,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 127.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "She",
+    "don't",
+    "use",
+    "know",
+    "who",
+    "uses",
+    "Vaseline",
+    "her",
+    "girl",
+    "She'll"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4173228346456693,
+    "most_common_words": [
+      [
+        "She",
+        7
+      ],
+      [
+        "don't",
+        6
+      ],
+      [
+        "use",
+        6
+      ],
+      [
+        "know",
+        3
+      ],
+      [
+        "who",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 283,
+  "unique_word_count": 149,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 141.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "back",
+    "And",
+    "this",
+    "man",
+    "It's",
+    "haven't",
+    "seen",
+    "Barbados",
+    "must"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.47349823321554774,
+    "most_common_words": [
+      [
+        "and",
+        12
+      ],
+      [
+        "back",
+        7
+      ],
+      [
+        "And",
+        6
+      ],
+      [
+        "this",
+        6
+      ],
+      [
+        "man",
+        5
+      ]
+    ]
+  }
+}

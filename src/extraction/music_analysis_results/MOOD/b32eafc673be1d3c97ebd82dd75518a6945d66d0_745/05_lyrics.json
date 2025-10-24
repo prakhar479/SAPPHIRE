@@ -1,0 +1,45 @@
+{
+  "word_count": 429,
+  "unique_word_count": 260,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 85.8,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "I'm",
+    "and",
+    "And",
+    "Don't",
+    "like",
+    "gonna",
+    "with",
+    "when"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3939393939393939,
+    "most_common_words": [
+      [
+        "the",
+        14
+      ],
+      [
+        "you",
+        13
+      ],
+      [
+        "I'm",
+        12
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "And",
+        5
+      ]
+    ]
+  }
+}

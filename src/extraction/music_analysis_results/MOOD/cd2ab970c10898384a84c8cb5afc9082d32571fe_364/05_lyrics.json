@@ -1,0 +1,45 @@
+{
+  "word_count": 260,
+  "unique_word_count": 143,
+  "sentence_count": 18,
+  "avg_words_per_sentence": 14.444444444444445,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "that",
+    "the",
+    "long,",
+    "Marianne,",
+    "it's",
+    "time",
+    "began",
+    "you",
+    "and",
+    "your"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.44999999999999996,
+    "most_common_words": [
+      [
+        "that",
+        9
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "long,",
+        6
+      ],
+      [
+        "Marianne,",
+        6
+      ],
+      [
+        "it's",
+        6
+      ]
+    ]
+  }
+}

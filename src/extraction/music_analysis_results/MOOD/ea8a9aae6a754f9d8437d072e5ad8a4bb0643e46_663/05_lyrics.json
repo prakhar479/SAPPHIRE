@@ -1,0 +1,45 @@
+{
+  "word_count": 269,
+  "unique_word_count": 155,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 38.42857142857143,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "and",
+    "The",
+    "ho,",
+    "you",
+    "they",
+    "trip",
+    "Hey",
+    "never",
+    "Please"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4237918215613383,
+    "most_common_words": [
+      [
+        "the",
+        14
+      ],
+      [
+        "and",
+        8
+      ],
+      [
+        "The",
+        7
+      ],
+      [
+        "ho,",
+        5
+      ],
+      [
+        "you",
+        4
+      ]
+    ]
+  }
+}

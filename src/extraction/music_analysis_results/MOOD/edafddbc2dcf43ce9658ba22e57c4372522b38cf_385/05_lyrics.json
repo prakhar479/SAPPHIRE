@@ -1,0 +1,45 @@
+{
+  "word_count": 259,
+  "unique_word_count": 134,
+  "sentence_count": 7,
+  "avg_words_per_sentence": 37.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "and",
+    "I've",
+    "looked",
+    "now",
+    "don't",
+    "life",
+    "clouds",
+    "that",
+    "way.",
+    "from"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.48262548262548266,
+    "most_common_words": [
+      [
+        "and",
+        16
+      ],
+      [
+        "I've",
+        8
+      ],
+      [
+        "looked",
+        7
+      ],
+      [
+        "now",
+        7
+      ],
+      [
+        "don't",
+        5
+      ]
+    ]
+  }
+}

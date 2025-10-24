@@ -1,0 +1,45 @@
+{
+  "word_count": 68,
+  "unique_word_count": 46,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 68.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "I'm",
+    "shit",
+    "Won't",
+    "come",
+    "and",
+    "save",
+    "Save",
+    "Feed"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.32352941176470584,
+    "most_common_words": [
+      [
+        "the",
+        3
+      ],
+      [
+        "you",
+        3
+      ],
+      [
+        "I'm",
+        2
+      ],
+      [
+        "shit",
+        2
+      ],
+      [
+        "Won't",
+        2
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 455,
+  "unique_word_count": 244,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 151.66666666666666,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "over",
+    "you",
+    "bridge",
+    "them",
+    "come",
+    "and",
+    "again,",
+    "know",
+    "out"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.46373626373626375,
+    "most_common_words": [
+      [
+        "the",
+        17
+      ],
+      [
+        "over",
+        10
+      ],
+      [
+        "you",
+        10
+      ],
+      [
+        "bridge",
+        8
+      ],
+      [
+        "them",
+        8
+      ]
+    ]
+  }
+}

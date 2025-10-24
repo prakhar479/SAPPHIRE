@@ -1,0 +1,45 @@
+{
+  "word_count": 78,
+  "unique_word_count": 55,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 78.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "You",
+    "you",
+    "Winchester",
+    "Cathedral",
+    "You're",
+    "bringing",
+    "down",
+    "stood",
+    "and",
+    "watched"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.2948717948717948,
+    "most_common_words": [
+      [
+        "You",
+        5
+      ],
+      [
+        "you",
+        3
+      ],
+      [
+        "Winchester",
+        2
+      ],
+      [
+        "Cathedral",
+        2
+      ],
+      [
+        "You're",
+        2
+      ]
+    ]
+  }
+}

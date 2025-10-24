@@ -1,0 +1,45 @@
+{
+  "word_count": 205,
+  "unique_word_count": 91,
+  "sentence_count": 16,
+  "avg_words_per_sentence": 12.8125,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "summertime",
+    "this",
+    "sunny",
+    "afternoon.",
+    "me,",
+    "And",
+    "Lazing",
+    "save",
+    "love",
+    "live"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5560975609756098,
+    "most_common_words": [
+      [
+        "summertime",
+        8
+      ],
+      [
+        "this",
+        7
+      ],
+      [
+        "sunny",
+        6
+      ],
+      [
+        "afternoon.",
+        6
+      ],
+      [
+        "me,",
+        6
+      ]
+    ]
+  }
+}

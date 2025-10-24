@@ -1,0 +1,45 @@
+{
+  "word_count": 360,
+  "unique_word_count": 129,
+  "sentence_count": 13,
+  "avg_words_per_sentence": 27.692307692307693,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "And",
+    "and",
+    "all",
+    "working",
+    "overtime",
+    "for",
+    "can",
+    "I've",
+    "got"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6416666666666666,
+    "most_common_words": [
+      [
+        "the",
+        25
+      ],
+      [
+        "And",
+        15
+      ],
+      [
+        "and",
+        12
+      ],
+      [
+        "all",
+        11
+      ],
+      [
+        "working",
+        8
+      ]
+    ]
+  }
+}

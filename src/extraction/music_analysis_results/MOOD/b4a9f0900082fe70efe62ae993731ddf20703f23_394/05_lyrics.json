@@ -1,0 +1,45 @@
+{
+  "word_count": 200,
+  "unique_word_count": 104,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 200.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "wait",
+    "for",
+    "all",
+    "Don't",
+    "need",
+    "me,",
+    "I'll",
+    "Maybe",
+    "need,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.48,
+    "most_common_words": [
+      [
+        "you",
+        16
+      ],
+      [
+        "wait",
+        10
+      ],
+      [
+        "for",
+        10
+      ],
+      [
+        "all",
+        6
+      ],
+      [
+        "Don't",
+        6
+      ]
+    ]
+  }
+}

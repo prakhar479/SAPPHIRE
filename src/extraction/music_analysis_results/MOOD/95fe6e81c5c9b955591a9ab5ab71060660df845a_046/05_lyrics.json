@@ -1,0 +1,45 @@
+{
+  "word_count": 125,
+  "unique_word_count": 76,
+  "sentence_count": 13,
+  "avg_words_per_sentence": 9.615384615384615,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "Fujiyama",
+    "can",
+    "Cause",
+    "the",
+    "you",
+    "and",
+    "mama...",
+    "baby",
+    "just"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.392,
+    "most_common_words": [
+      [
+        "I'm",
+        7
+      ],
+      [
+        "Fujiyama",
+        5
+      ],
+      [
+        "can",
+        4
+      ],
+      [
+        "Cause",
+        4
+      ],
+      [
+        "the",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 161,
+  "unique_word_count": 99,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 17.88888888888889,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Cos",
+    "Its",
+    "true",
+    "nobody",
+    "loves",
+    "Not",
+    "like",
+    "you",
+    "the",
+    "Take"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3850931677018633,
+    "most_common_words": [
+      [
+        "Cos",
+        6
+      ],
+      [
+        "Its",
+        6
+      ],
+      [
+        "true",
+        6
+      ],
+      [
+        "nobody",
+        5
+      ],
+      [
+        "loves",
+        5
+      ]
+    ]
+  }
+}

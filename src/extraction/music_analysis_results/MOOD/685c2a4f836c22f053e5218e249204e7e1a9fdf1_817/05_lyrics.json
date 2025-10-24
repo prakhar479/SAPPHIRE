@@ -1,0 +1,45 @@
+{
+  "word_count": 126,
+  "unique_word_count": 41,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 126.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "have",
+    "come",
+    "child",
+    "eyes",
+    "and",
+    "'Cause",
+    "you",
+    "seen",
+    "some",
+    "things"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6746031746031746,
+    "most_common_words": [
+      [
+        "have",
+        7
+      ],
+      [
+        "come",
+        6
+      ],
+      [
+        "child",
+        6
+      ],
+      [
+        "eyes",
+        4
+      ],
+      [
+        "and",
+        4
+      ]
+    ]
+  }
+}

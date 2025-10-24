@@ -1,0 +1,45 @@
+{
+  "word_count": 191,
+  "unique_word_count": 108,
+  "sentence_count": 9,
+  "avg_words_per_sentence": 21.22222222222222,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "love",
+    "baby",
+    "need",
+    "away",
+    "Why",
+    "love,",
+    "like",
+    "Baby",
+    "Oh,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4345549738219895,
+    "most_common_words": [
+      [
+        "you",
+        14
+      ],
+      [
+        "love",
+        11
+      ],
+      [
+        "baby",
+        6
+      ],
+      [
+        "need",
+        6
+      ],
+      [
+        "away",
+        3
+      ]
+    ]
+  }
+}

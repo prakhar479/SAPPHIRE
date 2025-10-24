@@ -1,0 +1,45 @@
+{
+  "word_count": 159,
+  "unique_word_count": 80,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 79.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Lord",
+    "the",
+    "Lord,",
+    "Good",
+    "Lordy,",
+    "'Son,",
+    "buy",
+    "yo'",
+    "none",
+    "for"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4968553459119497,
+    "most_common_words": [
+      [
+        "Lord",
+        6
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "Lord,",
+        5
+      ],
+      [
+        "Good",
+        4
+      ],
+      [
+        "Lordy,",
+        4
+      ]
+    ]
+  }
+}

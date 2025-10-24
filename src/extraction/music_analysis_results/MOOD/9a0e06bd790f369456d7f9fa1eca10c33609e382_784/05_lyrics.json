@@ -1,0 +1,45 @@
+{
+  "word_count": 186,
+  "unique_word_count": 77,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 186.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "God",
+    "the",
+    "future,",
+    "future",
+    "save",
+    "queen",
+    "you",
+    "for",
+    "what",
+    "mean"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.586021505376344,
+    "most_common_words": [
+      [
+        "God",
+        11
+      ],
+      [
+        "the",
+        10
+      ],
+      [
+        "future,",
+        10
+      ],
+      [
+        "future",
+        9
+      ],
+      [
+        "save",
+        8
+      ]
+    ]
+  }
+}

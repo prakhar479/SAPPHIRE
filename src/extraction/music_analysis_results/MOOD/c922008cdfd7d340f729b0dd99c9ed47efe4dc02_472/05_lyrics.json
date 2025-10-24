@@ -1,0 +1,45 @@
+{
+  "word_count": 252,
+  "unique_word_count": 167,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 252.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "was",
+    "the",
+    "I'm",
+    "raised",
+    "robbery",
+    "you",
+    "for",
+    "You",
+    "shame",
+    "ain't"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.3373015873015873,
+    "most_common_words": [
+      [
+        "was",
+        7
+      ],
+      [
+        "the",
+        6
+      ],
+      [
+        "I'm",
+        6
+      ],
+      [
+        "raised",
+        4
+      ],
+      [
+        "robbery",
+        4
+      ]
+    ]
+  }
+}

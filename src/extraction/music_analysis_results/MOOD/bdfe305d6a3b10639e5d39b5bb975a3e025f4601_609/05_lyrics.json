@@ -1,0 +1,45 @@
+{
+  "word_count": 113,
+  "unique_word_count": 54,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 113.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Don't",
+    "worry,",
+    "happy",
+    "happy,",
+    "your",
+    "note",
+    "have",
+    "you",
+    "Here's",
+    "little"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5221238938053097,
+    "most_common_words": [
+      [
+        "Don't",
+        14
+      ],
+      [
+        "worry,",
+        14
+      ],
+      [
+        "happy",
+        10
+      ],
+      [
+        "happy,",
+        4
+      ],
+      [
+        "your",
+        3
+      ]
+    ]
+  }
+}

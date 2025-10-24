@@ -1,0 +1,45 @@
+{
+  "word_count": 171,
+  "unique_word_count": 49,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 171.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "hey",
+    "now,",
+    "poppin'",
+    "good",
+    "time",
+    "Hey",
+    "It's",
+    "finger",
+    "pop",
+    "feel"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7134502923976609,
+    "most_common_words": [
+      [
+        "hey",
+        13
+      ],
+      [
+        "now,",
+        12
+      ],
+      [
+        "poppin'",
+        11
+      ],
+      [
+        "good",
+        10
+      ],
+      [
+        "time",
+        8
+      ]
+    ]
+  }
+}

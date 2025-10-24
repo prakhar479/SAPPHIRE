@@ -1,0 +1,45 @@
+{
+  "word_count": 180,
+  "unique_word_count": 118,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 18.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "and",
+    "can",
+    "hand",
+    "just",
+    "[Chorus]",
+    "Yoko",
+    "there's",
+    "someone",
+    "so."
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.34444444444444444,
+    "most_common_words": [
+      [
+        "you",
+        5
+      ],
+      [
+        "and",
+        5
+      ],
+      [
+        "can",
+        4
+      ],
+      [
+        "hand",
+        4
+      ],
+      [
+        "just",
+        3
+      ]
+    ]
+  }
+}

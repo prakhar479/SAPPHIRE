@@ -1,0 +1,45 @@
+{
+  "word_count": 179,
+  "unique_word_count": 59,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 179.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "Goin'",
+    "And",
+    "we're",
+    "chapel",
+    "gonna",
+    "get",
+    "ma-a-arried",
+    "love",
+    "yeah,"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6703910614525139,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "Goin'",
+        11
+      ],
+      [
+        "And",
+        11
+      ],
+      [
+        "we're",
+        11
+      ],
+      [
+        "chapel",
+        10
+      ]
+    ]
+  }
+}

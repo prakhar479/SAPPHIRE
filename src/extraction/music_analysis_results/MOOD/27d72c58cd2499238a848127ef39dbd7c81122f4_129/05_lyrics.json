@@ -1,0 +1,45 @@
+{
+  "word_count": 216,
+  "unique_word_count": 84,
+  "sentence_count": 3,
+  "avg_words_per_sentence": 72.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "than",
+    "away",
+    "(more",
+    "feeling)",
+    "see",
+    "Marianne",
+    "and",
+    "the",
+    "song",
+    "slipped"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6111111111111112,
+    "most_common_words": [
+      [
+        "than",
+        9
+      ],
+      [
+        "away",
+        8
+      ],
+      [
+        "(more",
+        6
+      ],
+      [
+        "feeling)",
+        6
+      ],
+      [
+        "see",
+        6
+      ]
+    ]
+  }
+}

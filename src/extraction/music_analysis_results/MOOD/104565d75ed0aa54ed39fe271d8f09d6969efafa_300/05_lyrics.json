@@ -1,0 +1,45 @@
+{
+  "word_count": 212,
+  "unique_word_count": 119,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 212.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "that",
+    "I'd",
+    "way",
+    "the",
+    "careful",
+    "with",
+    "I'm",
+    "And",
+    "like",
+    "stay"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4386792452830188,
+    "most_common_words": [
+      [
+        "that",
+        10
+      ],
+      [
+        "I'd",
+        5
+      ],
+      [
+        "way",
+        5
+      ],
+      [
+        "the",
+        4
+      ],
+      [
+        "careful",
+        4
+      ]
+    ]
+  }
+}

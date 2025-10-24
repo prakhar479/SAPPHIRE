@@ -1,0 +1,45 @@
+{
+  "word_count": 175,
+  "unique_word_count": 29,
+  "sentence_count": 35,
+  "avg_words_per_sentence": 5.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "very",
+    "stylish",
+    "girl.",
+    "How",
+    "look?",
+    "Very",
+    "good.",
+    "must",
+    "say",
+    "I'm"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.8342857142857143,
+    "most_common_words": [
+      [
+        "very",
+        22
+      ],
+      [
+        "stylish",
+        22
+      ],
+      [
+        "girl.",
+        21
+      ],
+      [
+        "How",
+        10
+      ],
+      [
+        "look?",
+        10
+      ]
+    ]
+  }
+}

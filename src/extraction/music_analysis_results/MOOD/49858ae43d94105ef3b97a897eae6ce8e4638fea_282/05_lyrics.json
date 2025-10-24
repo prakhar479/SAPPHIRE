@@ -1,0 +1,45 @@
+{
+  "word_count": 168,
+  "unique_word_count": 65,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 168.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Break",
+    "Mind",
+    "the",
+    "leave",
+    "gonna",
+    "stand",
+    "mind",
+    "Cause",
+    "that"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6130952380952381,
+    "most_common_words": [
+      [
+        "you",
+        8
+      ],
+      [
+        "Break",
+        8
+      ],
+      [
+        "Mind",
+        8
+      ],
+      [
+        "the",
+        7
+      ],
+      [
+        "leave",
+        6
+      ]
+    ]
+  }
+}

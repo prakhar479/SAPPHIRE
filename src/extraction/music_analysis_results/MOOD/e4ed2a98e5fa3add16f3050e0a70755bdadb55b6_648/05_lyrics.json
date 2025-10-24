@@ -1,0 +1,45 @@
+{
+  "word_count": 391,
+  "unique_word_count": 198,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 78.2,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "that",
+    "the",
+    "lawn",
+    "when",
+    "(Yodel-a-hee,",
+    "Yodel-oh-hee,",
+    "for",
+    "Potholes",
+    "don't",
+    "But"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4936061381074168,
+    "most_common_words": [
+      [
+        "that",
+        11
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "lawn",
+        6
+      ],
+      [
+        "when",
+        6
+      ],
+      [
+        "(Yodel-a-hee,",
+        6
+      ]
+    ]
+  }
+}

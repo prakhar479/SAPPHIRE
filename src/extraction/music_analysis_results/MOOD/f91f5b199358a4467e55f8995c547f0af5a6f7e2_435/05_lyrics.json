@@ -1,0 +1,45 @@
+{
+  "word_count": 139,
+  "unique_word_count": 59,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 139.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "lost",
+    "myself",
+    "This",
+    "what",
+    "get",
+    "For",
+    "minute",
+    "there",
+    "Karma"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5755395683453237,
+    "most_common_words": [
+      [
+        "you",
+        8
+      ],
+      [
+        "lost",
+        8
+      ],
+      [
+        "myself",
+        8
+      ],
+      [
+        "This",
+        6
+      ],
+      [
+        "what",
+        6
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 281,
+  "unique_word_count": 152,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 140.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "sugar",
+    "new",
+    "tonight",
+    "It's",
+    "all",
+    "Mother",
+    "Nature",
+    "taking",
+    "over"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4590747330960854,
+    "most_common_words": [
+      [
+        "the",
+        12
+      ],
+      [
+        "sugar",
+        8
+      ],
+      [
+        "new",
+        6
+      ],
+      [
+        "tonight",
+        5
+      ],
+      [
+        "It's",
+        5
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 411,
+  "unique_word_count": 228,
+  "sentence_count": 86,
+  "avg_words_per_sentence": 4.77906976744186,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "...",
+    "the",
+    "sun",
+    "more",
+    "else",
+    "should",
+    "had",
+    "And",
+    "What",
+    "have"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.44525547445255476,
+    "most_common_words": [
+      [
+        "...",
+        27
+      ],
+      [
+        "the",
+        16
+      ],
+      [
+        "sun",
+        8
+      ],
+      [
+        "more",
+        6
+      ],
+      [
+        "else",
+        5
+      ]
+    ]
+  }
+}

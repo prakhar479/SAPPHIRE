@@ -1,0 +1,45 @@
+{
+  "word_count": 315,
+  "unique_word_count": 103,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 315.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "don't",
+    "the",
+    "world",
+    "let's",
+    "start",
+    "get",
+    "around",
+    "you",
+    "and",
+    "But"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.6730158730158731,
+    "most_common_words": [
+      [
+        "don't",
+        27
+      ],
+      [
+        "the",
+        14
+      ],
+      [
+        "world",
+        9
+      ],
+      [
+        "let's",
+        8
+      ],
+      [
+        "start",
+        8
+      ]
+    ]
+  }
+}

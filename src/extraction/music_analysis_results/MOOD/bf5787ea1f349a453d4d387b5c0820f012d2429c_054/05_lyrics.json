@@ -1,0 +1,45 @@
+{
+  "word_count": 129,
+  "unique_word_count": 59,
+  "sentence_count": 2,
+  "avg_words_per_sentence": 64.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Well,",
+    "I'm",
+    "king",
+    "bee",
+    "buzz",
+    "all",
+    "night",
+    "long",
+    "yo'",
+    "can"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5426356589147288,
+    "most_common_words": [
+      [
+        "Well,",
+        10
+      ],
+      [
+        "I'm",
+        8
+      ],
+      [
+        "king",
+        6
+      ],
+      [
+        "bee",
+        6
+      ],
+      [
+        "buzz",
+        6
+      ]
+    ]
+  }
+}

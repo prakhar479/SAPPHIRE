@@ -1,0 +1,45 @@
+{
+  "word_count": 137,
+  "unique_word_count": 75,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 137.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "your",
+    "have",
+    "never",
+    "had",
+    "beauty",
+    "mark",
+    "did",
+    "not",
+    "But",
+    "wanted"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.45255474452554745,
+    "most_common_words": [
+      [
+        "your",
+        7
+      ],
+      [
+        "have",
+        7
+      ],
+      [
+        "never",
+        6
+      ],
+      [
+        "had",
+        5
+      ],
+      [
+        "beauty",
+        3
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 597,
+  "unique_word_count": 292,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 597.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "Rock!",
+    "Freeze!",
+    "the",
+    "your",
+    "and",
+    "(Ahhh)",
+    "baby!",
+    "dang",
+    "more"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5108877721943048,
+    "most_common_words": [
+      [
+        "you",
+        15
+      ],
+      [
+        "Rock!",
+        14
+      ],
+      [
+        "Freeze!",
+        14
+      ],
+      [
+        "the",
+        11
+      ],
+      [
+        "your",
+        10
+      ]
+    ]
+  }
+}

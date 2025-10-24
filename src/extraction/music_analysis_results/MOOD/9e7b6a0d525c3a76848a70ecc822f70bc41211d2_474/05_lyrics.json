@@ -1,0 +1,45 @@
+{
+  "word_count": 125,
+  "unique_word_count": 77,
+  "sentence_count": 10,
+  "avg_words_per_sentence": 12.5,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "with",
+    "Babe,",
+    "know",
+    "I'd",
+    "Knowin'",
+    "gone.",
+    "was",
+    "said"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.384,
+    "most_common_words": [
+      [
+        "you",
+        5
+      ],
+      [
+        "the",
+        5
+      ],
+      [
+        "with",
+        4
+      ],
+      [
+        "Babe,",
+        4
+      ],
+      [
+        "know",
+        4
+      ]
+    ]
+  }
+}

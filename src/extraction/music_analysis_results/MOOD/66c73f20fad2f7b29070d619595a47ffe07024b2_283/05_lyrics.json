@@ -1,0 +1,45 @@
+{
+  "word_count": 149,
+  "unique_word_count": 87,
+  "sentence_count": 5,
+  "avg_words_per_sentence": 29.8,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "Desdemona,",
+    "the",
+    "Desdemona",
+    "and",
+    "because",
+    "your",
+    "just",
+    "Just",
+    "Lift",
+    "skirt"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.4161073825503355,
+    "most_common_words": [
+      [
+        "Desdemona,",
+        12
+      ],
+      [
+        "the",
+        9
+      ],
+      [
+        "Desdemona",
+        7
+      ],
+      [
+        "and",
+        6
+      ],
+      [
+        "because",
+        4
+      ]
+    ]
+  }
+}

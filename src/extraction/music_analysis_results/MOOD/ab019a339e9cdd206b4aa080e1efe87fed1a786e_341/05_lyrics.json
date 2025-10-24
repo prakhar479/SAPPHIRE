@@ -1,0 +1,45 @@
+{
+  "word_count": 212,
+  "unique_word_count": 60,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 212.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "time",
+    "turn,",
+    "turn",
+    "everything",
+    "There",
+    "season",
+    "And",
+    "every",
+    "purpose",
+    "under"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.7169811320754718,
+    "most_common_words": [
+      [
+        "time",
+        31
+      ],
+      [
+        "turn,",
+        16
+      ],
+      [
+        "turn",
+        8
+      ],
+      [
+        "everything",
+        4
+      ],
+      [
+        "There",
+        4
+      ]
+    ]
+  }
+}

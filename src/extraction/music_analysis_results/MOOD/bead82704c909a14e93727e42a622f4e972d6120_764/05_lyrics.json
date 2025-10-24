@@ -1,0 +1,45 @@
+{
+  "word_count": 409,
+  "unique_word_count": 202,
+  "sentence_count": 4,
+  "avg_words_per_sentence": 102.25,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "the",
+    "You",
+    "your",
+    "How",
+    "does",
+    "feel",
+    "Like",
+    "used",
+    "all"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5061124694376529,
+    "most_common_words": [
+      [
+        "you",
+        20
+      ],
+      [
+        "the",
+        12
+      ],
+      [
+        "You",
+        9
+      ],
+      [
+        "your",
+        8
+      ],
+      [
+        "How",
+        8
+      ]
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "word_count": 214,
+  "unique_word_count": 21,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 214.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "I'm",
+    "you",
+    "ready",
+    "ready!",
+    "know",
+    "One",
+    "more",
+    "time",
+    "around",
+    "the"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.9018691588785047,
+    "most_common_words": [
+      [
+        "I'm",
+        31
+      ],
+      [
+        "you",
+        16
+      ],
+      [
+        "ready",
+        16
+      ],
+      [
+        "ready!",
+        15
+      ],
+      [
+        "know",
+        12
+      ]
+    ]
+  }
+}

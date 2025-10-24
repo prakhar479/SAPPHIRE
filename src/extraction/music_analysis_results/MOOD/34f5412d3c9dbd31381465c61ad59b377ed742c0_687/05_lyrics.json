@@ -1,0 +1,45 @@
+{
+  "word_count": 246,
+  "unique_word_count": 122,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 246.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "you",
+    "leave",
+    "that",
+    "let",
+    "down",
+    "I'm",
+    "gonna",
+    "flat)",
+    "can't",
+    "talking"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5040650406504066,
+    "most_common_words": [
+      [
+        "you",
+        26
+      ],
+      [
+        "leave",
+        7
+      ],
+      [
+        "that",
+        6
+      ],
+      [
+        "let",
+        6
+      ],
+      [
+        "down",
+        6
+      ]
+    ]
+  }
+}

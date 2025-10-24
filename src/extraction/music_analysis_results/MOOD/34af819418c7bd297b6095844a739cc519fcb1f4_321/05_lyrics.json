@@ -1,0 +1,45 @@
+{
+  "word_count": 158,
+  "unique_word_count": 75,
+  "sentence_count": 1,
+  "avg_words_per_sentence": 158.0,
+  "readability": null,
+  "sentiment_analysis": null,
+  "topic_keywords": [
+    "the",
+    "you",
+    "sun",
+    "will",
+    "always",
+    "shine",
+    "Well",
+    "this",
+    "palomine",
+    "wish"
+  ],
+  "repetition_analysis": {
+    "repetition_ratio": 0.5253164556962026,
+    "most_common_words": [
+      [
+        "the",
+        11
+      ],
+      [
+        "you",
+        6
+      ],
+      [
+        "sun",
+        5
+      ],
+      [
+        "will",
+        5
+      ],
+      [
+        "always",
+        5
+      ]
+    ]
+  }
+}
