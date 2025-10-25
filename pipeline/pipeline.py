@@ -233,7 +233,7 @@ class Pipeline:
         
         for track in tracks:
             try:
-                features = self.feature_extractor.extract_all_features(track)
+                features = self.feature_extractor.extract_features(track)
                 
                 # Add metadata
                 features.update({
@@ -516,7 +516,7 @@ class Pipeline:
         track = self.preprocessor.preprocess_track(track)
         
         # Extract features
-        features = self.feature_extractor.extract_all_features(track)
+        features = self.feature_extractor.extract_features(track)
         features_df = pd.DataFrame([features])
         
         # Make prediction

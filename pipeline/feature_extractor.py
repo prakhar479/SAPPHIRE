@@ -10,7 +10,8 @@ from typing import Dict, List, Optional, Any, Tuple
 import hashlib
 from pathlib import Path
 from datetime import datetime
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from collections.abc import MutableMapping
 import logging
 from concurrent.futures import ProcessPoolExecutor
 from tqdm import tqdm
@@ -49,7 +50,7 @@ from .data_loader import MusicTrack
 logger = logging.getLogger(__name__)
 
 @dataclass
-class FeatureContainer:
+class FeatureContainer(MutableMapping):
     """Container for extracted features."""
     track_id: str
     acoustic_features: Dict[str, Any]
@@ -58,6 +59,8 @@ class FeatureContainer:
     lyrics_features: Dict[str, Any]
     quality_features: Dict[str, Any]
     metadata: Dict[str, Any]
+    # Extra dict to hold any dynamic keys when FeatureContainer is used as a mapping
+    _extra: Dict[str, Any] = field(default_factory=dict, init=False, repr=False)
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to flat dictionary for DataFrame creation."""
@@ -86,6 +89,52 @@ class FeatureContainer:
                     result[f'{category}_{key}'] = value
                     
         return result
+
+    # Mapping protocol implementations so FeatureContainer behaves like a dict
+    def _as_mapping(self) -> Dict[str, Any]:
+        """Return the flattened mapping representing this FeatureContainer.
+
+        This merges the flattened feature dict with the track_id and any
+        extra keys set via mapping operations.
+        """
+        flat = self.to_dict()
+        # include track_id as a top-level key (common expectation)
+        flat['track_id'] = self.track_id
+        # Merge any extras (these are set when __setitem__ or update is used)
+        if self._extra:
+            flat.update(self._extra)
+        return flat
+
+    # MutableMapping required methods
+    def __getitem__(self, key: str) -> Any:
+        mapping = self._as_mapping()
+        return mapping[key]
+
+    def __setitem__(self, key: str, value: Any) -> None:
+        # Store dynamic keys in the extra dict so original structured fields remain intact
+        self._extra[key] = value
+
+    def __delitem__(self, key: str) -> None:
+        if key in self._extra:
+            del self._extra[key]
+            return
+        # Deleting keys that originate from the structured fields is not supported
+        raise KeyError(f"Cannot delete key '{key}' from FeatureContainer")
+
+    def __iter__(self):
+        return iter(self._as_mapping())
+
+    def __len__(self) -> int:
+        return len(self._as_mapping())
+
+    def keys(self):
+        return self._as_mapping().keys()
+
+    def items(self):
+        return self._as_mapping().items()
+
+    def get(self, key: str, default: Any = None) -> Any:
+        return self._as_mapping().get(key, default)
 
 class FeatureExtractor:
     """

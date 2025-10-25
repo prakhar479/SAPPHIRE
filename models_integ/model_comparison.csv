@@ -1,0 +1,6 @@
+Model,Test Accuracy,CV Mean,CV Std,Best Params
+random_forest,0.4143646408839779,0.4488314176245211,0.03188087990728298,"{'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 300}"
+gradient_boosting,0.3425414364640884,0.4364176245210728,0.055229195650500204,"{'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100}"
+svm,0.4198895027624309,0.4113888888888889,0.04159537654289604,"{'C': 1, 'gamma': 'scale', 'kernel': 'rbf'}"
+logistic_regression,0.43646408839779005,0.4363026819923371,0.030273821559401042,"{'C': 0.1, 'penalty': 'l1', 'solver': 'liblinear'}"
+neural_network,0.34806629834254144,0.4197701149425287,0.05835996630123552,"{'activation': 'relu', 'alpha': 0.0001, 'hidden_layer_sizes': (100,), 'learning_rate': 'constant'}"

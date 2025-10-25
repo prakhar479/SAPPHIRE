@@ -8,6 +8,7 @@ Provides commands for data processing, feature extraction, model training, and a
 
 import argparse
 import sys
+import subprocess
 import logging
 import json
 from pathlib import Path
@@ -131,7 +132,7 @@ def cmd_extract_features(args):
             
             if track.audio_data is not None:
                 # Extract features
-                features = extractor.extract_all_features(track)
+                features = extractor.extract_features(track)
                 features.update({
                     'track_id': track.track_id,
                     'mood_cluster': track.mood_cluster,
@@ -169,13 +170,29 @@ def cmd_extract_features(args):
 def cmd_train_models(args):
     """Train mood classification models."""
     print("🤖 Starting model training...")
-    
-    # Load features
+
+    # Prepare features path (optionally normalize first)
     features_path = Path(args.features)
     if not features_path.exists():
         print(f"❌ Features file not found: {features_path}")
         return
-    
+
+    # If requested, auto-normalize serialized object columns before loading
+    if getattr(args, 'normalize', False):
+        # Determine output path for normalized features
+        if getattr(args, 'normalize_out', None):
+            normalized_path = Path(args.normalize_out)
+        else:
+            normalized_path = features_path.with_name(features_path.stem + '_clean.parquet')
+
+        try:
+            print(f"🔧 Normalizing feature columns into: {normalized_path}")
+            subprocess.run([sys.executable, 'scripts/normalize_feature_columns.py', str(features_path), str(normalized_path)], check=True)
+            features_path = normalized_path
+        except subprocess.CalledProcessError as e:
+            print(f"❌ Normalization failed: {e}")
+            return
+
     if features_path.suffix == '.parquet':
         features_df = pd.read_parquet(features_path)
     else:
@@ -602,6 +619,8 @@ Examples:
     train_parser.add_argument('--output', type=str, required=True, help='Output directory')
     train_parser.add_argument('--models', type=str, help='Comma-separated list of models to train')
     train_parser.add_argument('--max-features', type=int, help='Maximum number of features to select')
+    train_parser.add_argument('--normalize', action='store_true', help='Auto-normalize serialized-dict feature columns before training')
+    train_parser.add_argument('--normalize-out', type=str, help='Optional path to write normalized features (parquet)')
     train_parser.set_defaults(func=cmd_train_models)
     
     # Analyze command

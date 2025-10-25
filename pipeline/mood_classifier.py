@@ -113,18 +113,56 @@ class MoodClassifier:
         # Get feature columns (exclude metadata and target columns)
         exclude_cols = [target_column, 'track_id', 'mood_category', 'dataset', 'language']
         feature_cols = [col for col in features_df.columns if col not in exclude_cols]
-        
+
         X = features_df[feature_cols].copy()
         y = features_df[target_column].copy()
-        
-        # Handle missing values
+
+        # Defensive: drop identifier-like columns that may leak information
+        id_like = [
+            c for c in X.columns
+            if (
+                c == 'track_id'
+                or 'file_index' in c
+                or c.endswith('.track_id')
+                or c.endswith('.file_index')
+                or c == 'index'
+                or c.lower() == 'index'
+                or c == 'extra.track_id'
+            )
+        ]
+        if id_like:
+            self.logger.info(f"Dropping identifier-like columns to avoid leakage: {id_like}")
+            X = X.drop(columns=id_like, errors='ignore')
+
+        # Drop constant columns (no information)
+        const_cols = [c for c in X.columns if X[c].nunique(dropna=False) <= 1]
+        if const_cols:
+            self.logger.info(f"Dropping constant columns: {const_cols}")
+            X = X.drop(columns=const_cols, errors='ignore')
+
+        # Keep only numeric feature columns (drop any leftover object/meta columns)
+        numeric_cols = X.select_dtypes(include=[np.number]).columns.tolist()
+        if not numeric_cols:
+            # Provide helpful debugging info when no numeric features are present
+            obj_cols = [c for c in X.columns if X[c].dtype == object]
+            raise ValueError(f"No numeric feature columns found after filtering. Object-type columns: {obj_cols}")
+
+        # Final safety: remove numeric id-like columns (e.g., file_index may be numeric)
+        id_like_numeric = [c for c in numeric_cols if 'file_index' in c or c.endswith('.file_index') or c.endswith('.track_id')]
+        if id_like_numeric:
+            self.logger.info(f"Removing numeric identifier-like columns from features: {id_like_numeric}")
+            numeric_cols = [c for c in numeric_cols if c not in id_like_numeric]
+
+        X = X[numeric_cols]
+
+        # Handle missing values (numeric only)
         X = X.fillna(X.mean())
-        
+
         # Remove infinite values
         X = X.replace([np.inf, -np.inf], np.nan).fillna(X.mean())
-        
+
         # Store feature names
-        self.feature_names = feature_cols
+        self.feature_names = numeric_cols
         
         # Encode labels
         y_encoded = self.label_encoder.fit_transform(y)

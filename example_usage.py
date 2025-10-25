@@ -140,7 +140,7 @@ def quick_feature_extraction_example():
             
             if track.audio_data is not None:
                 # Extract features
-                features = extractor.extract_all_features(track)
+                features = extractor.extract_features(track)
                 features['track_id'] = track.track_id
                 features['mood_cluster'] = track.mood_cluster
                 features_list.append(features)

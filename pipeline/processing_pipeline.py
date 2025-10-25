@@ -183,7 +183,7 @@ class EnhancedProcessingPipeline:
                     continue
                 
                 # Extract features
-                features = self.feature_extractor.extract_all_features(track)
+                features = self.feature_extractor.extract_features(track)
                 
                 # Add metadata
                 features.update({

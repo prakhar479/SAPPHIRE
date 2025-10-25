@@ -168,7 +168,7 @@ features = []
 for track in tracks:
     track = loader.load_audio(track)
     track = loader.load_lyrics(track)
-    feature_dict = extractor.extract_all_features(track)
+    feature_dict = extractor.extract_features(track)
     features.append(feature_dict)
 
 # Train mood classifier
