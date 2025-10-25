@@ -18,15 +18,15 @@ __version__ = "1.0.0"
 __author__ = "SAPPHIRE Team"
 
 __all__ = [
-    'config',
-    'Config',
-    'DataLoader',
-    'MusicTrack',
-    'FeatureExtractor', 
-    'Preprocessor',
-    'Analyzer',
-    'MoodClassifier',
-    'Visualizer',
-    'Pipeline',
-    'EnhancedProcessingPipeline'
+    "config",
+    "Config",
+    "DataLoader",
+    "MusicTrack",
+    "FeatureExtractor",
+    "Preprocessor",
+    "Analyzer",
+    "MoodClassifier",
+    "Visualizer",
+    "Pipeline",
+    "EnhancedProcessingPipeline",
 ]

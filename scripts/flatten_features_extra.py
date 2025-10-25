@@ -57,7 +57,11 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--input", required=True, help="Input features CSV or parquet")
     p.add_argument("--output", required=True, help="Output file path (parquet or csv)")
-    p.add_argument("--extra-column", default="_extra", help="Name of the column containing the dict (default: _extra)")
+    p.add_argument(
+        "--extra-column",
+        default="_extra",
+        help="Name of the column containing the dict (default: _extra)",
+    )
     args = p.parse_args()
 
     inp = Path(args.input)

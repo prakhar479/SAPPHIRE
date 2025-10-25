@@ -8,23 +8,27 @@ from pathlib import Path
 
 # Read README for long description
 readme_path = Path(__file__).parent / "README.md"
-long_description = readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
+long_description = (
+    readme_path.read_text(encoding="utf-8") if readme_path.exists() else ""
+)
 
 # Read requirements
 requirements_path = Path(__file__).parent / "requirements.txt"
 if requirements_path.exists():
     with open(requirements_path) as f:
-        requirements = [line.strip() for line in f if line.strip() and not line.startswith('#')]
+        requirements = [
+            line.strip() for line in f if line.strip() and not line.startswith("#")
+        ]
 else:
     requirements = [
-        'numpy>=1.21.0',
-        'pandas>=1.3.0',
-        'librosa>=0.9.0',
-        'scikit-learn>=1.0.0',
-        'matplotlib>=3.4.0',
-        'seaborn>=0.11.0',
-        'nltk>=3.6.0',
-        'sentence-transformers>=2.0.0'
+        "numpy>=1.21.0",
+        "pandas>=1.3.0",
+        "librosa>=0.9.0",
+        "scikit-learn>=1.0.0",
+        "matplotlib>=3.4.0",
+        "seaborn>=0.11.0",
+        "nltk>=3.6.0",
+        "sentence-transformers>=2.0.0",
     ]
 
 setup(
@@ -53,7 +57,7 @@ setup(
     extras_require={
         "advanced": ["crepe>=0.0.12"],
         "dev": ["pytest>=6.0.0", "jupyter>=1.0.0", "ipykernel>=6.0.0"],
-        "all": ["crepe>=0.0.12", "pytest>=6.0.0", "jupyter>=1.0.0"]
+        "all": ["crepe>=0.0.12", "pytest>=6.0.0", "jupyter>=1.0.0"],
     },
     entry_points={
         "console_scripts": [
