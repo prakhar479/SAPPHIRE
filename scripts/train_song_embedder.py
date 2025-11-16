@@ -111,7 +111,9 @@ def prepare_features(df: pd.DataFrame) -> Tuple[np.ndarray, np.ndarray, Dict[str
     The function mirrors the logic of the main pipeline but is self-contained.
     """
     if "mood_cluster" not in df.columns:
-        raise ValueError("Input features must contain a 'mood_cluster' column for supervised training.")
+        raise ValueError(
+            "Input features must contain a 'mood_cluster' column for supervised training."
+        )
 
     # Drop rows without labels
     df = df.dropna(subset=["mood_cluster"]).copy()
@@ -176,7 +178,11 @@ def train_embedder(
     )
     relative_test = test_size / (val_size + test_size)
     X_val, X_test, y_val, y_test = train_test_split(
-        X_temp, y_temp, test_size=relative_test, random_state=random_state, stratify=y_temp
+        X_temp,
+        y_temp,
+        test_size=relative_test,
+        random_state=random_state,
+        stratify=y_temp,
     )
 
     # Standardize features
@@ -444,7 +450,9 @@ def evaluate_embedding_quality(
         dists = np.linalg.norm(emb_cls - centroid, axis=1)
         intra_dists.extend(dists.tolist())
 
-    results["mean_intra_class_distance"] = float(np.mean(intra_dists)) if intra_dists else None
+    results["mean_intra_class_distance"] = (
+        float(np.mean(intra_dists)) if intra_dists else None
+    )
 
     centroid_list = list(centroids.values())
     if len(centroid_list) > 1:
@@ -533,7 +541,13 @@ def plot_training_curves(history: Dict[str, Any], output_dir: Path) -> None:
     plt.subplot(1, 2, 1)
     plt.plot(epochs, history["train_loss"], label="Train Loss")
     plt.plot(epochs, history["val_loss"], label="Val Loss")
-    plt.axvline(best_epoch, color="red", linestyle="--", alpha=0.5, label=f"Best Val (epoch {best_epoch})")
+    plt.axvline(
+        best_epoch,
+        color="red",
+        linestyle="--",
+        alpha=0.5,
+        label=f"Best Val (epoch {best_epoch})",
+    )
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.title("Training vs Validation Loss")
@@ -558,7 +572,14 @@ def plot_confusion_matrix(cm: np.ndarray, class_names, output_dir: Path) -> None
     output_dir.mkdir(parents=True, exist_ok=True)
 
     plt.figure(figsize=(8, 6))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=class_names, yticklabels=class_names)
+    sns.heatmap(
+        cm,
+        annot=True,
+        fmt="d",
+        cmap="Blues",
+        xticklabels=class_names,
+        yticklabels=class_names,
+    )
     plt.xlabel("Predicted")
     plt.ylabel("True")
     plt.title("Song Embedder Confusion Matrix")
@@ -790,7 +811,11 @@ def plot_embedding_space(
         emb_tsne_input = embeddings
         labels_tsne = labels
 
-    tsne = TSNE(n_components=2, random_state=random_state, perplexity=min(30, len(emb_tsne_input) - 1))
+    tsne = TSNE(
+        n_components=2,
+        random_state=random_state,
+        perplexity=min(30, len(emb_tsne_input) - 1),
+    )
     emb_tsne = tsne.fit_transform(emb_tsne_input)
 
     plt.figure(figsize=(10, 8))
@@ -798,7 +823,9 @@ def plot_embedding_space(
         mask = labels_tsne == cls_idx
         if not np.any(mask):
             continue
-        plt.scatter(emb_tsne[mask, 0], emb_tsne[mask, 1], label=cls_name, alpha=0.7, s=30)
+        plt.scatter(
+            emb_tsne[mask, 0], emb_tsne[mask, 1], label=cls_name, alpha=0.7, s=30
+        )
 
     plt.xlabel("t-SNE 1")
     plt.ylabel("t-SNE 2")
@@ -858,7 +885,9 @@ def save_embedder_report(
     md_lines.append("# Song Embedder Report\n")
     md_lines.append("## Overview\n")
     md_lines.append(f"- **Test Accuracy**: {metrics['test_accuracy']:.4f}\n")
-    md_lines.append(f"- **Best Validation Accuracy**: {metrics['best_val_accuracy']:.4f}\n")
+    md_lines.append(
+        f"- **Best Validation Accuracy**: {metrics['best_val_accuracy']:.4f}\n"
+    )
     md_lines.append(f"- **Embedding Dimension**: {metrics['embedding_dim']}\n")
     md_lines.append(f"- **Number of Classes**: {metrics['num_classes']}\n")
     md_lines.append(f"- **Number of Features**: {metrics['num_features']}\n")
@@ -901,13 +930,32 @@ def parse_args() -> argparse.Namespace:
         description="Train a supervised song embedding model from SAPPHIRE feature tables.",
     )
 
-    parser.add_argument("--features", type=str, required=True, help="Path to features file (.parquet or .csv)")
-    parser.add_argument("--output", type=str, required=True, help="Output directory for model and reports")
-    parser.add_argument("--embedding-dim", type=int, default=64, help="Embedding dimension")
+    parser.add_argument(
+        "--features",
+        type=str,
+        required=True,
+        help="Path to features file (.parquet or .csv)",
+    )
+    parser.add_argument(
+        "--output",
+        type=str,
+        required=True,
+        help="Output directory for model and reports",
+    )
+    parser.add_argument(
+        "--embedding-dim", type=int, default=64, help="Embedding dimension"
+    )
     parser.add_argument("--batch-size", type=int, default=64, help="Batch size")
-    parser.add_argument("--epochs", type=int, default=40, help="Number of training epochs")
+    parser.add_argument(
+        "--epochs", type=int, default=40, help="Number of training epochs"
+    )
     parser.add_argument("--lr", type=float, default=1e-3, help="Learning rate")
-    parser.add_argument("--weight-decay", type=float, default=1e-4, help="Weight decay (L2 regularization)")
+    parser.add_argument(
+        "--weight-decay",
+        type=float,
+        default=1e-4,
+        help="Weight decay (L2 regularization)",
+    )
     parser.add_argument("--random-state", type=int, default=42, help="Random seed")
 
     return parser.parse_args()
