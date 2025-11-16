@@ -1,2 +1,0 @@
-Model,Test Accuracy,CV Mean,CV Std,Best Params
-random_forest,0.994475138121547,0.981963601532567,0.012114703820099276,"{'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 300}"

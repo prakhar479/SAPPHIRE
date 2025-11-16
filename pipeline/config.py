@@ -90,7 +90,10 @@ class ModelConfig:
     # Feature selection
     feature_selection_method: str = "mutual_info"  # mutual_info, f_score, rfe
     max_features: Optional[int] = None
-
+    use_importance_subset: bool = False
+    importance_csv_path: Optional[str] = None
+    top_n_important: Optional[int] = None
+    
     # Models to train
     models: List[str] = None
 

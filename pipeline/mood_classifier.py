@@ -192,10 +192,74 @@ class MoodClassifier:
         self.logger.info(f"Target classes: {list(self.label_encoder.classes_)}")
 
         return X.values, y_encoded
+    
+    def subset_features_by_importance(
+        self,
+        features_df: pd.DataFrame,
+        importance_csv_path: str,
+        top_n: int
+    ) -> Tuple[pd.DataFrame, pd.DataFrame]:
+        """Subset features using a precomputed importance ranking.
 
-    def select_features(
-        self, X: np.ndarray, y: np.ndarray, method: str = "mutual_info", k: int = None
-    ) -> np.ndarray:
+        Returns a tuple of (subset_features_df, used_importance_df).
+        """
+        importance_path = Path(importance_csv_path)
+        if not importance_path.exists():
+            self.logger.warning(f"Importance CSV not found at {importance_path}, skipping importance-based subsetting")
+            return features_df, pd.DataFrame()
+
+        try:
+            importance_df = pd.read_csv(importance_path)
+        except Exception as e:
+            self.logger.warning(f"Failed to read importance CSV at {importance_path}: {e}")
+            return features_df, pd.DataFrame()
+
+        if 'feature' not in importance_df.columns:
+            self.logger.warning("Importance CSV does not contain required 'feature' column; skipping importance-based subsetting")
+            return features_df, pd.DataFrame()
+
+        if top_n is None or top_n <= 0:
+            self.logger.warning(f"Invalid top_n value for importance-based subsetting: {top_n}; skipping")
+            return features_df, pd.DataFrame()
+
+        self.logger.info(f"Applying importance-based feature subset: top {top_n} from {importance_path}")
+
+        # Select top-N features from importance ranking
+        selected_df = importance_df.head(top_n).copy()
+        selected_features = selected_df['feature'].tolist()
+
+        # Keep only features that actually exist in the DataFrame
+        available_mask = selected_df['feature'].isin(features_df.columns)
+        used_importance_df = selected_df[available_mask].copy()
+        used_features = used_importance_df['feature'].tolist()
+
+        missing_features = selected_df.loc[~available_mask, 'feature'].tolist()
+        if missing_features:
+            self.logger.warning(
+                f"The following important features were not found in the feature table and will be ignored: {missing_features}"
+            )
+
+        if not used_features:
+            self.logger.warning("No overlap between important features and feature table columns; skipping importance-based subsetting")
+            return features_df, pd.DataFrame()
+
+        # Always keep key metadata / label columns if present
+        base_cols = [
+            col
+            for col in ['track_id', 'mood_cluster', 'mood_category', 'dataset', 'language']
+            if col in features_df.columns
+        ]
+
+        subset_columns = base_cols + used_features
+        subset_df = features_df[subset_columns].copy()
+
+        self.logger.info(
+            f"Using {len(used_features)} important features (top {top_n}); first few: {used_features[:10]}"
+        )
+
+        return subset_df, used_importance_df
+
+    def select_features(self, X: np.ndarray, y: np.ndarray, method: str = 'mutual_info', k: int = None) -> np.ndarray:
         """
         Perform feature selection.
 
@@ -208,6 +272,12 @@ class MoodClassifier:
         Returns:
             Selected features
         """
+        if method == 'none':
+            # Bypass additional statistical feature selection entirely
+            self.logger.info("Feature selection method 'none' specified; using all provided features without additional selection")
+            self.feature_selector = None
+            return X
+
         if k is None:
             k = min(self.config.model.max_features or X.shape[1], X.shape[1])
 

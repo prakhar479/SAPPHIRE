@@ -186,7 +186,7 @@ def cmd_extract_features(args):
 def cmd_train_models(args):
     """Train mood classification models."""
     print("🤖 Starting model training...")
-
+    
     # Prepare features path (optionally normalize first)
     features_path = Path(args.features)
     if not features_path.exists():
@@ -233,7 +233,10 @@ def cmd_train_models(args):
     if len(labeled_tracks) == 0:
         print("❌ No labeled tracks found!")
         return
-
+    
+    output_dir = Path(args.output)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
     # Load configuration
     if args.config:
         config_obj = Config.from_file(args.config)
@@ -246,7 +249,25 @@ def cmd_train_models(args):
 
     # Initialize classifier
     classifier = MoodClassifier(config_obj)
+    
+    # Optional importance-based feature subset
+    if getattr(args, 'top_n_important', None):
+        # Use canonical default if CSV not explicitly provided
+        importance_csv_path = args.important_features_csv or 'output/fi_test/feature_importances_full.csv'
+        labeled_tracks, used_importance_df = classifier.subset_features_by_importance(
+            labeled_tracks,
+            importance_csv_path,
+            args.top_n_important
+        )
 
+        if not used_importance_df.empty:
+            selected_path = output_dir / 'selected_features_from_importance.csv'
+            used_importance_df.to_csv(selected_path, index=False)
+            print(f"✨ Using {len(used_importance_df)} important features (top {args.top_n_important}) from {importance_csv_path}")
+            print(f"   First features: {used_importance_df['feature'].head(10).tolist()}")
+        else:
+            print("⚠️  Importance-based subsetting requested but no usable features were found; proceeding with original features")
+    
     # Prepare data
     X, y = classifier.prepare_data(labeled_tracks, "mood_cluster")
 
@@ -263,11 +284,7 @@ def cmd_train_models(args):
 
     # Train models
     results = classifier.train_models(X_selected, y)
-
-    # Save results
-    output_dir = Path(args.output)
-    output_dir.mkdir(parents=True, exist_ok=True)
-
+    
     # Evaluate models
     classifier.evaluate_models(results, str(output_dir))
 
@@ -434,7 +451,18 @@ def cmd_pipeline(args):
         config_obj.processing.memory_limit_gb = args.memory_limit
     if args.chunk_size:
         config_obj.processing.chunk_size = args.chunk_size
-
+    
+    # Importance-based feature subset configuration
+    if getattr(args, 'top_n_important', None):
+        config_obj.model.use_importance_subset = True
+        config_obj.model.top_n_important = args.top_n_important
+        # Allow overriding the CSV path; otherwise use canonical default
+        config_obj.model.importance_csv_path = (
+            args.important_features_csv or
+            config_obj.model.importance_csv_path or
+            'output/fi_test/feature_importances_full.csv'
+        )
+    
     # Configure filtering
     if args.disable_quality_filter:
         config_obj.filtering["enable_quality_filter"] = False
@@ -460,8 +488,8 @@ def cmd_pipeline(args):
     )
 
     # Print results
-    if results["status"] == "success":
-        print(f"\n🎉 Pipeline completed successfully!")
+    if results['status'] == 'success':
+        print("✅ Pipeline completed successfully!")
         print(f"⏱️  Duration: {results['duration']}")
         print(f"🎵 Tracks processed: {results['tracks_processed']}")
         print(f"🔢 Features extracted: {results['features_extracted']}")
@@ -681,31 +709,15 @@ Examples:
     extract_parser.set_defaults(func=cmd_extract_features)
 
     # Train models command
-    train_parser = subparsers.add_parser(
-        "train", help="Train mood classification models"
-    )
-    train_parser.add_argument(
-        "--features", type=str, required=True, help="Features file path"
-    )
-    train_parser.add_argument(
-        "--output", type=str, required=True, help="Output directory"
-    )
-    train_parser.add_argument(
-        "--models", type=str, help="Comma-separated list of models to train"
-    )
-    train_parser.add_argument(
-        "--max-features", type=int, help="Maximum number of features to select"
-    )
-    train_parser.add_argument(
-        "--normalize",
-        action="store_true",
-        help="Auto-normalize serialized-dict feature columns before training",
-    )
-    train_parser.add_argument(
-        "--normalize-out",
-        type=str,
-        help="Optional path to write normalized features (parquet)",
-    )
+    train_parser = subparsers.add_parser('train', help='Train mood classification models')
+    train_parser.add_argument('--features', type=str, required=True, help='Features file path')
+    train_parser.add_argument('--output', type=str, required=True, help='Output directory')
+    train_parser.add_argument('--models', type=str, help='Comma-separated list of models to train')
+    train_parser.add_argument('--max-features', type=int, help='Maximum number of features to select')
+    train_parser.add_argument('--important-features-csv', type=str, help='Path to feature importance CSV for RF-based selection (default: output/fi_test/feature_importances_full.csv)')
+    train_parser.add_argument('--top-n-important', type=int, help='Use top-N features from importance CSV before model training')
+    train_parser.add_argument('--normalize', action='store_true', help='Auto-normalize serialized-dict feature columns before training')
+    train_parser.add_argument('--normalize-out', type=str, help='Optional path to write normalized features (parquet)')
     train_parser.set_defaults(func=cmd_train_models)
 
     # Analyze command
@@ -734,48 +746,24 @@ Examples:
     predict_parser.set_defaults(func=cmd_predict)
 
     # Full pipeline command
-    pipeline_parser = subparsers.add_parser(
-        "pipeline", help="Run the full SAPPHIRE pipeline"
-    )
-    pipeline_parser.add_argument(
-        "--datasets", type=str, help="Comma-separated list of datasets"
-    )
-    pipeline_parser.add_argument(
-        "--output", type=str, default="output", help="Output directory"
-    )
-    pipeline_parser.add_argument(
-        "--limit", type=int, help="Limit number of tracks to process"
-    )
-    pipeline_parser.add_argument(
-        "--workers", type=int, help="Number of worker processes"
-    )
-    pipeline_parser.add_argument(
-        "--models", type=str, help="Comma-separated list of models to train"
-    )
-    pipeline_parser.add_argument(
-        "--memory-limit", type=float, help="Memory limit in GB"
-    )
-    pipeline_parser.add_argument("--chunk-size", type=int, help="Processing chunk size")
-    pipeline_parser.add_argument(
-        "--disable-enhanced-processing",
-        action="store_true",
-        help="Disable enhanced processing pipeline",
-    )
-    pipeline_parser.add_argument(
-        "--disable-quality-filter",
-        action="store_true",
-        help="Disable quality filtering",
-    )
-    pipeline_parser.add_argument(
-        "--disable-duplicate-detection",
-        action="store_true",
-        help="Disable duplicate detection",
-    )
-    pipeline_parser.add_argument(
-        "--disable-outlier-detection",
-        action="store_true",
-        help="Disable outlier detection",
-    )
+    pipeline_parser = subparsers.add_parser('pipeline', help='Run the full SAPPHIRE pipeline')
+    pipeline_parser.add_argument('--datasets', type=str, help='Comma-separated list of datasets')
+    pipeline_parser.add_argument('--output', type=str, default='output', help='Output directory')
+    pipeline_parser.add_argument('--limit', type=int, help='Limit number of tracks to process')
+    pipeline_parser.add_argument('--workers', type=int, help='Number of worker processes')
+    pipeline_parser.add_argument('--models', type=str, help='Comma-separated list of models to train')
+    pipeline_parser.add_argument('--memory-limit', type=float, help='Memory limit in GB')
+    pipeline_parser.add_argument('--chunk-size', type=int, help='Processing chunk size')
+    pipeline_parser.add_argument('--important-features-csv', type=str, help='Path to feature importance CSV for RF-based selection (default: output/fi_test/feature_importances_full.csv)')
+    pipeline_parser.add_argument('--top-n-important', type=int, help='Use top-N important features during classifier training')
+    pipeline_parser.add_argument('--disable-enhanced-processing', action='store_true', 
+                                help='Disable enhanced processing pipeline')
+    pipeline_parser.add_argument('--disable-quality-filter', action='store_true',
+                                help='Disable quality filtering')
+    pipeline_parser.add_argument('--disable-duplicate-detection', action='store_true',
+                                help='Disable duplicate detection')
+    pipeline_parser.add_argument('--disable-outlier-detection', action='store_true',
+                                help='Disable outlier detection')
     pipeline_parser.set_defaults(func=cmd_pipeline)
 
     # Configuration command
