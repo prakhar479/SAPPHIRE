@@ -293,10 +293,12 @@ class Pipeline:
             f"Extracted {len(features_df.columns)} features for {len(features_df)} tracks"
         )
         return features_df
-    
-    def analyze_features(self, features_df: pd.DataFrame, output_dir: str) -> Dict[str, Any]:
+
+    def analyze_features(
+        self, features_df: pd.DataFrame, output_dir: str
+    ) -> Dict[str, Any]:
         """Perform comprehensive feature analysis.
-        
+
         Args:
             features_df: DataFrame with extracted features
             output_dir: Directory to save analysis results
@@ -330,10 +332,12 @@ class Pipeline:
             json.dump(analysis_results, f, indent=2, default=str)
 
         return analysis_results
-    
-    def train_classifiers(self, features_df: pd.DataFrame, output_dir: str) -> Dict[str, Dict]:
+
+    def train_classifiers(
+        self, features_df: pd.DataFrame, output_dir: str
+    ) -> Dict[str, Dict]:
         """Train mood classification models.
-        
+
         Args:
             features_df: DataFrame with features and mood labels
             output_dir: Directory to save model results
@@ -351,33 +355,40 @@ class Pipeline:
         if len(labeled_tracks) == 0:
             self.logger.warning("No tracks with mood labels found")
             return {}
-        
-        self.logger.info(f"Training classifiers on {len(labeled_tracks)} labeled tracks")
-        
+
+        self.logger.info(
+            f"Training classifiers on {len(labeled_tracks)} labeled tracks"
+        )
+
         # Optional importance-based feature subset
-        if getattr(self.config.model, 'use_importance_subset', False) and \
-           getattr(self.config.model, 'importance_csv_path', None) and \
-           getattr(self.config.model, 'top_n_important', None):
-            labeled_tracks, used_importance_df = self.mood_classifier.subset_features_by_importance(
-                labeled_tracks,
-                self.config.model.importance_csv_path,
-                self.config.model.top_n_important
+        if (
+            getattr(self.config.model, "use_importance_subset", False)
+            and getattr(self.config.model, "importance_csv_path", None)
+            and getattr(self.config.model, "top_n_important", None)
+        ):
+            labeled_tracks, used_importance_df = (
+                self.mood_classifier.subset_features_by_importance(
+                    labeled_tracks,
+                    self.config.model.importance_csv_path,
+                    self.config.model.top_n_important,
+                )
             )
 
             if not used_importance_df.empty:
                 output_path = Path(output_dir)
-                selected_path = output_path / 'selected_features_from_importance.csv'
+                selected_path = output_path / "selected_features_from_importance.csv"
                 used_importance_df.to_csv(selected_path, index=False)
                 self.logger.info(
                     f"Saved selected important features (top {self.config.model.top_n_important}) to {selected_path}"
                 )
-        
+
         # Prepare data
         X, y = self.mood_classifier.prepare_data(labeled_tracks, "mood_cluster")
 
         # Feature selection
         X_selected = self.mood_classifier.select_features(
-            X, y,
+            X,
+            y,
             method=self.config.model.feature_selection_method,
             k=self.config.model.max_features,
         )

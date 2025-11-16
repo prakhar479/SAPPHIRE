@@ -93,7 +93,7 @@ class ModelConfig:
     use_importance_subset: bool = False
     importance_csv_path: Optional[str] = None
     top_n_important: Optional[int] = None
-    
+
     # Models to train
     models: List[str] = None
 
