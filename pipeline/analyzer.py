@@ -213,6 +213,24 @@ class Analyzer:
             },
         }
 
+    def perform_clustering(self, df: pd.DataFrame, output_dir: str) -> Dict[str, Any]:
+        """Public wrapper to perform clustering analysis only.
+
+        This exposes the clustering functionality used internally by
+        `analyze_dataset` so that other components (CLI, Pipeline) can
+        request clustering without rerunning the full analysis.
+
+        Args:
+            df: Feature DataFrame.
+            output_dir: Directory where clustering plots/results should be saved.
+
+        Returns:
+            Dictionary with clustering analysis results.
+        """
+        output_path = Path(output_dir)
+        output_path.mkdir(parents=True, exist_ok=True)
+        return self._analyze_clustering(df, output_path)
+
     def _analyze_clustering(
         self, df: pd.DataFrame, output_path: Path
     ) -> Dict[str, Any]:

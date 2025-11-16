@@ -1,0 +1,14 @@
+{
+  "total_tracks": 903,
+  "total_features": 142,
+  "mood_distribution": {
+    "Cluster 3": 215,
+    "Cluster 4": 191,
+    "Cluster 1": 170,
+    "Cluster 2": 164,
+    "Cluster 5": 163
+  },
+  "dataset_distribution": {
+    "MIREX_mood": 903
+  }
+}

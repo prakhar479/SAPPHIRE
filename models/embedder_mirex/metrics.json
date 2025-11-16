@@ -1,0 +1,7 @@
+{
+  "test_accuracy": 0.6243093922651933,
+  "best_val_accuracy": 0.7777777777777778,
+  "num_classes": 5,
+  "num_features": 141,
+  "embedding_dim": 64
+}
