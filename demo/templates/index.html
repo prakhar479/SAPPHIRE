@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SAPPHIRE Embedding Demo</title>
+    <style>
+      :root{--accent:#2563eb;--muted:#6b7280;--surface:#ffffff;--card:#f8fafc}
+      html,body{height:100%}
+      body { font-family: Inter, Arial, sans-serif; margin: 24px; max-width: 1100px; color:#0f172a }
+      header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+      h1{font-size:20px;margin:0}
+      .controls { margin-bottom: 12px; display:flex; gap:12px; flex-wrap:wrap }
+      #results { margin-top: 12px; }
+      .song { padding:10px; border-radius:8px; background:var(--card); display:flex; gap:12px; align-items:flex-start; box-shadow: 0 1px 0 rgba(15,23,42,0.03) }
+      .song + .song{margin-top:8px}
+      .song .meta { font-size: 0.95em; color:#0f172a }
+      .status { font-weight:600; margin-left:8px }
+      .small { font-size:0.9em; color:var(--muted) }
+      .btn { padding:8px 12px; background:var(--accent); color:#fff; border:0; border-radius:6px; cursor:pointer }
+      .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(37,99,235,0.12)}
+      .row { display:flex; gap:12px; align-items:center; margin-bottom:8px }
+      pre { background:#fff; padding:8px; border-radius:6px; overflow:auto; border:1px solid #eef2ff }
+      .badge{display:inline-block;padding:6px 8px;border-radius:999px;font-size:0.8em;background:#eef2ff;color:var(--accent);margin-left:8px}
+      #uploadDrop{border:1px dashed #e6edf8;padding:12px;border-radius:8px;background:#fbfdff}
+      #libraryPreview{margin-top:8px}
+      table.lib{width:100%;border-collapse:collapse}
+      table.lib th, table.lib td{padding:8px;text-align:left;border-bottom:1px solid #f1f5f9;font-size:0.9em}
+      .flex-between{display:flex;justify-content:space-between;align-items:center}
+      .muted{color:var(--muted)}
+      .control-group{display:flex;gap:8px;align-items:center}
+      audio.player{width:160px}
+      .play-btn{background:#fff;border:1px solid #e6eefb;padding:6px;border-radius:6px;cursor:pointer}
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="/static/logo.svg" alt="SAPPHIRE" style="width:72px; height:72px;" />
+      <div style="flex:1">
+        <div class="flex-between">
+          <div>
+            <h1>SAPPHIRE — Embedding Similarity Demo</h1>
+            <div class="small">Build the index, search by song ID, or upload audio to find similar songs.</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="controls row">
+      <div class="control-group">
+        <button id="buildIndex" class="btn" data-busy="Indexing...">Build / Rebuild Index</button>
+        <button id="clearResults" class="btn ghost">Clear Results</button>
+      </div>
+      <div style="margin-left:8px">
+        <span id="indexStatus" class="badge">index: unknown</span>
+        <span id="embedderStatus" class="badge" style="background:#fff;color:var(--muted);border:1px solid #eef2ff">embedder: unknown</span>
+      </div>
+    </div>
+
+    <div class="controls row" style="align-items:center">
+      <div class="small muted">Last action:</div>
+      <div id="lastAction" class="badge" style="background:#fff;color:var(--muted);border:1px solid #eef2ff;margin-left:6px">idle</div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button id="showLog" class="btn ghost" style="padding:6px">Show Log</button>
+        <button id="clearLog" class="btn ghost" style="padding:6px">Clear Log</button>
+      </div>
+    </div>
+
+    <div class="controls row">
+      <label>Song ID (integer): <input id="songId" type="number" /></label>
+      <label>k: <input id="k" type="number" value="10" style="width:80px" /></label>
+      <button id="searchBtn" class="btn" data-busy="Searching...">Find Similar</button>
+      <span id="libraryCount" class="small" style="margin-left:8px"></span>
+    </div>
+
+    <h3>Upload Audio (quick test)</h3>
+    <div class="controls">
+      <form id="uploadForm" style="width:100%">
+        <div id="uploadDrop" class="row" style="align-items:center">
+          <input type="file" id="audioFile" name="file" accept="audio/*" />
+          <div style="flex:1">
+            <div class="small"> <span id="filePreview">No file selected</span></div>
+            <div class="small muted">Or drag-and-drop an audio file onto the input.</div>
+          </div>
+          <label>k: <input id="uploadK" type="number" value="10" style="width:80px" /></label>
+          <button type="submit" class="btn" data-busy="Uploading...">Upload & Search</button>
+        </div>
+      </form>
+      <div id="uploadStatus" class="small"></div>
+    </div>
+
+    <div id="results"></div>
+
+    <h3>Library Preview</h3>
+    <div id="library">
+      {% if metadata %}
+        <pre id="metaJson" style="display:none">{{ metadata|tojson(indent=2) }}</pre>
+        <div id="libraryControls" class="row" style="margin-top:8px;align-items:center;gap:12px">
+          <input id="libFilter" placeholder="Global filter (id, title, artist...)" style="flex:1;padding:8px;border-radius:6px;border:1px solid #eef2ff" />
+          <select id="libColumnFilter" style="width:220px;padding:8px;border-radius:6px;border:1px solid #eef2ff">
+            <option value="">Column filter (optional)</option>
+          </select>
+          <input id="libColumnFilterVal" placeholder="value" style="width:160px;padding:8px;border-radius:6px;border:1px solid #eef2ff" />
+          <select id="libSort" style="width:160px;padding:8px;border-radius:6px;border:1px solid #eef2ff">
+            <option value="">Sort by (auto)</option>
+          </select>
+          <button id="libSortDir" class="btn ghost" data-dir="asc" style="padding:6px 8px">Asc</button>
+          <label style="margin-left:8px">Page size: <select id="libPageSize" style="margin-left:6px;padding:6px"><option>10</option><option>25</option><option>50</option></select></label>
+        </div>
+        <div id="libColumnSelector" class="small" style="margin-top:6px">Show columns: <span id="libColumns"></span></div>
+        <div id="libraryPreview" class="small" style="margin-top:8px"></div>
+        <div id="libraryPager" class="row small" style="margin-top:8px;align-items:center">
+          <button id="libPrev" class="btn ghost">Prev</button>
+          <span id="libPageInfo" style="margin:0 8px">&nbsp;</span>
+          <button id="libNext" class="btn ghost">Next</button>
+        </div>
+      {% else %}
+        <p>No metadata found in demo; upload or generate metadata file at <code>demo/metadata.json</code> or in <code>models/embedder_mirex/embeddings/metadata.json</code>.</p>
+      {% endif %}
+    </div>
+
+    <p><a href="/static_demo">Open static demo pages with study plots</a></p>
+    <div style="margin-top:12px">
+      <button id="showVerbose" class="btn small ghost">Show Debug Info</button>
+      <pre id="verboseOut" style="display:none; margin-top:8px; background:#fff; padding:8px; border:1px solid #eee; max-height:240px; overflow:auto"></pre>
+    </div>
+
+    <div id="processLog" style="display:none;margin-top:12px">
+      <h4 style="margin:6px 0">Process Log</h4>
+      <div id="logEntries" style="background:#0f172a;color:#fff;padding:8px;border-radius:6px;max-height:220px;overflow:auto;font-family:monospace;font-size:12px"></div>
+    </div>
+
+  <script>
+  // helper: show/hide and disable controls
+  function setBusy(el, busy=true){
+    el.disabled = busy;
+    if(busy) el.textContent = (el.getAttribute('data-busy')||'Working...');
+  }
+
+  // process log and last action helpers
+  function ts(){ return new Date().toISOString().replace('T',' ').slice(0,19); }
+  function appendLog(msg){
+    const log = document.getElementById('logEntries');
+    if(!log) return;
+    const entry = document.createElement('div'); entry.textContent = `[${ts()}] ${msg}`;
+    log.appendChild(entry);
+    log.scrollTop = log.scrollHeight;
+    // also update lastAction badge
+    const last = document.getElementById('lastAction'); if(last) last.textContent = msg.split('\n')[0];
+  }
+  document.getElementById('showLog').addEventListener('click', ()=>{ const p = document.getElementById('processLog'); p.style.display = p.style.display==='none'?'block':'none'; });
+  document.getElementById('clearLog').addEventListener('click', ()=>{ const log = document.getElementById('logEntries'); if(log) log.innerHTML=''; appendLog('Log cleared'); });
+
+  async function checkStatus(){
+    // check library count and health
+    try{
+      appendLog('Starting health check');
+      const r = await fetch('/api/health');
+      const j = await r.json();
+      if(j.ok){
+        document.getElementById('libraryCount').textContent = j.embeddings_present ? 'embeddings: present' : 'embeddings: missing';
+        document.getElementById('indexStatus').textContent = j.index_built ? 'index: built' : 'index: not built';
+        document.getElementById('embedderStatus').textContent = (j.embedder_checkpoint_present && j.torch_available) ? 'embedder: ready' : j.embedder_checkpoint_present ? 'embedder: checkpoint present (torch missing)' : 'embedder: checkpoint not found';
+        // set badge classes/colors
+        const idx = document.getElementById('indexStatus');
+        idx.className = 'badge';
+        const emb = document.getElementById('embedderStatus');
+        emb.className = 'badge';
+        appendLog(`Health: index_built=${j.index_built}, embeddings_present=${j.embeddings_present}`);
+      }
+    }catch(e){ console.warn('health check failed', e); }
+  }
+
+  // run status check on load
+  checkStatus();
+
+  document.getElementById('showVerbose').addEventListener('click', async ()=>{
+    const out = document.getElementById('verboseOut');
+    out.style.display = 'block';
+    out.textContent = 'Loading...';
+    try{
+      const r = await fetch('/api/health/verbose');
+      const j = await r.json();
+      out.textContent = JSON.stringify(j, null, 2);
+    }catch(e){ out.textContent = 'Failed to load verbose health: '+e }
+  });
+
+  document.getElementById('buildIndex').addEventListener('click', async ()=>{
+    const btn = document.getElementById('buildIndex');
+    const status = document.getElementById('indexStatus');
+    setBusy(btn,true);
+    status.textContent = 'indexing...';
+    appendLog('Triggering index build');
+    try{
+      const r = await fetch('/api/index', {method:'POST'});
+      const j = await r.json();
+      if (j.ok) status.textContent = `index: built (${j.items_indexed} items)`;
+      else status.textContent = 'index: error';
+      appendLog('Index build finished: ' + (j.ok? `items_indexed=${j.items_indexed}` : (j.error||'error')));
+    }catch(e){ status.textContent = 'index: failed' }
+    setBusy(btn,false);
+    checkStatus();
+  });
+
+  document.getElementById('searchBtn').addEventListener('click', async ()=>{
+    const id = document.getElementById('songId').value;
+    const k = document.getElementById('k').value || 10;
+    const payload = { song_id: id ? parseInt(id,10) : null, k: parseInt(k,10) };
+    const out = document.getElementById('results');
+    out.innerHTML = '';
+    setBusy(document.getElementById('searchBtn'), true);
+    appendLog('Searching — payload: ' + JSON.stringify(payload));
+    try{
+      const r = await fetch('/api/search', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
+      const j = await r.json();
+      if (!j.ok) { out.textContent = 'Error: ' + (j.error||'unknown'); return; }
+      j.results.forEach(it => {
+        const div = document.createElement('div');
+        div.className = 'song';
+        const info = it.info || {};
+        const infoHtml = `<div style="min-width:220px"><strong>ID:</strong> ${it.id}<br/><strong>distance:</strong> ${it.distance.toFixed(4)}${info.duration?('<br/><strong>duration:</strong> '+info.duration+'s'):''}</div>`;
+        const metaHtml = `<div><pre>${JSON.stringify(info, null, 2)}</pre></div>`;
+        div.innerHTML = infoHtml + metaHtml;
+        // add optional play button if a preview url exists
+        if(info.preview_url){
+          const btn = document.createElement('button'); btn.className='play-btn'; btn.textContent='Play';
+          btn.addEventListener('click', ()=>{
+            // small inline audio player
+            let existing = div.querySelector('audio');
+            if(existing){ existing.paused?existing.play():existing.pause(); return }
+            const audio = document.createElement('audio'); audio.src = info.preview_url; audio.controls = true; audio.className='player';
+            div.appendChild(audio);
+            audio.play().catch(()=>{});
+          });
+          div.appendChild(btn);
+        }
+        out.appendChild(div);
+      });
+        appendLog(`Search returned ${j.results.length} results`);
+    }catch(e){ out.textContent = 'Search failed: ' + e }
+    setBusy(document.getElementById('searchBtn'), false);
+  });
+
+  // upload form handler
+  document.getElementById('uploadForm').addEventListener('submit', async (ev)=>{
+    ev.preventDefault();
+    const fileInput = document.getElementById('audioFile');
+    const status = document.getElementById('uploadStatus');
+    status.textContent = '';
+    if (!fileInput.files.length) { status.textContent = 'Select a file first'; return; }
+    const file = fileInput.files[0];
+    // show filename + duration (if available)
+    document.getElementById('filePreview').textContent = file.name;
+    try{
+      const audio = document.createElement('audio');
+      audio.src = URL.createObjectURL(file);
+      audio.addEventListener('loadedmetadata', ()=>{
+        const d = Math.round(audio.duration);
+        document.getElementById('filePreview').textContent = `${file.name} (${d}s)`;
+      });
+    }catch(e){ /* ignore */ }
+
+    const form = new FormData();
+    form.append('file', file);
+    form.append('k', document.getElementById('uploadK').value || '10');
+    const submitBtn = ev.submitter || ev.target.querySelector('button[type=submit]');
+    setBusy(submitBtn,true);
+    status.textContent = 'Uploading and embedding...';
+    try {
+      appendLog('Uploading file: ' + file.name + ' ('+file.size+' bytes)');
+      const r = await fetch('/api/upload', { method: 'POST', body: form });
+      const j = await r.json();
+      if (!j.ok) { status.textContent = 'Error: ' + (j.error || 'unknown'); submitBtn.disabled = false; return; }
+      status.innerHTML = `<div><strong>Embedding:</strong> <small>length ${j.embedding.length}</small></div>`;
+      const out = document.getElementById('results');
+      out.innerHTML = '';
+      j.results.forEach(it => {
+        const div = document.createElement('div');
+        div.className = 'song';
+        div.innerHTML = `<div class="meta"><strong>ID:</strong> ${it.id}<br/><strong>distance:</strong> ${it.distance.toFixed(4)}</div><div><pre>${JSON.stringify(it.info||{}, null, 2)}</pre></div>`;
+        out.appendChild(div);
+      });
+      appendLog(`Upload returned ${j.results.length} results; embedding length ${j.embedding.length}`);
+    } catch (e) {
+      status.textContent = 'Upload failed: ' + e;
+      appendLog('Upload failed: ' + e);
+    } finally {
+      setBusy(submitBtn,false);
+      checkStatus();
+    }
+  });
+
+  // drag and drop UX: highlight drop area and populate file input preview
+  (function(){
+    const drop = document.getElementById('uploadDrop');
+    if(!drop) return;
+    ['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev, (e)=>{e.preventDefault(); drop.style.borderColor='#cfe2ff'}));
+    ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev, (e)=>{e.preventDefault(); drop.style.borderColor=''}));
+    drop.addEventListener('drop', (e)=>{
+      const f = e.dataTransfer.files && e.dataTransfer.files[0];
+      if(!f) return;
+      const input = document.getElementById('audioFile');
+      const dt = new DataTransfer(); dt.items.add(f); input.files = dt.files;
+      document.getElementById('filePreview').textContent = f.name;
+      appendLog('File dropped: ' + f.name);
+    });
+    document.getElementById('audioFile').addEventListener('change', (e)=>{
+      const f = e.target.files[0]; document.getElementById('filePreview').textContent = f?f.name:'No file selected';
+      if(f) appendLog('File selected: ' + f.name);
+    });
+  })();
+
+  document.getElementById('clearResults').addEventListener('click', ()=>{ document.getElementById('results').innerHTML=''; });
+
+  // render library metadata with filtering, sorting, and pagination
+  (function(){
+    const metaPre = document.getElementById('metaJson');
+    const preview = document.getElementById('libraryPreview');
+    const filterInput = document.getElementById('libFilter');
+    const sortSelect = document.getElementById('libSort');
+    const sortDirBtn = document.getElementById('libSortDir');
+    const pageSizeSel = document.getElementById('libPageSize');
+    const prevBtn = document.getElementById('libPrev');
+    const nextBtn = document.getElementById('libNext');
+    const pageInfo = document.getElementById('libPageInfo');
+    if(!metaPre || !preview) return;
+    let data = [];
+    try{
+      data = JSON.parse(metaPre.textContent || 'null') || [];
+    }catch(e){ preview.textContent='Failed to parse metadata: '+e; return }
+    if(!data.length){ preview.textContent='No items in metadata'; return }
+
+    // determine common keys for columns
+    const keys = Array.from(new Set(data.flatMap(d=>Object.keys(d)))).slice(0,12);
+
+    // populate sort select and column-filter select
+    sortSelect.innerHTML = '<option value="">(no sort)</option>' + keys.map(k=>`<option value="${k}">${k}</option>`).join('');
+    const colFilterSel = document.getElementById('libColumnFilter');
+    colFilterSel.innerHTML = '<option value="">Column filter (optional)</option>' + keys.map(k=>`<option value="${k}">${k}</option>`).join('');
+
+    const columnsSpan = document.getElementById('libColumns');
+    // state includes visible columns for column selector
+    const state = { filter:'', columnFilter:'', columnFilterVal:'', visibleColumns: keys.slice(), sortKey:'', sortDir:'asc', page:1, pageSize: parseInt(pageSizeSel.value,10) };
+
+    // render column selector checkboxes
+    function renderColumnSelector(){
+      if(!columnsSpan) return;
+      columnsSpan.innerHTML = '';
+      keys.forEach(k=>{
+        const id = 'colchk_'+k.replace(/[^a-z0-9]/gi,'_');
+        const chk = document.createElement('input'); chk.type='checkbox'; chk.id=id; chk.checked = state.visibleColumns.includes(k);
+        chk.addEventListener('change', ()=>{ if(chk.checked){ if(!state.visibleColumns.includes(k)) state.visibleColumns.push(k);} else { state.visibleColumns = state.visibleColumns.filter(x=>x!==k); } render(); });
+        const lbl = document.createElement('label'); lbl.style.marginRight='8px'; lbl.appendChild(chk); lbl.append(' '+k);
+        columnsSpan.appendChild(lbl);
+      });
+    }
+
+    function escapeHtml(s){ return String(s).replace(/[&<>'"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"})[c]); }
+    function highlightText(text, term){ if(!term) return escapeHtml(text); const t = String(term); const re = new RegExp('('+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'); return escapeHtml(text).replace(re, '<mark>$1</mark>'); }
+
+    function matchesFilter(item, term){
+      // global filter
+      if(term){ const s = term.toLowerCase(); if(Object.values(item).some(v=>String(v||'').toLowerCase().includes(s))) return true; return false; }
+      return true;
+    }
+    function matchesColumnFilter(item, col, val){ if(!col || !val) return true; const v = item[col]; if(v==null) return false; return String(v).toLowerCase().includes(String(val).toLowerCase()); }
+
+    function compare(a,b,key,dir){ const va = a[key], vb = b[key]; if(va==null && vb==null) return 0; if(va==null) return dir==='asc'?1:-1; if(vb==null) return dir==='asc'?-1:1; if(!isNaN(va) && !isNaN(vb)) return (Number(va)-Number(vb))*(dir==='asc'?1:-1); return String(va).localeCompare(String(vb))*(dir==='asc'?1:-1); }
+
+    function render(){
+      // filter
+      const filtered = data.filter(d=> matchesFilter(d, state.filter) && matchesColumnFilter(d, state.columnFilter, state.columnFilterVal) );
+      // sort
+      if(state.sortKey) filtered.sort((a,b)=>compare(a,b,state.sortKey,state.sortDir));
+      // paginate
+      const total = filtered.length;
+      const pageCount = Math.max(1, Math.ceil(total/state.pageSize));
+      if(state.page>pageCount) state.page = pageCount;
+      const start = (state.page-1)*state.pageSize; const pageItems = filtered.slice(start, start+state.pageSize);
+
+      // build table using visible columns
+      const cols = state.visibleColumns.length? state.visibleColumns : keys.slice(0,6);
+      let html = '<table class="lib"><thead><tr>' + cols.map(k=>`<th data-key="${k}" style="cursor:pointer">${k}</th>`).join('') + '<th>actions</th></tr></thead><tbody>';
+      pageItems.forEach(item=>{
+        html += '<tr>' + cols.map(k=>{
+          const raw = item[k]!==undefined?String(item[k]):'';
+          // decide which term to highlight (column specific val has priority)
+          const hterm = state.columnFilter && state.columnFilterVal && state.columnFilter===k ? state.columnFilterVal : state.filter;
+          return `<td>${highlightText(raw, hterm)}</td>`;
+        }).join('') + `<td><button class=play-btn data-id="${item.id||''}">Copy ID</button></td></tr>`;
+      });
+      html += '</tbody></table>';
+      preview.innerHTML = html;
+
+      // wire copy buttons and header clicks
+      preview.querySelectorAll('.play-btn').forEach(b=>b.addEventListener('click', (ev)=>{ const id = ev.target.getAttribute('data-id'); if(!id) return; navigator.clipboard && navigator.clipboard.writeText(String(id)).then(()=>{ev.target.textContent='Copied'; appendLog('Copied ID '+id)}).catch(()=>{}); }));
+      preview.querySelectorAll('th[data-key]').forEach(h=>h.addEventListener('click', (ev)=>{ const k = ev.currentTarget.getAttribute('data-key'); if(state.sortKey===k) state.sortDir = state.sortDir==='asc'?'desc':'asc'; else state.sortKey = k; sortSelect.value = state.sortKey; sortDirBtn.textContent = state.sortDir==='asc'?'Asc':'Desc'; render(); }));
+
+      // pager UI
+      pageInfo.textContent = `Page ${state.page} / ${pageCount} — ${total} items`;
+      prevBtn.disabled = state.page<=1; nextBtn.disabled = state.page>=pageCount;
+    }
+
+    // wire controls
+    renderColumnSelector();
+    const colFilterVal = document.getElementById('libColumnFilterVal');
+    const colFilterSelEl = document.getElementById('libColumnFilter');
+    filterInput.addEventListener('input', (e)=>{ state.filter = e.target.value; state.page = 1; render(); });
+    colFilterSelEl.addEventListener('change', (e)=>{ state.columnFilter = e.target.value; state.page = 1; render(); });
+    colFilterVal.addEventListener('input', (e)=>{ state.columnFilterVal = e.target.value; state.page = 1; render(); });
+    sortSelect.addEventListener('change', (e)=>{ state.sortKey = e.target.value; render(); });
+    sortDirBtn.addEventListener('click', ()=>{ state.sortDir = state.sortDir==='asc'?'desc':'asc'; sortDirBtn.textContent = state.sortDir==='asc'?'Asc':'Desc'; render(); });
+    pageSizeSel.addEventListener('change', (e)=>{ state.pageSize = parseInt(e.target.value,10); state.page = 1; render(); });
+    prevBtn.addEventListener('click', ()=>{ if(state.page>1){ state.page--; render(); } });
+    nextBtn.addEventListener('click', ()=>{ state.page++; render(); });
+
+    // initial render
+    render();
+  })();
+
+  // small helper: setBusy respects data-busy attribute
+  function setBusy(el, busy=true){ if(!el) return; el.disabled = busy; if(busy) el.textContent = (el.getAttribute('data-busy')||'Working...'); else el.textContent = el.getAttribute('data-label') || el.textContent; }
+  </script>
+  </body>
+</html>

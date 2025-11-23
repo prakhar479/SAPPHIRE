@@ -1,0 +1,9 @@
+flask>=2.0
+numpy
+annoy
+pandas
+pyarrow
+torch
+librosa
+soundfile
+scikit-learn
