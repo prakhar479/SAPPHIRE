@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Prevent caching during development -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <title>SAPPHIRE | Audio Embedding Demo</title>
   <link rel="stylesheet" href="/static/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,6 +92,34 @@
           </div>
           <div id="results" class="results-grid"></div>
         </div>
+      </div>
+
+      <!-- Add to Library Section -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h2 class="section-title" style="margin: 0;">Add to Library</h2>
+        </div>
+        <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 14px;">
+          Add new songs to the searchable library. Files will be processed, embedded, and added to the index.
+        </p>
+        <form id="addLibraryForm" style="display: flex; flex-direction: column; gap: 12px;">
+          <div id="libraryDropZone" class="upload-drop" style="cursor: pointer;">
+            <input type="file" id="libraryFiles" name="files[]" multiple accept="audio/*" style="display: none;">
+            <div id="libraryDropText">
+              <div style="font-size: 48px; margin-bottom: 8px;">📁</div>
+              <div style="font-weight: 500;">Click to select audio files or drag & drop</div>
+              <div style="margin-top: 4px; font-size: 12px; color: var(--text-muted);">Multiple files supported</div>
+            </div>
+            <div id="libraryFilePreview" class="file-preview hidden">
+              <div id="librarySelectedFiles" style="font-size: 14px;"></div>
+              <button type="button" id="clearLibraryFiles" class="btn btn-ghost"
+                style="margin-top: 8px; padding: 6px 12px; font-size: 12px;">Clear</button>
+            </div>
+          </div>
+          <button type="submit" id="addLibraryBtn" class="btn btn-primary" disabled>Add to Library</button>
+          <div id="libraryProgress" class="hidden"
+            style="background: var(--background); padding: 12px; border-radius: 8px; font-size: 14px;"></div>
+        </form>
       </div>
 
       <!-- Library Section -->
@@ -237,16 +269,21 @@
         const info = item.info || {};
         const title = info.track_id || `Song ${item.id}`;
         const details = Object.entries(info)
-          .filter(([k]) => k !== 'track_id')
+          .filter(([k]) => k !== 'track_id' && k !== 'audio_path')
           .map(([k, v]) => `<span class="badge" style="margin-right: 4px;">${k}: ${v}</span>`)
           .join('');
+
+        // Check for audio path
+        const audioPath = info.audio_path || info.preview_url;
+        const audioPlayer = audioPath ?
+          `<audio controls src="${audioPath}" style="margin-top: 8px; height: 32px; width: 100%;"></audio>` : '';
 
         el.innerHTML = `
                     <div class="result-info">
                         <div style="font-weight: 600;">${title}</div>
                         <div class="result-meta">ID: ${item.id}</div>
                         <div style="margin-top: 8px;">${details}</div>
-                        ${info.preview_url ? `<audio controls src="${info.preview_url}" style="margin-top: 8px; height: 32px; width: 100%;"></audio>` : ''}
+                        ${audioPlayer}
                     </div>
                     <div class="result-score">
                         <div>${(1 - item.distance).toFixed(4)}</div>
@@ -261,8 +298,11 @@
       $('resultsArea').classList.add('hidden');
       $('results').innerHTML = '';
       $('songId').value = '';
+      // Remove analysis and player sections
       const analysisSection = document.getElementById('analysisSection');
       if (analysisSection) analysisSection.remove();
+      const playerSection = document.getElementById('uploadedPlayerSection');
+      if (playerSection) playerSection.remove();
     });
 
     // --- Upload ---
@@ -332,7 +372,14 @@
 
         if (data.ok) {
           renderResults(data.results);
-          if (data.analysis) renderAnalysis(data.analysis);
+          if (data.analysis) {
+            renderAnalysis(data.analysis);
+            // Add playback for uploaded file if available
+            const uploadedFile = fileInput.files[0];
+            if (uploadedFile) {
+              addUploadedAudioPlayer(uploadedFile);
+            }
+          }
           log(`Upload analysis complete. Found ${data.results.length} matches.`);
         } else {
           $('results').innerHTML = `<div style="color: var(--error); text-align: center;">Error: ${data.error}</div>`;
@@ -452,6 +499,27 @@
     $('clearLog').addEventListener('click', () => $('logEntries').innerHTML = '');
 
     // --- Live Analysis Visualization ---
+    function addUploadedAudioPlayer(file) {
+      let playerSection = document.getElementById('uploadedPlayerSection');
+      if (!playerSection) {
+        playerSection = document.createElement('div');
+        playerSection.id = 'uploadedPlayerSection';
+        playerSection.className = 'card';
+        playerSection.style.marginTop = '24px';
+        // Simply append to resultsArea instead of insertBefore
+        const resultsArea = $('resultsArea');
+        if (resultsArea) {
+          resultsArea.appendChild(playerSection);
+        }
+      }
+
+      const url = URL.createObjectURL(file);
+      playerSection.innerHTML = `
+                <h2 class="section-title">Uploaded Audio</h2>
+                <audio controls src="${url}" style="width: 100%; margin-top: 8px;"></audio>
+            `;
+    }
+
     function renderAnalysis(data) {
       // Create analysis section if not exists
       let analysisSection = document.getElementById('analysisSection');
@@ -467,6 +535,12 @@
                 <h2 class="section-title">Live Audio Analysis</h2>
                 <div style="display: grid; gap: 24px;">
                     <div>
+                        <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">Waveform</h3>
+                        <div id="waveformViz" style="height: 150px; background: var(--background); border-radius: 8px; padding: 16px;">
+                            <canvas id="waveformCanvas" style="width: 100%; height: 100%;"></canvas>
+                        </div>
+                    </div>
+                    <div>
                         <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">MFCC Features</h3>
                         <div id="mfccViz" style="height: 200px; background: var(--background); border-radius: 8px; padding: 16px; overflow: hidden;">
                             <canvas id="mfccCanvas" style="width: 100%; height: 100%;"></canvas>
@@ -478,12 +552,84 @@
                             <canvas id="chromaCanvas" style="width: 100%; height: 100%;"></canvas>
                         </div>
                     </div>
+                    <div>
+                        <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">Spectral Centroid</h3>
+                        <div id="spectralViz" style="height: 120px; background: var(--background); border-radius: 8px; padding: 16px;">
+                            <canvas id="spectralCanvas" style="width: 100%; height: 100%;"></canvas>
+                        </div>
+                    </div>
                 </div>
             `;
 
-      // Draw MFCC heatmap
-      drawHeatmap('mfccCanvas', data.mfcc, 'Blues');
-      drawHeatmap('chromaCanvas', data.chroma, 'Greens');
+      // Draw visualizations
+      if (data.waveform) drawWaveform('waveformCanvas', data.waveform);
+      if (data.mfcc) drawHeatmap('mfccCanvas', data.mfcc, 'Blues');
+      if (data.chroma) drawHeatmap('chromaCanvas', data.chroma, 'Greens');
+      if (data.spectral_centroid) drawLinePlot('spectralCanvas', data.spectral_centroid[0], 'Spectral Centroid');
+    }
+
+    function drawWaveform(canvasId, data) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas || !data || data.length === 0) return;
+
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width = canvas.offsetWidth;
+      const height = canvas.height = canvas.offsetHeight;
+
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw center line
+      ctx.strokeStyle = '#e2e8f0';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(0, height / 2);
+      ctx.lineTo(width, height / 2);
+      ctx.stroke();
+
+      // Draw waveform
+      ctx.strokeStyle = '#2563eb';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+
+      const step = width / data.length;
+      for (let i = 0; i < data.length; i++) {
+        const x = i * step;
+        const y = (height / 2) - (data[i] * height / 2);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+
+    function drawLinePlot(canvasId, data, label) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas || !data || data.length === 0) return;
+
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width = canvas.offsetWidth;
+      const height = canvas.height = canvas.offsetHeight;
+
+      ctx.clearRect(0, 0, width, height);
+
+      // Find min/max
+      const min = Math.min(...data);
+      const max = Math.max(...data);
+      const range = max - min || 1;
+
+      // Draw line
+      ctx.strokeStyle = '#10b981';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+
+      const step = width / data.length;
+      for (let i = 0; i < data.length; i++) {
+        const x = i * step;
+        const normalized = (data[i] - min) / range;
+        const y = height - (normalized * height * 0.9) - (height * 0.05);
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
     }
 
     function drawHeatmap(canvasId, data, colorScheme) {
@@ -524,6 +670,72 @@
         }
       }
     }
+
+    // --- Add to Library ---
+    const libraryDropZone = $('libraryDropZone');
+    const libraryFilesInput = $('libraryFiles');
+
+    libraryDropZone.addEventListener('click', () => libraryFilesInput.click());
+    libraryFilesInput.addEventListener('change', () => {
+      if (libraryFilesInput.files.length > 0) {
+        const fileList = Array.from(libraryFilesInput.files).map(f => f.name).join(', ');
+        $('librarySelectedFiles').textContent = `${libraryFilesInput.files.length} file(s) selected: ${fileList}`;
+        $('libraryDropText').classList.add('hidden');
+        $('libraryFilePreview').classList.remove('hidden');
+        $('addLibraryBtn').disabled = false;
+      }
+    });
+
+    $('clearLibraryFiles').addEventListener('click', (e) => {
+      e.stopPropagation();
+      libraryFilesInput.value = '';
+      $('libraryDropText').classList.remove('hidden');
+      $('libraryFilePreview').classList.add('hidden');
+      $('addLibraryBtn').disabled = true;
+    });
+
+    $('addLibraryForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (libraryFilesInput.files.length === 0) return;
+
+      setBusy($('addLibraryBtn'), true, 'Processing...');
+      $('libraryProgress').classList.remove('hidden');
+      $('libraryProgress').innerHTML = `Processing ${libraryFilesInput.files.length} file(s)... This may take a moment.`;
+
+      try {
+        const formData = new FormData();
+        for (let file of libraryFilesInput.files) {
+          formData.append('files[]', file);
+        }
+
+        const r = await fetch('/api/add_to_library', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await r.json();
+
+        if (data.ok) {
+          $('libraryProgress').innerHTML = `
+            <div style="color: var(--primary); font-weight: 500;">✓ Success!</div>
+            <div>Added ${data.added} song(s) to library</div>
+            <div>Total library size: ${data.total_library_size} songs</div>
+            ${data.failed.length > 0 ? `<div style="color: var(--text-muted); margin-top: 8px;">Failed: ${data.failed.join(', ')}</div>` : ''}
+          `;
+          log(`Added ${data.added} songs to library`);
+          libraryFilesInput.value = '';
+          $('libraryDropText').classList.remove('hidden');
+          $('libraryFilePreview').classList.add('hidden');
+          $('addLibraryBtn').disabled = true;
+          checkHealth(); // Refresh library count
+        } else {
+          $('libraryProgress').innerHTML = `<div style="color: var(--error);">Error: ${data.error}</div>`;
+        }
+      } catch (e) {
+        $('libraryProgress').innerHTML = `<div style="color: var(--error);">Failed: ${e}</div>`;
+      } finally {
+        setBusy($('addLibraryBtn'), false);
+      }
+    });
 
     // --- Init ---
     checkHealth();
