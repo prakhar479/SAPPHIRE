@@ -16,6 +16,16 @@ SAPPHIRE is a comprehensive music analysis pipeline that addresses the "perceptu
 - **Quality Assessment**: Audio quality filtering and lyrics completeness evaluation
 - **Modular Architecture**: Flexible pipeline components that can be used independently
 
+## Documentation
+
+Detailed documentation is available in the `docs/` directory:
+
+- [**Architecture Overview**](docs/ARCHITECTURE.md): System design and component interactions.
+- [**API Reference**](docs/API_REFERENCE.md): Detailed API documentation for all modules.
+- [**Configuration Guide**](docs/CONFIGURATION.md): Explanation of configuration options.
+- [**Developer Guide**](docs/DEVELOPER_GUIDE.md): Instructions for contributing and extending.
+- [**CLI Guide**](CLI_GUIDE.md): Command-line interface usage.
+
 ## Architecture
 
 The SAPPHIRE pipeline consists of several key components:

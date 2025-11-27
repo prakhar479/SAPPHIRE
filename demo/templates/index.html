@@ -1,424 +1,534 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>SAPPHIRE Embedding Demo</title>
-    <style>
-      :root{--accent:#2563eb;--muted:#6b7280;--surface:#ffffff;--card:#f8fafc}
-      html,body{height:100%}
-      body { font-family: Inter, Arial, sans-serif; margin: 24px; max-width: 1100px; color:#0f172a }
-      header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
-      h1{font-size:20px;margin:0}
-      .controls { margin-bottom: 12px; display:flex; gap:12px; flex-wrap:wrap }
-      #results { margin-top: 12px; }
-      .song { padding:10px; border-radius:8px; background:var(--card); display:flex; gap:12px; align-items:flex-start; box-shadow: 0 1px 0 rgba(15,23,42,0.03) }
-      .song + .song{margin-top:8px}
-      .song .meta { font-size: 0.95em; color:#0f172a }
-      .status { font-weight:600; margin-left:8px }
-      .small { font-size:0.9em; color:var(--muted) }
-      .btn { padding:8px 12px; background:var(--accent); color:#fff; border:0; border-radius:6px; cursor:pointer }
-      .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(37,99,235,0.12)}
-      .row { display:flex; gap:12px; align-items:center; margin-bottom:8px }
-      pre { background:#fff; padding:8px; border-radius:6px; overflow:auto; border:1px solid #eef2ff }
-      .badge{display:inline-block;padding:6px 8px;border-radius:999px;font-size:0.8em;background:#eef2ff;color:var(--accent);margin-left:8px}
-      #uploadDrop{border:1px dashed #e6edf8;padding:12px;border-radius:8px;background:#fbfdff}
-      #libraryPreview{margin-top:8px}
-      table.lib{width:100%;border-collapse:collapse}
-      table.lib th, table.lib td{padding:8px;text-align:left;border-bottom:1px solid #f1f5f9;font-size:0.9em}
-      .flex-between{display:flex;justify-content:space-between;align-items:center}
-      .muted{color:var(--muted)}
-      .control-group{display:flex;gap:8px;align-items:center}
-      audio.player{width:160px}
-      .play-btn{background:#fff;border:1px solid #e6eefb;padding:6px;border-radius:6px;cursor:pointer}
-    </style>
-  </head>
-  <body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAPPHIRE | Audio Embedding Demo</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
     <header>
-      <img src="/static/logo.svg" alt="SAPPHIRE" style="width:72px; height:72px;" />
-      <div style="flex:1">
-        <div class="flex-between">
-          <div>
-            <h1>SAPPHIRE — Embedding Similarity Demo</h1>
-            <div class="small">Build the index, search by song ID, or upload audio to find similar songs.</div>
-          </div>
+      <img src="/static/logo.svg" alt="SAPPHIRE" class="logo" />
+      <div>
+        <h1>SAPPHIRE</h1>
+        <p class="subtitle">Audio Embedding & Similarity Search Demo</p>
+      </div>
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 16px;">
+        <a href="/model_details" class="btn btn-ghost" style="text-decoration: none;">Model Details</a>
+        <div id="statusBadges" class="controls" style="justify-content: flex-end; margin: 0;">
+          <span id="indexStatus" class="badge">Index: Checking...</span>
+          <span id="embedderStatus" class="badge">Embedder: Checking...</span>
         </div>
       </div>
     </header>
 
-    <div class="controls row">
-      <div class="control-group">
-        <button id="buildIndex" class="btn" data-busy="Indexing...">Build / Rebuild Index</button>
-        <button id="clearResults" class="btn ghost">Clear Results</button>
-      </div>
-      <div style="margin-left:8px">
-        <span id="indexStatus" class="badge">index: unknown</span>
-        <span id="embedderStatus" class="badge" style="background:#fff;color:var(--muted);border:1px solid #eef2ff">embedder: unknown</span>
-      </div>
-    </div>
-
-    <div class="controls row" style="align-items:center">
-      <div class="small muted">Last action:</div>
-      <div id="lastAction" class="badge" style="background:#fff;color:var(--muted);border:1px solid #eef2ff;margin-left:6px">idle</div>
-      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
-        <button id="showLog" class="btn ghost" style="padding:6px">Show Log</button>
-        <button id="clearLog" class="btn ghost" style="padding:6px">Clear Log</button>
-      </div>
-    </div>
-
-    <div class="controls row">
-      <label>Song ID (integer): <input id="songId" type="number" /></label>
-      <label>k: <input id="k" type="number" value="10" style="width:80px" /></label>
-      <button id="searchBtn" class="btn" data-busy="Searching...">Find Similar</button>
-      <span id="libraryCount" class="small" style="margin-left:8px"></span>
-    </div>
-
-    <h3>Upload Audio (quick test)</h3>
-    <div class="controls">
-      <form id="uploadForm" style="width:100%">
-        <div id="uploadDrop" class="row" style="align-items:center">
-          <input type="file" id="audioFile" name="file" accept="audio/*" />
-          <div style="flex:1">
-            <div class="small"> <span id="filePreview">No file selected</span></div>
-            <div class="small muted">Or drag-and-drop an audio file onto the input.</div>
+    <main>
+      <!-- Search Section -->
+      <div class="card">
+        <h2 class="section-title">Search Similar Audio</h2>
+        <div class="controls">
+          <div style="flex: 1;">
+            <input id="songId" type="number" placeholder="Enter Song ID..."
+              style="width: 100%; box-sizing: border-box;">
           </div>
-          <label>k: <input id="uploadK" type="number" value="10" style="width:80px" /></label>
-          <button type="submit" class="btn" data-busy="Uploading...">Upload & Search</button>
+          <div style="width: 100px;">
+            <input id="k" type="number" value="10" min="1" max="100" title="Number of results">
+          </div>
+          <button id="searchBtn" class="btn btn-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            Search
+          </button>
         </div>
-      </form>
-      <div id="uploadStatus" class="small"></div>
-    </div>
+      </div>
 
-    <div id="results"></div>
+      <!-- Upload Section -->
+      <div class="card">
+        <h2 class="section-title">Upload & Analyze</h2>
+        <form id="uploadForm">
+          <div id="uploadDrop" class="upload-area">
+            <input type="file" id="audioFile" name="file" accept="audio/*" class="hidden" />
+            <div id="dropText">
+              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                style="margin-bottom: 8px; color: var(--primary);">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+              </svg>
+              <p style="margin: 0; font-weight: 500;">Click to upload or drag and drop</p>
+              <p style="margin: 4px 0 0 0; font-size: 13px; color: var(--text-muted);">MP3, WAV, OGG supported</p>
+            </div>
+            <div id="filePreview" class="hidden"
+              style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <span id="fileName" style="font-weight: 500;"></span>
+              <button type="button" id="clearFile" class="btn btn-ghost"
+                style="padding: 4px 8px; font-size: 12px;">Change</button>
+            </div>
+          </div>
+          <div class="controls" style="margin-top: 16px; justify-content: flex-end;">
+            <button type="submit" class="btn btn-primary" id="uploadBtn" disabled>Analyze Upload</button>
+          </div>
+        </form>
+      </div>
 
-    <h3>Library Preview</h3>
-    <div id="library">
-      {% if metadata %}
-        <pre id="metaJson" style="display:none">{{ metadata|tojson(indent=2) }}</pre>
-        <div id="libraryControls" class="row" style="margin-top:8px;align-items:center;gap:12px">
-          <input id="libFilter" placeholder="Global filter (id, title, artist...)" style="flex:1;padding:8px;border-radius:6px;border:1px solid #eef2ff" />
-          <select id="libColumnFilter" style="width:220px;padding:8px;border-radius:6px;border:1px solid #eef2ff">
-            <option value="">Column filter (optional)</option>
+      <!-- Results Section -->
+      <div id="resultsArea" class="hidden">
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h2 class="section-title" style="margin: 0;">Results</h2>
+            <button id="clearResults" class="btn btn-ghost" style="font-size: 12px; padding: 6px 12px;">Clear</button>
+          </div>
+          <div id="results" class="results-grid"></div>
+        </div>
+      </div>
+
+      <!-- Library Section -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h2 class="section-title" style="margin: 0;">Library</h2>
+          <div class="controls">
+            <button id="buildIndex" class="btn btn-ghost">Rebuild Index</button>
+          </div>
+        </div>
+
+        <div class="controls" style="margin-bottom: 16px;">
+          <input id="libFilter" type="text" placeholder="Filter library..." style="flex: 1;">
+          <select id="libPageSize" style="width: auto;">
+            <option value="10">10 per page</option>
+            <option value="25">25 per page</option>
+            <option value="50">50 per page</option>
           </select>
-          <input id="libColumnFilterVal" placeholder="value" style="width:160px;padding:8px;border-radius:6px;border:1px solid #eef2ff" />
-          <select id="libSort" style="width:160px;padding:8px;border-radius:6px;border:1px solid #eef2ff">
-            <option value="">Sort by (auto)</option>
-          </select>
-          <button id="libSortDir" class="btn ghost" data-dir="asc" style="padding:6px 8px">Asc</button>
-          <label style="margin-left:8px">Page size: <select id="libPageSize" style="margin-left:6px;padding:6px"><option>10</option><option>25</option><option>50</option></select></label>
         </div>
-        <div id="libColumnSelector" class="small" style="margin-top:6px">Show columns: <span id="libColumns"></span></div>
-        <div id="libraryPreview" class="small" style="margin-top:8px"></div>
-        <div id="libraryPager" class="row small" style="margin-top:8px;align-items:center">
-          <button id="libPrev" class="btn ghost">Prev</button>
-          <span id="libPageInfo" style="margin:0 8px">&nbsp;</span>
-          <button id="libNext" class="btn ghost">Next</button>
+
+        <div id="library" class="table-container">
+          <div id="libraryPreview">Loading library...</div>
         </div>
-      {% else %}
-        <p>No metadata found in demo; upload or generate metadata file at <code>demo/metadata.json</code> or in <code>models/embedder_mirex/embeddings/metadata.json</code>.</p>
-      {% endif %}
-    </div>
 
-    <p><a href="/static_demo">Open static demo pages with study plots</a></p>
-    <div style="margin-top:12px">
-      <button id="showVerbose" class="btn small ghost">Show Debug Info</button>
-      <pre id="verboseOut" style="display:none; margin-top:8px; background:#fff; padding:8px; border:1px solid #eee; max-height:240px; overflow:auto"></pre>
-    </div>
+        <div class="controls" style="margin-top: 16px; justify-content: center;">
+          <button id="libPrev" class="btn btn-ghost" disabled>Previous</button>
+          <span id="libPageInfo" style="font-size: 14px; color: var(--text-muted);">Page 1</span>
+          <button id="libNext" class="btn btn-ghost" disabled>Next</button>
+        </div>
 
-    <div id="processLog" style="display:none;margin-top:12px">
-      <h4 style="margin:6px 0">Process Log</h4>
-      <div id="logEntries" style="background:#0f172a;color:#fff;padding:8px;border-radius:6px;max-height:220px;overflow:auto;font-family:monospace;font-size:12px"></div>
-    </div>
+        <!-- Hidden metadata storage -->
+        {% if metadata %}
+        <script id="metaJson" type="application/json">{{ metadata|tojson }}</script>
+        {% endif %}
+      </div>
+
+      <!-- Debug/Log Section -->
+      <div style="margin-top: 40px;">
+        <button id="toggleLog" class="btn btn-ghost" style="width: 100%;">Show System Log</button>
+        <div id="processLog" class="log-container hidden">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <strong>System Log</strong>
+            <button id="clearLog"
+              style="background: none; border: none; color: #94a3b8; cursor: pointer;">Clear</button>
+          </div>
+          <div id="logEntries"></div>
+        </div>
+      </div>
+    </main>
+  </div>
 
   <script>
-  // helper: show/hide and disable controls
-  function setBusy(el, busy=true){
-    el.disabled = busy;
-    if(busy) el.textContent = (el.getAttribute('data-busy')||'Working...');
-  }
+    // --- Utilities ---
+    const $ = (id) => document.getElementById(id);
+    const ts = () => new Date().toLocaleTimeString();
 
-  // process log and last action helpers
-  function ts(){ return new Date().toISOString().replace('T',' ').slice(0,19); }
-  function appendLog(msg){
-    const log = document.getElementById('logEntries');
-    if(!log) return;
-    const entry = document.createElement('div'); entry.textContent = `[${ts()}] ${msg}`;
-    log.appendChild(entry);
-    log.scrollTop = log.scrollHeight;
-    // also update lastAction badge
-    const last = document.getElementById('lastAction'); if(last) last.textContent = msg.split('\n')[0];
-  }
-  document.getElementById('showLog').addEventListener('click', ()=>{ const p = document.getElementById('processLog'); p.style.display = p.style.display==='none'?'block':'none'; });
-  document.getElementById('clearLog').addEventListener('click', ()=>{ const log = document.getElementById('logEntries'); if(log) log.innerHTML=''; appendLog('Log cleared'); });
+    function log(msg, type = 'info') {
+      const el = document.createElement('div');
+      el.className = 'log-entry';
+      el.innerHTML = `<span style="color: #64748b;">[${ts()}]</span> ${msg}`;
+      $('logEntries').appendChild(el);
+      $('logEntries').scrollTop = $('logEntries').scrollHeight;
+    }
 
-  async function checkStatus(){
-    // check library count and health
-    try{
-      appendLog('Starting health check');
-      const r = await fetch('/api/health');
-      const j = await r.json();
-      if(j.ok){
-        document.getElementById('libraryCount').textContent = j.embeddings_present ? 'embeddings: present' : 'embeddings: missing';
-        document.getElementById('indexStatus').textContent = j.index_built ? 'index: built' : 'index: not built';
-        document.getElementById('embedderStatus').textContent = (j.embedder_checkpoint_present && j.torch_available) ? 'embedder: ready' : j.embedder_checkpoint_present ? 'embedder: checkpoint present (torch missing)' : 'embedder: checkpoint not found';
-        // set badge classes/colors
-        const idx = document.getElementById('indexStatus');
-        idx.className = 'badge';
-        const emb = document.getElementById('embedderStatus');
-        emb.className = 'badge';
-        appendLog(`Health: index_built=${j.index_built}, embeddings_present=${j.embeddings_present}`);
+    function setBusy(btn, isBusy, label = 'Working...') {
+      if (!btn) return;
+      btn.disabled = isBusy;
+      const originalLabel = btn.getAttribute('data-original-label') || btn.innerHTML;
+      if (isBusy) {
+        if (!btn.getAttribute('data-original-label')) btn.setAttribute('data-original-label', btn.innerHTML);
+        btn.innerHTML = `<span class="spin">↻</span> ${label}`;
+      } else {
+        btn.innerHTML = originalLabel;
       }
-    }catch(e){ console.warn('health check failed', e); }
-  }
+    }
 
-  // run status check on load
-  checkStatus();
+    // --- Status & Health ---
+    async function checkHealth() {
+      try {
+        const r = await fetch('/api/health');
+        const data = await r.json();
 
-  document.getElementById('showVerbose').addEventListener('click', async ()=>{
-    const out = document.getElementById('verboseOut');
-    out.style.display = 'block';
-    out.textContent = 'Loading...';
-    try{
-      const r = await fetch('/api/health/verbose');
-      const j = await r.json();
-      out.textContent = JSON.stringify(j, null, 2);
-    }catch(e){ out.textContent = 'Failed to load verbose health: '+e }
-  });
+        const idx = $('indexStatus');
+        const emb = $('embedderStatus');
 
-  document.getElementById('buildIndex').addEventListener('click', async ()=>{
-    const btn = document.getElementById('buildIndex');
-    const status = document.getElementById('indexStatus');
-    setBusy(btn,true);
-    status.textContent = 'indexing...';
-    appendLog('Triggering index build');
-    try{
-      const r = await fetch('/api/index', {method:'POST'});
-      const j = await r.json();
-      if (j.ok) status.textContent = `index: built (${j.items_indexed} items)`;
-      else status.textContent = 'index: error';
-      appendLog('Index build finished: ' + (j.ok? `items_indexed=${j.items_indexed}` : (j.error||'error')));
-    }catch(e){ status.textContent = 'index: failed' }
-    setBusy(btn,false);
-    checkStatus();
-  });
+        if (data.ok) {
+          idx.textContent = data.index_built ? 'Index Ready' : 'Index Missing';
+          idx.className = `badge ${data.index_built ? 'success' : 'error'}`;
 
-  document.getElementById('searchBtn').addEventListener('click', async ()=>{
-    const id = document.getElementById('songId').value;
-    const k = document.getElementById('k').value || 10;
-    const payload = { song_id: id ? parseInt(id,10) : null, k: parseInt(k,10) };
-    const out = document.getElementById('results');
-    out.innerHTML = '';
-    setBusy(document.getElementById('searchBtn'), true);
-    appendLog('Searching — payload: ' + JSON.stringify(payload));
-    try{
-      const r = await fetch('/api/search', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)});
-      const j = await r.json();
-      if (!j.ok) { out.textContent = 'Error: ' + (j.error||'unknown'); return; }
-      j.results.forEach(it => {
-        const div = document.createElement('div');
-        div.className = 'song';
-        const info = it.info || {};
-        const infoHtml = `<div style="min-width:220px"><strong>ID:</strong> ${it.id}<br/><strong>distance:</strong> ${it.distance.toFixed(4)}${info.duration?('<br/><strong>duration:</strong> '+info.duration+'s'):''}</div>`;
-        const metaHtml = `<div><pre>${JSON.stringify(info, null, 2)}</pre></div>`;
-        div.innerHTML = infoHtml + metaHtml;
-        // add optional play button if a preview url exists
-        if(info.preview_url){
-          const btn = document.createElement('button'); btn.className='play-btn'; btn.textContent='Play';
-          btn.addEventListener('click', ()=>{
-            // small inline audio player
-            let existing = div.querySelector('audio');
-            if(existing){ existing.paused?existing.play():existing.pause(); return }
-            const audio = document.createElement('audio'); audio.src = info.preview_url; audio.controls = true; audio.className='player';
-            div.appendChild(audio);
-            audio.play().catch(()=>{});
-          });
-          div.appendChild(btn);
+          emb.textContent = data.embedder_checkpoint_present ? 'Embedder Ready' : 'Embedder Missing';
+          emb.className = `badge ${data.embedder_checkpoint_present ? 'success' : 'error'}`;
+
+          log(`Health check: Index=${data.index_built}, Embedder=${data.embedder_checkpoint_present}`);
         }
-        out.appendChild(div);
-      });
-        appendLog(`Search returned ${j.results.length} results`);
-    }catch(e){ out.textContent = 'Search failed: ' + e }
-    setBusy(document.getElementById('searchBtn'), false);
-  });
-
-  // upload form handler
-  document.getElementById('uploadForm').addEventListener('submit', async (ev)=>{
-    ev.preventDefault();
-    const fileInput = document.getElementById('audioFile');
-    const status = document.getElementById('uploadStatus');
-    status.textContent = '';
-    if (!fileInput.files.length) { status.textContent = 'Select a file first'; return; }
-    const file = fileInput.files[0];
-    // show filename + duration (if available)
-    document.getElementById('filePreview').textContent = file.name;
-    try{
-      const audio = document.createElement('audio');
-      audio.src = URL.createObjectURL(file);
-      audio.addEventListener('loadedmetadata', ()=>{
-        const d = Math.round(audio.duration);
-        document.getElementById('filePreview').textContent = `${file.name} (${d}s)`;
-      });
-    }catch(e){ /* ignore */ }
-
-    const form = new FormData();
-    form.append('file', file);
-    form.append('k', document.getElementById('uploadK').value || '10');
-    const submitBtn = ev.submitter || ev.target.querySelector('button[type=submit]');
-    setBusy(submitBtn,true);
-    status.textContent = 'Uploading and embedding...';
-    try {
-      appendLog('Uploading file: ' + file.name + ' ('+file.size+' bytes)');
-      const r = await fetch('/api/upload', { method: 'POST', body: form });
-      const j = await r.json();
-      if (!j.ok) { status.textContent = 'Error: ' + (j.error || 'unknown'); submitBtn.disabled = false; return; }
-      status.innerHTML = `<div><strong>Embedding:</strong> <small>length ${j.embedding.length}</small></div>`;
-      const out = document.getElementById('results');
-      out.innerHTML = '';
-      j.results.forEach(it => {
-        const div = document.createElement('div');
-        div.className = 'song';
-        div.innerHTML = `<div class="meta"><strong>ID:</strong> ${it.id}<br/><strong>distance:</strong> ${it.distance.toFixed(4)}</div><div><pre>${JSON.stringify(it.info||{}, null, 2)}</pre></div>`;
-        out.appendChild(div);
-      });
-      appendLog(`Upload returned ${j.results.length} results; embedding length ${j.embedding.length}`);
-    } catch (e) {
-      status.textContent = 'Upload failed: ' + e;
-      appendLog('Upload failed: ' + e);
-    } finally {
-      setBusy(submitBtn,false);
-      checkStatus();
+      } catch (e) {
+        console.error(e);
+        log('Health check failed', 'error');
+      }
     }
-  });
 
-  // drag and drop UX: highlight drop area and populate file input preview
-  (function(){
-    const drop = document.getElementById('uploadDrop');
-    if(!drop) return;
-    ['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev, (e)=>{e.preventDefault(); drop.style.borderColor='#cfe2ff'}));
-    ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev, (e)=>{e.preventDefault(); drop.style.borderColor=''}));
-    drop.addEventListener('drop', (e)=>{
-      const f = e.dataTransfer.files && e.dataTransfer.files[0];
-      if(!f) return;
-      const input = document.getElementById('audioFile');
-      const dt = new DataTransfer(); dt.items.add(f); input.files = dt.files;
-      document.getElementById('filePreview').textContent = f.name;
-      appendLog('File dropped: ' + f.name);
+    // --- Search ---
+    $('searchBtn').addEventListener('click', async () => {
+      const id = $('songId').value;
+      const k = $('k').value;
+
+      if (!id) return;
+
+      setBusy($('searchBtn'), true, 'Searching...');
+      $('resultsArea').classList.remove('hidden');
+      $('results').innerHTML = '<div style="text-align:center; padding: 20px;">Searching...</div>';
+
+      try {
+        const r = await fetch('/api/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ song_id: parseInt(id), k: parseInt(k) })
+        });
+        const data = await r.json();
+
+        if (data.ok) {
+          renderResults(data.results);
+          log(`Search for ID ${id} returned ${data.results.length} results`);
+        } else {
+          $('results').innerHTML = `<div style="color: var(--error); text-align: center;">Error: ${data.error}</div>`;
+        }
+      } catch (e) {
+        $('results').innerHTML = `<div style="color: var(--error); text-align: center;">Search failed: ${e}</div>`;
+      } finally {
+        setBusy($('searchBtn'), false);
+      }
     });
-    document.getElementById('audioFile').addEventListener('change', (e)=>{
-      const f = e.target.files[0]; document.getElementById('filePreview').textContent = f?f.name:'No file selected';
-      if(f) appendLog('File selected: ' + f.name);
-    });
-  })();
 
-  document.getElementById('clearResults').addEventListener('click', ()=>{ document.getElementById('results').innerHTML=''; });
+    function renderResults(results) {
+      const container = $('results');
+      container.innerHTML = '';
 
-  // render library metadata with filtering, sorting, and pagination
-  (function(){
-    const metaPre = document.getElementById('metaJson');
-    const preview = document.getElementById('libraryPreview');
-    const filterInput = document.getElementById('libFilter');
-    const sortSelect = document.getElementById('libSort');
-    const sortDirBtn = document.getElementById('libSortDir');
-    const pageSizeSel = document.getElementById('libPageSize');
-    const prevBtn = document.getElementById('libPrev');
-    const nextBtn = document.getElementById('libNext');
-    const pageInfo = document.getElementById('libPageInfo');
-    if(!metaPre || !preview) return;
-    let data = [];
-    try{
-      data = JSON.parse(metaPre.textContent || 'null') || [];
-    }catch(e){ preview.textContent='Failed to parse metadata: '+e; return }
-    if(!data.length){ preview.textContent='No items in metadata'; return }
+      if (results.length === 0) {
+        container.innerHTML = '<div style="text-align:center; color: var(--text-muted);">No results found</div>';
+        return;
+      }
 
-    // determine common keys for columns
-    const keys = Array.from(new Set(data.flatMap(d=>Object.keys(d)))).slice(0,12);
+      results.forEach(item => {
+        const el = document.createElement('div');
+        el.className = 'result-item';
 
-    // populate sort select and column-filter select
-    sortSelect.innerHTML = '<option value="">(no sort)</option>' + keys.map(k=>`<option value="${k}">${k}</option>`).join('');
-    const colFilterSel = document.getElementById('libColumnFilter');
-    colFilterSel.innerHTML = '<option value="">Column filter (optional)</option>' + keys.map(k=>`<option value="${k}">${k}</option>`).join('');
+        // Format info nicely
+        const info = item.info || {};
+        const title = info.track_id || `Song ${item.id}`;
+        const details = Object.entries(info)
+          .filter(([k]) => k !== 'track_id')
+          .map(([k, v]) => `<span class="badge" style="margin-right: 4px;">${k}: ${v}</span>`)
+          .join('');
 
-    const columnsSpan = document.getElementById('libColumns');
-    // state includes visible columns for column selector
-    const state = { filter:'', columnFilter:'', columnFilterVal:'', visibleColumns: keys.slice(), sortKey:'', sortDir:'asc', page:1, pageSize: parseInt(pageSizeSel.value,10) };
-
-    // render column selector checkboxes
-    function renderColumnSelector(){
-      if(!columnsSpan) return;
-      columnsSpan.innerHTML = '';
-      keys.forEach(k=>{
-        const id = 'colchk_'+k.replace(/[^a-z0-9]/gi,'_');
-        const chk = document.createElement('input'); chk.type='checkbox'; chk.id=id; chk.checked = state.visibleColumns.includes(k);
-        chk.addEventListener('change', ()=>{ if(chk.checked){ if(!state.visibleColumns.includes(k)) state.visibleColumns.push(k);} else { state.visibleColumns = state.visibleColumns.filter(x=>x!==k); } render(); });
-        const lbl = document.createElement('label'); lbl.style.marginRight='8px'; lbl.appendChild(chk); lbl.append(' '+k);
-        columnsSpan.appendChild(lbl);
+        el.innerHTML = `
+                    <div class="result-info">
+                        <div style="font-weight: 600;">${title}</div>
+                        <div class="result-meta">ID: ${item.id}</div>
+                        <div style="margin-top: 8px;">${details}</div>
+                        ${info.preview_url ? `<audio controls src="${info.preview_url}" style="margin-top: 8px; height: 32px; width: 100%;"></audio>` : ''}
+                    </div>
+                    <div class="result-score">
+                        <div>${(1 - item.distance).toFixed(4)}</div>
+                        <div style="font-size: 11px; color: var(--text-muted); font-weight: 400;">Similarity</div>
+                    </div>
+                `;
+        container.appendChild(el);
       });
     }
 
-    function escapeHtml(s){ return String(s).replace(/[&<>'"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"})[c]); }
-    function highlightText(text, term){ if(!term) return escapeHtml(text); const t = String(term); const re = new RegExp('('+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'); return escapeHtml(text).replace(re, '<mark>$1</mark>'); }
+    $('clearResults').addEventListener('click', () => {
+      $('resultsArea').classList.add('hidden');
+      $('results').innerHTML = '';
+      $('songId').value = '';
+      const analysisSection = document.getElementById('analysisSection');
+      if (analysisSection) analysisSection.remove();
+    });
 
-    function matchesFilter(item, term){
-      // global filter
-      if(term){ const s = term.toLowerCase(); if(Object.values(item).some(v=>String(v||'').toLowerCase().includes(s))) return true; return false; }
-      return true;
+    // --- Upload ---
+    const dropZone = $('uploadDrop');
+    const fileInput = $('audioFile');
+
+    dropZone.addEventListener('click', () => fileInput.click());
+
+    ['dragenter', 'dragover'].forEach(e => {
+      dropZone.addEventListener(e, (ev) => {
+        ev.preventDefault();
+        dropZone.classList.add('dragover');
+      });
+    });
+
+    ['dragleave', 'drop'].forEach(e => {
+      dropZone.addEventListener(e, (ev) => {
+        ev.preventDefault();
+        dropZone.classList.remove('dragover');
+      });
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      const files = e.dataTransfer.files;
+      if (files.length) handleFile(files[0]);
+    });
+
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files.length) handleFile(e.target.files[0]);
+    });
+
+    function handleFile(file) {
+      $('dropText').classList.add('hidden');
+      $('filePreview').classList.remove('hidden');
+      $('filePreview').style.display = 'flex';
+      $('fileName').textContent = file.name;
+      $('uploadBtn').disabled = false;
     }
-    function matchesColumnFilter(item, col, val){ if(!col || !val) return true; const v = item[col]; if(v==null) return false; return String(v).toLowerCase().includes(String(val).toLowerCase()); }
 
-    function compare(a,b,key,dir){ const va = a[key], vb = b[key]; if(va==null && vb==null) return 0; if(va==null) return dir==='asc'?1:-1; if(vb==null) return dir==='asc'?-1:1; if(!isNaN(va) && !isNaN(vb)) return (Number(va)-Number(vb))*(dir==='asc'?1:-1); return String(va).localeCompare(String(vb))*(dir==='asc'?1:-1); }
+    $('clearFile').addEventListener('click', (e) => {
+      e.stopPropagation();
+      fileInput.value = '';
+      $('dropText').classList.remove('hidden');
+      $('filePreview').classList.add('hidden');
+      $('uploadBtn').disabled = true;
+    });
 
-    function render(){
-      // filter
-      const filtered = data.filter(d=> matchesFilter(d, state.filter) && matchesColumnFilter(d, state.columnFilter, state.columnFilterVal) );
-      // sort
-      if(state.sortKey) filtered.sort((a,b)=>compare(a,b,state.sortKey,state.sortDir));
-      // paginate
+    $('uploadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      setBusy($('uploadBtn'), true, 'Analyzing...');
+      $('resultsArea').classList.remove('hidden');
+      $('results').innerHTML = '<div style="text-align:center; padding: 20px;">Uploading and analyzing...</div>';
+
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('k', $('k').value);
+
+      try {
+        const r = await fetch('/api/upload', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await r.json();
+
+        if (data.ok) {
+          renderResults(data.results);
+          if (data.analysis) renderAnalysis(data.analysis);
+          log(`Upload analysis complete. Found ${data.results.length} matches.`);
+        } else {
+          $('results').innerHTML = `<div style="color: var(--error); text-align: center;">Error: ${data.error}</div>`;
+        }
+      } catch (e) {
+        $('results').innerHTML = `<div style="color: var(--error); text-align: center;">Upload failed: ${e}</div>`;
+      } finally {
+        setBusy($('uploadBtn'), false);
+      }
+    });
+
+    // --- Library ---
+    // Simple client-side pagination for demo
+    let libraryData = [];
+    let currentPage = 1;
+    let pageSize = 10;
+
+    function initLibrary() {
+      try {
+        const raw = $('metaJson')?.textContent;
+        if (raw) {
+          const data = JSON.parse(raw);
+          // Convert object to array if needed
+          if (!Array.isArray(data)) {
+            libraryData = Object.entries(data).map(([k, v]) => ({ id: k, ...v }));
+          } else {
+            libraryData = data;
+          }
+          renderLibrary();
+        } else {
+          $('libraryPreview').innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-muted);">No library metadata available.</div>';
+        }
+      } catch (e) {
+        console.error(e);
+        $('libraryPreview').textContent = 'Error loading library.';
+      }
+    }
+
+    function renderLibrary() {
+      const filter = $('libFilter').value.toLowerCase();
+      const filtered = libraryData.filter(item => {
+        if (!filter) return true;
+        return Object.values(item).some(val => String(val).toLowerCase().includes(filter));
+      });
+
       const total = filtered.length;
-      const pageCount = Math.max(1, Math.ceil(total/state.pageSize));
-      if(state.page>pageCount) state.page = pageCount;
-      const start = (state.page-1)*state.pageSize; const pageItems = filtered.slice(start, start+state.pageSize);
+      const maxPage = Math.ceil(total / pageSize) || 1;
+      if (currentPage > maxPage) currentPage = maxPage;
 
-      // build table using visible columns
-      const cols = state.visibleColumns.length? state.visibleColumns : keys.slice(0,6);
-      let html = '<table class="lib"><thead><tr>' + cols.map(k=>`<th data-key="${k}" style="cursor:pointer">${k}</th>`).join('') + '<th>actions</th></tr></thead><tbody>';
-      pageItems.forEach(item=>{
-        html += '<tr>' + cols.map(k=>{
-          const raw = item[k]!==undefined?String(item[k]):'';
-          // decide which term to highlight (column specific val has priority)
-          const hterm = state.columnFilter && state.columnFilterVal && state.columnFilter===k ? state.columnFilterVal : state.filter;
-          return `<td>${highlightText(raw, hterm)}</td>`;
-        }).join('') + `<td><button class=play-btn data-id="${item.id||''}">Copy ID</button></td></tr>`;
+      const start = (currentPage - 1) * pageSize;
+      const pageItems = filtered.slice(start, start + pageSize);
+
+      $('libPageInfo').textContent = `Page ${currentPage} of ${maxPage} (${total} items)`;
+      $('libPrev').disabled = currentPage <= 1;
+      $('libNext').disabled = currentPage >= maxPage;
+
+      if (pageItems.length === 0) {
+        $('libraryPreview').innerHTML = '<div style="padding: 20px; text-align: center; color: var(--text-muted);">No items match filter.</div>';
+        return;
+      }
+
+      // Dynamic columns
+      const keys = Object.keys(pageItems[0]).slice(0, 5); // Limit columns
+
+      let html = '<table><thead><tr>';
+      keys.forEach(k => html += `<th>${k}</th>`);
+      html += '<th>Action</th></tr></thead><tbody>';
+
+      pageItems.forEach(item => {
+        html += '<tr>';
+        keys.forEach(k => html += `<td>${item[k] !== undefined ? item[k] : ''}</td>`);
+        html += `<td><button class="btn btn-ghost" style="padding: 4px 8px; font-size: 12px;" onclick="copyId('${item.id}')">Copy ID</button></td></tr>`;
       });
       html += '</tbody></table>';
-      preview.innerHTML = html;
 
-      // wire copy buttons and header clicks
-      preview.querySelectorAll('.play-btn').forEach(b=>b.addEventListener('click', (ev)=>{ const id = ev.target.getAttribute('data-id'); if(!id) return; navigator.clipboard && navigator.clipboard.writeText(String(id)).then(()=>{ev.target.textContent='Copied'; appendLog('Copied ID '+id)}).catch(()=>{}); }));
-      preview.querySelectorAll('th[data-key]').forEach(h=>h.addEventListener('click', (ev)=>{ const k = ev.currentTarget.getAttribute('data-key'); if(state.sortKey===k) state.sortDir = state.sortDir==='asc'?'desc':'asc'; else state.sortKey = k; sortSelect.value = state.sortKey; sortDirBtn.textContent = state.sortDir==='asc'?'Asc':'Desc'; render(); }));
-
-      // pager UI
-      pageInfo.textContent = `Page ${state.page} / ${pageCount} — ${total} items`;
-      prevBtn.disabled = state.page<=1; nextBtn.disabled = state.page>=pageCount;
+      $('libraryPreview').innerHTML = html;
     }
 
-    // wire controls
-    renderColumnSelector();
-    const colFilterVal = document.getElementById('libColumnFilterVal');
-    const colFilterSelEl = document.getElementById('libColumnFilter');
-    filterInput.addEventListener('input', (e)=>{ state.filter = e.target.value; state.page = 1; render(); });
-    colFilterSelEl.addEventListener('change', (e)=>{ state.columnFilter = e.target.value; state.page = 1; render(); });
-    colFilterVal.addEventListener('input', (e)=>{ state.columnFilterVal = e.target.value; state.page = 1; render(); });
-    sortSelect.addEventListener('change', (e)=>{ state.sortKey = e.target.value; render(); });
-    sortDirBtn.addEventListener('click', ()=>{ state.sortDir = state.sortDir==='asc'?'desc':'asc'; sortDirBtn.textContent = state.sortDir==='asc'?'Asc':'Desc'; render(); });
-    pageSizeSel.addEventListener('change', (e)=>{ state.pageSize = parseInt(e.target.value,10); state.page = 1; render(); });
-    prevBtn.addEventListener('click', ()=>{ if(state.page>1){ state.page--; render(); } });
-    nextBtn.addEventListener('click', ()=>{ state.page++; render(); });
+    window.copyId = (id) => {
+      $('songId').value = id;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Highlight the input
+      $('songId').focus();
+      $('songId').style.borderColor = 'var(--primary)';
+      setTimeout(() => $('songId').style.borderColor = '', 1000);
+    };
 
-    // initial render
-    render();
-  })();
+    $('libFilter').addEventListener('input', () => { currentPage = 1; renderLibrary(); });
+    $('libPageSize').addEventListener('change', (e) => { pageSize = parseInt(e.target.value); currentPage = 1; renderLibrary(); });
+    $('libPrev').addEventListener('click', () => { if (currentPage > 1) { currentPage--; renderLibrary(); } });
+    $('libNext').addEventListener('click', () => { currentPage++; renderLibrary(); });
 
-  // small helper: setBusy respects data-busy attribute
-  function setBusy(el, busy=true){ if(!el) return; el.disabled = busy; if(busy) el.textContent = (el.getAttribute('data-busy')||'Working...'); else el.textContent = el.getAttribute('data-label') || el.textContent; }
+    $('buildIndex').addEventListener('click', async () => {
+      if (!confirm('Rebuild index? This may take a moment.')) return;
+      setBusy($('buildIndex'), true, 'Building...');
+      try {
+        const r = await fetch('/api/index', { method: 'POST' });
+        const d = await r.json();
+        if (d.ok) {
+          log(`Index built with ${d.items_indexed} items`);
+          checkHealth();
+        } else {
+          log('Index build failed: ' + d.error, 'error');
+        }
+      } catch (e) {
+        log('Index build error: ' + e, 'error');
+      } finally {
+        setBusy($('buildIndex'), false);
+      }
+    });
+
+    // --- Log ---
+    $('toggleLog').addEventListener('click', () => {
+      $('processLog').classList.toggle('hidden');
+      $('toggleLog').textContent = $('processLog').classList.contains('hidden') ? 'Show System Log' : 'Hide System Log';
+    });
+    $('clearLog').addEventListener('click', () => $('logEntries').innerHTML = '');
+
+    // --- Live Analysis Visualization ---
+    function renderAnalysis(data) {
+      // Create analysis section if not exists
+      let analysisSection = document.getElementById('analysisSection');
+      if (!analysisSection) {
+        analysisSection = document.createElement('div');
+        analysisSection.id = 'analysisSection';
+        analysisSection.className = 'card';
+        analysisSection.style.marginTop = '24px';
+        $('resultsArea').appendChild(analysisSection);
+      }
+
+      analysisSection.innerHTML = `
+                <h2 class="section-title">Live Audio Analysis</h2>
+                <div style="display: grid; gap: 24px;">
+                    <div>
+                        <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">MFCC Features</h3>
+                        <div id="mfccViz" style="height: 200px; background: var(--background); border-radius: 8px; padding: 16px; overflow: hidden;">
+                            <canvas id="mfccCanvas" style="width: 100%; height: 100%;"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">Chroma Features</h3>
+                        <div id="chromaViz" style="height: 150px; background: var(--background); border-radius: 8px; padding: 16px;">
+                            <canvas id="chromaCanvas" style="width: 100%; height: 100%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+      // Draw MFCC heatmap
+      drawHeatmap('mfccCanvas', data.mfcc, 'Blues');
+      drawHeatmap('chromaCanvas', data.chroma, 'Greens');
+    }
+
+    function drawHeatmap(canvasId, data, colorScheme) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width = canvas.offsetWidth;
+      const height = canvas.height = canvas.offsetHeight;
+
+      if (!data || data.length === 0) return;
+
+      const rows = data.length;
+      const cols = data[0].length;
+      const cellWidth = width / cols;
+      const cellHeight = height / rows;
+
+      // Find min/max for normalization
+      let min = Infinity, max = -Infinity;
+      data.forEach(row => row.forEach(val => {
+        if (val < min) min = val;
+        if (val > max) max = val;
+      }));
+
+      // Draw cells
+      for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+          const normalized = (data[i][j] - min) / (max - min);
+          const intensity = Math.floor(normalized * 255);
+
+          if (colorScheme === 'Blues') {
+            ctx.fillStyle = `rgb(${255 - intensity}, ${255 - intensity}, 255)`;
+          } else {
+            ctx.fillStyle = `rgb(${255 - intensity}, 255, ${255 - intensity})`;
+          }
+
+          ctx.fillRect(j * cellWidth, i * cellHeight, cellWidth, cellHeight);
+        }
+      }
+    }
+
+    // --- Init ---
+    checkHealth();
+    initLibrary();
   </script>
-  </body>
+</body>
+
 </html>

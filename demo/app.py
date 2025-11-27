@@ -42,7 +42,6 @@ def load_metadata():
     # look in multiple embedder folders (mirex then top40)
     candidates = [
         os.path.join(BASE_DIR, 'models', 'embedder_mirex', 'embeddings'),
-        os.path.join(BASE_DIR, 'models', 'embedder_top40', 'embeddings'),
     ]
     for embed_folder in candidates:
         csv_path = os.path.join(embed_folder, 'song_embeddings.csv')
@@ -81,7 +80,6 @@ def load_embeddings():
     # Look for standard locations (numpy, parquet or csv) used in this repo
     candidates = [
         os.path.join(BASE_DIR, 'models', 'embedder_mirex', 'embeddings'),
-        os.path.join(BASE_DIR, 'models', 'embedder_top40', 'embeddings'),
     ]
     for embed_folder in candidates:
         np_path = os.path.join(embed_folder, 'embeddings.npy')
@@ -257,60 +255,31 @@ def api_upload():
     try:
         f.save(tmp_path)
 
-        # try to use repository extractor if available
-        features = None
+        # robust load
         try:
-            sys.path.insert(0, os.path.join(BASE_DIR, 'utilities', 'src'))
-            from extraction import extract
-            y, sr = extract.load_audio(tmp_path)
-            features = {}
-            try:
-                features.update(extract.perceptual_mfcc(y, sr))
-            except Exception:
-                pass
-            try:
-                features.update(extract.chroma_features(y, sr))
-            except Exception:
-                pass
-            try:
-                features.update(extract.spectral_descriptors(y, sr))
-            except Exception:
-                pass
-            try:
-                features.update(extract.rhythm_features(y, sr))
-            except Exception:
-                pass
-        except Exception:
-            # fallback to librosa-based minimal features
-            # try lazy import of librosa/soundfile for fallback
-            global _LIBROSA_AVAILABLE, librosa, sf
-            if not _LIBROSA_AVAILABLE:
-                try:
-                    import importlib
-                    if importlib.util.find_spec('librosa'):
-                        import librosa as _lib
-                        librosa = _lib
-                        try:
-                            import soundfile as _sf
-                            sf = _sf
-                        except Exception:
-                            sf = None
-                        _LIBROSA_AVAILABLE = True
-                        logger.info('librosa imported for fallback extraction')
-                except Exception:
-                    logger.exception('failed to import librosa for fallback')
-            if not _LIBROSA_AVAILABLE:
-                return jsonify({'ok': False, 'error': 'neither repository extractor nor librosa available'}), 500
-            try:
-                y, sr = librosa.load(tmp_path, sr=22050, mono=True)
-                mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
-                features = {
-                    'mfcc_mean': list(np.mean(mfcc, axis=1)),
-                    'mfcc_std': list(np.std(mfcc, axis=1)),
-                }
-            except Exception as e:
-                logger.exception('librosa extraction failed: %s', e)
-                return jsonify({'ok': False, 'error': f'feature extraction failed: {e}'}), 500
+            y, sr = robust_load_audio(tmp_path)
+            # extract features using librosa
+            mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
+            chroma = librosa.feature.chroma_stft(y=y, sr=sr)
+            spec_cent = librosa.feature.spectral_centroid(y=y, sr=sr)
+            
+            features = {
+                'mfcc_mean': list(np.mean(mfcc, axis=1)),
+                'mfcc_std': list(np.std(mfcc, axis=1)),
+                'chroma_mean': list(np.mean(chroma, axis=1)),
+                'chroma_std': list(np.std(chroma, axis=1)),
+            }
+            
+            # Prepare visualization data (downsample for frontend)
+            viz_data = {
+                'waveform': list(y[::1000]), # Downsample for display
+                'mfcc': mfcc.tolist(),
+                'chroma': chroma.tolist(),
+                'spectral_centroid': spec_cent.tolist()
+            }
+        except Exception as e:
+            logger.exception('feature extraction failed: %s', e)
+            return jsonify({'ok': False, 'error': f'feature extraction failed: {e}'}), 500
 
         # flatten features to vector
         flat = flatten_extracted_features(features)
@@ -398,7 +367,7 @@ def api_upload():
             info = meta.get(str(n), {}) if isinstance(meta, dict) else {}
             results.append({'id': int(n), 'distance': float(d), 'info': info})
 
-        return jsonify({'ok': True, 'embedding': emb.tolist(), 'results': results})
+        return jsonify({'ok': True, 'embedding': emb.tolist(), 'results': results, 'analysis': viz_data})
     finally:
         try:
             shutil.rmtree(tmp_dir)
@@ -543,7 +512,6 @@ def load_embedder_checkpoint(prefer='embedder_mirex'):
             return None
     model_dirs = {
         'embedder_mirex': os.path.join(BASE_DIR, 'models', 'embedder_mirex'),
-        'embedder_top40': os.path.join(BASE_DIR, 'models', 'embedder_top40'),
     }
     d = model_dirs.get(prefer, model_dirs['embedder_mirex'])
     ckpt_path = os.path.join(d, 'song_embedder.pt')
@@ -658,6 +626,23 @@ _CACHED_EMBEDDER = None
 def index():
     meta = load_metadata()
     return render_template('index.html', metadata=meta)
+
+
+@app.route('/model_details')
+def model_details():
+    """Render model details page."""
+    # Get model info
+    embedder = load_embedder_checkpoint()
+    info = {}
+    if embedder:
+        model = embedder['model']
+        info = {
+            'input_dim': embedder['input_dim'],
+            'embedding_dim': embedder['embedding_dim'],
+            'layers': str(model),
+            'feature_cols': embedder.get('feature_cols', [])
+        }
+    return render_template('model_details.html', info=info)
 
 
 @app.route('/static_demo')

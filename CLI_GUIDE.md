@@ -5,20 +5,6 @@ The SAPPHIRE CLI provides comprehensive command-line access to all pipeline func
 ## Installation and Setup
 
 ```bash
-# Make CLI executable
-chmod +x cli.py
-
-# Or run with Python
-python cli.py --help
-```
-
-## Available Commands
-
-### 1. Dataset Discovery
-
-Discover and inspect available datasets in your data directory:
-
-```bash
 # Basic discovery
 python cli.py discover
 

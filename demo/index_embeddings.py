@@ -23,7 +23,6 @@ def find_embeddings(candidate=None):
         return emb, None
     candidates = [
         os.path.join(BASE_DIR, 'models', 'embedder_mirex', 'embeddings'),
-        os.path.join(BASE_DIR, 'models', 'embedder_top40', 'embeddings'),
     ]
     for embed_folder in candidates:
         np_path = os.path.join(embed_folder, 'embeddings.npy')
@@ -33,28 +32,28 @@ def find_embeddings(candidate=None):
             emb = np.load(np_path)
             return emb, None
         if os.path.exists(pqt_path) or os.path.exists(csv_path):
-        try:
-            import pandas as pd
-            if os.path.exists(pqt_path):
-                df = pd.read_parquet(pqt_path)
-            else:
-                df = pd.read_csv(csv_path)
-            emb_cols = [c for c in df.columns if str(c).startswith('emb_')]
-            if not emb_cols:
+            try:
+                import pandas as pd
+                if os.path.exists(pqt_path):
+                    df = pd.read_parquet(pqt_path)
+                else:
+                    df = pd.read_csv(csv_path)
+                emb_cols = [c for c in df.columns if str(c).startswith('emb_')]
+                if not emb_cols:
+                    return None, None
+                arr = df[emb_cols].to_numpy(dtype=np.float32)
+                # build metadata mapping index->info
+                meta = {}
+                for i, row in enumerate(df.itertuples(index=False)):
+                    meta[str(i)] = {
+                        'track_id': getattr(row, 'track_id', None),
+                        'mood_cluster': getattr(row, 'mood_cluster', None),
+                        'mood_category': getattr(row, 'mood_category', None),
+                        'dataset': getattr(row, 'dataset', None),
+                    }
+                return arr, meta
+            except Exception:
                 return None, None
-            arr = df[emb_cols].to_numpy(dtype=np.float32)
-            # build metadata mapping index->info
-            meta = {}
-            for i, row in enumerate(df.itertuples(index=False)):
-                meta[str(i)] = {
-                    'track_id': getattr(row, 'track_id', None),
-                    'mood_cluster': getattr(row, 'mood_cluster', None),
-                    'mood_category': getattr(row, 'mood_category', None),
-                    'dataset': getattr(row, 'dataset', None),
-                }
-            return arr, meta
-        except Exception:
-            return None, None
     # fallback: load any .npy inside embed_folder
     if os.path.isdir(embed_folder):
         files = [os.path.join(embed_folder, f) for f in os.listdir(embed_folder) if f.endswith('.npy')]

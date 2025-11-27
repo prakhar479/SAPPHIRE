@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Details | SAPPHIRE</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="/static/logo.svg" alt="SAPPHIRE" class="logo" />
+            <div>
+                <h1>SAPPHIRE</h1>
+                <p class="subtitle">Model Architecture & Details</p>
+            </div>
+            <div style="margin-left: auto;">
+                <a href="/" class="btn btn-ghost">← Back to Demo</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2 class="section-title">Embedding Model Information</h2>
+
+                {% if info %}
+                <div style="display: grid; gap: 16px;">
+                    <div>
+                        <h3 style="font-size: 16px; margin: 0 0 8px 0; color: var(--text-muted);">Input Dimensions</h3>
+                        <p style="font-size: 24px; font-weight: 600; margin: 0; color: var(--primary);">{{
+                            info.input_dim }}</p>
+                        <p style="font-size: 14px; color: var(--text-muted); margin: 4px 0 0 0;">Audio features
+                            extracted from each track</p>
+                    </div>
+
+                    <div>
+                        <h3 style="font-size: 16px; margin: 0 0 8px 0; color: var(--text-muted);">Embedding Dimensions
+                        </h3>
+                        <p style="font-size: 24px; font-weight: 600; margin: 0; color: var(--primary);">{{
+                            info.embedding_dim }}</p>
+                        <p style="font-size: 14px; color: var(--text-muted); margin: 4px 0 0 0;">Compressed
+                            representation size</p>
+                    </div>
+                </div>
+                {% else %}
+                <p style="color: var(--text-muted);">Model information not available. Ensure the embedder checkpoint is
+                    loaded.</p>
+                {% endif %}
+            </div>
+
+            {% if info %}
+            <div class="card">
+                <h2 class="section-title">Network Architecture</h2>
+                <pre
+                    style="background: var(--background); padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 12px; line-height: 1.6;">{{ info.layers }}</pre>
+            </div>
+
+            <div class="card">
+                <h2 class="section-title">Feature Columns ({{ info.feature_cols|length }})</h2>
+                {% if info.feature_cols %}
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;">
+                    {% for col in info.feature_cols[:50] %}
+                    <div class="badge" style="margin: 0;">{{ col }}</div>
+                    {% endfor %}
+                    {% if info.feature_cols|length > 50 %}
+                    <div
+                        style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 8px;">
+                        ... and {{ info.feature_cols|length - 50 }} more
+                    </div>
+                    {% endif %}
+                </div>
+                {% else %}
+                <p style="color: var(--text-muted);">No feature columns found.</p>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            <div class="card">
+                <h2 class="section-title">About the Model</h2>
+                <p style="line-height: 1.6; color: var(--text);">
+                    This embedding model is trained on the MIREX dataset to learn compact representations of audio
+                    tracks.
+                    It uses a deep neural network to transform high-dimensional audio features into a low-dimensional
+                    embedding space where similar tracks are closer together.
+                </p>
+                <p style="line-height: 1.6; color: var(--text); margin-top: 12px;">
+                    The model extracts features like MFCCs (Mel-frequency cepstral coefficients), chroma features,
+                    and spectral descriptors from audio, then maps them to embeddings that capture the perceptual
+                    similarity between tracks.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
