@@ -138,27 +138,31 @@ def robust_load_audio(path, sr=22050):
     if not _LIBROSA_AVAILABLE:
         try:
             import librosa as _lib
+
             librosa = _lib
             _LIBROSA_AVAILABLE = True
         except Exception:
-            raise ImportError('librosa not available')
+            raise ImportError("librosa not available")
 
     try:
         # Try direct load first
         return librosa.load(path, sr=sr, mono=True)
     except Exception:
-        logger.warning('Direct load failed, trying ffmpeg conversion')
+        logger.warning("Direct load failed, trying ffmpeg conversion")
         # Fallback: convert to wav using ffmpeg
         import subprocess
-        wav_path = path + '.wav'
+
+        wav_path = path + ".wav"
         try:
-            subprocess.check_call([
-                'ffmpeg', '-i', path, '-ar', str(sr), '-ac', '1', '-y', wav_path
-            ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.check_call(
+                ["ffmpeg", "-i", path, "-ar", str(sr), "-ac", "1", "-y", wav_path],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
             y, _ = librosa.load(wav_path, sr=sr, mono=True)
             return y, sr
         except Exception as e:
-            logger.error('ffmpeg conversion failed: %s', e)
+            logger.error("ffmpeg conversion failed: %s", e)
             raise
         finally:
             if os.path.exists(wav_path):
@@ -166,7 +170,6 @@ def robust_load_audio(path, sr=22050):
                     os.remove(wav_path)
                 except Exception:
                     pass
-
 
 
 def load_index(expected_dim=None):
@@ -362,13 +365,13 @@ def api_upload():
                 "chroma_mean": list(np.mean(chroma, axis=1)),
                 "chroma_std": list(np.std(chroma, axis=1)),
             }
-            
+
             # Prepare visualization data (downsample for frontend)
             viz_data = {
-                'waveform': list(y[::1000]), # Downsample for display
-                'mfcc': mfcc.tolist(),
-                'chroma': chroma.tolist(),
-                'spectral_centroid': spec_cent.tolist()
+                "waveform": list(y[::1000]),  # Downsample for display
+                "mfcc": mfcc.tolist(),
+                "chroma": chroma.tolist(),
+                "spectral_centroid": spec_cent.tolist(),
             }
         except Exception as e:
             logger.exception("feature extraction failed: %s", e)
@@ -502,7 +505,14 @@ def api_upload():
             info = meta.get(str(n), {}) if isinstance(meta, dict) else {}
             results.append({"id": int(n), "distance": float(d), "info": info})
 
-        return jsonify({'ok': True, 'embedding': emb.tolist(), 'results': results, 'analysis': viz_data})
+        return jsonify(
+            {
+                "ok": True,
+                "embedding": emb.tolist(),
+                "results": results,
+                "analysis": viz_data,
+            }
+        )
     finally:
         try:
             shutil.rmtree(tmp_dir)
@@ -510,121 +520,126 @@ def api_upload():
             pass
 
 
-@app.route('/api/audio/<filename>')
+@app.route("/api/audio/<filename>")
 def serve_audio(filename):
     """Serve audio files from the audio_uploads directory."""
-    audio_dir = os.path.join(BASE_DIR, 'demo', 'audio_uploads')
+    audio_dir = os.path.join(BASE_DIR, "demo", "audio_uploads")
     try:
         from flask import send_from_directory
+
         return send_from_directory(audio_dir, filename)
     except Exception:
-        return jsonify({'ok': False, 'error': 'File not found'}), 404
+        return jsonify({"ok": False, "error": "File not found"}), 404
 
 
-@app.route('/api/add_to_library', methods=['POST'])
+@app.route("/api/add_to_library", methods=["POST"])
 def api_add_to_library():
     """Add new songs to the library by processing uploads, generating embeddings, and rebuilding index."""
-    if 'files[]' not in request.files:
-        return jsonify({'ok': False, 'error': 'no files uploaded'}), 400
-    
-    files = request.files.getlist('files[]')
-    if not files or all(f.filename == '' for f in files):
-        return jsonify({'ok': False, 'error': 'empty files'}), 400
-    
+    if "files[]" not in request.files:
+        return jsonify({"ok": False, "error": "no files uploaded"}), 400
+
+    files = request.files.getlist("files[]")
+    if not files or all(f.filename == "" for f in files):
+        return jsonify({"ok": False, "error": "empty files"}), 400
+
     # Load existing data
     existing_embeddings = load_embeddings()
     existing_metadata = load_metadata()
-    
+
     if existing_embeddings is None:
         existing_embeddings = np.array([], dtype=np.float32).reshape(0, 0)
         next_id = 0
     else:
         next_id = existing_embeddings.shape[0]
-    
+
     # Get next track_id
     if isinstance(existing_metadata, dict) and existing_metadata:
-        max_track_id = max(int(v.get('track_id', 0)) for v in existing_metadata.values() if v.get('track_id'))
+        max_track_id = max(
+            int(v.get("track_id", 0))
+            for v in existing_metadata.values()
+            if v.get("track_id")
+        )
         next_track_id = max_track_id + 1
     else:
         next_track_id = 1
         existing_metadata = {}
-    
+
     # Load embedder
     global _CACHED_EMBEDDER
     if _CACHED_EMBEDDER is None:
         _CACHED_EMBEDDER = load_embedder_checkpoint()
-    if not _CACHED_EMBEDDER or _CACHED_EMBEDDER.get('model') is None:
-        return jsonify({'ok': False, 'error': 'embedder not available'}), 500
-    
-    model = _CACHED_EMBEDDER['model']
-    scaler = _CACHED_EMBEDDER.get('scaler')
-    feature_cols = _CACHED_EMBEDDER.get('feature_cols', [])
-    embedding_dim = _CACHED_EMBEDDER['embedding_dim']
-    
+    if not _CACHED_EMBEDDER or _CACHED_EMBEDDER.get("model") is None:
+        return jsonify({"ok": False, "error": "embedder not available"}), 500
+
+    model = _CACHED_EMBEDDER["model"]
+    scaler = _CACHED_EMBEDDER.get("scaler")
+    feature_cols = _CACHED_EMBEDDER.get("feature_cols", [])
+    embedding_dim = _CACHED_EMBEDDER["embedding_dim"]
+
     # Initialize embeddings array if empty
     if existing_embeddings.size == 0:
         existing_embeddings = np.array([], dtype=np.float32).reshape(0, embedding_dim)
-    
+
     new_embeddings = []
     new_metadata = {}
-    audio_dir = os.path.join(BASE_DIR, 'demo', 'audio_uploads')
+    audio_dir = os.path.join(BASE_DIR, "demo", "audio_uploads")
     os.makedirs(audio_dir, exist_ok=True)
-    
+
     processed_count = 0
     failed_files = []
-    
+
     for file in files:
-        if file.filename == '':
+        if file.filename == "":
             continue
-        
+
         try:
             # Save temp file
-            tmp_dir = tempfile.mkdtemp(prefix='library_add_')
+            tmp_dir = tempfile.mkdtemp(prefix="library_add_")
             tmp_path = os.path.join(tmp_dir, file.filename)
             file.save(tmp_path)
-            
+
             # Extract features
             try:
                 y, sr = robust_load_audio(tmp_path)
                 mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
                 chroma = librosa.feature.chroma_stft(y=y, sr=sr)
-                
+
                 features = {
-                    'mfcc_mean': list(np.mean(mfcc, axis=1)),
-                    'mfcc_std': list(np.std(mfcc, axis=1)),
-                    'chroma_mean': list(np.mean(chroma, axis=1)),
-                    'chroma_std': list(np.std(chroma, axis=1)),
+                    "mfcc_mean": list(np.mean(mfcc, axis=1)),
+                    "mfcc_std": list(np.std(mfcc, axis=1)),
+                    "chroma_mean": list(np.mean(chroma, axis=1)),
+                    "chroma_std": list(np.std(chroma, axis=1)),
                 }
             except Exception as e:
-                logger.error(f'Feature extraction failed for {file.filename}: {e}')
+                logger.error(f"Feature extraction failed for {file.filename}: {e}")
                 failed_files.append(file.filename)
                 shutil.rmtree(tmp_dir, ignore_errors=True)
                 continue
-            
+
             # Flatten features
             flat = flatten_extracted_features(features)
-            
+
             # Build input vector
             if feature_cols:
                 vec = [float(flat.get(c, 0.0)) for c in feature_cols]
             else:
                 keys = sorted(flat.keys())
                 vec = [float(flat[k]) for k in keys]
-            
+
             x = np.array(vec, dtype=np.float32).reshape(1, -1)
             if scaler is not None:
                 try:
                     x = scaler.transform(x)
                 except Exception:
                     pass
-            
+
             # Trim/pad to match model
-            expected_dim = _CACHED_EMBEDDER['input_dim']
+            expected_dim = _CACHED_EMBEDDER["input_dim"]
             if x.shape[1] > expected_dim:
                 x = x[:, :expected_dim]
             elif x.shape[1] < expected_dim:
-                x = np.pad(x, ((0, 0), (0, expected_dim - x.shape[1])), 'constant')
-            
+                x = np.pad(x, ((0, 0), (0, expected_dim - x.shape[1])), "constant")
+
             # Generate embedding
             try:
                 with torch.no_grad():
@@ -635,76 +650,92 @@ def api_add_to_library():
                         out = out[0]
                     emb = out.cpu().numpy()[0]
             except Exception as e:
-                logger.error(f'Embedding generation failed for {file.filename}: {e}')
+                logger.error(f"Embedding generation failed for {file.filename}: {e}")
                 failed_files.append(file.filename)
                 shutil.rmtree(tmp_dir, ignore_errors=True)
                 continue
-            
+
             # Store audio file
             import time
+
             timestamp = int(time.time() * 1000)
-            file_ext = os.path.splitext(file.filename)[1] or '.wav'
-            stored_filename = f'lib_{next_track_id}_{timestamp}{file_ext}'
+            file_ext = os.path.splitext(file.filename)[1] or ".wav"
+            stored_filename = f"lib_{next_track_id}_{timestamp}{file_ext}"
             stored_path = os.path.join(audio_dir, stored_filename)
             shutil.copy2(tmp_path, stored_path)
-            audio_path = f'/api/audio/{stored_filename}'
-            
+            audio_path = f"/api/audio/{stored_filename}"
+
             # Add to new data
             new_embeddings.append(emb)
             new_metadata[str(next_id)] = {
-                'track_id': next_track_id,
-                'filename': file.filename,
-                'audio_path': audio_path,
-                'mood_cluster': 'User Upload'
+                "track_id": next_track_id,
+                "filename": file.filename,
+                "audio_path": audio_path,
+                "mood_cluster": "User Upload",
             }
-            
+
             next_id += 1
             next_track_id += 1
             processed_count += 1
-            
+
             # Cleanup
             shutil.rmtree(tmp_dir, ignore_errors=True)
-            
+
         except Exception as e:
-            logger.exception(f'Failed to process {file.filename}: {e}')
+            logger.exception(f"Failed to process {file.filename}: {e}")
             failed_files.append(file.filename)
-    
+
     if processed_count == 0:
-        return jsonify({'ok': False, 'error': 'no files were successfully processed', 'failed': failed_files}), 400
-    
+        return (
+            jsonify(
+                {
+                    "ok": False,
+                    "error": "no files were successfully processed",
+                    "failed": failed_files,
+                }
+            ),
+            400,
+        )
+
     # Combine embeddings
     new_emb_array = np.array(new_embeddings, dtype=np.float32)
-    all_embeddings = np.vstack([existing_embeddings, new_emb_array]) if existing_embeddings.size > 0 else new_emb_array
-    
+    all_embeddings = (
+        np.vstack([existing_embeddings, new_emb_array])
+        if existing_embeddings.size > 0
+        else new_emb_array
+    )
+
     # Update metadata
     all_metadata = {**existing_metadata, **new_metadata}
-    
+
     # Rebuild index
     dim = all_embeddings.shape[1]
-    t = AnnoyIndex(dim, 'angular')
+    t = AnnoyIndex(dim, "angular")
     for i, vec in enumerate(all_embeddings):
         t.add_item(i, vec.astype(np.float32))
     t.build(10)
     t.save(INDEX_PATH)
-    
+
     # Save index metadata
     try:
-        with open(INDEX_META_PATH, 'w') as f:
-            json.dump({'dim': int(dim), 'items': int(all_embeddings.shape[0])}, f)
+        with open(INDEX_META_PATH, "w") as f:
+            json.dump({"dim": int(dim), "items": int(all_embeddings.shape[0])}, f)
     except Exception:
-        logger.exception('failed to write index metadata')
-    
+        logger.exception("failed to write index metadata")
+
     # Save embeddings and metadata
     np.save(EMB_PATH, all_embeddings)
-    with open(META_PATH, 'w') as f:
+    with open(META_PATH, "w") as f:
         json.dump(all_metadata, f)
-    
-    return jsonify({
-        'ok': True, 
-        'added': processed_count,
-        'failed': failed_files,
-        'total_library_size': all_embeddings.shape[0]
-    })
+
+    return jsonify(
+        {
+            "ok": True,
+            "added": processed_count,
+            "failed": failed_files,
+            "total_library_size": all_embeddings.shape[0],
+        }
+    )
 
 
 # ------------------ Inference helpers ------------------
