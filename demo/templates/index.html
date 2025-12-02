@@ -9,6 +9,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>SAPPHIRE | Audio Embedding Demo</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,6 +77,14 @@
               <button type="button" id="clearFile" class="btn btn-ghost"
                 style="padding: 4px 8px; font-size: 12px;">Change</button>
             </div>
+          </div>
+          <div class="controls" style="margin-top: 16px;">
+            <label for="lyricsInput" style="display: block; font-weight: 500; margin-bottom: 8px;">
+              Lyrics (Optional)
+            </label>
+            <textarea id="lyricsInput" name="lyrics" rows="4"
+              placeholder="Paste song lyrics here to include lyrical features in the analysis..."
+              style="width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; resize: vertical;"></textarea>
           </div>
           <div class="controls" style="margin-top: 16px; justify-content: flex-end;">
             <button type="submit" class="btn btn-primary" id="uploadBtn" disabled>Analyze Upload</button>
@@ -298,6 +307,7 @@
       $('resultsArea').classList.add('hidden');
       $('results').innerHTML = '';
       $('songId').value = '';
+      $('lyricsInput').value = '';
       // Remove analysis and player sections
       const analysisSection = document.getElementById('analysisSection');
       if (analysisSection) analysisSection.remove();
@@ -345,6 +355,7 @@
     $('clearFile').addEventListener('click', (e) => {
       e.stopPropagation();
       fileInput.value = '';
+      $('lyricsInput').value = '';
       $('dropText').classList.remove('hidden');
       $('filePreview').classList.add('hidden');
       $('uploadBtn').disabled = true;

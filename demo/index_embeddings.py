@@ -53,6 +53,17 @@ def find_embeddings(candidate=None):
                         "mood_category": getattr(row, "mood_category", None),
                         "dataset": getattr(row, "dataset", None),
                     }
+                    # Try to resolve audio path for MIREX dataset
+                    track_id = getattr(row, "track_id", None)
+                    if track_id is not None:
+                        try:
+                            # MIREX dataset audio files are named like 001.mp3, 002.mp3
+                            filename = f"{int(track_id):03d}.mp3"
+                            dataset_audio_dir = os.path.join(BASE_DIR, "data", "raw", "MIREX-like_mood", "dataset", "Audio")
+                            if os.path.exists(os.path.join(dataset_audio_dir, filename)):
+                                meta[str(i)]["audio_path"] = f"/api/dataset_audio/{filename}"
+                        except Exception:
+                            pass
                 return arr, meta
             except Exception:
                 return None, None
