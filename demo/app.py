@@ -207,6 +207,199 @@ def robust_load_audio(path, sr=22050):
                     pass
 
 
+def extract_audio_features(y, sr):
+    """Extract comprehensive audio features for the model."""
+    global _LIBROSA_AVAILABLE, librosa
+    if not _LIBROSA_AVAILABLE:
+        try:
+            import librosa as _lib
+            librosa = _lib
+            _LIBROSA_AVAILABLE = True
+        except Exception:
+            raise ImportError('librosa not available')
+
+    # 1. Mel-Frequency Cepstral Coefficients (MFCC)
+    mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
+    
+    # 2. Chroma
+    chroma = librosa.feature.chroma_stft(y=y, sr=sr)
+    
+    # 3. Spectral Features
+    spec_cent = librosa.feature.spectral_centroid(y=y, sr=sr)
+    spec_bw = librosa.feature.spectral_bandwidth(y=y, sr=sr)
+    spec_rolloff = librosa.feature.spectral_rolloff(y=y, sr=sr)
+    spec_flat = librosa.feature.spectral_flatness(y=y)
+    spec_contrast = librosa.feature.spectral_contrast(y=y, sr=sr)
+    zcr = librosa.feature.zero_crossing_rate(y)
+    
+    # 4. Tonal Features
+    try:
+        tonnetz = librosa.feature.tonnetz(y=librosa.effects.harmonic(y), sr=sr)
+    except Exception:
+        tonnetz = np.zeros((6, 1))
+        
+    # 5. Rhythm Features
+    try:
+        tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
+        # Handle array output
+        if isinstance(tempo, np.ndarray):
+            tempo = float(tempo.item() if tempo.size == 1 else tempo[0])
+        else:
+            tempo = float(tempo)
+    except Exception:
+        tempo = 0.0
+        
+    # 6. Quality Features
+    rms = librosa.feature.rms(y=y)
+    
+    # 7. Skew/Kurtosis (requires scipy)
+    try:
+        from scipy.stats import skew, kurtosis
+        mfcc_skew = list(skew(mfcc, axis=1))
+        mfcc_kurtosis = list(kurtosis(mfcc, axis=1))
+    except Exception:
+        mfcc_skew = [0.0] * 13
+        mfcc_kurtosis = [0.0] * 13
+
+    features = {
+        "acoustic_features": {
+            "mfcc_mean": list(np.mean(mfcc, axis=1)),
+            "mfcc_std": list(np.std(mfcc, axis=1)),
+            "mfcc_skew": mfcc_skew,
+            "mfcc_kurtosis": mfcc_kurtosis,
+            "spectral_centroid_mean": float(np.mean(spec_cent)),
+            "spectral_centroid_std": float(np.std(spec_cent)),
+            "spectral_centroid_median": float(np.median(spec_cent)),
+            "spectral_bandwidth_mean": float(np.mean(spec_bw)),
+            "spectral_bandwidth_std": float(np.std(spec_bw)),
+            "spectral_rolloff_mean": float(np.mean(spec_rolloff)),
+            "spectral_flatness_mean": float(np.mean(spec_flat)),
+            "spectral_flatness_std": float(np.std(spec_flat)),
+            "spectral_contrast_mean": list(np.mean(spec_contrast, axis=1)),
+            "spectral_contrast_std": list(np.std(spec_contrast, axis=1)),
+            "zcr_mean": float(np.mean(zcr)),
+            "zcr_std": float(np.std(zcr)),
+            "tonnetz_mean": list(np.mean(tonnetz, axis=1)),
+            "tonnetz_std": list(np.std(tonnetz, axis=1)),
+        },
+        "harmony_features": {
+            "chroma_mean": list(np.mean(chroma, axis=1)),
+            "chroma_std": list(np.std(chroma, axis=1)),
+            "key_confidence": 0.0,
+            "harmonic_ratio": 0.0,
+            "percussive_ratio": 0.0,
+        },
+        "rhythm_features": {
+            "tempo_bpm": float(tempo),
+            "beat_count": 0.0,
+            "onset_count": 0.0,
+            "onset_density": 0.0,
+            "rhythm_regularity": 0.0,
+        },
+        "quality_features": {
+            "rms_energy": float(np.mean(rms)),
+            "snr_db": 0.0,
+            "dynamic_range_db": 0.0,
+            "clipping_percentage": 0.0,
+        },
+        "lyrics_features": {
+            "word_count": 0.0,
+            "char_count": 0.0,
+            "avg_word_length": 0.0,
+            "vocabulary_richness": 0.0,
+            "sentiment_compound": 0.0,
+            "sentiment_positive": 0.0,
+            "sentiment_negative": 0.0,
+            "sentiment_neutral": 0.0,
+        },
+        "metadata": {
+             "duration": float(librosa.get_duration(y=y, sr=sr)),
+             "original_sr": float(sr),
+        }
+    }
+    
+    return features, mfcc, chroma, spec_cent
+
+
+def extract_lyrical_features(lyrics_text):
+    """Extract lyrical/linguistic features from lyrics text.
+    
+    Returns a dictionary of lyrical features including word count, sentiment, readability.
+    If lyrics_text is None or empty, returns zeros for all features.
+    """
+    if not lyrics_text or not lyrics_text.strip():
+        return {
+            "word_count": 0.0,
+            "char_count": 0.0,
+            "avg_word_length": 0.0,
+            "vocabulary_richness": 0.0,
+            "flesch_reading_ease": 0.0,
+            "flesch_kincaid_grade": 0.0,
+            "sentiment_compound": 0.0,
+            "sentiment_positive": 0.0,
+            "sentiment_negative": 0.0,
+            "sentiment_neutral": 0.0,
+            "semantic_embedding_norm": 0.0,
+            "semantic_embedding_mean": 0.0,
+            "semantic_embedding_std": 0.0,
+        }
+    
+    lyrics_text = lyrics_text.strip()
+    
+    # Basic metrics
+    words = lyrics_text.split()
+    word_count = len(words)
+    char_count = len(lyrics_text)
+    avg_word_length = char_count / word_count if word_count > 0 else 0.0
+    
+    # Vocabulary richness
+    unique_words = len(set(w.lower() for w in words))
+    vocabulary_richness = unique_words / word_count if word_count > 0 else 0.0
+    
+    # Readability metrics (using textstat if available)
+    flesch_reading_ease = 0.0
+    flesch_kincaid_grade = 0.0
+    try:
+        import textstat
+        flesch_reading_ease = textstat.flesch_reading_ease(lyrics_text)
+        flesch_kincaid_grade = textstat.flesch_kincaid_grade(lyrics_text)
+    except Exception:
+        pass
+    
+    # Sentiment analysis (using vaderSentiment if available)
+    sentiment_compound = 0.0
+    sentiment_positive = 0.0
+    sentiment_negative = 0.0
+    sentiment_neutral = 0.0
+    try:
+        from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+        analyzer = SentimentIntensityAnalyzer()
+        scores = analyzer.polarity_scores(lyrics_text)
+        sentiment_compound = scores.get('compound', 0.0)
+        sentiment_positive = scores.get('pos', 0.0)
+        sentiment_negative = scores.get('neg', 0.0)
+        sentiment_neutral = scores.get('neu', 0.0)
+    except Exception:
+        pass
+    
+    return {
+        "word_count": float(word_count),
+        "char_count": float(char_count),
+        "avg_word_length": float(avg_word_length),
+        "vocabulary_richness": float(vocabulary_richness),
+        "flesch_reading_ease": float(flesch_reading_ease),
+        "flesch_kincaid_grade": float(flesch_kincaid_grade),
+        "sentiment_compound": float(sentiment_compound),
+        "sentiment_positive": float(sentiment_positive),
+        "sentiment_negative": float(sentiment_negative),
+        "sentiment_neutral": float(sentiment_neutral),
+        "semantic_embedding_norm": 0.0,
+        "semantic_embedding_mean": 0.0,
+        "semantic_embedding_std": 0.0,
+    }
+
+
+
 def load_index(expected_dim=None):
     """Load the Annoy index and return (index, dim).
 
@@ -396,21 +589,17 @@ def api_upload():
         # robust load
         try:
             y, sr = robust_load_audio(tmp_path)
-            # extract features using librosa
-            mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
-            chroma = librosa.feature.chroma_stft(y=y, sr=sr)
-            spec_cent = librosa.feature.spectral_centroid(y=y, sr=sr)
-
-            features = {
-                "mfcc_mean": list(np.mean(mfcc, axis=1)),
-                "mfcc_std": list(np.std(mfcc, axis=1)),
-                "chroma_mean": list(np.mean(chroma, axis=1)),
-                "chroma_std": list(np.std(chroma, axis=1)),
-            }
-
+            # Extract comprehensive features
+            features, mfcc, chroma, spec_cent = extract_audio_features(y, sr)
+            
+            # Extract lyrical features if lyrics provided
+            lyrics = request.form.get('lyrics', '').strip()
+            lyrical_features = extract_lyrical_features(lyrics)
+            features["lyrics_features"].update(lyrical_features)
+            
             # Prepare visualization data (downsample for frontend)
             viz_data = {
-                "waveform": list(y[::1000]),  # Downsample for display
+                "waveform": y[::1000].tolist(),  # .tolist() ensures Python floats
                 "mfcc": mfcc.tolist(),
                 "chroma": chroma.tolist(),
                 "spectral_centroid": spec_cent.tolist(),
@@ -677,15 +866,11 @@ def api_add_to_library():
             # Extract features
             try:
                 y, sr = robust_load_audio(tmp_path)
-                mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
-                chroma = librosa.feature.chroma_stft(y=y, sr=sr)
-
-                features = {
-                    "mfcc_mean": list(np.mean(mfcc, axis=1)),
-                    "mfcc_std": list(np.std(mfcc, axis=1)),
-                    "chroma_mean": list(np.mean(chroma, axis=1)),
-                    "chroma_std": list(np.std(chroma, axis=1)),
-                }
+                features, _, _, _ = extract_audio_features(y, sr)
+                
+                # Extract lyrical features (batch add doesn't support lyrics yet, but structure ready)
+                lyrical_features = extract_lyrical_features(None)
+                features["lyrics_features"].update(lyrical_features)
             except Exception as e:
                 logger.error(f"Feature extraction failed for {file.filename}: {e}")
                 failed_files.append(file.filename)
