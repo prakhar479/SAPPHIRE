@@ -18,6 +18,9 @@
 </head>
 
 <body>
+  <!-- Floating Particles -->
+  <div id="particles"></div>
+
   <div class="container">
     <header>
       <img src="/static/logo.svg" alt="SAPPHIRE" class="logo" />
@@ -25,16 +28,60 @@
         <h1>SAPPHIRE</h1>
         <p class="subtitle">Audio Embedding & Similarity Search Demo</p>
       </div>
-      <div style="margin-left: auto; display: flex; align-items: center; gap: 16px;">
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 16px; position: relative; z-index: 1;">
+        <a href="/static_demo" class="btn btn-ghost" style="text-decoration: none;">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 4px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+            </path>
+          </svg>
+          Visualizations
+        </a>
         <a href="/model_details" class="btn btn-ghost" style="text-decoration: none;">Model Details</a>
         <div id="statusBadges" class="controls" style="justify-content: flex-end; margin: 0;">
-          <span id="indexStatus" class="badge">Index: Checking...</span>
-          <span id="embedderStatus" class="badge">Embedder: Checking...</span>
+          <span id="indexStatus" class="badge" style="position: relative;">Index: Checking...</span>
+          <span id="embedderStatus" class="badge" style="position: relative;">Embedder: Checking...</span>
         </div>
       </div>
     </header>
 
     <main>
+      <!-- Dataset Analytics Dashboard -->
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h2 class="section-title" style="margin: 0;">Dataset Analytics</h2>
+          <button id="toggleStats" class="btn btn-ghost" style="font-size: 12px; padding: 6px 12px;">Show
+            Details</button>
+        </div>
+
+        <div id="statsOverview" class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="statTotalSongs">-</div>
+            <div class="stat-label">Total Songs</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="statEmbeddingDim">-</div>
+            <div class="stat-label">Embedding Dim</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="statMoodCount">-</div>
+            <div class="stat-label">Mood Categories</div>
+          </div>
+        </div>
+
+        <div id="statsDetails" class="hidden" style="margin-top: 24px;">
+          <div class="chart-container">
+            <div class="chart-title">Mood Distribution</div>
+            <div id="moodChart" class="bar-chart"></div>
+          </div>
+
+          <div class="chart-container">
+            <div class="chart-title">Category Distribution</div>
+            <div id="categoryChart" class="bar-chart"></div>
+          </div>
+        </div>
+      </div>
+
       <!-- Search Section -->
       <div class="card">
         <h2 class="section-title">Search Similar Audio</h2>
@@ -47,11 +94,12 @@
             <input id="k" type="number" value="10" min="1" max="100" title="Number of results">
           </div>
           <button id="searchBtn" class="btn btn-primary">
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              style="transition: transform 0.3s ease;">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
-            Search
+            <span>Search</span>
           </button>
         </div>
       </div>
@@ -63,13 +111,14 @@
           <div id="uploadDrop" class="upload-area">
             <input type="file" id="audioFile" name="file" accept="audio/*" class="hidden" />
             <div id="dropText">
-              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                style="margin-bottom: 8px; color: var(--primary);">
+              <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                style="margin-bottom: 16px; color: var(--primary); filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5)); transition: transform 0.3s ease;">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
               </svg>
-              <p style="margin: 0; font-weight: 500;">Click to upload or drag and drop</p>
-              <p style="margin: 4px 0 0 0; font-size: 13px; color: var(--text-muted);">MP3, WAV, OGG supported</p>
+              <p style="margin: 0; font-weight: 600; font-size: 16px;">Click to upload or drag and drop</p>
+              <p style="margin: 8px 0 0 0; font-size: 14px; color: var(--text-muted);">MP3, WAV, OGG supported • Max
+                50MB</p>
             </div>
             <div id="filePreview" class="hidden"
               style="display: flex; align-items: center; justify-content: center; gap: 8px;">
@@ -270,38 +319,92 @@
         return;
       }
 
-      results.forEach(item => {
+      results.forEach((item, index) => {
         const el = document.createElement('div');
-        el.className = 'result-item';
+        el.style.marginBottom = '16px';
 
         // Format info nicely
         const info = item.info || {};
         const title = info.track_id || `Song ${item.id}`;
-        const details = Object.entries(info)
-          .filter(([k]) => k !== 'track_id' && k !== 'audio_path')
-          .map(([k, v]) => `<span class="badge" style="margin-right: 4px;">${k}: ${v}</span>`)
-          .join('');
+        const similarity = (1 - item.distance) * 100;
+        const similarityClass = similarity > 80 ? 'high' : similarity > 50 ? 'medium' : 'low';
 
         // Check for audio path
         const audioPath = info.audio_path || info.preview_url;
         const audioPlayer = audioPath ?
-          `<audio controls src="${audioPath}" style="margin-top: 8px; height: 32px; width: 100%;"></audio>` : '';
+          `<audio controls src="${audioPath}" style="margin-top: 12px; width: 100%; height: 40px;"></audio>` : '';
 
-        el.innerHTML = `
-                    <div class="result-info">
-                        <div style="font-weight: 600;">${title}</div>
-                        <div class="result-meta">ID: ${item.id}</div>
-                        <div style="margin-top: 8px;">${details}</div>
-                        ${audioPlayer}
-                    </div>
-                    <div class="result-score">
-                        <div>${(1 - item.distance).toFixed(4)}</div>
-                        <div style="font-size: 11px; color: var(--text-muted); font-weight: 400;">Similarity</div>
-                    </div>
-                `;
+        // Main result card
+        const mainCard = document.createElement('div');
+        mainCard.className = 'result-item';
+        mainCard.innerHTML = `
+          <div class="result-info" style="flex: 1;">
+            <div style="font-weight: 600; font-size: 16px;">${title}</div>
+            <div class="result-meta">ID: ${item.id}</div>
+            <div class="similarity-indicator" style="margin-top: 12px;">
+              <span style="font-size: 12px; color: var(--text-muted); min-width: 70px;">Similarity:</span>
+              <div class="similarity-bar">
+                <div class="similarity-fill ${similarityClass}" style="width: ${similarity}%"></div>
+              </div>
+              <span class="similarity-percent">${similarity.toFixed(1)}%</span>
+            </div>
+            ${audioPlayer}
+          </div>
+          <div class="result-score">
+            <div>${(1 - item.distance).toFixed(4)}</div>
+            <div style="font-size: 11px; color: var(--text-muted); font-weight: 400;">Score</div>
+            <button class="btn btn-ghost" style="margin-top: 12px; padding: 6px 12px; font-size: 11px;" onclick="toggleDetails(${index})">
+              Details ▼
+            </button>
+          </div>
+        `;
+
+        // Expandable details panel
+        const detailsPanel = document.createElement('div');
+        detailsPanel.className = 'expandable-panel';
+        detailsPanel.id = `details-${index}`;
+
+        const detailsContent = Object.entries(info)
+          .filter(([k]) => k !== 'audio_path' && k !== 'preview_url')
+          .map(([k, v]) => `
+            <tr>
+              <td style="font-weight: 500;">${k.replace(/_/g, ' ').toUpperCase()}</td>
+              <td class="feature-value">${v}</td>
+            </tr>
+          `).join('');
+
+        detailsPanel.innerHTML = `
+          <div class="expandable-content">
+            <div class="expandable-body">
+              <h4 style="margin: 0 0 12px 0; font-size: 14px; color: var(--text-secondary);">Song Details</h4>
+              <table class="feature-table">
+                <thead>
+                  <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${detailsContent || '<tr><td colspan="2" style="text-align: center; color: var(--text-muted);">No additional details available</td></tr>'}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+
+        el.appendChild(mainCard);
+        el.appendChild(detailsPanel);
         container.appendChild(el);
       });
     }
+
+    // Toggle details panel
+    window.toggleDetails = function (index) {
+      const panel = document.getElementById(`details-${index}`);
+      if (panel) {
+        panel.classList.toggle('expanded');
+      }
+    };
 
     $('clearResults').addEventListener('click', () => {
       $('resultsArea').classList.add('hidden');
@@ -544,28 +647,40 @@
 
       analysisSection.innerHTML = `
                 <h2 class="section-title">Live Audio Analysis</h2>
-                <div style="display: grid; gap: 24px;">
-                    <div>
-                        <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">Waveform</h3>
-                        <div id="waveformViz" style="height: 150px; background: var(--background); border-radius: 8px; padding: 16px;">
+                <div style="display: grid; gap: 32px;">
+                    <div style="position: relative;">
+                        <h3 style="font-size: 15px; margin: 0 0 16px 0; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                            <span style="display: inline-block; width: 8px; height: 8px; background: linear-gradient(135deg, #2563eb, #3b82f6); border-radius: 50%; margin-right: 8px; box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);"></span>
+                            Waveform
+                        </h3>
+                        <div id="waveformViz" style="height: 180px; background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(59, 130, 246, 0.05)); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: 16px; padding: 20px; box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);">
                             <canvas id="waveformCanvas" style="width: 100%; height: 100%;"></canvas>
                         </div>
                     </div>
-                    <div>
-                        <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">MFCC Features</h3>
-                        <div id="mfccViz" style="height: 200px; background: var(--background); border-radius: 8px; padding: 16px; overflow: hidden;">
+                    <div style="position: relative;">
+                        <h3 style="font-size: 15px; margin: 0 0 16px 0; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                            <span style="display: inline-block; width: 8px; height: 8px; background: linear-gradient(135deg, #8b5cf6, #a78bfa); border-radius: 50%; margin-right: 8px; box-shadow: 0 0 10px rgba(139, 92, 246, 0.6);"></span>
+                            MFCC Features
+                        </h3>
+                        <div id="mfccViz" style="height: 240px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(167, 139, 250, 0.05)); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 16px; padding: 20px; overflow: hidden; box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);">
                             <canvas id="mfccCanvas" style="width: 100%; height: 100%;"></canvas>
                         </div>
                     </div>
-                    <div>
-                        <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">Chroma Features</h3>
-                        <div id="chromaViz" style="height: 150px; background: var(--background); border-radius: 8px; padding: 16px;">
+                    <div style="position: relative;">
+                        <h3 style="font-size: 15px; margin: 0 0 16px 0; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                            <span style="display: inline-block; width: 8px; height: 8px; background: linear-gradient(135deg, #10b981, #34d399); border-radius: 50%; margin-right: 8px; box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);"></span>
+                            Chroma Features
+                        </h3>
+                        <div id="chromaViz" style="height: 180px; background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(52, 211, 153, 0.05)); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 16px; padding: 20px; box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);">
                             <canvas id="chromaCanvas" style="width: 100%; height: 100%;"></canvas>
                         </div>
                     </div>
-                    <div>
-                        <h3 style="font-size: 14px; margin: 0 0 12px 0; color: var(--text-muted);">Spectral Centroid</h3>
-                        <div id="spectralViz" style="height: 120px; background: var(--background); border-radius: 8px; padding: 16px;">
+                    <div style="position: relative;">
+                        <h3 style="font-size: 15px; margin: 0 0 16px 0; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                            <span style="display: inline-block; width: 8px; height: 8px; background: linear-gradient(135deg, #f59e0b, #fbbf24); border-radius: 50%; margin-right: 8px; box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);"></span>
+                            Spectral Centroid
+                        </h3>
+                        <div id="spectralViz" style="height: 150px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), rgba(251, 191, 36, 0.05)); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 16px; padding: 20px; box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);">
                             <canvas id="spectralCanvas" style="width: 100%; height: 100%;"></canvas>
                         </div>
                     </div>
@@ -590,16 +705,24 @@
       ctx.clearRect(0, 0, width, height);
 
       // Draw center line
-      ctx.strokeStyle = '#e2e8f0';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.moveTo(0, height / 2);
       ctx.lineTo(width, height / 2);
       ctx.stroke();
 
-      // Draw waveform
-      ctx.strokeStyle = '#2563eb';
-      ctx.lineWidth = 1.5;
+      // Create gradient for waveform
+      const gradient = ctx.createLinearGradient(0, 0, 0, height);
+      gradient.addColorStop(0, '#3b82f6');
+      gradient.addColorStop(0.5, '#2563eb');
+      gradient.addColorStop(1, '#1d4ed8');
+
+      // Draw waveform with glow
+      ctx.shadowBlur = 15;
+      ctx.shadowColor = 'rgba(37, 99, 235, 0.8)';
+      ctx.strokeStyle = gradient;
+      ctx.lineWidth = 2.5;
       ctx.beginPath();
 
       const step = width / data.length;
@@ -610,6 +733,7 @@
         else ctx.lineTo(x, y);
       }
       ctx.stroke();
+      ctx.shadowBlur = 0;
     }
 
     function drawLinePlot(canvasId, data, label) {
@@ -627,9 +751,17 @@
       const max = Math.max(...data);
       const range = max - min || 1;
 
-      // Draw line
-      ctx.strokeStyle = '#10b981';
-      ctx.lineWidth = 2;
+      // Create gradient
+      const gradient = ctx.createLinearGradient(0, 0, 0, height);
+      gradient.addColorStop(0, '#fbbf24');
+      gradient.addColorStop(0.5, '#f59e0b');
+      gradient.addColorStop(1, '#d97706');
+
+      // Draw line with glow
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = 'rgba(245, 158, 11, 0.7)';
+      ctx.strokeStyle = gradient;
+      ctx.lineWidth = 3;
       ctx.beginPath();
 
       const step = width / data.length;
@@ -641,6 +773,7 @@
         else ctx.lineTo(x, y);
       }
       ctx.stroke();
+      ctx.shadowBlur = 0;
     }
 
     function drawHeatmap(canvasId, data, colorScheme) {
@@ -748,9 +881,120 @@
       }
     });
 
+    // --- Dataset Statistics ---
+    async function loadDatasetStats() {
+      try {
+        const r = await fetch('/api/dataset_stats');
+        const data = await r.json();
+
+        if (data.ok && data.stats) {
+          const stats = data.stats;
+
+          // Update stat cards
+          $('statTotalSongs').textContent = stats.total_songs || '-';
+          $('statEmbeddingDim').textContent = stats.embedding_dim || '-';
+          $('statMoodCount').textContent = Object.keys(stats.category_distribution || {}).length || '-';
+
+          // Render charts
+          renderBarChart('moodChart', stats.mood_distribution || {});
+          renderBarChart('categoryChart', stats.category_distribution || {});
+
+          log('Dataset statistics loaded');
+        }
+      } catch (e) {
+        console.error('Failed to load dataset stats:', e);
+        log('Failed to load dataset statistics', 'error');
+      }
+    }
+
+    function renderBarChart(containerId, data) {
+      const container = $(containerId);
+      if (!container) return;
+
+      container.innerHTML = '';
+
+      if (Object.keys(data).length === 0) {
+        container.innerHTML = '<div style="text-align: center; color: var(--text-muted); padding: 20px;">No data available</div>';
+        return;
+      }
+
+      // Sort by count descending
+      const sorted = Object.entries(data).sort((a, b) => b[1] - a[1]);
+      const maxCount = Math.max(...sorted.map(([_, count]) => count));
+
+      sorted.forEach(([label, count]) => {
+        const percentage = (count / maxCount) * 100;
+        const barItem = document.createElement('div');
+        barItem.className = 'bar-item';
+        barItem.innerHTML = `
+          <div class="bar-label">${label}</div>
+          <div class="bar-visual">
+            <div class="bar-fill" style="width: ${percentage}%">
+              <span class="bar-count">${count}</span>
+            </div>
+          </div>
+        `;
+        container.appendChild(barItem);
+      });
+    }
+
+    $('toggleStats').addEventListener('click', () => {
+      const details = $('statsDetails');
+      details.classList.toggle('hidden');
+      $('toggleStats').textContent = details.classList.contains('hidden') ? 'Show Details' : 'Hide Details';
+    });
+
     // --- Init ---
     checkHealth();
     initLibrary();
+    loadDatasetStats();
+
+    // --- Particle Effects ---
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      if (!particlesContainer) return;
+
+      const particleCount = 30;
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    createParticles();
+
+    // --- Enhanced Button Interactions ---
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mouseenter', function (e) {
+        const svg = this.querySelector('svg');
+        if (svg) {
+          svg.style.transform = 'scale(1.2) rotate(5deg)';
+        }
+      });
+
+      btn.addEventListener('mouseleave', function (e) {
+        const svg = this.querySelector('svg');
+        if (svg) {
+          svg.style.transform = 'scale(1) rotate(0deg)';
+        }
+      });
+    });
+
+    // --- Upload Area Animation ---
+    const uploadIcon = document.querySelector('#uploadDrop svg');
+    if (uploadIcon) {
+      dropZone.addEventListener('mouseenter', () => {
+        uploadIcon.style.transform = 'translateY(-5px) scale(1.1)';
+      });
+      dropZone.addEventListener('mouseleave', () => {
+        uploadIcon.style.transform = 'translateY(0) scale(1)';
+      });
+    }
   </script>
 </body>
 

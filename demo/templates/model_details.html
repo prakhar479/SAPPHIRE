@@ -4,99 +4,390 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Model Details | SAPPHIRE</title>
+    <title>Model Architecture | SAPPHIRE</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
+    <!-- Floating Particles -->
+    <div id="particles"></div>
+
     <div class="container">
         <header>
             <img src="/static/logo.svg" alt="SAPPHIRE" class="logo" />
             <div>
                 <h1>SAPPHIRE</h1>
-                <p class="subtitle">Model Architecture & Details</p>
+                <p class="subtitle">Model Architecture & Technical Details</p>
             </div>
-            <div style="margin-left: auto;">
-                <a href="/" class="btn btn-ghost">← Back to Demo</a>
+            <div style="margin-left: auto; display: flex; align-items: center; gap: 12px;">
+                <a href="/static_demo" class="btn btn-ghost"
+                    style="text-decoration: none; font-size: 13px; padding: 8px 16px;">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        style="margin-right: 4px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                        </path>
+                    </svg>
+                    Visualizations
+                </a>
+                <a href="/" class="btn btn-primary" style="text-decoration: none;">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        style="margin-right: 4px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    Back to Demo
+                </a>
             </div>
         </header>
 
         <main>
-            <div class="card">
-                <h2 class="section-title">Embedding Model Information</h2>
-
-                {% if info %}
-                <div style="display: grid; gap: 16px;">
-                    <div>
-                        <h3 style="font-size: 16px; margin: 0 0 8px 0; color: var(--text-muted);">Input Dimensions</h3>
-                        <p style="font-size: 24px; font-weight: 600; margin: 0; color: var(--primary);">{{
-                            info.input_dim }}</p>
-                        <p style="font-size: 14px; color: var(--text-muted); margin: 4px 0 0 0;">Audio features
-                            extracted from each track</p>
-                    </div>
-
-                    <div>
-                        <h3 style="font-size: 16px; margin: 0 0 8px 0; color: var(--text-muted);">Embedding Dimensions
-                        </h3>
-                        <p style="font-size: 24px; font-weight: 600; margin: 0; color: var(--primary);">{{
-                            info.embedding_dim }}</p>
-                        <p style="font-size: 14px; color: var(--text-muted); margin: 4px 0 0 0;">Compressed
-                            representation size</p>
-                    </div>
-                </div>
-                {% else %}
-                <p style="color: var(--text-muted);">Model information not available. Ensure the embedder checkpoint is
-                    loaded.</p>
-                {% endif %}
-            </div>
-
             {% if info %}
+            <!-- Model Overview -->
             <div class="card">
-                <h2 class="section-title">Network Architecture</h2>
-                <pre
-                    style="background: var(--background); padding: 16px; border-radius: 8px; overflow-x: auto; font-size: 12px; line-height: 1.6;">{{ info.layers }}</pre>
+                <h2 class="section-title">Model Overview</h2>
+
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div style="font-size: 48px; margin-bottom: 12px;">🎵</div>
+                        <div class="stat-value">{{ info.input_dim }}</div>
+                        <div class="stat-label">Input Features</div>
+                        <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">Audio features per track
+                        </p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div style="font-size: 48px; margin-bottom: 12px;">🧠</div>
+                        <div class="stat-value">{{ info.embedding_dim }}</div>
+                        <div class="stat-label">Embedding Dim</div>
+                        <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">Compressed representation
+                        </p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div style="font-size: 48px; margin-bottom: 12px;">📊</div>
+                        <div class="stat-value">{{ info.feature_cols|length if info.feature_cols else 0 }}</div>
+                        <div class="stat-label">Feature Columns</div>
+                        <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">Total feature count</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- Network Architecture -->
             <div class="card">
-                <h2 class="section-title">Feature Columns ({{ info.feature_cols|length }})</h2>
-                {% if info.feature_cols %}
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px;">
-                    {% for col in info.feature_cols[:50] %}
-                    <div class="badge" style="margin: 0;">{{ col }}</div>
-                    {% endfor %}
-                    {% if info.feature_cols|length > 50 %}
-                    <div
-                        style="grid-column: 1 / -1; text-align: center; color: var(--text-muted); font-size: 14px; margin-top: 8px;">
-                        ... and {{ info.feature_cols|length - 50 }} more
-                    </div>
-                    {% endif %}
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                    <h2 class="section-title" style="margin: 0;">Network Architecture</h2>
+                    <button id="toggleArch" class="btn btn-ghost"
+                        style="font-size: 12px; padding: 6px 12px;">Expand</button>
                 </div>
-                {% else %}
-                <p style="color: var(--text-muted);">No feature columns found.</p>
+
+                <!-- Architecture Visualization -->
+                <div
+                    style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(20, 184, 166, 0.05)); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; margin-bottom: 24px;">
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 24px;">
+                        <!-- Input Layer -->
+                        <div style="text-align: center;">
+                            <div
+                                style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);">
+                                <span style="font-size: 32px; font-weight: 700; color: white;">{{ info.input_dim
+                                    }}</span>
+                            </div>
+                            <div style="font-size: 12px; font-weight: 600; color: var(--text-secondary);">INPUT LAYER
+                            </div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Audio Features
+                            </div>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div style="color: var(--primary); font-size: 24px;">→</div>
+
+                        <!-- Hidden Layers -->
+                        <div style="text-align: center;">
+                            <div
+                                style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--secondary), #be185d); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: 0 0 20px rgba(236, 72, 153, 0.6);">
+                                <span style="font-size: 24px; font-weight: 700; color: white;">🔄</span>
+                            </div>
+                            <div style="font-size: 12px; font-weight: 600; color: var(--text-secondary);">HIDDEN LAYERS
+                            </div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Deep Network</div>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div style="color: var(--primary); font-size: 24px;">→</div>
+
+                        <!-- Embedding Layer -->
+                        <div style="text-align: center;">
+                            <div
+                                style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent), #0d9488); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; box-shadow: 0 0 20px rgba(20, 184, 166, 0.6);">
+                                <span style="font-size: 32px; font-weight: 700; color: white;">{{ info.embedding_dim
+                                    }}</span>
+                            </div>
+                            <div style="font-size: 12px; font-weight: 600; color: var(--text-secondary);">EMBEDDING
+                            </div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Output Vector</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Architecture -->
+                <div id="archDetails" class="hidden">
+                    <h3
+                        style="font-size: 14px; margin: 0 0 16px 0; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                        <span
+                            style="display: inline-block; width: 8px; height: 8px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; margin-right: 8px; box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);"></span>
+                        Layer Details
+                    </h3>
+                    <div
+                        style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; overflow-x: auto;">
+                        <pre
+                            style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.8; color: var(--text-secondary);">{{ info.layers }}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Columns -->
+            {% if info.feature_cols %}
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                    <h2 class="section-title" style="margin: 0;">Feature Columns ({{ info.feature_cols|length }})</h2>
+                    <div class="feature-pills">
+                        <button class="feature-pill active" onclick="filterFeatures('all')">All</button>
+                        <button class="feature-pill" onclick="filterFeatures('mfcc')">MFCC</button>
+                        <button class="feature-pill" onclick="filterFeatures('chroma')">Chroma</button>
+                        <button class="feature-pill" onclick="filterFeatures('spectral')">Spectral</button>
+                        <button class="feature-pill" onclick="filterFeatures('rhythm')">Rhythm</button>
+                    </div>
+                </div>
+
+                <div id="featureGrid"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px;">
+                    {% for col in info.feature_cols %}
+                    <div class="feature-badge" data-feature="{{ col }}">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div
+                                style="width: 6px; height: 6px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);">
+                            </div>
+                            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px;">{{ col }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                {% if info.feature_cols|length > 50 %}
+                <div
+                    style="text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);">
+                    Showing all {{ info.feature_cols|length }} features
+                </div>
                 {% endif %}
             </div>
             {% endif %}
 
+            <!-- Model Information -->
             <div class="card">
                 <h2 class="section-title">About the Model</h2>
-                <p style="line-height: 1.6; color: var(--text);">
-                    This embedding model is trained on the MIREX dataset to learn compact representations of audio
-                    tracks.
-                    It uses a deep neural network to transform high-dimensional audio features into a low-dimensional
-                    embedding space where similar tracks are closer together.
-                </p>
-                <p style="line-height: 1.6; color: var(--text); margin-top: 12px;">
-                    The model extracts features like MFCCs (Mel-frequency cepstral coefficients), chroma features,
-                    and spectral descriptors from audio, then maps them to embeddings that capture the perceptual
-                    similarity between tracks.
-                </p>
+
+                <div style="display: grid; gap: 24px;">
+                    <div class="expandable-panel expanded">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <span style="font-size: 16px;">🎯</span>
+                                </div>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 14px;">Model Purpose</div>
+                                    <div style="font-size: 11px; color: var(--text-muted);">What this model does</div>
+                                </div>
+                            </div>
+                            <div class="expandable-icon">▼</div>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-body">
+                                <p style="line-height: 1.8; color: var(--text-secondary); margin: 0;">
+                                    This embedding model is trained on the MIREX dataset to learn compact
+                                    representations of audio tracks.
+                                    It uses a deep neural network to transform high-dimensional audio features into a
+                                    low-dimensional
+                                    embedding space where similar tracks are closer together.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expandable-panel expanded">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--secondary), #be185d); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <span style="font-size: 16px;">🔬</span>
+                                </div>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 14px;">Feature Extraction</div>
+                                    <div style="font-size: 11px; color: var(--text-muted);">How features are extracted
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="expandable-icon">▼</div>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-body">
+                                <p style="line-height: 1.8; color: var(--text-secondary); margin: 0;">
+                                    The model extracts features like MFCCs (Mel-frequency cepstral coefficients), chroma
+                                    features,
+                                    and spectral descriptors from audio, then maps them to embeddings that capture the
+                                    perceptual
+                                    similarity between tracks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="expandable-panel">
+                        <div class="expandable-header" onclick="toggleSection(this)">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div
+                                    style="width: 32px; height: 32px; background: linear-gradient(135deg, var(--accent), #0d9488); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <span style="font-size: 16px;">⚡</span>
+                                </div>
+                                <div>
+                                    <div style="font-weight: 600; font-size: 14px;">Performance</div>
+                                    <div style="font-size: 11px; color: var(--text-muted);">Model efficiency</div>
+                                </div>
+                            </div>
+                            <div class="expandable-icon">▼</div>
+                        </div>
+                        <div class="expandable-content">
+                            <div class="expandable-body">
+                                <p style="line-height: 1.8; color: var(--text-secondary); margin: 0 0 16px 0;">
+                                    The model achieves efficient compression from {{ info.input_dim }} input features to
+                                    {{ info.embedding_dim }} embedding dimensions,
+                                    reducing dimensionality by {{ "%.1f"|format((1 - info.embedding_dim /
+                                    info.input_dim) * 100) }}% while preserving semantic similarity.
+                                </p>
+                                <div class="progress-bar-container" style="height: 12px;">
+                                    <div class="progress-bar" id="compressionBar"
+                                        data-width="{{ (info.embedding_dim / info.input_dim * 100) }}"></div>
+                                </div>
+                                <div class="progress-label">
+                                    <span>Compression Ratio</span>
+                                    <span>{{ info.embedding_dim }} / {{ info.input_dim }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            {% else %}
+            <!-- No Model Info Available -->
+            <div class="card">
+                <div style="text-align: center; padding: 60px 20px;">
+                    <div style="font-size: 64px; margin-bottom: 16px; opacity: 0.5;">🤖</div>
+                    <h2 style="margin: 0 0 12px 0; color: var(--text);">Model Information Unavailable</h2>
+                    <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto;">
+                        The embedder checkpoint could not be loaded. Please ensure the model files are present in the
+                        correct location.
+                    </p>
+                </div>
+            </div>
+            {% endif %}
         </main>
     </div>
+
+    <script>
+        // Particle effects
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+
+            const particleCount = 20;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Set compression bar width from data attribute
+        const compressionBar = document.getElementById('compressionBar');
+        if (compressionBar) {
+            const width = compressionBar.getAttribute('data-width');
+            if (width) {
+                compressionBar.style.width = width + '%';
+            }
+        }
+
+        // Toggle architecture details
+        const toggleArch = document.getElementById('toggleArch');
+        const archDetails = document.getElementById('archDetails');
+        if (toggleArch && archDetails) {
+            toggleArch.addEventListener('click', () => {
+                archDetails.classList.toggle('hidden');
+                toggleArch.textContent = archDetails.classList.contains('hidden') ? 'Expand' : 'Collapse';
+            });
+        }
+
+        // Toggle expandable sections
+        window.toggleSection = function (header) {
+            const panel = header.parentElement;
+            panel.classList.toggle('expanded');
+        };
+
+        // Filter features
+        window.filterFeatures = function (category) {
+            const badges = document.querySelectorAll('.feature-badge');
+            const pills = document.querySelectorAll('.feature-pill');
+
+            // Update active pill
+            pills.forEach(pill => {
+                pill.classList.remove('active');
+                if (pill.textContent.toLowerCase().includes(category) || category === 'all') {
+                    if (pill.onclick.toString().includes(category)) {
+                        pill.classList.add('active');
+                    }
+                }
+            });
+
+            // Filter badges
+            badges.forEach(badge => {
+                const feature = badge.dataset.feature.toLowerCase();
+                if (category === 'all' || feature.includes(category)) {
+                    badge.style.display = 'block';
+                } else {
+                    badge.style.display = 'none';
+                }
+            });
+        };
+    </script>
+
+    <style>
+        .feature-badge {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-badge:hover {
+            background: var(--surface-hover);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+    </style>
 </body>
 
 </html>

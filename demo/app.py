@@ -1498,6 +1498,51 @@ def api_library():
     return jsonify({"ok": True, "metadata": meta})
 
 
+@app.route("/api/dataset_stats", methods=["GET"])
+def api_dataset_stats():
+    """Return comprehensive dataset statistics and analytics."""
+    try:
+        meta = load_metadata()
+        embeddings = load_embeddings()
+        
+        stats = {
+            "total_songs": 0,
+            "mood_distribution": {},
+            "category_distribution": {},
+            "dataset_distribution": {},
+            "has_embeddings": embeddings is not None,
+            "embedding_dim": 0,
+        }
+        
+        if embeddings is not None:
+            stats["total_songs"] = len(embeddings)
+            stats["embedding_dim"] = embeddings.shape[1] if len(embeddings.shape) > 1 else 0
+        
+        # Analyze metadata
+        if isinstance(meta, dict):
+            for item in meta.values():
+                if isinstance(item, dict):
+                    # Count mood clusters
+                    mood = item.get("mood_cluster")
+                    if mood:
+                        stats["mood_distribution"][str(mood)] = stats["mood_distribution"].get(str(mood), 0) + 1
+                    
+                    # Count mood categories
+                    category = item.get("mood_category")
+                    if category:
+                        stats["category_distribution"][str(category)] = stats["category_distribution"].get(str(category), 0) + 1
+                    
+                    # Count datasets
+                    dataset = item.get("dataset")
+                    if dataset:
+                        stats["dataset_distribution"][str(dataset)] = stats["dataset_distribution"].get(str(dataset), 0) + 1
+        
+        return jsonify({"ok": True, "stats": stats})
+    except Exception as e:
+        logger.exception("Failed to compute dataset stats")
+        return jsonify({"ok": False, "error": str(e)}), 500
+
+
 @app.route("/api/search", methods=["POST"])
 def api_search():
     payload = request.json or {}

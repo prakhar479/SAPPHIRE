@@ -1,25 +1,131 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Static Demo — Study Plots</title>
-    <style>body{font-family:Arial,Helvetica,sans-serif; margin:20px;} img{max-width:420px; margin:8px; border:1px solid #ddd; padding:4px}</style>
-  </head>
-  <body>
-    <h1>Study Plots and Visualizations</h1>
-    <p>These images are pulled from the repository's analysis and model folders.</p>
-    <div>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Visualizations | SAPPHIRE</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Floating Particles -->
+  <div id="particles"></div>
+
+  <div class="container">
+    <header>
+      <img src="/static/logo.svg" alt="SAPPHIRE" class="logo" />
+      <div>
+        <h1>SAPPHIRE</h1>
+        <p class="subtitle">Study Plots & Visualizations</p>
+      </div>
+      <div style="margin-left: auto;">
+        <a href="/" class="btn btn-primary" style="text-decoration: none;">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin-right: 4px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+            </path>
+          </svg>
+          Back to Demo
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Introduction -->
+      <div class="card">
+        <h2 class="section-title">Research Visualizations</h2>
+        <p style="line-height: 1.8; color: var(--text-secondary); margin: 0;">
+          These visualizations are generated from the model training and analysis processes.
+          They provide insights into feature distributions, model performance, and embedding quality.
+        </p>
+      </div>
+
+      <!-- Plots Grid -->
       {% if plots %}
+      <div style="display: grid; gap: 24px;">
         {% for p in plots %}
-          <div>
-            <p><strong>{{ p }}</strong></p>
-            <img src="/file/{{ p }}" alt="{{ p }}" />
+        <div class="card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h3 style="font-size: 16px; font-weight: 600; margin: 0; color: var(--text);">
+              <span
+                style="display: inline-block; width: 8px; height: 8px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%; margin-right: 8px; box-shadow: 0 0 10px rgba(99, 102, 241, 0.6);"></span>
+              {{ p.split('/')[-1].replace('_', ' ').replace('.png', '').title() }}
+            </h3>
+            <a href="/file/{{ p }}" download class="btn btn-ghost"
+              style="text-decoration: none; padding: 6px 12px; font-size: 12px;">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                style="margin-right: 4px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              Download
+            </a>
           </div>
+
+          <div
+            style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; overflow: hidden;">
+            <img src="/file/{{ p }}" alt="{{ p }}"
+              style="width: 100%; height: auto; border-radius: 8px; display: block; transition: transform 0.3s ease;"
+              onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" />
+          </div>
+
+          <div
+            style="margin-top: 12px; padding: 12px; background: var(--surface); border-radius: 8px; border: 1px solid var(--border);">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted);">
+              {{ p }}
+            </div>
+          </div>
+        </div>
         {% endfor %}
+      </div>
       {% else %}
-        <p>No plots found in the expected locations. Check `models/embedder_mirex/plots` and `analysis/.../plots`.</p>
+      <!-- No Plots Found -->
+      <div class="card">
+        <div style="text-align: center; padding: 60px 20px;">
+          <div style="font-size: 64px; margin-bottom: 16px; opacity: 0.5;">📊</div>
+          <h2 style="margin: 0 0 12px 0; color: var(--text);">No Visualizations Found</h2>
+          <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 24px;">
+            No plots were found in the expected locations. Check the following directories:
+          </p>
+          <div
+            style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; max-width: 600px; margin: 0 auto; text-align: left;">
+            <div
+              style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-secondary); line-height: 1.8;">
+              • models/embedder_mirex/plots<br>
+              • analysis/.../plots
+            </div>
+          </div>
+        </div>
+      </div>
       {% endif %}
-    </div>
-    <p><a href="/">Back to demo</a></p>
-  </body>
+    </main>
+  </div>
+
+  <script>
+    // Particle effects
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      if (!particlesContainer) return;
+
+      const particleCount = 20;
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    createParticles();
+  </script>
+</body>
+
 </html>
