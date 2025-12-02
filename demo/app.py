@@ -74,9 +74,20 @@ def load_metadata():
                             try:
                                 # MIREX dataset audio files are named like 001.mp3, 002.mp3
                                 filename = f"{int(track_id):03d}.mp3"
-                                dataset_audio_dir = os.path.join(BASE_DIR, "data", "raw", "MIREX-like_mood", "dataset", "Audio")
-                                if os.path.exists(os.path.join(dataset_audio_dir, filename)):
-                                    info["audio_path"] = f"/api/dataset_audio/{filename}"
+                                dataset_audio_dir = os.path.join(
+                                    BASE_DIR,
+                                    "data",
+                                    "raw",
+                                    "MIREX-like_mood",
+                                    "dataset",
+                                    "Audio",
+                                )
+                                if os.path.exists(
+                                    os.path.join(dataset_audio_dir, filename)
+                                ):
+                                    info["audio_path"] = (
+                                        f"/api/dataset_audio/{filename}"
+                                    )
                             except Exception:
                                 pass
                     except Exception:
@@ -171,15 +182,19 @@ def robust_load_audio(path, sr=22050):
 
         wav_path = path + ".wav"
         try:
-            subprocess.check_call([
-                'ffmpeg', '-i', path, '-ar', str(sr), '-ac', '1', '-y', wav_path
-            ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.check_call(
+                ["ffmpeg", "-i", path, "-ar", str(sr), "-ac", "1", "-y", wav_path],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
             y, _ = librosa.load(wav_path, sr=sr, mono=True)
             return y, sr
         except subprocess.CalledProcessError as e:
-            logger.error('ffmpeg conversion failed: %s', e)
+            logger.error("ffmpeg conversion failed: %s", e)
             if e.stderr:
-                logger.error('ffmpeg stderr: %s', e.stderr.decode('utf-8', errors='ignore'))
+                logger.error(
+                    "ffmpeg stderr: %s", e.stderr.decode("utf-8", errors="ignore")
+                )
             raise
         except Exception as e:
             logger.error("ffmpeg conversion failed: %s", e)
@@ -190,7 +205,6 @@ def robust_load_audio(path, sr=22050):
                     os.remove(wav_path)
                 except Exception:
                     pass
-
 
 
 def load_index(expected_dim=None):
@@ -371,7 +385,7 @@ def api_upload():
     # Use a safe filename to avoid ffmpeg issues with complex characters
     # Sanitize extension: only alphanumeric and dot
     original_ext = os.path.splitext(f.filename)[1]
-    ext = re.sub(r'[^a-zA-Z0-9.]', '', original_ext)
+    ext = re.sub(r"[^a-zA-Z0-9.]", "", original_ext)
     if not ext:
         ext = ".bin"
     safe_filename = f"upload{ext}"
@@ -393,13 +407,13 @@ def api_upload():
                 "chroma_mean": list(np.mean(chroma, axis=1)),
                 "chroma_std": list(np.std(chroma, axis=1)),
             }
-            
+
             # Prepare visualization data (downsample for frontend)
             viz_data = {
-                'waveform': list(y[::1000]), # Downsample for display
-                'mfcc': mfcc.tolist(),
-                'chroma': chroma.tolist(),
-                'spectral_centroid': spec_cent.tolist()
+                "waveform": list(y[::1000]),  # Downsample for display
+                "mfcc": mfcc.tolist(),
+                "chroma": chroma.tolist(),
+                "spectral_centroid": spec_cent.tolist(),
             }
         except Exception as e:
             logger.exception("feature extraction failed: %s", e)
@@ -437,7 +451,14 @@ def api_upload():
                 val = flat.get(c)
                 if val is None:
                     # try stripping common prefixes if exact match fails
-                    for prefix in ["acoustic_features.", "harmony_features.", "rhythm_features.", "quality_features.", "lyrics_features.", "metadata."]:
+                    for prefix in [
+                        "acoustic_features.",
+                        "harmony_features.",
+                        "rhythm_features.",
+                        "quality_features.",
+                        "lyrics_features.",
+                        "metadata.",
+                    ]:
                         if c.startswith(prefix):
                             val = flat.get(c.replace(prefix, ""))
                             if val is not None:
@@ -573,15 +594,18 @@ def serve_audio(filename):
         return jsonify({"ok": False, "error": "File not found"}), 404
 
 
-@app.route('/api/dataset_audio/<path:filename>')
+@app.route("/api/dataset_audio/<path:filename>")
 def serve_dataset_audio(filename):
     """Serve audio files from the MIREX dataset directory."""
-    audio_dir = os.path.join(BASE_DIR, "data", "raw", "MIREX-like_mood", "dataset", "Audio")
+    audio_dir = os.path.join(
+        BASE_DIR, "data", "raw", "MIREX-like_mood", "dataset", "Audio"
+    )
     try:
         from flask import send_from_directory
+
         return send_from_directory(audio_dir, filename)
     except Exception:
-        return jsonify({'ok': False, 'error': 'File not found'}), 404
+        return jsonify({"ok": False, "error": "File not found"}), 404
 
 
 @app.route("/api/add_to_library", methods=["POST"])
@@ -646,7 +670,7 @@ def api_add_to_library():
 
         try:
             # Save temp file
-            tmp_dir = tempfile.mkdtemp(prefix='library_add_')
+            tmp_dir = tempfile.mkdtemp(prefix="library_add_")
             tmp_path = os.path.join(tmp_dir, file.filename)
             file.save(tmp_path)
 
@@ -655,12 +679,12 @@ def api_add_to_library():
                 y, sr = robust_load_audio(tmp_path)
                 mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
                 chroma = librosa.feature.chroma_stft(y=y, sr=sr)
-                
+
                 features = {
-                    'mfcc_mean': list(np.mean(mfcc, axis=1)),
-                    'mfcc_std': list(np.std(mfcc, axis=1)),
-                    'chroma_mean': list(np.mean(chroma, axis=1)),
-                    'chroma_std': list(np.std(chroma, axis=1)),
+                    "mfcc_mean": list(np.mean(mfcc, axis=1)),
+                    "mfcc_std": list(np.std(mfcc, axis=1)),
+                    "chroma_mean": list(np.mean(chroma, axis=1)),
+                    "chroma_std": list(np.std(chroma, axis=1)),
                 }
             except Exception as e:
                 logger.error(f"Feature extraction failed for {file.filename}: {e}")
@@ -678,7 +702,14 @@ def api_add_to_library():
                     val = flat.get(c)
                     if val is None:
                         # try stripping common prefixes if exact match fails
-                        for prefix in ["acoustic_features.", "harmony_features.", "rhythm_features.", "quality_features.", "lyrics_features.", "metadata."]:
+                        for prefix in [
+                            "acoustic_features.",
+                            "harmony_features.",
+                            "rhythm_features.",
+                            "quality_features.",
+                            "lyrics_features.",
+                            "metadata.",
+                        ]:
                             if c.startswith(prefix):
                                 val = flat.get(c.replace(prefix, ""))
                                 if val is not None:
@@ -884,14 +915,14 @@ def flatten_extracted_features(feat: dict):
         if isinstance(obj, list) or isinstance(obj, np.ndarray):
             # heuristics for common list-valued features
             # Check if the prefix ends with a known pattern (handle both with and without top-level prefix)
-            base_name = prefix.split('.')[-1] if '.' in prefix else prefix
-            
+            base_name = prefix.split(".")[-1] if "." in prefix else prefix
+
             if base_name in ("mfcc_mean", "mfcc_std") or base_name.startswith("mfcc_"):
                 # expand to mfcc_0_mean, mfcc_1_mean, ...
                 for i, v in enumerate(obj):
                     # Preserve the top-level prefix
-                    if '.' in prefix:
-                        parts = prefix.rsplit('.', 1)
+                    if "." in prefix:
+                        parts = prefix.rsplit(".", 1)
                         key = f"{parts[0]}.mfcc_{i}_" + (
                             "mean"
                             if "mean" in base_name
@@ -911,8 +942,8 @@ def flatten_extracted_features(feat: dict):
                 return
             if base_name in ("chroma_mean", "chroma_std"):
                 for i, v in enumerate(obj):
-                    if '.' in prefix:
-                        parts = prefix.rsplit('.', 1)
+                    if "." in prefix:
+                        parts = prefix.rsplit(".", 1)
                         key = f"{parts[0]}.chroma_{i}_" + (
                             "mean"
                             if "mean" in base_name
@@ -931,18 +962,14 @@ def flatten_extracted_features(feat: dict):
                 return
             if base_name in ("mfcc_skew", "mfcc_kurtosis"):
                 for i, v in enumerate(obj):
-                    if '.' in prefix:
-                        parts = prefix.rsplit('.', 1)
+                    if "." in prefix:
+                        parts = prefix.rsplit(".", 1)
                         key = f"{parts[0]}.mfcc_{i}_" + (
-                            "skew"
-                            if "skew" in base_name
-                            else "kurtosis"
+                            "skew" if "skew" in base_name else "kurtosis"
                         )
                     else:
                         key = f"mfcc_{i}_" + (
-                            "skew"
-                            if "skew" in prefix
-                            else "kurtosis"
+                            "skew" if "skew" in prefix else "kurtosis"
                         )
                     try:
                         flat[key] = _to_number(v)
@@ -951,8 +978,8 @@ def flatten_extracted_features(feat: dict):
                 return
             if base_name in ("spectral_contrast_mean", "spectral_contrast_std"):
                 for i, v in enumerate(obj):
-                    if '.' in prefix:
-                        parts = prefix.rsplit('.', 1)
+                    if "." in prefix:
+                        parts = prefix.rsplit(".", 1)
                         key = f"{parts[0]}.spectral_contrast_{i}_" + (
                             "mean"
                             if "mean" in base_name
@@ -971,8 +998,8 @@ def flatten_extracted_features(feat: dict):
                 return
             if base_name in ("tonnetz_mean", "tonnetz_std"):
                 for i, v in enumerate(obj):
-                    if '.' in prefix:
-                        parts = prefix.rsplit('.', 1)
+                    if "." in prefix:
+                        parts = prefix.rsplit(".", 1)
                         key = f"{parts[0]}.tonnetz_{i}_" + (
                             "mean"
                             if "mean" in base_name
