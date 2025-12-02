@@ -213,17 +213,18 @@ def extract_audio_features(y, sr):
     if not _LIBROSA_AVAILABLE:
         try:
             import librosa as _lib
+
             librosa = _lib
             _LIBROSA_AVAILABLE = True
         except Exception:
-            raise ImportError('librosa not available')
+            raise ImportError("librosa not available")
 
     # 1. Mel-Frequency Cepstral Coefficients (MFCC)
     mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
-    
+
     # 2. Chroma
     chroma = librosa.feature.chroma_stft(y=y, sr=sr)
-    
+
     # 3. Spectral Features
     spec_cent = librosa.feature.spectral_centroid(y=y, sr=sr)
     spec_bw = librosa.feature.spectral_bandwidth(y=y, sr=sr)
@@ -231,13 +232,13 @@ def extract_audio_features(y, sr):
     spec_flat = librosa.feature.spectral_flatness(y=y)
     spec_contrast = librosa.feature.spectral_contrast(y=y, sr=sr)
     zcr = librosa.feature.zero_crossing_rate(y)
-    
+
     # 4. Tonal Features
     try:
         tonnetz = librosa.feature.tonnetz(y=librosa.effects.harmonic(y), sr=sr)
     except Exception:
         tonnetz = np.zeros((6, 1))
-        
+
     # 5. Rhythm Features
     try:
         tempo, _ = librosa.beat.beat_track(y=y, sr=sr)
@@ -248,13 +249,14 @@ def extract_audio_features(y, sr):
             tempo = float(tempo)
     except Exception:
         tempo = 0.0
-        
+
     # 6. Quality Features
     rms = librosa.feature.rms(y=y)
-    
+
     # 7. Skew/Kurtosis (requires scipy)
     try:
         from scipy.stats import skew, kurtosis
+
         mfcc_skew = list(skew(mfcc, axis=1))
         mfcc_kurtosis = list(kurtosis(mfcc, axis=1))
     except Exception:
@@ -313,17 +315,17 @@ def extract_audio_features(y, sr):
             "sentiment_neutral": 0.0,
         },
         "metadata": {
-             "duration": float(librosa.get_duration(y=y, sr=sr)),
-             "original_sr": float(sr),
-        }
+            "duration": float(librosa.get_duration(y=y, sr=sr)),
+            "original_sr": float(sr),
+        },
     }
-    
+
     return features, mfcc, chroma, spec_cent
 
 
 def extract_lyrical_features(lyrics_text):
     """Extract lyrical/linguistic features from lyrics text.
-    
+
     Returns a dictionary of lyrical features including word count, sentiment, readability.
     If lyrics_text is None or empty, returns zeros for all features.
     """
@@ -343,29 +345,30 @@ def extract_lyrical_features(lyrics_text):
             "semantic_embedding_mean": 0.0,
             "semantic_embedding_std": 0.0,
         }
-    
+
     lyrics_text = lyrics_text.strip()
-    
+
     # Basic metrics
     words = lyrics_text.split()
     word_count = len(words)
     char_count = len(lyrics_text)
     avg_word_length = char_count / word_count if word_count > 0 else 0.0
-    
+
     # Vocabulary richness
     unique_words = len(set(w.lower() for w in words))
     vocabulary_richness = unique_words / word_count if word_count > 0 else 0.0
-    
+
     # Readability metrics (using textstat if available)
     flesch_reading_ease = 0.0
     flesch_kincaid_grade = 0.0
     try:
         import textstat
+
         flesch_reading_ease = textstat.flesch_reading_ease(lyrics_text)
         flesch_kincaid_grade = textstat.flesch_kincaid_grade(lyrics_text)
     except Exception:
         pass
-    
+
     # Sentiment analysis (using vaderSentiment if available)
     sentiment_compound = 0.0
     sentiment_positive = 0.0
@@ -373,15 +376,16 @@ def extract_lyrical_features(lyrics_text):
     sentiment_neutral = 0.0
     try:
         from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
         analyzer = SentimentIntensityAnalyzer()
         scores = analyzer.polarity_scores(lyrics_text)
-        sentiment_compound = scores.get('compound', 0.0)
-        sentiment_positive = scores.get('pos', 0.0)
-        sentiment_negative = scores.get('neg', 0.0)
-        sentiment_neutral = scores.get('neu', 0.0)
+        sentiment_compound = scores.get("compound", 0.0)
+        sentiment_positive = scores.get("pos", 0.0)
+        sentiment_negative = scores.get("neg", 0.0)
+        sentiment_neutral = scores.get("neu", 0.0)
     except Exception:
         pass
-    
+
     return {
         "word_count": float(word_count),
         "char_count": float(char_count),
@@ -397,7 +401,6 @@ def extract_lyrical_features(lyrics_text):
         "semantic_embedding_mean": 0.0,
         "semantic_embedding_std": 0.0,
     }
-
 
 
 def load_index(expected_dim=None):
@@ -591,12 +594,12 @@ def api_upload():
             y, sr = robust_load_audio(tmp_path)
             # Extract comprehensive features
             features, mfcc, chroma, spec_cent = extract_audio_features(y, sr)
-            
+
             # Extract lyrical features if lyrics provided
-            lyrics = request.form.get('lyrics', '').strip()
+            lyrics = request.form.get("lyrics", "").strip()
             lyrical_features = extract_lyrical_features(lyrics)
             features["lyrics_features"].update(lyrical_features)
-            
+
             # Prepare visualization data (downsample for frontend)
             viz_data = {
                 "waveform": y[::1000].tolist(),  # .tolist() ensures Python floats
@@ -867,7 +870,7 @@ def api_add_to_library():
             try:
                 y, sr = robust_load_audio(tmp_path)
                 features, _, _, _ = extract_audio_features(y, sr)
-                
+
                 # Extract lyrical features (batch add doesn't support lyrics yet, but structure ready)
                 lyrical_features = extract_lyrical_features(None)
                 features["lyrics_features"].update(lyrical_features)
@@ -1504,7 +1507,7 @@ def api_dataset_stats():
     try:
         meta = load_metadata()
         embeddings = load_embeddings()
-        
+
         stats = {
             "total_songs": 0,
             "mood_distribution": {},
@@ -1513,11 +1516,13 @@ def api_dataset_stats():
             "has_embeddings": embeddings is not None,
             "embedding_dim": 0,
         }
-        
+
         if embeddings is not None:
             stats["total_songs"] = len(embeddings)
-            stats["embedding_dim"] = embeddings.shape[1] if len(embeddings.shape) > 1 else 0
-        
+            stats["embedding_dim"] = (
+                embeddings.shape[1] if len(embeddings.shape) > 1 else 0
+            )
+
         # Analyze metadata
         if isinstance(meta, dict):
             for item in meta.values():
@@ -1525,18 +1530,24 @@ def api_dataset_stats():
                     # Count mood clusters
                     mood = item.get("mood_cluster")
                     if mood:
-                        stats["mood_distribution"][str(mood)] = stats["mood_distribution"].get(str(mood), 0) + 1
-                    
+                        stats["mood_distribution"][str(mood)] = (
+                            stats["mood_distribution"].get(str(mood), 0) + 1
+                        )
+
                     # Count mood categories
                     category = item.get("mood_category")
                     if category:
-                        stats["category_distribution"][str(category)] = stats["category_distribution"].get(str(category), 0) + 1
-                    
+                        stats["category_distribution"][str(category)] = (
+                            stats["category_distribution"].get(str(category), 0) + 1
+                        )
+
                     # Count datasets
                     dataset = item.get("dataset")
                     if dataset:
-                        stats["dataset_distribution"][str(dataset)] = stats["dataset_distribution"].get(str(dataset), 0) + 1
-        
+                        stats["dataset_distribution"][str(dataset)] = (
+                            stats["dataset_distribution"].get(str(dataset), 0) + 1
+                        )
+
         return jsonify({"ok": True, "stats": stats})
     except Exception as e:
         logger.exception("Failed to compute dataset stats")
